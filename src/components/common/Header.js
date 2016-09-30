@@ -1,15 +1,16 @@
 import React, {PropTypes} from 'react';
-import { Link, IndexLink } from 'react-router';
+// import { Link, IndexLink } from 'react-router';
+
+// COMPONENTS
+import NavLinks from './NavLinks.js';
 
 const Header = () => {
   return (
-    <nav>
-      <IndexLink to="/about" activeClassName="active">About</IndexLink>
-      {" | "}
-      <Link to="/work" activeClassName="active">Work</Link>
-      {" | "}
-      <Link to="/contact" activeClassName="active">Contact</Link>
-    </nav>
+    <div>
+      <nav className="pull-right">
+        <NavLinks />
+      </nav>
+    </div>
   );
 };
 
