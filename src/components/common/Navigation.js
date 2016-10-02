@@ -6,10 +6,18 @@ import '../../stylesheets/components/_Navigation.scss';
 const Navigation = () => {
   return (
     <ul className="Navigation">
-      <li><IndexLink to="/" activeClassName="active">Welcome</IndexLink></li>
-      <li><Link to="/about" activeClassName="active">About</Link></li>
-      <li><Link to="/work" activeClassName="active">Work</Link></li>
-      <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+      <li className="col-xs-12">
+        <IndexLink to="/" activeClassName="active">HOME</IndexLink>
+      </li>
+      <li className="col-xs-12">
+        <Link to="/about" activeClassName="active">ABOUT</Link>
+      </li>
+      <li className="col-xs-12">
+        <Link to="/work" activeClassName="active">WORK</Link>
+      </li>
+      <li className="col-xs-12">
+        <Link to="/contact" activeClassName="active">CONTACT</Link>
+      </li>
     </ul>
   );
 };

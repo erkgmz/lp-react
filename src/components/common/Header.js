@@ -6,8 +6,9 @@ import Navigation from './Navigation.js';
 const Header = () => {
   return (
     <div className="row">
-      <h3 className="col-xs-6">ERIK GOMEZ</h3>
-      <nav className="pull-right">
+      <h2 className="col-xs-10">ERIK GOMEZ</h2>
+      <h4 className="col-xs-2 pull-right">eg</h4>
+      <nav>
         <Navigation />
       </nav>
     </div>

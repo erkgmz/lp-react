@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACE,cAAI;EACF,KAAK,EAAE,IAAI;;ACAb,cAAG;EACD,OAAO,EAAE,KAAK;EACd,eAAe,EAAE,IAAI",
-"sources": ["components/_AboutPage.scss","components/_Navigation.scss"],
+"mappings": "AACE,cAAI;EACF,KAAK,EAAE,IAAI;;ACFf,WAAY;EACV,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,CAAC;EAEV,cAAG;IACD,OAAO,EAAE,KAAK;IACd,eAAe,EAAE,IAAI;IACrB,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,MAAM;IACf,gBAAgB,EAAE,KAAK;IACvB,UAAU,EAAE,0BAA0B;IAEtC,gBAAE;MACA,KAAK,EAAE,KAAK;MACZ,UAAU,EAAE,eAAe;IAG7B,oBAAQ;MACN,gBAAgB,EAAE,KAAK;MAEvB,sBAAE;QACA,KAAK,EAAE,KAAK;;ACpBlB,YAAG;EACD,OAAO,EAAE,CAAC;EAEV,eAAG;IACD,UAAU,EAAE,IAAI;IAChB,MAAM,EAAE,KAAK;IACb,MAAM,EAAE,eAAe",
+"sources": ["components/_AboutPage.scss","components/_Navigation.scss","components/_WorkPage.scss"],
 "names": [],
 "file": "main.css"
 }

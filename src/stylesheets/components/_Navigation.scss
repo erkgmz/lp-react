@@ -1,7 +1,27 @@
 .Navigation {
+  width: 100%;
+  padding: 0;
 
   li {
     display: block;
     list-style-type: none;
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+    transition: background-color 0.4s ease;
+
+    a {
+      color: black;
+      transition: color 0.4s ease;
+    }
+
+    &:hover {
+      background-color: black;
+
+      a {
+        color: white;
+      }
+
+    }
   }
 }
