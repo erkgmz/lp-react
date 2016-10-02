@@ -20,12 +20,11 @@ class ContactPage extends React.Component {
     return (
       <div className="Contact row">
         <h1>Here is my contact information</h1>
-        {/* <nav className="row"> */}
+
         <List
           items={this.state.items}
           itemClasses="col-xs-12"
           listClass="contact-nav" />
-        {/* </nav> */}
 
         <div className="form-group row">
           <div className="col-xs-6">
