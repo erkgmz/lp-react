@@ -1,12 +1,8 @@
-.AboutPage {
-  background-color: black; }
-  .AboutPage img {
-    display: block;
-    width: 100%; }
-    body .container {
-      padding-left: 0;
-      padding-right: 0; }
-  .AboutPage h1 {
-    color: red; }
+.AboutPage img {
+  width: 100%; }
+
+.Navigation li {
+  display: block;
+  list-style-type: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,21 +1,5 @@
 .AboutPage {
-  background-color: black;
-
   img {
-    display: block;
     width: 100%;
-
-    @at-root {
-      body {
-        .container {
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-    }
-  }
-
-  h1{
-    color: red;
   }
 }
