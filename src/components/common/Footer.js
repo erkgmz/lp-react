@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 // COMPONENTS
-import NavLinks from './NavLinks.js';
+import Navigation from './Navigation.js';
 
 const Footer = () => {
   return (
     <div>
       <nav>
-        <NavLinks />
+        <Navigation />
       </nav>
       <p>	&copy; Erik Gomez | Lorem ipsum dolor sit amet.</p>
     </div>

@@ -1,19 +1,20 @@
 import React from 'react';
 import Image from '../common/Image.js';
 
-const IMAGE = require('./images/erikGomezHeadshot.jpg');
+const MOBILE_IMAGE = require('./images/mobileHeadshot.png');
+const DESKTOP_IMAGE = require('./images/erikGomezHeadshot.png');
 
-import '../../../styles/AboutPage.css';
+import '../../styles/about/AboutPage.css';
 
 class AboutPage extends React.Component {
   render() {
     return (
-      <div className="AboutPage col-xs-6">
-        <Image src={IMAGE} />
+      <div className="AboutPage">
+        <Image src={MOBILE_IMAGE} />
         <h1>About</h1>
       </div>
     );
   }
 }
-
+// sass AboutPage.scss:AboutPage.css --watch
 export default AboutPage;
