@@ -1,6 +1,10 @@
 .AboutPage img {
   width: 100%; }
 
+.Header nav {
+  display: block;
+  height: auto; }
+
 .WorkPage ul {
   padding: 0; }
   .WorkPage ul li {

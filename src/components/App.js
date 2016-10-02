@@ -12,7 +12,6 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header />
-        <Navigation />
         {this.props.children}
         <Footer />
       </div>
