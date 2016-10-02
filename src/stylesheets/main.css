@@ -1,29 +1,17 @@
 .AboutPage img {
   width: 100%; }
 
-.Navigation {
-  width: 100%;
-  padding: 0; }
-  .Navigation li {
-    display: block;
-    list-style-type: none;
-    text-align: center;
-    padding: 10px 0;
-    background-color: white;
-    transition: background-color 0.4s ease; }
-    .Navigation li a {
-      color: black;
-      transition: color 0.4s ease; }
-    .Navigation li:hover {
-      background-color: black; }
-      .Navigation li:hover a {
-        color: white; }
-
 .WorkPage ul {
   padding: 0; }
   .WorkPage ul li {
     list-style: none;
     height: 150px;
     border: 1px solid coral; }
+
+.Navigation {
+  background-color: lime; }
+
+.Contact .contact-nav {
+  background-color: coral; }
 
 /*# sourceMappingURL=main.css.map */

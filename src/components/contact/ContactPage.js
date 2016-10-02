@@ -1,22 +1,59 @@
 import React from 'react';
 
+import List from '../common/List';
+
+import '../../stylesheets/components/_ContactPage.scss';
+
 class ContactPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        {txt: 'LINKEDIN', src: '#'},
+        {txt: 'TWITTER', src: '#'},
+        {txt: 'GITHUB', src: '#'}
+      ]
+    };
+  }
+
   render() {
     return (
-      <div>
+      <div className="Contact row">
         <h1>Here is my contact information</h1>
-        <ul>
-          <li><a>LINKEDIN</a></li>
-          <li><a>TWITTER</a></li>
-          <li><a>GITHUB</a></li>
-        </ul>
+        <nav className="row">
+          <List
+            items={this.state.items}
+            itemClasses="col-xs-12"
+            listClass="contact-nav" />
+        </nav>
 
-        <form>
-          <input type="text" placeholder="first name" />
-          <input type="text" placeholder="last name" />
-          <input type="text" placeholder="email" />
-          <textarea></textarea>
-        </form>
+        <div className="form-group row">
+          <div className="col-xs-6">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Name"
+              id="name-input" />
+          </div>
+        
+          <div className="col-xs-6">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Email"
+              id="email-input" />
+          </div>
+        </div>
+
+        <div className="form-group">
+            <textarea
+              placeholder="Message"
+              className="form-control"
+              id="textarea-input"
+              rows="4">
+            </textarea>
+        </div>
+
       </div>
     );
   }

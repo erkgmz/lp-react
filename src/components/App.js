@@ -1,16 +1,18 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import Footer from './common/Footer';
+import Navigation from './common/Navigation';
 
 class App extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div className="container">
         <Header />
+        <Navigation />
         {this.props.children}
         <Footer />
       </div>

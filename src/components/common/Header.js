@@ -1,16 +1,12 @@
 import React, {PropTypes} from 'react';
 
-// COMPONENTS
-import Navigation from './Navigation.js';
+import '../../stylesheets/components/_Header.scss';
 
 const Header = () => {
   return (
-    <div className="row">
+    <div className="Header row">
       <h2 className="col-xs-10">ERIK GOMEZ</h2>
-      <h4 className="col-xs-2 pull-right">eg</h4>
-      <nav>
-        <Navigation />
-      </nav>
+      <h4 className="col-xs-2">eg</h4>
     </div>
   );
 };

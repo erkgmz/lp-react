@@ -1,24 +1,23 @@
 import React from 'react';
-import { Link, IndexLink } from 'react-router';
+import List from './List.js';
 
 import '../../stylesheets/components/_Navigation.scss';
 
+const ITEMS = [
+  {txt: 'HOME', src: '/'},
+  {txt: 'ABOUT', src: '/about'},
+  {txt: 'WORK', src: '/work'},
+  {txt: 'CONTACT', src: '/contact'}
+];
+
 const Navigation = () => {
   return (
-    <ul className="Navigation">
-      <li className="col-xs-12">
-        <IndexLink to="/" activeClassName="active">HOME</IndexLink>
-      </li>
-      <li className="col-xs-12">
-        <Link to="/about" activeClassName="active">ABOUT</Link>
-      </li>
-      <li className="col-xs-12">
-        <Link to="/work" activeClassName="active">WORK</Link>
-      </li>
-      <li className="col-xs-12">
-        <Link to="/contact" activeClassName="active">CONTACT</Link>
-      </li>
-    </ul>
+    <nav>
+      <List
+        items={ITEMS}
+        itemClasses="col-xs-12"
+        listClass="Navigation row" />
+    </nav>
   );
 };
 
