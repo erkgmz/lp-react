@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,gBAAgB,EAAE,KAAK;EAEvB,cAAI;IACF,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI;IAIP,eAAW;MACT,YAAY,EAAE,CAAC;MACf,aAAa,EAAE,CAAC;EAMxB,aAAE;IACA,KAAK,EAAE,GAAG",
+"sources": ["components/_AboutPage.scss"],
+"names": [],
+"file": "main.css"
+}

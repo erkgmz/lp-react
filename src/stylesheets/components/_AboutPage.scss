@@ -1,4 +1,6 @@
 .AboutPage {
+  background-color: black;
+
   img {
     display: block;
     width: 100%;
@@ -12,14 +14,8 @@
       }
     }
   }
-}
 
-// h1 {
-//   font-size: 16px;
-//   @at-root {
-//     header {
-//       margin: 0 auto;
-//       width: 98%;
-//     }
-//   }
-// }
+  h1{
+    color: red;
+  }
+}

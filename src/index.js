@@ -6,7 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
 // CSS imports via WEBPACK
-import './styles/styles.css';
+import './stylesheets/main.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 render(
