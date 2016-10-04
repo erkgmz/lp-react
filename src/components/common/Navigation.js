@@ -10,15 +10,22 @@ const ITEMS = [
   {txt: 'CONTACT', src: '/contact'}
 ];
 
-const Navigation = () => {
+const Navigation = ({listClass, itemClass, linkClass}) => {
   return (
     <nav>
       <List
         items={ITEMS}
-        itemClasses="col-xs-12"
-        listClass="Navigation row" />
+        listClass={listClass}
+        itemClass={itemClass}
+        linkClass={linkClass} />
     </nav>
   );
+};
+
+Navigation.propTypes = {
+  listClass: React.PropTypes.string,
+  itemClass: React.PropTypes.string,
+  linkClass: React.PropTypes.string
 };
 
 export default Navigation;

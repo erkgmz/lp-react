@@ -1,6 +1,56 @@
 .Header {
-  nav {
-    display: block;
+  // border: 1px solid black;
+  background-color: coral;
+
+  div {
+    // border: 1px solid coral;
+    padding: 15px 5px;
     height: auto;
+    margin: 0 auto;
+    width: 100%;
+
+    h2 {
+      display: inline-block;
+    }
+
+    input {
+      display: block;
+      font-size: 35px;
+      padding: 0 15px;
+    }
+  }
+
+  // TODO:
+    // factor into Navigation component
+    // namespace components using <Navigation>
+    // Currently: Footer, Header. 
+  nav {
+    clear: both;
+
+    ul {
+      padding: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        padding: 10px 0;
+        margin: 0 auto;
+        background-color: white;
+        transition: background-color 0.4s ease;
+
+        a {
+          color: black;
+          font-size: 1.6rem;
+        }
+
+        &:hover {
+          background-color: black;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
   }
 }

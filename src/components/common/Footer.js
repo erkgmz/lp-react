@@ -5,12 +5,13 @@ import Navigation from './Navigation.js';
 
 const Footer = () => {
   return (
-    <div>
-      <nav>
-        <Navigation />
-      </nav>
+    <footer>
+      <Navigation
+        listClass="footer-nav row"
+        itemClass="col-xs-12"
+        linkClass="" />
       <p>	&copy; Erik Gomez | Lorem ipsum dolor sit amet.</p>
-    </div>
+    </footer>
   );
 };
 

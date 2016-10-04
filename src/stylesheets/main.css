@@ -1,9 +1,37 @@
+.Header {
+  background-color: coral; }
+  .Header div {
+    padding: 15px 5px;
+    height: auto;
+    margin: 0 auto;
+    width: 100%; }
+    .Header div h2 {
+      display: inline-block; }
+    .Header div input {
+      display: block;
+      font-size: 35px;
+      padding: 0 15px; }
+  .Header nav {
+    clear: both; }
+    .Header nav ul {
+      padding: 0;
+      text-align: center; }
+      .Header nav ul li {
+        display: inline-block;
+        padding: 10px 0;
+        margin: 0 auto;
+        background-color: white;
+        transition: background-color 0.4s ease; }
+        .Header nav ul li a {
+          color: black;
+          font-size: 1.6rem; }
+        .Header nav ul li:hover {
+          background-color: black; }
+          .Header nav ul li:hover a {
+            color: white; }
+
 .AboutPage img {
   width: 100%; }
-
-.Header nav {
-  display: block;
-  height: auto; }
 
 .WorkPage ul {
   padding: 0; }
@@ -11,9 +39,6 @@
     list-style: none;
     height: 150px;
     border: 1px solid coral; }
-
-.Navigation {
-  background-color: lime; }
 
 .Contact .contact-nav {
   background-color: coral; }

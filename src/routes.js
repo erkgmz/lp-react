@@ -3,10 +3,10 @@ import { Route, IndexRoute } from 'react-router';
 
 // COMPONENTS
 import App from './components/App.js'; // eslint-disable-line import/no-named-as-default
-import HomePage from './components/home/HomePage.js';
-import AboutPage from './components/about/AboutPage.js';
-import WorkPage from './components/work/WorkPage.js';
-import ContactPage from './components/contact/ContactPage.js';
+import HomePage from './components/home/HomePage';
+import AboutPage from './components/about/AboutPage';
+import WorkPage from './components/work/WorkPage';
+import ContactPage from './components/contact/ContactPage';
 
 export default (
   <Route path="/" component={App}>
