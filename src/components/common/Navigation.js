@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './List.js';
 
-const Navigation = ({listClass, itemClass, linkClass}) => {
+const Navigation = ({listClass, itemClass, linkClass, linkOnClick}) => {
 
   const ITEMS = [
     {txt: 'HOME', src: '/'},
@@ -16,7 +16,8 @@ const Navigation = ({listClass, itemClass, linkClass}) => {
         items={ITEMS}
         listClass={listClass}
         itemClass={itemClass}
-        linkClass={linkClass} />
+        linkClass={linkClass}
+        linkOnClick={linkOnClick} />
     </nav>
   );
 };
@@ -25,7 +26,8 @@ Navigation.propTypes = {
   listClass: React.PropTypes.string,
   itemClass: React.PropTypes.string,
   linkClass: React.PropTypes.string,
-  displayClass: React.PropTypes.string
+  displayClass: React.PropTypes.string,
+  linkOnClick: React.PropTypes.bool
 };
 
 export default Navigation;

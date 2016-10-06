@@ -37,6 +37,7 @@ class Header extends React.Component {
             listClass="header-nav col-xs-12"
             itemClass="col-xs-12"
             linkClass=""
+            linkOnClick={this.showNav}
           />
         }
       </div>

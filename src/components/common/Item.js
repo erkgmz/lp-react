@@ -1,11 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-const Item = ({item, itemClass, linkClass}) => {
+const Item = ({item, itemClass, linkClass, linkOnClick}) => {
   if(item.src || linkClass) {
     return (
       <li className={itemClass}>
-        <Link to={item.src} className={linkClass}>{item.txt}</Link>
+        <Link
+          to={item.src}
+          className={linkClass}
+          onClick={linkOnClick}>
+          {item.txt}
+        </Link>
       </li>
     );
   } else {
@@ -18,7 +23,8 @@ const Item = ({item, itemClass, linkClass}) => {
 Item.propTypes = {
   item: React.PropTypes.object.isRequired,
   itemClass: React.PropTypes.string,
-  linkClass: React.PropTypes.string
+  linkClass: React.PropTypes.string,
+  linkOnClick: React.PropTypes.bool
 };
 
 export default Item;
