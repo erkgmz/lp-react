@@ -1,16 +1,15 @@
 import React from 'react';
 import List from './List.js';
 
-import '../../stylesheets/components/_Navigation.scss';
-
-const ITEMS = [
-  {txt: 'HOME', src: '/'},
-  {txt: 'ABOUT', src: '/about'},
-  {txt: 'WORK', src: '/work'},
-  {txt: 'CONTACT', src: '/contact'}
-];
-
 const Navigation = ({listClass, itemClass, linkClass}) => {
+
+  const ITEMS = [
+    {txt: 'HOME', src: '/'},
+    {txt: 'ABOUT', src: '/about'},
+    {txt: 'WORK', src: '/work'},
+    {txt: 'CONTACT', src: '/contact'}
+  ];
+
   return (
     <nav>
       <List
@@ -25,7 +24,8 @@ const Navigation = ({listClass, itemClass, linkClass}) => {
 Navigation.propTypes = {
   listClass: React.PropTypes.string,
   itemClass: React.PropTypes.string,
-  linkClass: React.PropTypes.string
+  linkClass: React.PropTypes.string,
+  displayClass: React.PropTypes.string
 };
 
 export default Navigation;

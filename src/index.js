@@ -9,6 +9,7 @@ import routes from './routes';
 import './stylesheets/main.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+// props are passed down to App.js from here
 render(
   <Router history={browserHistory} routes={routes} />,
   document.getElementById('app')

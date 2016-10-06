@@ -1,23 +1,47 @@
 import React, {PropTypes} from 'react';
 import Navigation from './Navigation';
+import Image from './Image';
+import Hamburger from './Hamburger';
 
 import '../../stylesheets/components/_Header.scss';
 
-const Header = () => {
-  return (
-    <div className="Header row">
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <div className="col-xs-12">
-        <h2>Erik Gomez</h2>
-        <input type="submit" value="H" className="pull-right" />
+    this.state = {
+      showNav: false
+    };
+
+    this.showNav = this.showNav.bind(this);
+  }
+
+  showNav() {
+    this.setState({showNav: this.state.showNav ? false : true});
+  }
+
+  render() {
+    return (
+      <div className="Header row">
+        <div className="col-xs-12">
+          <h2 className="col-xs-10">Erik Gomez</h2>
+          <a
+            className="col-xs-2"
+            onClick={this.showNav}>
+            <Hamburger />
+          </a>
+        </div>
+
+        {this.state.showNav &&
+          <Navigation
+            listClass="header-nav col-xs-12"
+            itemClass="col-xs-12"
+            linkClass=""
+          />
+        }
       </div>
-
-      <Navigation
-        listClass="header-nav row"
-        itemClass="col-xs-6"
-        linkClass="" />
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Header;
