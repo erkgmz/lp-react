@@ -11,13 +11,14 @@ const Navigation = ({listClass, itemClass, linkClass, linkOnClick}) => {
   ];
 
   return (
-    <nav>
+    <nav className="row">
       <List
         items={ITEMS}
         listClass={listClass}
         itemClass={itemClass}
         linkClass={linkClass}
-        linkOnClick={linkOnClick} />
+        linkOnClick={linkOnClick}
+      />
     </nav>
   );
 };
@@ -26,7 +27,6 @@ Navigation.propTypes = {
   listClass: React.PropTypes.string,
   itemClass: React.PropTypes.string,
   linkClass: React.PropTypes.string,
-  displayClass: React.PropTypes.string,
   linkOnClick: React.PropTypes.bool
 };
 

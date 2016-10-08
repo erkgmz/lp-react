@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
-import Footer from './common/Footer';
 import Navigation from './common/Navigation';
+
+import '../stylesheets/components/_App.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,10 +11,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="App container">
         <Header />
         {this.props.children}
-        <Footer />
+        <Navigation
+          listClass="col-xs-12"
+          itemClass="col-xs-3"
+          linkClass=""
+          linkOnClick={this.showNav}
+        />
       </div>
     );
   }

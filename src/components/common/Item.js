@@ -9,7 +9,7 @@ const Item = ({item, itemClass, linkClass, linkOnClick}) => {
           to={item.src}
           className={linkClass}
           onClick={linkOnClick}>
-          {item.txt}
+            {item.txt}
         </Link>
       </li>
     );

@@ -13,7 +13,7 @@ export default {
   ],
   target: 'web',
   output: {
-    path: __dirname + '/dist', 
+    path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -34,7 +34,9 @@ export default {
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')}
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')},
+      {test: /\.html$/, loader: 'html-loader?attrs[]=video:src'},
+      {test: /\.mp4$/, loader: 'url?limit=1000000'}
     ]
   }
 };

@@ -12,7 +12,8 @@ const List = ({items, itemClass, listClass, linkClass, linkOnClick}) => {
             linkClass={linkClass}
             itemClass={itemClass}
             linkOnClick={linkOnClick}
-            key={i} />
+            key={i}
+          />
         );
       })}
     </ul>

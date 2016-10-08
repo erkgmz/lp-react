@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Header from '../common/Header';
+// DEPRECATE?
 class HomePage extends React.Component {
   render() {
     return (
