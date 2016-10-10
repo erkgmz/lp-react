@@ -1,9 +1,18 @@
+html,
+body,
+#app,
 .App {
   height: 100%;
+  width: 100%;
+}
+//UGHHHHHH!
+// TODO: REFACTOR 1-7 into some sort of config/base file
+
+.App {
 
   nav {
     height: auto;
-    width: auto;
+    width: 100%;
 
     ul {
       position: fixed;

@@ -1,15 +1,20 @@
 import React from 'react';
 import Header from '../common/Header';
-// DEPRECATE?
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    );
-  }
-}
+
+import '../../stylesheets/components/_HomePage.scss';
+
+const HomePage = () => {
+  return (
+    <div className="homePage text-center">
+      <h1>WEB DEVELOPER</h1>
+      <h2>Erik Gomez</h2>
+      <p>
+        As the headlines above imply, my name is Erik and I'm a web developer in Bakersfield, CA.
+        I'm a front-end developer, which basically means I know how to do cool things with HTML, CSS, and JavaScript.
+        I have primarily made projects using Angularjs but have recently switched to Reactjs and I have been loving it!
+      </p>
+    </div>
+  );
+};
 
 export default HomePage;
