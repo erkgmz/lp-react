@@ -2,7 +2,8 @@ import React from 'react';
 
 import List from '../common/List';
 
-import '../../stylesheets/components/_ContactPage.scss';
+// import '../../stylesheets/components/_ContactPage.scss';
+// require('../../stylesheets/components/_ContactPage.scss')
 
 class ContactPage extends React.Component {
   constructor(props) {

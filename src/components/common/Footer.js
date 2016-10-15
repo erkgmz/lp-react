@@ -1,6 +1,5 @@
 import React from 'react';
 
-// COMPONENTS
 import Navigation from './Navigation.js';
 
 const Footer = () => {

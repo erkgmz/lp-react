@@ -20,11 +20,6 @@ export default {
   devServer: {
     contentBase: path.resolve(__dirname, 'src')
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('styles.css')
-  ],
   module: {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
@@ -34,9 +29,12 @@ export default {
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')},
-      {test: /\.html$/, loader: 'html-loader?attrs[]=video:src'},
-      {test: /\.mp4$/, loader: 'url?limit=1000000'}
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')}
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('styles.css', { allChunks: true })
+  ]
 };

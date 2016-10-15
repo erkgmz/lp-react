@@ -1,0 +1,28 @@
+html {
+  background-color: black;
+  overflow: scroll;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $headline-font;
+    font-weight: $headline-weight;
+  }
+
+  p,
+  a {
+    font-family: $body-font;
+  }
+}

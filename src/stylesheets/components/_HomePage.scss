@@ -1,15 +1,43 @@
-@import '../base/all';
+@import '../base/variables';
 
 .homePage {
   height: 100%;
 
-  h1 {
-    font-family: $open-sans;
-    font-weight: $font-light;
-  }
+  .content-block {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-  h2 {
-    font-family: $open-sans;
-    font-weight: $font-bold;
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      display: inline-block;
+      padding: 8px;
+      font-size: 3rem;
+      border-radius: 15px 0 10px 0;
+      background-color: $highlighter;
+      color: black;
+    }
+
+    a {
+      margin-top: 20px;
+      display: inline-block;
+      border: 2px solid red;
+      color: white;
+      padding: 5px 0;
+      border-radius: 8px;
+      min-width: 150px;
+      background-color: red;
+      transition: background-color 0.5s ease;
+      text-align: center;
+
+      &:hover {
+        background-color: white;
+        color: red;
+        text-decoration: none;
+      }
+    }
   }
 }

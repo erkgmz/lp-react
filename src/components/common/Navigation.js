@@ -5,7 +5,7 @@ const Navigation = ({listClass, itemClass, linkClass, linkOnClick}) => {
 
   const ITEMS = [
     {txt: 'HOME', src: '/'},
-    {txt: 'ABOUT', src: '/about'},
+    // {txt: 'ABOUT', src: '/about'},
     {txt: 'WORK', src: '/work'},
     {txt: 'CONTACT', src: '/contact'}
   ];

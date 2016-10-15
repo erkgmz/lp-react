@@ -1,13 +1,38 @@
+@import '../base/variables';
+
 .WorkPage {
-  
-  ul {
-    padding: 0;
+  height: 100%;
 
-    li {
-      list-style: none;
-      height: 15rem;
-      border: 1px solid black;
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
+    h2 {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 15px 0 10px 0;
+      background-color: $highlighter;
+      color: black;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+        height: 10rem;
+        margin: 0 auto;
+        color: black;
+        border-bottom: 2px solid black;
+
+        p {
+
+          a {
+            color: red;
+          }
+        }
+      }
     }
   }
 }

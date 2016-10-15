@@ -1,7 +1,5 @@
 import React, {PropTypes} from 'react';
 
-import '../../stylesheets/components/_Header.scss';
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -10,8 +8,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header row">
-          <h1 className="col-xs-9">eg</h1>
-          <h1 className="col-xs-3">eg</h1>
+          <h1 className="col-xs-12">e.g.</h1>
       </header>
     );
   }

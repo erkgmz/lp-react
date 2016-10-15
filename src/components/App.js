@@ -16,7 +16,7 @@ class App extends React.Component {
         {this.props.children}
         <Navigation
           listClass="col-xs-12"
-          itemClass="col-xs-3"
+          itemClass="col-xs-4"
           linkClass=""
           linkOnClick={this.showNav}
         />
