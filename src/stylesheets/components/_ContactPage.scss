@@ -1,6 +1,52 @@
 .Contact {
-  
-  .contact-nav {
-    background-color: coral;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+
+  #linkedin {
+    color: #008cc9;
+  }
+
+  #github {
+    color: #333;
+  }
+
+  #twitter {
+    color: #00aced;
+  }
+
+  h2 {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 15px 0 10px 0;
+    background-color: $highlighter;
+    color: black;
+  }
+
+
+  .form-group {
+    text-align: right;
+
+    a {
+      color: red;
+      margin-right: 15px;
+    }
+
+    div {
+      margin: .5rem auto;
+
+      textarea {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .fa-2x {
+    font-size: 1.4em;
   }
 }

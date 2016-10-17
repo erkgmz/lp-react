@@ -10,7 +10,6 @@ body,
 }
 
 #app {
-
   h1,
   h2,
   h3,
@@ -24,5 +23,9 @@ body,
   p,
   a {
     font-family: $body-font;
+  }
+
+  a {
+    cursor: pointer;
   }
 }

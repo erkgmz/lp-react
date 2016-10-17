@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import Navigation from './common/Navigation';
 
+import '../../node_modules/font-awesome/css/font-awesome.css';
 import '../stylesheets/components/_App.scss';
 
 class App extends React.Component {
