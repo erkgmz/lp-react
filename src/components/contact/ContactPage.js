@@ -20,6 +20,8 @@ class ContactPage extends React.Component {
 
   handleClick() {
     console.log(1+1);
+    // GET FORM DATA
+    // SEND FORM DATA TO erikgomezco
   }
 
   render() {
