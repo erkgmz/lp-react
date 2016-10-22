@@ -7,6 +7,21 @@ import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
 // require('../../stylesheets/components/_ContactPage.scss')
 
+/*
+10/22
+  TODO: Add form feedback so user is aware that message has been sent
+  1: Clear all form fields
+  2: Display a toast from toastr
+    A: if message was sent display success
+    B: if message was NOT sent display error
+  3: Display message after NODEMAILER response
+
+
+  install toastr via npm
+  toastr.success('Your message has been sent')
+  toastr.error('An error has occured')
+*/
+
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
