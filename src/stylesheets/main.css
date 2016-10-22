@@ -106,17 +106,17 @@ body,
     .homePage .content-block a {
       margin-top: 20px;
       display: inline-block;
-      border: 2px solid red;
+      border: 2px solid #e74c3c;
       color: white;
       padding: 5px 0;
       border-radius: 8px;
       min-width: 150px;
-      background-color: red;
+      background-color: #e74c3c;
       transition: background-color 0.5s ease;
       text-align: center; }
       .homePage .content-block a:hover {
         background-color: white;
-        color: red;
+        color: #e74c3c;
         text-decoration: none; }
 
 .AboutPage {
@@ -159,7 +159,7 @@ body,
         color: black;
         border-bottom: 2px solid black; }
         .WorkPage .wrapper ul li p a {
-          color: red; }
+          color: #e74c3c; }
 
 .Contact {
   top: 50%;
@@ -167,10 +167,10 @@ body,
   transform: translateY(-50%); }
   .Contact #linkedin {
     color: #008cc9; }
-  .Contact #github {
-    color: #333; }
   .Contact #twitter {
     color: #00aced; }
+  .Contact #github {
+    color: #333; }
   .Contact h2 {
     display: inline-block;
     padding: 8px;
@@ -179,9 +179,11 @@ body,
     color: black; }
   .Contact .form-group {
     text-align: right; }
-    .Contact .form-group a {
-      color: red;
-      margin-right: 15px; }
+    .Contact .form-group #submit {
+      color: #e74c3c;
+      margin-right: 15px;
+      background: none;
+      border: none; }
     .Contact .form-group div {
       margin: .5rem auto; }
       .Contact .form-group div textarea {

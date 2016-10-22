@@ -1,4 +1,6 @@
 import React from 'react';
+import * as $ from 'jquery';
+/* eslint-disable no-console */
 
 import List from '../common/List';
 import 'font-awesome/css/font-awesome.css';
@@ -9,19 +11,54 @@ class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        {txt: 'LINKEDIN', src: '#'},
-        {txt: 'TWITTER', src: '#'},
-        {txt: 'GITHUB', src: '#'}
-      ]
+      name: '',
+      email: '',
+      message: ''
     };
+
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick() {
-    console.log(1+1);
-    // GET FORM DATA
-    // SEND FORM DATA TO erikgomezco
+  handleClick(event) {
+    let data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: '/contact',
+      data: data,
+      dataType: 'json',
+      cache: false,
+      success: function(response) {
+        console.log('Success!');
+        console.log(response);
+      }.bind(this),
+      error: function(xhr, status, error) {
+        console.log('Error');
+        console.log(error);
+      }.bind(this)
+    });
+  }
+
+  handleChange(event) {
+    // TODO: Make this more programmatic
+    if(event.target.name === 'name') {
+      let name = event.target.value;
+      this.setState({name: name});
+
+    } else if(event.target.name === 'email') {
+      let email = event.target.value;
+      this.setState({email: email});
+
+    } else {
+      let message = event.target.value;
+      this.setState({message: message});
+
+    }
   }
 
   render() {
@@ -38,8 +75,10 @@ class ContactPage extends React.Component {
             <input
               className="form-control"
               required
+              onChange={this.handleChange}
               type="text"
               placeholder="Name"
+              name="name"
               id="name-input" />
           </div>
 
@@ -47,15 +86,19 @@ class ContactPage extends React.Component {
             <input
               className="form-control"
               required
-              type="text"
+              onChange={this.handleChange}
+              type="email"
               placeholder="Email"
+              name="email"
               id="email-input" />
           </div>
 
           <div className="form-group col-xs-12">
             <textarea
               placeholder="Message"
+              onChange={this.handleChange}
               required
+              name="message"
               className="form-control"
               id="textarea-input"
               rows="4">
@@ -90,10 +133,12 @@ class ContactPage extends React.Component {
               aria-hidden="true"></i>
           </a>
 
-          <a onClick={this.handleClick}>SUBMIT</a>
+          <input
+            type="submit"
+            value="SUBMIT"
+            id="submit"
+            onClick={this.handleClick} />
         </div>
-
-
       </div>
     );
   }

@@ -7,12 +7,12 @@
     color: #008cc9;
   }
 
-  #github {
-    color: #333;
-  }
-
   #twitter {
     color: #00aced;
+  }
+
+  #github {
+    color: #333;
   }
 
   h2 {
@@ -27,9 +27,11 @@
   .form-group {
     text-align: right;
 
-    a {
-      color: red;
+    #submit {
+      color: $linkColor;
       margin-right: 15px;
+      background: none;
+      border: none;
     }
 
     div {
