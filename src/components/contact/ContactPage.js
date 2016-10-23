@@ -40,8 +40,9 @@ class ContactPage extends React.Component {
     let data = this.validateData(this.state);
 
     if( data.valid ) {
+      // :`(
       data = data.data;
-
+      
       toastr.success(`Sending...`);
 
       $.ajax({
