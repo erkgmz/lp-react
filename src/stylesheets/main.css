@@ -188,6 +188,10 @@ body,
       margin: .5rem auto; }
       .Contact .form-group div textarea {
         margin-bottom: 1rem; }
+    .Contact .form-group ul {
+      padding: 0; }
+      .Contact .form-group ul li {
+        margin-right: 1.3rem; }
   .Contact li {
     list-style: none;
     display: inline-block; }

@@ -25,13 +25,14 @@ contactController.sendMessage = (req, res) => {
   console.log(mailOptions);
 
   // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, function(error, data){
     if(error){
-        return console.log(error);
+      console.log(error);
+      res.json({error: error});
     }
-    console.log('Message sent: ' + info.response);
+    console.log('Message sent: ' + data.response);
+    res.json({name: name, email: email, message: message, data: data});
   });
-  res.json({name: name, email: email, message: message});
 };
 
 module.exports = contactController;

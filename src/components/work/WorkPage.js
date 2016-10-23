@@ -12,6 +12,7 @@ class WorkPage extends React.Component {
 
   render() {
     return (
+      // TODO: Componentize... WorkList?
       <div className="WorkPage">
         <div className="wrapper">
           <h2>WORK</h2>

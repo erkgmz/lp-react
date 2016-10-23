@@ -7,9 +7,10 @@ const Item = ({item, itemClass, linkClass, linkOnClick}) => {
       <li className={itemClass}>
         <Link
           to={item.src}
+          id={item.styleId}
           className={linkClass}
           onClick={linkOnClick}>
-            {item.txt}
+            {item.txt || item.logo}
         </Link>
       </li>
     );

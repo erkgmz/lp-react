@@ -3,6 +3,7 @@ import Header from './common/Header';
 import Navigation from './common/Navigation';
 
 import '../../node_modules/font-awesome/css/font-awesome.css';
+import '../../node_modules/toastr/build/toastr.min.css';
 import '../stylesheets/components/_App.scss';
 
 class App extends React.Component {
@@ -19,7 +20,6 @@ class App extends React.Component {
           listClass="col-xs-12"
           itemClass="col-xs-4"
           linkClass=""
-          linkOnClick={this.showNav}
         />
       </div>
     );

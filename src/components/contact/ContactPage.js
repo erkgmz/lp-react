@@ -1,62 +1,75 @@
-import React from 'react';
-import * as $ from 'jquery';
 /* eslint-disable no-console */
 
+import React from 'react';
+import toastr from 'toastr';
+import * as $ from 'jquery';
+
 import List from '../common/List';
+import SocialIcons from '../common/SocialIcons';
+import icons from '../common/Icons';
+
 import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
-// require('../../stylesheets/components/_ContactPage.scss')
 
 /*
 10/22
   TODO: Add form feedback so user is aware that message has been sent
-  1: Clear all form fields
-  2: Display a toast from toastr
-    A: if message was sent display success
-    B: if message was NOT sent display error
-  3: Display message after NODEMAILER response
+  1. Make Input, Textarea components
+  2. Import Link componenet handle making links
+  3. Make social icon component
 
 
-  install toastr via npm
-  toastr.success('Your message has been sent')
-  toastr.error('An error has occured')
+
 */
 
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: ''
+    this.state = { name: '', email: '', message: '' };
+
+    toastr.options = {
+      positionClass: "toast-top-full-width"
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.validateData = this.validateData.bind(this);
   }
 
-  handleClick(event) {
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    };
+  validateData(data) {
+    for(let key in data) {
+      if(data[key] === '') {
+        return {valid: false, missing: key};
+      }
+    }
+    return {data, valid: true};
+  }
 
-    $.ajax({
-      type: 'POST',
-      url: '/contact',
-      data: data,
-      dataType: 'json',
-      cache: false,
-      success: function(response) {
-        console.log('Success!');
-        console.log(response);
-      }.bind(this),
-      error: function(xhr, status, error) {
-        console.log('Error');
-        console.log(error);
-      }.bind(this)
-    });
+  handleClick() {
+    let data = this.validateData(this.state);
+
+    if( data.valid ) {
+      data = data.data;
+
+      toastr.success(`Sending...`);
+
+      $.ajax({
+        type: 'POST',
+        url: '/contact',
+        data: data,
+        dataType: 'json',
+        cache: false,
+        success: function(response) {
+          toastr.clear();
+          toastr.success('Your message has been sent.');
+        }.bind(this),
+        error: function(xhr, status, error) {
+          toastr.error('Oops, Something went wrong. Try again later');
+        }.bind(this)
+      });
+    } else {
+      toastr.info(`Don't forget to enter your ${data.missing}`);
+    }
   }
 
   handleChange(event) {
@@ -65,11 +78,12 @@ class ContactPage extends React.Component {
       let name = event.target.value;
       this.setState({name: name});
 
-    } else if(event.target.name === 'email') {
+    }
+    if(event.target.name === 'email') {
       let email = event.target.value;
       this.setState({email: email});
 
-    } else {
+    } if(event.target.name === 'message') {
       let message = event.target.value;
       this.setState({message: message});
 
@@ -113,6 +127,7 @@ class ContactPage extends React.Component {
               placeholder="Message"
               onChange={this.handleChange}
               required
+              type="text"
               name="message"
               className="form-control"
               id="textarea-input"
@@ -120,33 +135,7 @@ class ContactPage extends React.Component {
             </textarea>
           </div>
 
-          {/* TODO: Componentize social badges  */}
-          <a
-            className="social-icon col-xs-1"
-            id="linkedin"
-            href="https://www.linkedin.com/in/erkgmz" >
-            <i
-              className=" fa fa-linkedin fa-2x"
-              aria-hidden="true"></i>
-          </a>
-
-          <a
-            className="social-icon col-xs-1"
-            id="twitter"
-            href="https://twitter.com/erikgomezco" >
-            <i
-              className=" fa fa-twitter fa-2x"
-              aria-hidden="true"></i>
-          </a>
-
-          <a
-            className="social-icon col-xs-1"
-            id="github"
-            href="https://github.com/erkgmz" >
-            <i
-              className=" fa fa-github fa-2x"
-              aria-hidden="true"></i>
-          </a>
+          <SocialIcons icons={icons} />
 
           <input
             type="submit"
