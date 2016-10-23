@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
+
+import WorkListItem from './WorkListItem';
 
 class WorkList extends React.Component {
   constructor(props){
@@ -8,21 +9,11 @@ class WorkList extends React.Component {
 
   render() {
     const {items} = this.props;
-
     return (
       <ul className="row">
         {items.map( (item, i) => {
           return (
-            <li key={i} className="col-xs-12">
-              <h4>{item.name}</h4>
-              {item.urls.map( (url, index) => {
-                return (
-                  <p key={index}>
-                    <Link to={url.url}>{`View ${url.label}`}</Link>
-                  </p>
-                );
-              })}
-            </li>
+            <WorkListItem item={item} key={i} />
           );
         })}
       </ul>
