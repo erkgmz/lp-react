@@ -4,11 +4,11 @@ const WorkItems = [
     urls: [
       {
         url: 'http://erkgmz.github.io/pillars-of-civilization/',
-        label: 'Pillars'
+        label: 'View Pillars'
       },
       {
         url: 'https://github.com/erkgmz/pillars-of-civilization',
-        label: 'GitHub'
+        label: 'Vie on GitHub'
       }
     ]
   },
@@ -17,7 +17,7 @@ const WorkItems = [
     urls: [
       {
         url: 'http://createpurpose.org/',
-        label: 'Create Purpose'
+        label: 'View Create Purpose'
       }
     ]
   },
@@ -26,11 +26,11 @@ const WorkItems = [
     urls: [
       {
         url: 'https://ga-admissions.herokuapp.com/',
-        label: 'GA Admissions'
+        label: 'View GA Admissions'
       },
       {
         url: 'https://github.com/machever/ga_admissions_app',
-        label: 'Github'
+        label: 'View on Github'
       }
     ]
   },
@@ -39,11 +39,11 @@ const WorkItems = [
     urls: [
       {
         url: 'https://theproject.com',
-        label: 'Stud Finder'
+        label: 'View Stud Finder'
       },
       {
         url: 'https://github.com/erkgmz/stud-finder',
-        label: 'GitHub'
+        label: 'View on GitHub'
       }
     ]
   }
