@@ -97,12 +97,6 @@ body,
     transform: translateY(-50%); }
     .homePage .content-block h1 {
       font-size: 5rem; }
-    .homePage .content-block h2 {
-      display: inline-block;
-      padding: 8px;
-      border-radius: 15px 0 10px 0;
-      background-color: #FFF600;
-      color: black; }
     .homePage .content-block a {
       margin-top: 20px;
       display: inline-block;
@@ -144,12 +138,6 @@ body,
     position: absolute;
     top: 50%;
     transform: translateY(-50%); }
-    .WorkPage .wrapper h2 {
-      display: inline-block;
-      padding: 5px;
-      border-radius: 15px 0 10px 0;
-      background-color: #FFF600;
-      color: black; }
     .WorkPage .wrapper ul {
       padding: 0; }
       .WorkPage .wrapper ul li {
@@ -171,12 +159,6 @@ body,
     color: #00aced; }
   .Contact #github {
     color: #333; }
-  .Contact h2 {
-    display: inline-block;
-    padding: 8px;
-    border-radius: 15px 0 10px 0;
-    background-color: #FFF600;
-    color: black; }
   .Contact .form-group {
     text-align: right; }
     .Contact .form-group input[type="submit"] {
@@ -199,5 +181,12 @@ body,
     display: inline-block; }
   .Contact .fa-2x {
     font-size: 1.4em; }
+
+h2 {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 15px 0 10px 0;
+  background-color: #FFF600;
+  color: black; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import Image from '../common/Image';
+import Highlighter from '../common/Highlighter';
 
 import '../../stylesheets/components/_WorkPage.scss';
 
@@ -15,7 +15,7 @@ class WorkPage extends React.Component {
       // TODO: Componentize... WorkList?
       <div className="WorkPage">
         <div className="wrapper">
-          <h2>WORK</h2>
+          <Highlighter text="WORK" />
           <ul className="row">
             <li className="col-xs-12">
               <h4>Pillars</h4>

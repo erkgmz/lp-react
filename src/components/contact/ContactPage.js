@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 import React from 'react';
 import toastr from 'toastr';
 import * as $ from 'jquery';
@@ -7,9 +6,9 @@ import * as $ from 'jquery';
 import List from '../common/List';
 import SocialIcons from '../common/SocialIcons';
 import icons from '../common/Icons';
-
 import Input from '../common/Input';
 import TextArea from '../common/TextArea';
+import Highlighter from '../common/Highlighter';
 
 import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
@@ -86,7 +85,7 @@ class ContactPage extends React.Component {
     return (
       <div className="Contact">
 
-        <h2>Contact</h2>
+        <Highlighter text="CONTACT"/>
 
         <div className="form-group">
           <Input
