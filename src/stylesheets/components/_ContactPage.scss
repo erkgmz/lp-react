@@ -27,11 +27,15 @@
   .form-group {
     text-align: right;
 
-    #submit {
+    input[type="submit"] {
       color: $linkColor;
       margin-right: 15px;
       background: none;
       border: none;
+    }
+
+    .submitButton {
+      margin: 0;
     }
 
     div {

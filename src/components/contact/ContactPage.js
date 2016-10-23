@@ -8,19 +8,11 @@ import List from '../common/List';
 import SocialIcons from '../common/SocialIcons';
 import icons from '../common/Icons';
 
+import Input from '../common/Input';
+import TextArea from '../common/TextArea';
+
 import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
-
-/*
-10/22
-  TODO: Add form feedback so user is aware that message has been sent
-  1. Make Input, Textarea components
-  2. Import Link componenet handle making links
-  3. Make social icon component
-
-
-
-*/
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -96,51 +88,32 @@ class ContactPage extends React.Component {
 
         <h2>Contact</h2>
 
-        <div className="clearfix"></div>
-
-        {/* TODO: Componentize .form-group  */}
         <div className="form-group">
-          <div className="col-xs-12">
-            <input
-              className="form-control"
-              required
-              onChange={this.handleChange}
-              type="text"
-              placeholder="Name"
-              name="name"
-              id="name-input" />
-          </div>
+          <Input
+            classes="col-xs-12"
+            onChange={this.handleChange}
+            type="name"
+            name="name"
+            placeholder="Name"
+            inputClass="form-control" />
 
-          <div className="col-xs-12">
-            <input
-              className="form-control"
-              required
-              onChange={this.handleChange}
-              type="email"
-              placeholder="Email"
-              name="email"
-              id="email-input" />
-          </div>
+          <Input
+            classes="col-xs-12"
+            onChange={this.handleChange}
+            type="email"
+            name="email"
+            placeholder="Email"
+            inputClass="form-control" />
 
-          <div className="form-group col-xs-12">
-            <textarea
-              placeholder="Message"
-              onChange={this.handleChange}
-              required
-              type="text"
-              name="message"
-              className="form-control"
-              id="textarea-input"
-              rows="4">
-            </textarea>
-          </div>
+          <TextArea
+            classes="form-group col-xs-12"
+            onChange={this.handleChange} />
 
           <SocialIcons icons={icons} />
 
-          <input
+          <Input
             type="submit"
             value="SUBMIT"
-            id="submit"
             onClick={this.handleClick} />
         </div>
       </div>
