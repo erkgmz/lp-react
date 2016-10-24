@@ -10,7 +10,7 @@ import Input from '../common/Input';
 import TextArea from '../common/TextArea';
 import Highlighter from '../common/Highlighter';
 
-import 'font-awesome/css/font-awesome.css';
+// import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
 
 class ContactPage extends React.Component {
@@ -27,13 +27,24 @@ class ContactPage extends React.Component {
     this.validateData = this.validateData.bind(this);
   }
 
+  validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
   validateData(data) {
+    console.log(data);
     for(let key in data) {
       if(data[key] === '') {
-        return {valid: false, missing: key};
+        return { valid: false, message: `Please enter your ${key}` };
       }
     }
-    return {data, valid: true};
+
+    if( this.validateEmail(data.email) ) {
+      return {data, valid: true};
+    } else {
+      return { valid: false, message: 'Please eneter a correct email.' };
+    }
   }
 
   handleClick() {
@@ -42,7 +53,7 @@ class ContactPage extends React.Component {
     if( data.valid ) {
       // :`(
       data = data.data;
-      
+
       toastr.success(`Sending...`);
 
       $.ajax({
@@ -60,7 +71,7 @@ class ContactPage extends React.Component {
         }.bind(this)
       });
     } else {
-      toastr.info(`Don't forget to enter your ${data.missing}`);
+      toastr.info(data.message);
     }
   }
 

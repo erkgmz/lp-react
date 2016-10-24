@@ -23,6 +23,15 @@ body,
 #app a {
   cursor: pointer; }
 
+body #toast-container div {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+  filter: alpha(opacity=1); }
+body .toast-top-full-width {
+  top: 5rem;
+  right: 0;
+  width: 100%; }
+
 html {
   background-color: black;
   overflow: scroll; }
@@ -45,6 +54,15 @@ body,
   font-family: "Lato", sans-serif; }
 #app a {
   cursor: pointer; }
+
+body #toast-container div {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+  filter: alpha(opacity=1); }
+body .toast-top-full-width {
+  top: 5rem;
+  right: 0;
+  width: 100%; }
 
 .App {
   height: 100%;

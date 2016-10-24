@@ -9,7 +9,12 @@ const WorkListItem = ({ item }) => {
       {item.urls.map( (url, i) => {
         return (
           <p key={i}>
-            <Link to={url.url}>{url.label}</Link>
+            <a
+              href={url.url}
+              target="_blank"
+              rel="noopener noreferrer">
+              {url.label}
+            </a>
           </p>
         );
       })}
