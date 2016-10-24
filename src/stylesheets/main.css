@@ -164,8 +164,10 @@ body .toast-top-full-width {
         margin: 0 auto;
         color: black;
         border-bottom: 2px solid black; }
-        .WorkPage .wrapper ul li p a {
-          color: #e74c3c; }
+        .WorkPage .wrapper ul li p {
+          padding-left: 1rem; }
+          .WorkPage .wrapper ul li p a {
+            color: #e74c3c; }
 
 .Contact {
   top: 50%;

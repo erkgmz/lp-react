@@ -8,7 +8,7 @@ const WorkItems = [
       },
       {
         url: 'https://github.com/erkgmz/pillars-of-civilization',
-        label: 'Vie on GitHub'
+        label: 'View on GitHub'
       }
     ]
   },
