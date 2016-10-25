@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../stylesheets/components/_Highlighter.scss';
+// import '../../stylesheets/components/_Highlighter.scss';
 
 const Highlighter = ({ text }) => {
   return (

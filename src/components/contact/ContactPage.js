@@ -1,26 +1,19 @@
 /* eslint-disable no-console */
 import React from 'react';
-// import toastr from 'toastr';
 import * as $ from 'jquery';
 
-import List from '../common/List';
 import SocialIcons from '../common/SocialIcons';
 import icons from '../common/Icons';
 import Input from '../common/Input';
 import TextArea from '../common/TextArea';
 import Highlighter from '../common/Highlighter';
 
-// import 'font-awesome/css/font-awesome.css';
 // import '../../stylesheets/components/_ContactPage.scss';
 
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '', email: '', message: '' };
-
-    // toastr.options = {
-    //   positionClass: "toast-top-full-width"
-    // };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -54,8 +47,6 @@ class ContactPage extends React.Component {
       // :`(
       data = data.data;
 
-      // toastr.success(`Sending...`);
-
       $.ajax({
         type: 'POST',
         url: '/contact',
@@ -63,17 +54,15 @@ class ContactPage extends React.Component {
         dataType: 'json',
         cache: false,
         success: function(response) {
-          // toastr.clear();
-          // toastr.success('Your message has been sent.');
+          console.log('SUCCESS');
           console.log(response);
         }.bind(this),
         error: function(xhr, status, error) {
-          // toastr.error('Oops, Something went wrong. Try again later');
+          console.log('FAIL');
           console.log(error);
         }.bind(this)
       });
     } else {
-      // toastr.info(data.message);
       return console.log(`Data not valid, see errors`);
     }
   }
@@ -102,25 +91,20 @@ class ContactPage extends React.Component {
 
         <div>
           <Input
-            // classes="col-xs-12"
             onChange={this.handleChange}
             type="name"
             name="name"
             placeholder="Name"
-            // inputClass="form-control"
           />
 
           <Input
-            // classes="col-xs-12"
             onChange={this.handleChange}
             type="email"
             name="email"
             placeholder="Email"
-            // inputClass="form-control"
           />
 
           <TextArea
-            // classes="form-group col-xs-12"
             onChange={this.handleChange} />
 
           <SocialIcons icons={icons} />

@@ -10,8 +10,7 @@ const Input = ({ classes, onChange, type, name, placeholder, value, onClick, inp
         type={type}
         name={name}
         className={inputClass}
-        placeholder={placeholder}
-        required />
+        placeholder={placeholder} />
     </div>
   );
 };

@@ -22,8 +22,6 @@ const HomePage = () => {
           <Link to="/contact">CONTACT ME</Link>
         </div>
       </div>
-
-
     </div>
   );
 };

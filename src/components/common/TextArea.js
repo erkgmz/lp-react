@@ -5,11 +5,9 @@ const TextArea = ({ onChange, classes }) => {
     <div className={classes}>
       <textarea
         placeholder="Message"
-        // className="form-control"
         onChange={onChange}
         type="text"
         name="message"
-        // id="textarea-input"
         required
         rows="4">
       </textarea>

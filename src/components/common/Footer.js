@@ -6,9 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <Navigation
-        listClass="footer-nav"
-        itemClass=""
-        linkClass="" />
+        listClass="footer-nav" />
       <p>	&copy; Erik Gomez | Lorem ipsum dolor sit amet.</p>
     </footer>
   );

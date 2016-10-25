@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const WorkListItem = ({ item }) => {
-
   return (
     <li>
       <h4>{item.name}</h4>

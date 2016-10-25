@@ -6,8 +6,6 @@ const SocialIcons = ({ icons }) => {
   return (
     <List
       items={icons}
-      // listClass="col-xs-6"
-      // itemClass="col-xs-2"
       linkClass="" />
   );
 };
