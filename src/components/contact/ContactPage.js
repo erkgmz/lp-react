@@ -80,16 +80,14 @@ class ContactPage extends React.Component {
     if(event.target.name === 'name') {
       let name = event.target.value;
       this.setState({name: name});
-
     }
     if(event.target.name === 'email') {
       let email = event.target.value;
       this.setState({email: email});
-
-    } if(event.target.name === 'message') {
+    }
+    if(event.target.name === 'message') {
       let message = event.target.value;
       this.setState({message: message});
-
     }
   }
 
