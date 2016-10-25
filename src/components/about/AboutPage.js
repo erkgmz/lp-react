@@ -14,9 +14,9 @@ class AboutPage extends React.Component {
           <h2>Hello</h2>
           <Image
             src={MOBILE_IMAGE}
-            classes="col-xs-6 pull-right" />
+            classes="" />
           <p>
-            
+
           </p>
         </div>
       </div>

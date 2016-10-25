@@ -7,8 +7,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="header row">
-          <h1 className="col-xs-12">e.g.</h1>
+      <header className="header">
+          <h1>e.g.</h1>
       </header>
     );
   }

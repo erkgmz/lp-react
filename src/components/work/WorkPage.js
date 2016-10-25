@@ -5,7 +5,7 @@ import Highlighter from '../common/Highlighter';
 import WorkList from './WorkList';
 import WorkItems from './WorkItems';
 
-import '../../stylesheets/components/_WorkPage.scss';
+// import '../../stylesheets/components/_WorkPage.scss';
 
 class WorkPage extends React.Component {
   constructor(props){

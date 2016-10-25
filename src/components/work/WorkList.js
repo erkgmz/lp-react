@@ -10,7 +10,7 @@ class WorkList extends React.Component {
   render() {
     const {items} = this.props;
     return (
-      <ul className="row">
+      <ul>
         {items.map( (item, i) => {
           return (
             <WorkListItem item={item} key={i} />

@@ -11,7 +11,7 @@ const Navigation = ({listClass, itemClass, linkClass, linkOnClick}) => {
   ];
 
   return (
-    <nav className="row">
+    <nav>
       <List
         items={ITEMS}
         listClass={listClass}

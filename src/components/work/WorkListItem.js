@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const WorkListItem = ({ item }) => {
 
   return (
-    <li className="col-xs-12">
+    <li>
       <h4>{item.name}</h4>
       {item.urls.map( (url, i) => {
         return (

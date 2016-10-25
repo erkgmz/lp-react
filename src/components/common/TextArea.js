@@ -5,7 +5,7 @@ const TextArea = ({ onChange, classes }) => {
     <div className={classes}>
       <textarea
         placeholder="Message"
-        className="form-control"
+        // className="form-control"
         onChange={onChange}
         type="text"
         name="message"

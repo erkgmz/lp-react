@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import Highlighter from '../common/Highlighter';
-import '../../stylesheets/components/_HomePage.scss';
+// import '../../stylesheets/components/_HomePage.scss';
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
         <h1>WEB DEVELOPER</h1>
 
         <Highlighter text="ERIK GOMEZ"/>
-      
+
         <p>
           As the headlines above imply, my name is Erik and I'm a web developer in Bakersfield, CA.
           I'm a front-end developer, which basically means I know how to do cool things with HTML, CSS, and JavaScript.
