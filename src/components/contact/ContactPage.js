@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
+
+// I would consider loading the full jQuery library. If you link to jQuery on a CDN, loading times will be minuscule. - http://stackoverflow.com/questions/4132163/is-there-only-ajax-part-of-jquery
 import * as $ from 'jquery';
 
 import SocialIcons from '../common/SocialIcons';
@@ -33,10 +35,26 @@ class ContactPage extends React.Component {
       }
     }
 
+    // If all input fields are populated, run another check to validate email
     if( this.validateEmail(data.email) ) {
       return {data, valid: true};
     } else {
       return { valid: false, message: 'Please eneter a correct email.' };
+    }
+  }
+
+  handleChange(event) {
+    if(event.target.name === 'name') {
+      let name = event.target.value;
+      this.setState({name: name});
+    }
+    if(event.target.name === 'email') {
+      let email = event.target.value;
+      this.setState({email: email});
+    }
+    if(event.target.name === 'message') {
+      let message = event.target.value;
+      this.setState({message: message});
     }
   }
 
@@ -63,23 +81,7 @@ class ContactPage extends React.Component {
         }.bind(this)
       });
     } else {
-      return console.log(`Data not valid, see errors`);
-    }
-  }
-
-  handleChange(event) {
-    // TODO: Make this more programmatic
-    if(event.target.name === 'name') {
-      let name = event.target.value;
-      this.setState({name: name});
-    }
-    if(event.target.name === 'email') {
-      let email = event.target.value;
-      this.setState({email: email});
-    }
-    if(event.target.name === 'message') {
-      let message = event.target.value;
-      this.setState({message: message});
+      return console.log(`Data not valid: ${data.message}`);
     }
   }
 
@@ -90,24 +92,24 @@ class ContactPage extends React.Component {
         <Highlighter text="CONTACT"/>
 
         <div>
+          {/* Add refs to inputs  */}
           <Input
             onChange={this.handleChange}
             type="name"
             name="name"
-            placeholder="Name"
-          />
+            placeholder="Name" />
 
           <Input
             onChange={this.handleChange}
             type="email"
             name="email"
-            placeholder="Email"
-          />
+            placeholder="Email" />
 
           <TextArea
             onChange={this.handleChange} />
 
-          <SocialIcons icons={icons} />
+          <SocialIcons
+            icons={icons} />
 
           <Input
             type="submit"

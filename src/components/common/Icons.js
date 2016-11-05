@@ -1,5 +1,5 @@
 import React from 'react';
-// IMPORT MATERIAL ICONS HERE??
+// IMPORT MATERIAL 
 
 const icons = [
   {
