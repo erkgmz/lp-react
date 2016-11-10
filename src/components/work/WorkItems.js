@@ -1,52 +1,31 @@
-const WorkItems = [
-  {
-    name: 'Pillars',
-    urls: [
-      {
-        url: 'http://erkgmz.github.io/pillars-of-civilization/',
-        label: 'View Pillars'
-      },
-      {
-        url: 'https://github.com/erkgmz/pillars-of-civilization',
-        label: 'View on GitHub'
-      }
-    ]
-  },
-  {
-    name: 'Create Purpose',
-    urls: [
-      {
-        url: 'http://createpurpose.org/',
-        label: 'View Create Purpose'
-      }
-    ]
-  },
-  {
-    name: 'General Assembly Admissions',
-    urls: [
-      {
-        url: 'https://ga-admissions.herokuapp.com/',
-        label: 'View GA Admissions'
-      },
-      {
-        url: 'https://github.com/machever/ga_admissions_app',
-        label: 'View on Github'
-      }
-    ]
-  },
-  {
-    name: 'Stud Finder',
-    urls: [
-      {
-        url: 'https://theproject.com',
-        label: 'View Stud Finder'
-      },
-      {
-        url: 'https://github.com/erkgmz/stud-finder',
-        label: 'View on GitHub'
-      }
-    ]
-  }
-];
+import React from 'react';
+
+import WorkItem from './WorkItem';
+
+const WorkItems = () => {
+  return (
+    <ul>
+      <WorkItem
+        name="STUD FINDER"
+        thumb="#"
+        linkToPage="#" />
+
+      <WorkItem
+        name="GA ADMISSIONS"
+        thumb="#"
+        linkToPage="#" />
+
+      <WorkItem
+        name="PERSONAL SITE"
+        thumb="#"
+        linkToPage="#" />
+
+      <WorkItem
+        name="CREATE PURPOSE"
+        thumb="#"
+        linkToPage="#" />
+    </ul>
+  );
+};
 
 export default WorkItems;

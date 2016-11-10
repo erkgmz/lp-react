@@ -1,27 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router';
 
-import Highlighter from '../common/Highlighter';
-import WorkList from './WorkList';
+import Headline from '../common/Headline';
+import Byline from '../common/Byline';
 import WorkItems from './WorkItems';
 
-// import '../../stylesheets/components/_WorkPage.scss';
-
-class WorkPage extends React.Component {
-  constructor(props){
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="WorkPage">
-        <div className="wrapper">
-          <Highlighter text="WORK" />
-          <WorkList items={WorkItems} />
-        </div>
-      </div>
-    );
-  }
-}
+const WorkPage = () => {
+  return (
+    <article>
+      <Headline text="Portfolio" />
+      <Byline text="I design & develop responsive apps & websites" />
+      <WorkItems />
+    </article>
+  );
+};
 
 export default WorkPage;

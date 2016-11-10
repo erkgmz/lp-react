@@ -1,17 +1,11 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <header className="header">
-          <h1>e.g.</h1>
-      </header>
-    );
-  }
-}
+const Header = () => {
+  return (
+    <div>
+      <h1>EG</h1>
+    </div>
+  );
+};
 
 export default Header;

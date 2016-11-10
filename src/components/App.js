@@ -1,10 +1,11 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
-import Navigation from './common/Navigation';
+import Navigation from './navigation/Navigation';
 
-import '../../node_modules/font-awesome/css/font-awesome.css';
-// import '../../node_modules/toastr/build/toastr.min.css';
-// import '../stylesheets/components/_App.scss';
+/***************
+TODO: Check to make sure form data is sending correctly before
+removing dead code: .components/, .routes.js
+****************/
 
 class App extends React.Component {
   constructor(props) {
@@ -13,14 +14,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Header />
         {this.props.children}
-        <Navigation
-          listClass=""
-          itemClass=""
-          linkClass=""
-        />
+        <Navigation />
       </div>
     );
   }

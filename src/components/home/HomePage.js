@@ -1,23 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router';
 
-import Highlighter from '../common/Highlighter';
-// import '../../stylesheets/components/_HomePage.scss';
+import Headline from '../common/Headline';
+import Byline from '../common/Byline';
+import CopyBlock from './CopyBlock';
 
 const HomePage = () => {
   return (
-    <div>
-      <div>
-        <h1>WEB DEVELOPER</h1>
-        <h2>Erik Gomez</h2>
-        <p>
-          As the headlines above imply, my name is Erik and I'm a web developer in Bakersfield, CA.
-          I'm a front-end developer, which basically means I know how to do cool things with HTML, CSS, and JavaScript.
-          I have primarily made projects using Angularjs but have recently switched to Reactjs and I have been loving it!
-        </p>
-        <Link to="/contact">CONTACT ME</Link>
-      </div>
-    </div>
+    <article>
+      <Headline text="Erik Gomez" />
+      <Byline text="Front end developer in Bakersfield, Ca" />
+      <CopyBlock />
+    </article>
   );
 };
 
