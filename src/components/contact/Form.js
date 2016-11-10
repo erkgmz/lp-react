@@ -16,7 +16,7 @@ class Form extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.allFieldsAreValid = this.allFieldsAreValid.bind(this);
+    this.formIsValid = this.formIsValid.bind(this);
   }
 
   inputsAreValid() {
@@ -24,8 +24,8 @@ class Form extends Component {
     let user = {name, email, message};
 
     for(let key in user) {
-      if(this.state[key] === '') {
-        this.setState({error: `You need to enter your ${key}`});
+      if(user[key] === '') {
+        this.setState({error: `You cant leave ${key} field empty!`});
         return false;
       }
     }
@@ -34,15 +34,17 @@ class Form extends Component {
 
   emailIsValid() {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if( re.test(this.state.email) ) {
+    let {email} = this.state;
+
+    if( re.test(email) ) {
       return true;
     } else {
-      this.setState({error: 'Check your email'});
+      this.setState({error: `Hmm, seems like '${email}' is not a valid email. Try again (example: youremail@website.com)`});
       return false;
     }
   }
 
-  allFieldsAreValid() {
+  formIsValid() {
     if( this.inputsAreValid() && this.emailIsValid() ) {
     return true;
     } else {
@@ -61,12 +63,13 @@ class Form extends Component {
       this.setState({message: event.target.value});
     }
 
-    this.allFieldsAreValid();
+    // checking form validation in preperation for send
+    this.formIsValid();
   }
 
   handleClick(event) {
     event.preventDefault();
-    if( this.allFieldsAreValid() ){
+    if( this.formIsValid() ){
       let {name, email, message} = this.state;
       let user = {name, email, message};
       $.ajax({
