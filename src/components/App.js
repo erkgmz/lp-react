@@ -2,11 +2,6 @@ import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import Navigation from './navigation/Navigation';
 
-/***************
-TODO: Check to make sure form data is sending correctly before
-removing dead code: .components/, .routes.js
-****************/
-
 class App extends React.Component {
   constructor(props) {
     super(props);
