@@ -17,7 +17,7 @@ TextInput.propTypes = {
   label: React.PropTypes.string.isRequired,
   type: React.PropTypes.string.isRequired,
   value: React.PropTypes.string,
-  onChange: React.PropTypes.func.isRequired,
+  onChange: React.PropTypes.func.isRequired
 };
 
 export default TextInput;

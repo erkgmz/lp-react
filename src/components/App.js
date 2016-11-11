@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import Navigation from './navigation/Navigation';
+import styleable from 'react-styleable';
+
+import css from '../css/sass/components/_app.scss'; // eslint-disable-line
 
 class App extends React.Component {
   constructor(props) {

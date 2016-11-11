@@ -1,0 +1,60 @@
+// WEBPACK - explicit import required for access to variables
+@import 'config';
+@import "normalize.css/normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-font-size;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $theme-text;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $theme-light;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: $headline;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: $subheader;
+  }
+
+  header {
+    background-color: $theme-dark;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: $theme-medium;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: .5rem 0;
+
+      li {
+        list-style: none;
+        margin: auto;
+      }
+    }
+  }
+}

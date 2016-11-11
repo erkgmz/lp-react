@@ -3,10 +3,13 @@ import React from 'react';
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
 import CopyBlock from './CopyBlock';
+import styleable from 'react-styleable';
 
-const HomePage = () => {
+import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
+
+const HomePage = (props) => {
   return (
-    <article>
+    <article className={props.css.homepage}>
       <Headline text="Erik Gomez" />
       <Byline text="Front end developer in Bakersfield, Ca" />
       <CopyBlock />
@@ -14,4 +17,8 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default styleable(css)(HomePage);
+
+HomePage.propTypes = {
+  css: React.PropTypes.object
+};

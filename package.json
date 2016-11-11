@@ -8,7 +8,7 @@
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "sass": "sass src/stylesheets/main.scss:src/stylesheets/main.css",
+    "sass": "sass src/css/sass/input.scss:src/css/output.css",
     "sass:watch": "npm run sass -- --watch"
   },
   "dependencies": {
@@ -47,9 +47,12 @@
     "file-loader": "0.8.5",
     "html-loader": "^0.4.4",
     "node-sass": "^3.10.1",
+    "normalize.css": "^5.0.0",
     "npm-run-all": "1.8.0",
     "open": "0.0.5",
     "react-addons-test-utils": "15.0.2",
+    "react-styleable": "^2.2.4",
+    "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
