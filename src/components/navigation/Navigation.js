@@ -1,12 +1,19 @@
 import React from 'react';
 import NavigationItems from './NavigationItems';
+import styleable from 'react-styleable';
 
-const Navigation = () => {
+import css from '../../css/sass/components/_navigation.scss';// eslint-disable-line
+
+const Navigation = ({css}) => {
   return (
-    <nav>
+    <nav className={css.navigation}>
       <NavigationItems />
     </nav>
   );
 };
 
-export default Navigation;
+export default styleable(css)(Navigation);
+
+Navigation.propTypes = {
+  css: React.PropTypes.object
+};

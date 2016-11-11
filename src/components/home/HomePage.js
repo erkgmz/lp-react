@@ -7,9 +7,9 @@ import styleable from 'react-styleable';
 
 import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
 
-const HomePage = (props) => {
+const HomePage = ({css}) => {
   return (
-    <article className={props.css.homepage}>
+    <article className={css.homepage}>
       <Headline text="Erik Gomez" />
       <Byline text="Front end developer in Bakersfield, Ca" />
       <CopyBlock />

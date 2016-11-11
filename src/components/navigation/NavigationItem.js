@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-const NavigationItem = ({ text, pageUri, logo }) => {
+const NavigationItem = ({ text, url, fontAwesome }) => {
   return (
     <li>
-      <Link to={pageUri}>
-        <img src={logo} />
+      <Link to={url}>
+        <i className={fontAwesome} aria-hidden="true"></i>
         <p>{text}</p>
       </Link>
     </li>
@@ -14,8 +14,8 @@ const NavigationItem = ({ text, pageUri, logo }) => {
 
 NavigationItem.propTypes = {
   text: React.PropTypes.string.isRequired,
-  pageUri: React.PropTypes.string.isRequired,
-  logo: React.PropTypes.string.isRequired
+  url: React.PropTypes.string.isRequired,
+  fontAwesome: React.PropTypes.string.isRequired
 };
 
 export default NavigationItem;

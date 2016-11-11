@@ -6,18 +6,18 @@ const NavigationItems = () => {
     <ul>
       <NavigationItem
         text="HOME"
-        pageUri="/"
-        logo="#" />
+        url="/"
+        fontAwesome="fa fa-home" />
 
       <NavigationItem
         text="WORK"
-        pageUri="/work"
-        logo="#" />
+        url="/work"
+        fontAwesome="fa fa-briefcase" />
 
       <NavigationItem
         text="CONTACT"
-        pageUri="/contact"
-        logo="#" />
+        url="/contact"
+        fontAwesome="fa fa-comments" />
     </ul>
   );
 };

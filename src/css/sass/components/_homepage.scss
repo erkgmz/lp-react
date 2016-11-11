@@ -1,19 +1,17 @@
-// WEBPACK - explicit import required for access to variables
-// @import 'config';
-//
-// .homepage {
-//   background-color: white;
-//   color: blue;
-//
-//   h1 {
-//     color: lime;
-//   }
-//
-//   h2 {
-//     color: lime;
-//   }
-//
-//   p {
-//     color: lime;
-//   }
-// }
+@import 'config';
+
+.homepage {
+  // padding: 0 2.2rem;
+
+  h1 {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin: 3.5rem auto 0;
+  }
+}

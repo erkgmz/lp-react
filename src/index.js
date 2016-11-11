@@ -6,7 +6,5 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
 // props are passed down to App.js from here
-render(
-  <Router history={browserHistory} routes={routes} />,
-  document.getElementById('app')
-);
+let root = document.getElementById('app');
+render(<Router history={browserHistory} routes={routes} />, root);

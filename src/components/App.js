@@ -4,25 +4,21 @@ import Navigation from './navigation/Navigation';
 import styleable from 'react-styleable';
 
 import css from '../css/sass/components/_app.scss'; // eslint-disable-line
+import 'font-awesome/css/font-awesome.min.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-        {this.props.children}
-        <Navigation />
-      </div>
-    );
-  }
-}
-
-App.propTypes = {
-  children: PropTypes.object.isRequired
+const App = ({css, children}) => {
+  return (
+    <div className={css.wrapper}>
+      <Header />
+      {children}
+      <Navigation />
+    </div>
+  );
 };
 
-export default App;
+App.propTypes = {
+  children: React.PropTypes.object.isRequired,
+  css: React.PropTypes.object
+};
+
+export default styleable(css)(App);
