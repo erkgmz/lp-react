@@ -112,6 +112,7 @@ class Form extends Component {
           <textarea
             type="text"
             name="message"
+            rows="3"
             value={this.state.message}
             onChange={this.handleChange}>
           </textarea>

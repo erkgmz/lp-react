@@ -3,7 +3,10 @@ import React from 'react';
 const WorkItem = ({ name, img, link, altText }) => {
   return (
     <li>
-      <a href={link}>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer">
         <img
           src={img}
           alt={altText} />

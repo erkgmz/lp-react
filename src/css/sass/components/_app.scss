@@ -68,6 +68,10 @@ body {
     cursor: pointer;
   }
 
+  li {
+    list-style: none;
+  }
+
   article,
   header {
     padding: 0 2.2rem;

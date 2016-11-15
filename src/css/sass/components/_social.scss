@@ -1,0 +1,18 @@
+@import './config';
+
+.social {
+  padding: 0;
+  display: inline-flex;
+
+  li {
+    margin: 0 1rem;
+
+    a {
+      color: $theme-text;
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

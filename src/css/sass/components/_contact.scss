@@ -1,0 +1,39 @@
+@import './config';
+
+/*
+TODO:
+Refactor all fixed dimensions to utilize flexbox.
+*/
+
+.contact {
+
+  form {
+    margin: 2rem auto 0;
+
+    input {
+      height: 3rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $theme-text;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      outline: none;
+      color: $theme-text;
+    }
+
+    input[type="submit"] {
+      font-size: 1.3rem;
+      display: block;
+      background-color: $theme-accent;
+      border: none;
+      padding: .6rem;
+      margin: 1rem auto 0;
+      cursor: pointer;
+    }
+  }
+}

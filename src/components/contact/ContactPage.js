@@ -5,15 +5,18 @@ import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import Form from './Form';
 
+import styleable from 'react-styleable';
+import css from '../../css/sass/components/_contact.scss'; // eslint-disable-line
+
 const ContactPage = () => {
   return (
-    <article>
-      <Headline text="CONTACT ME"/>
+    <article className={css.contact}>
+      <Headline text="CONTACT"/>
       <Byline text="Have a question? Great! I want to hear from you." />
-      <SocialIcons />
       <Form />
+      <SocialIcons />
     </article>
   );
 };
 
-export default ContactPage;
+export default styleable(css)(ContactPage);

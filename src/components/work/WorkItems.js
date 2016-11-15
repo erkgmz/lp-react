@@ -13,7 +13,7 @@ const WorkItems = () => {
       <WorkItem
         name="ERIKGOMEZ.CO"
         img={personalPage}
-        alt="Erik Gomez cover image"
+        alt="erikgomez.co cover image"
         link="https://erikgomez.co/" />
 
       <WorkItem

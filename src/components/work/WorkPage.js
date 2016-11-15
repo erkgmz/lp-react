@@ -15,7 +15,10 @@ const WorkPage = () => {
       <p>
         Want to learn about how I used React.js to build this page?
         &nbsp;
-        <a href="https://github.com/erkgmz/lp-react">
+        <a
+          href="https://github.com/erkgmz/lp-react"
+          target="_blank"
+          rel="noopener noreferrer">
           Checkout the project repo on GitHub
         </a>
       </p>

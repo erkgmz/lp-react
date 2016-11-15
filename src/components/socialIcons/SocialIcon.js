@@ -1,12 +1,13 @@
 import React from 'react';
 
-const SocialIcon = ({ socialLink, alt, logo }) => {
+const SocialIcon = ({ socialLink, fontAwesomeClass }) => {
   return (
     <li>
       <a href={socialLink}>
-        <img
-          src={logo}
-          alt={alt} />
+        <i
+          className={fontAwesomeClass}
+          aria-hidden="true">
+        </i>
       </a>
     </li>
   );
@@ -14,8 +15,7 @@ const SocialIcon = ({ socialLink, alt, logo }) => {
 
 SocialIcon.propTypes = {
   socialLink: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string.isRequired,
-  logo: React.PropTypes.string.isRequired
+  fontAwesomeClass: React.PropTypes.string.isRequired
 };
 
 export default SocialIcon;
