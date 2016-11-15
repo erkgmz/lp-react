@@ -1,13 +1,13 @@
 import React from 'react';
 
-const WorkItem = ({ name, thumb, linkToPage }) => {
+const WorkItem = ({ name, img, link, altText }) => {
   return (
     <li>
-      <a href={linkToPage}>
+      <a href={link}>
         <img
-          src={thumb}
-          alt="Some string" />
-        <h4>{name}</h4>
+          src={img}
+          alt={altText} />
+        <p>{name}</p>
       </a>
     </li>
   );
@@ -15,8 +15,9 @@ const WorkItem = ({ name, thumb, linkToPage }) => {
 
 WorkItem.propTypes = {
   name: React.PropTypes.string.isRequired,
-  thumb: React.PropTypes.string.isRequired,
-  linkToPage: React.PropTypes.string.isRequired
+  img: React.PropTypes.string.isRequired,
+  link: React.PropTypes.string.isRequired,
+  altText: React.PropTypes.string
 };
 
 export default WorkItem;

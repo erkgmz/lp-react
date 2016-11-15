@@ -12,7 +12,8 @@
 html {
   font-size: 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.8);
+  overflow: hidden; }
 
 html,
 body {
@@ -20,13 +21,12 @@ body {
 
 body {
   background-color: #90A4AE;
-  overflow: auto;
-  z-index: 1; }
+  overflow: auto; }
 
 .wrapper {
   min-height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   justify-content: center; }
   .wrapper h1,
   .wrapper h2,
@@ -42,10 +42,16 @@ body {
     font-size: 5rem; }
   .wrapper h2 {
     font-size: 2.5rem; }
+  .wrapper p {
+    line-height: 1.7rem; }
   .wrapper p,
   .wrapper a {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8); }
+  .wrapper a {
+    text-decoration: none;
+    cursor: pointer; }
   .wrapper article,
   .wrapper header {
     padding: 0 2.2rem; }
@@ -57,8 +63,7 @@ body {
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
 
 /* Font Sizes */
 /* HEADLINE Sizes */
@@ -68,6 +73,7 @@ body {
 .homepage h2 {
   margin: 0; }
 .homepage p {
+  font-size: 1.3rem;
   margin: 3.5rem auto 0; }
 
 /*# sourceMappingURL=output.css.map */

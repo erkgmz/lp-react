@@ -11,6 +11,7 @@ html {
   font-size: $root-font-size;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $theme-text;
+  overflow: hidden;
 }
 
 html,
@@ -26,7 +27,7 @@ body {
 .wrapper {
   min-height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   justify-content: center;
 
   h1,
@@ -51,10 +52,20 @@ body {
     font-size: $subheader;
   }
 
+  p {
+    line-height: 1.7rem;
+  }
+
   p,
   a {
     font-family: 'Roboto', sans-serif;
     font-size: $font-size-sm;
+    color: $theme-text;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
   }
 
   article,
@@ -69,5 +80,4 @@ body {
   nav {
     background-color: $theme-medium;
   }
-
 }

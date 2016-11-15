@@ -1,0 +1,31 @@
+@import './config';
+
+.workpage {
+  margin: 7.5rem auto;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 1rem auto;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $theme-accent;
+
+        img {
+          max-width: 100%;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
