@@ -13,18 +13,20 @@ const WorkItems = () => {
       <WorkItem
         name="ERIKGOMEZ.CO"
         img={personalPage}
+        alt="Erik Gomez cover image"
         link="https://erikgomez.co/" />
 
       <WorkItem
         name="GA ADMISSIONS"
         img={generalAssembly}
+        alt="General Assembly logo"
         link="https://ga-admissions.herokuapp.com/" />
-      
+
       <WorkItem
         name="STUD FINDER"
         img={courseWalkers}
+        alt="Course Walkers logo"
         link="http://course-walkers.herokuapp.com/" />
-
       </ul>
   );
 };

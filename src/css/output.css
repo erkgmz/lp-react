@@ -47,7 +47,7 @@ body {
   .wrapper p,
   .wrapper a {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.8); }
   .wrapper a {
     text-decoration: none;
@@ -73,7 +73,6 @@ body {
 .homepage h2 {
   margin: 0; }
 .homepage p {
-  font-size: 1.3rem;
   margin: 3.5rem auto 0; }
 
 /*# sourceMappingURL=output.css.map */
