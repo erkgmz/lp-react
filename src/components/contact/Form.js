@@ -12,12 +12,23 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-      error: 'Please enter your name.'
+      error: 'Please enter your name.',
+      sending: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.formIsValid = this.formIsValid.bind(this);
+    this.clearState = this.clearState.bind(this);
+  }
+
+  clearState() {
+    this.setState({
+      name: '',
+      email: '',
+      message: '',
+      sending: false
+    });
   }
 
   inputsAreValid() {
@@ -26,7 +37,7 @@ class Form extends Component {
 
     for(let key in user) {
       if(user[key] === '') {
-        this.setState({error: `You cant leave ${key} field empty!`});
+        this.setState({error: `You cant leave ${key} field empty.`});
         return false;
       }
     }
@@ -63,7 +74,6 @@ class Form extends Component {
     if(event.target.name === 'message') {
       this.setState({message: event.target.value});
     }
-
     // checking form validation in preperation for send
     this.formIsValid();
   }
@@ -71,6 +81,7 @@ class Form extends Component {
   handleClick(event) {
     event.preventDefault();
     if( this.formIsValid() ){
+      this.setState({sending: true});
       let {name, email, message} = this.state;
       let user = {name, email, message};
       $.ajax({
@@ -80,9 +91,11 @@ class Form extends Component {
         dataType: 'json',
         cache: false,
         success: function(response) {
+          this.clearState();
           console.log(response);
         }.bind(this),
         error: function(xhr, status, error) {
+          this.clearState();
           console.error(error);
         }.bind(this)
       });
@@ -108,7 +121,8 @@ class Form extends Component {
           value={this.state.email}
           onChange={this.handleChange} />
 
-        <label htmlFor="message">Message
+        <label htmlFor="message">
+          Message
           <textarea
             type="text"
             name="message"
@@ -120,7 +134,7 @@ class Form extends Component {
 
         <input
           type="submit"
-          value="Send"
+          value={this.state.sending ? 'Sending...' : 'Send'}
           onClick={this.handleClick} />
       </form>
     );
