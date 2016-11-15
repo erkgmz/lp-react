@@ -14,6 +14,7 @@ const WorkPage = () => {
       <Byline text="I design & develop responsive apps & websites" />
       <p>
         Want to learn about how I used React.js to build this page?
+        &nbsp;
         <a href="https://github.com/erkgmz/lp-react">
           Checkout the project repo on GitHub
         </a>
