@@ -1,11 +1,19 @@
 import React from 'react';
+import styleable from 'react-styleable';
 
-const Header = () => {
+import css from '../../css/sass/components/_header.scss'; // eslint-disable-line
+
+const Header = ({css}) => {
   return (
-    <header>
+    <header
+      className={css.header}>
       <h1>EG</h1>
     </header>
   );
 };
 
-export default Header;
+export default styleable(css)(Header);
+
+Header.propTypes = {
+  css: React.PropTypes.object
+};

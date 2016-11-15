@@ -20,10 +20,11 @@ body {
 
 body {
   background-color: #90A4AE;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 1; }
 
 .wrapper {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center; }
@@ -31,29 +32,33 @@ body {
   .wrapper h2,
   .wrapper h3,
   .wrapper h4 {
-    font-family: 'Roboto Slab', serif; }
+    font-family: 'Roboto Slab', serif;
+    margin: 0; }
   .wrapper h2,
   .wrapper h3,
   .wrapper h4 {
     font-weight: 400; }
   .wrapper h1 {
-    font-size: 5rem;
-    margin-top: 0; }
+    font-size: 5rem; }
   .wrapper h2 {
     font-size: 2.5rem; }
   .wrapper p,
   .wrapper a {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem; }
-  .wrapper article {
+  .wrapper article,
+  .wrapper header {
     padding: 0 2.2rem; }
   .wrapper header {
-    background-color: #37474F;
-    position: fixed;
-    top: 0;
-    width: 100%; }
+    background-color: #37474F; }
   .wrapper nav {
     background-color: #607D8B; }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
 
 /* Font Sizes */
 /* HEADLINE Sizes */
