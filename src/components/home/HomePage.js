@@ -8,7 +8,7 @@ import styleable from 'react-styleable';
 
 import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
 
-const HomePage = ({css}) => {
+const HomePage = () => {
   return (
     <article className={css.homepage}>
       <Headline text="Erik Gomez" />

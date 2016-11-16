@@ -24,11 +24,42 @@ body {
   overflow: auto;
 }
 
+header {
+  background-color: $theme-dark;
+}
+
+header,
+article {
+  padding: 0 1rem;
+}
+
+nav {
+  background-color: $theme-medium;
+}
+
+/*
+ * NOTE:
+ *  Since the header and navigation are fixed at the top & bottom, respectively, we will not treat them as
+ *  flex items. We wanted to provide a native experience and did not want to use the hamburger button on mobile.
+ *  Currently, flexbox does not support absolutely positioned elements.
+ *  http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element
+ *  Because of this, we will set the height of the .wrapper, set a column layout on .wrapper since the
+ *   view will not be absolutely positioned, and leverage flexbox to vertically center our content!
+ */
+
 .wrapper {
   min-height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
+
+  h1 {
+    font-size: $headline;
+  }
+
+  h2 {
+    font-size: $subheader;
+  }
 
   h1,
   h2,
@@ -44,44 +75,26 @@ body {
     font-weight: 400;
   }
 
-  h1 {
-    font-size: $headline;
-  }
-
-  h2 {
-    font-size: $subheader;
-  }
-
-  p {
-    line-height: 1.7rem;
-  }
-
   p,
   a {
+    line-height: 1.7rem;
     font-family: 'Roboto', sans-serif;
-    font-size: $font-size-sm;
-    color: $theme-text;
   }
 
   a {
     text-decoration: none;
     cursor: pointer;
+    color: $theme-text;
+  }
+
+  p,
+  a,
+  input,
+  textarea {
+    font-size: $font-size-sm;
   }
 
   li {
     list-style: none;
-  }
-
-  article,
-  header {
-    padding: 0 2.2rem;
-  }
-
-  header {
-    background-color: $theme-dark;
-  }
-
-  nav {
-    background-color: $theme-medium;
   }
 }

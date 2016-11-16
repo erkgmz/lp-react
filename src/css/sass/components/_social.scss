@@ -2,16 +2,15 @@
 
 .social {
   padding: 0;
-  display: inline-flex;
+  display: flex;
 
   li {
-    margin: 0 1rem;
+    flex: 0 0 5rem;
 
     a {
-      color: $theme-text;
 
       i {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
   }

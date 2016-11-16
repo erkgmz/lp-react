@@ -1,37 +1,35 @@
 @import 'config';
 
+/*
+ * NOTE:
+ * Specs do not allow a flex item here since the header will be fixed to the top of the browser window.
+ */
+
 .navigation {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 2;
 
   ul {
     padding: 0;
-    margin: 0;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-around;
 
     li {
-      list-style: none;
-      flex-grow: 1;
+      width: 32%;
 
       a {
-        color: $theme-text;
-        text-decoration: none;
         display: flex;
-        flex-direction: column;
+        flex-flow: column nowrap;
         align-items: center;
 
         i {
           font-size: 2.4rem;
-          margin: .8rem auto;
         }
 
         p {
-          margin: 0 auto .6rem;
-
+          margin: 0 auto;
         }
       }
     }

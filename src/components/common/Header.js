@@ -3,7 +3,7 @@ import styleable from 'react-styleable';
 
 import css from '../../css/sass/components/_header.scss'; // eslint-disable-line
 
-const Header = ({css}) => {
+const Header = () => {
   return (
     <header
       className={css.header}>

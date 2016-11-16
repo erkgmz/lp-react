@@ -1,51 +1,56 @@
 @import './config';
 
 .workpage {
-  margin: 7.5rem auto;
+  margin: 9rem auto 7.5rem;
 
   a {
-    margin: 1rem auto 0;
     text-decoration: underline;
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
     li {
-      list-style: none;
-      margin: 1rem;
+      margin: 1rem auto;
+      flex: 0 1 32rem;
+      align-items: flex-start;
 
       a {
         text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background-color: $theme-accent;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
 
         img {
           width: 100%;
-          max-width: 300px;
         }
 
         p {
-          font-size: 1.6rem;
+          margin: .8rem auto;
         }
       }
     }
   }
 
-  @media(min-width: 1024px) {
-    ul {
-      flex-flow: row wrap;
-      justify-content: space-around;
+  // @media(min-width: 1024px) {
+  /*
 
-      li {
-        margin: auto 1rem;
+  Give .workpage a max width and center it in larger viewports
+  there should be empty space around .wrapper element
 
-      }
-    }
-  }
+  */
+  //   ul {
+  //     flex-flow: row wrap;
+  //     justify-content: space-around;
+  //
+  //     li {
+  //       margin: auto 1rem;
+  //
+  //     }
+  //   }
+  // }
 }

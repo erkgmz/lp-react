@@ -1,3 +1,8 @@
+/*
+ * NOTE:
+ * Specs do not allow a flex item here since the header will be fixed to the top of the browser window.
+ */
+
 .header {
   position: fixed;
   top: 0;

@@ -23,11 +23,34 @@ body {
   background-color: #90A4AE;
   overflow: auto; }
 
+header {
+  background-color: #37474F; }
+
+header,
+article {
+  padding: 0 1rem; }
+
+nav {
+  background-color: #607D8B; }
+
+/*
+ * NOTE:
+ *  Since the header and navigation are fixed at the top & bottom, respectively, we will not treat them as
+ *  flex items. We wanted to provide a native experience and did not want to use the hamburger button on mobile.
+ *  Currently, flexbox does not support absolutely positioned elements.
+ *  http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element
+ *  Because of this, we will set the height of the .wrapper, set a column layout on .wrapper since the
+ *   view will not be absolutely positioned, and leverage flexbox to vertically center our content!
+ */
 .wrapper {
   min-height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center; }
+  .wrapper h1 {
+    font-size: 5rem; }
+  .wrapper h2 {
+    font-size: 2.5rem; }
   .wrapper h1,
   .wrapper h2,
   .wrapper h3,
@@ -38,30 +61,26 @@ body {
   .wrapper h3,
   .wrapper h4 {
     font-weight: 400; }
-  .wrapper h1 {
-    font-size: 5rem; }
-  .wrapper h2 {
-    font-size: 2.5rem; }
-  .wrapper p {
-    line-height: 1.7rem; }
   .wrapper p,
   .wrapper a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.8); }
+    line-height: 1.7rem;
+    font-family: 'Roboto', sans-serif; }
   .wrapper a {
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8); }
+  .wrapper p,
+  .wrapper a,
+  .wrapper input,
+  .wrapper textarea {
+    font-size: 1.3rem; }
   .wrapper li {
     list-style: none; }
-  .wrapper article,
-  .wrapper header {
-    padding: 0 2.2rem; }
-  .wrapper header {
-    background-color: #37474F; }
-  .wrapper nav {
-    background-color: #607D8B; }
 
+/*
+ * NOTE:
+ * Specs do not allow a flex item here since the header will be fixed to the top of the browser window.
+ */
 .header {
   position: fixed;
   top: 0;
@@ -70,45 +89,99 @@ body {
 /* Font Sizes */
 /* HEADLINE Sizes */
 /* Theme Color Palette */
-.homepage h1 {
-  margin: 0; }
-.homepage h2 {
-  margin: 0; }
-.homepage p {
-  margin: 3.5rem auto 0; }
-
 /* Font Sizes */
 /* HEADLINE Sizes */
 /* Theme Color Palette */
 .workpage {
-  margin: 7.5rem auto; }
+  margin: 9rem auto 7.5rem;
+  /*
+
+  Give .workpage a max width and center it in larger viewports
+  there should be empty space around .wrapper element
+
+  */ }
   .workpage a {
-    margin: 1rem auto 0;
     text-decoration: underline; }
   .workpage ul {
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0; }
+    flex-flow: row wrap;
+    justify-content: center; }
     .workpage ul li {
-      list-style: none;
-      margin: 1rem; }
+      margin: 1rem auto;
+      flex: 0 1 32rem;
+      align-items: flex-start; }
       .workpage ul li a {
         text-decoration: none;
+        background-color: #FF3D00;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #FF3D00; }
+        flex-flow: column nowrap;
+        align-items: center; }
         .workpage ul li a img {
-          width: 100%;
-          max-width: 300px; }
+          width: 100%; }
         .workpage ul li a p {
-          font-size: 1.6rem; }
-  @media (min-width: 1024px) {
-    .workpage ul {
-      flex-flow: row wrap;
-      justify-content: space-around; }
-      .workpage ul li {
-        margin: auto 1rem; } }
+          margin: .8rem auto; }
+
+/* Font Sizes */
+/* HEADLINE Sizes */
+/* Theme Color Palette */
+.contact form {
+  margin: 2rem auto 0;
+  display: flex;
+  flex-flow: column nowrap; }
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8); }
+  .contact form input[type="submit"] {
+    display: block;
+    background-color: #FF3D00;
+    border: none;
+    padding: .6rem;
+    margin: 0 auto;
+    cursor: pointer; }
+
+/* Font Sizes */
+/* HEADLINE Sizes */
+/* Theme Color Palette */
+/*
+ * NOTE:
+ * Specs do not allow a flex item here since the header will be fixed to the top of the browser window.
+ */
+.navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  .navigation ul {
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+    .navigation ul li {
+      width: 32%; }
+      .navigation ul li a {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center; }
+        .navigation ul li a i {
+          font-size: 2.4rem; }
+        .navigation ul li a p {
+          margin: 0 auto; }
+
+/* Font Sizes */
+/* HEADLINE Sizes */
+/* Theme Color Palette */
+.social {
+  padding: 0;
+  display: flex; }
+  .social li {
+    flex: 0 0 5rem; }
+    .social li a i {
+      font-size: 2rem; }
 
 /*# sourceMappingURL=output.css.map */
