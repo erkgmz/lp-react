@@ -1,15 +1,18 @@
-// BREAKPOINTS?
-
+/* BREAKPOINTS */
+$breakpoint-mobile: 550px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 /* Font Sizes */
 $root-font-size: 10px;
-$font-size-sm: 1.3rem;
-$font-size-md: 1.4rem;
-$font-size-lg: 1.6rem;
+$font-size-sm: 1.4rem;
+$font-size-lg: 1.8rem;
 
 /* HEADLINE Sizes */
 $headline: 5rem;
+$headline-lg: 6.5rem;
 $subheader: 2.5rem;
+$subheader-lg: 3rem;
 
 /* Theme Color Palette */
 $theme-dark: #37474F;

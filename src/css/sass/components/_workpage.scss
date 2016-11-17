@@ -1,7 +1,9 @@
 @import './config';
 
 .workpage {
-  margin: 9rem auto 7.5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin: auto;
 
   a {
     text-decoration: underline;
@@ -15,7 +17,7 @@
 
     li {
       margin: 1rem auto;
-      flex: 0 1 32rem;
+      flex: 0 1 27rem;
       align-items: flex-start;
 
       a {
@@ -36,21 +38,11 @@
     }
   }
 
-  // @media(min-width: 1024px) {
-  /*
-
-  Give .workpage a max width and center it in larger viewports
-  there should be empty space around .wrapper element
-
-  */
-  //   ul {
-  //     flex-flow: row wrap;
-  //     justify-content: space-around;
-  //
-  //     li {
-  //       margin: auto 1rem;
-  //
-  //     }
-  //   }
-  // }
+  @media(min-width: $breakpoint-desktop) {
+    ul {
+      li {
+        flex: 0 1 24rem;
+      }
+    }
+  }
 }

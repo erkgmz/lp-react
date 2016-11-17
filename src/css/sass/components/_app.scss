@@ -3,10 +3,6 @@
 @import "normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400');
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   font-size: $root-font-size;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,7 +26,11 @@ header {
 
 header,
 article {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+
+article {
+  max-width: 55rem;
 }
 
 nav {
@@ -77,7 +77,6 @@ nav {
 
   p,
   a {
-    line-height: 1.7rem;
     font-family: 'Roboto', sans-serif;
   }
 
@@ -96,5 +95,43 @@ nav {
 
   li {
     list-style: none;
+  }
+
+  @media(min-width: $breakpoint-desktop) {
+
+    h1 {
+      font-size: $headline-lg;
+    }
+
+    h2 {
+      font-size: $subheader-lg;
+    }
+
+    p,
+    a,
+    input,
+    textarea {
+      font-size: $font-size-lg;
+    }
+
+    article {
+      max-width: 75rem;
+    }
+
+    // SET THE ORDER OF THE FLEX ITEM HEADER<NAV<BODY, respectively
+    header {
+        position: static;
+        order: 1;
+      }
+
+      nav {
+        position: static;
+        order: 2;
+      }
+
+      article {
+        order: 3;
+        margin: auto;
+      }
   }
 }

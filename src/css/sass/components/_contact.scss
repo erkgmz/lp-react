@@ -1,11 +1,21 @@
 @import './config';
 
 .contact {
-  
+  margin: auto;
+
   form {
     margin: 2rem auto 0;
     display: flex;
     flex-flow: column nowrap;
+
+    input[type="submit"] {
+      display: block;
+      background-color: $theme-accent;
+      border: none;
+      padding: .6rem;
+      margin: 0 auto;
+      cursor: pointer;
+    }
 
     input,
     textarea {
@@ -16,15 +26,7 @@
       margin-bottom: 1.5rem;
       outline: none;
       color: $theme-text;
-    }
-
-    input[type="submit"] {
-      display: block;
-      background-color: $theme-accent;
-      border: none;
-      padding: .6rem;
-      margin: 0 auto;
-      cursor: pointer;
+      padding: .8rem 0;
     }
   }
 }
