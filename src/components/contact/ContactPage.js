@@ -1,11 +1,11 @@
 import React from 'react';
+import styleable from 'react-styleable';
 
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import Form from './Form';
 
-import styleable from 'react-styleable';
 import css from '../../css/sass/components/_contact.scss'; // eslint-disable-line
 
 const ContactPage = () => {

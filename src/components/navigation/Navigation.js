@@ -1,13 +1,27 @@
 import React from 'react';
-import NavigationItems from './NavigationItems';
 import styleable from 'react-styleable';
+
+import NavigationItem from './NavigationItem';
+import icons from './icons';
 
 import css from '../../css/sass/components/_navigation.scss';// eslint-disable-line
 
-const Navigation = ({css}) => {
+const Navigation = () => {
   return (
     <nav className={css.navigation}>
-      <NavigationItems />
+      <ul>
+        {
+          icons.map( (icon, key) => {
+            return (
+              <NavigationItem
+                key={key}
+                text={icon.text}
+                url={icon.url}
+                fontAwesome={icon.fontAwesomeClass} />
+            );
+          })
+        }
+      </ul>
     </nav>
   );
 };

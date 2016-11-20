@@ -6,7 +6,7 @@ import styleable from 'react-styleable';
 import css from '../css/sass/components/_app.scss'; // eslint-disable-line
 import 'font-awesome/css/font-awesome.min.css';
 
-const App = ({css, children}) => {
+const App = ({ children }) => {
   return (
     <div className={css.wrapper}>
       <Header />

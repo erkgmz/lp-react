@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WorkItem = ({ name, img, link, altText }) => {
+const WorkItem = ({ title, img, link, alt }) => {
   return (
     <li>
       <a
@@ -9,18 +9,18 @@ const WorkItem = ({ name, img, link, altText }) => {
         rel="noopener noreferrer">
         <img
           src={img}
-          alt={altText} />
-        <p>{name}</p>
+          alt={alt} />
+        <p>{title}</p>
       </a>
     </li>
   );
 };
 
 WorkItem.propTypes = {
-  name: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
   img: React.PropTypes.string.isRequired,
   link: React.PropTypes.string.isRequired,
-  altText: React.PropTypes.string
+  alt: React.PropTypes.string
 };
 
 export default WorkItem;

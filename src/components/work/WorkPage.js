@@ -3,6 +3,7 @@ import React from 'react';
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
 import WorkItems from './WorkItems';
+import projects from './projects';
 
 import styleable from 'react-styleable';
 import css from '../../css/sass/components/_workpage.scss'; // eslint-disable-line
@@ -22,7 +23,7 @@ const WorkPage = () => {
           Checkout the project repo on GitHub
         </a>
       </p>
-      <WorkItems />
+      <WorkItems projects={projects} />
     </article>
   );
 };
