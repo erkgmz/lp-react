@@ -1,21 +1,19 @@
 import React from 'react';
+import FontAwesomeIcon from '../common/FontAwesomeIcon';
 
-const SocialIcon = ({ socialLink, fontAwesomeClass }) => {
+const SocialIcon = ({ outboundLink, classes }) => {
   return (
     <li>
-      <a href={socialLink}>
-        <i
-          className={fontAwesomeClass}
-          aria-hidden="true">
-        </i>
+      <a href={outboundLink}>
+        <FontAwesomeIcon classes={classes} />
       </a>
     </li>
   );
 };
 
 SocialIcon.propTypes = {
-  socialLink: React.PropTypes.string.isRequired,
-  fontAwesomeClass: React.PropTypes.string.isRequired
+  outboundLink: React.PropTypes.string.isRequired,
+  classes: React.PropTypes.string.isRequired
 };
 
 export default SocialIcon;

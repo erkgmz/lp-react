@@ -16,8 +16,8 @@ const Navigation = () => {
               <NavigationItem
                 key={key}
                 text={icon.text}
-                url={icon.url}
-                fontAwesome={icon.fontAwesomeClass} />
+                routerPath={icon.routerPath}
+                classes={icon.classes} />
             );
           })
         }

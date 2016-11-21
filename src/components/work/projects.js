@@ -1,30 +1,28 @@
-import React from 'react';
-
-const projects = [
+const PROJECTS = [
   {
     title: 'ERIKGOMEZ.CO',
+    link: 'https://erikgomez.co/',
     img: {
       path: require('./portfolio_images/personalPage.png'),
       alt: 'erikgomez.co cover image'
-    },
-    link: 'https://erikgomez.co/'
+    }
   },
   {
     title: 'GA ADMISSIONS',
+    link: 'https://ga-admissions.herokuapp.com/',
     img: {
       path: require('./portfolio_images/generalAssembly.png'),
       alt: 'General Assembly logo'
-    },
-    link: 'https://ga-admissions.herokuapp.com/'
+    }
   },
   {
     title: 'STUD FINDER',
+    link: 'http://course-walkers.herokuapp.com/',
     img: {
       path: require('./portfolio_images/coursewalkers.png'),
       alt: 'Course Walkers logo'
-    },
-    link: 'http://course-walkers.herokuapp.com/'
+    }
   }
 ];
 
-export default projects;
+export default PROJECTS;

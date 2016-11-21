@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-const NavigationItem = ({ text, url, fontAwesome }) => {
+import FontAwesomeIcon from '../common/FontAwesomeIcon';
+
+const NavigationItem = ({ text, routerPath, classes }) => {
   return (
     <li>
-      <Link to={url}>
-        <i className={fontAwesome} aria-hidden="true"></i>
+      <Link to={routerPath}>
+        <FontAwesomeIcon classes={classes} />
         <p>{text}</p>
       </Link>
     </li>
@@ -14,8 +16,8 @@ const NavigationItem = ({ text, url, fontAwesome }) => {
 
 NavigationItem.propTypes = {
   text: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string.isRequired,
-  fontAwesome: React.PropTypes.string.isRequired
+  routerPath: React.PropTypes.string.isRequired,
+  classes: React.PropTypes.string.isRequired
 };
 
 export default NavigationItem;

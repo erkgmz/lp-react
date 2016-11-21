@@ -6,7 +6,7 @@ const WorkItems = ({ projects }) => {
   return (
     <ul>
       {
-        projects.map( (project, key) => {
+        projects.map((project, key) => {
           return (
             <WorkItem
               key={key}

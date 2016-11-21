@@ -1,18 +1,18 @@
 const icons = [
   {
     text: 'HOME',
-    url: '/',
-    fontAwesomeClass:'fa fa-home'
+    routerPath: '/',
+    classes:'fa fa-home'
   },
   {
     text: 'WORK',
-    url: '/work',
-    fontAwesomeClass: 'fa fa-briefcase'
+    routerPath: '/work',
+    classes: 'fa fa-briefcase'
   },
   {
     text: 'CONTACT',
-    url: '/contact',
-    fontAwesomeClass: 'fa fa-comments'
+    routerPath: '/contact',
+    classes: 'fa fa-comments'
   }
 ];
 

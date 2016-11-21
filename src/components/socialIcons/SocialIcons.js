@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SocialIcon from './SocialIcon';
+import ICONS from './icons';
 
 import styleable from 'react-styleable';
 import css from '../../css/sass/components/_social.scss'; // eslint-disable-line
@@ -8,15 +9,14 @@ import css from '../../css/sass/components/_social.scss'; // eslint-disable-line
 const SocialIcons = () => {
   return (
     <ul className={css.social}>
-      <SocialIcon
-        socialLink="https://www.linkedin.com/in/erkgmz"
-        fontAwesomeClass="fa fa-linkedin" />
-      <SocialIcon
-        socialLink="https://twitter.com/erikgomezco"
-        fontAwesomeClass="fa fa-twitter" />
-      <SocialIcon
-        socialLink="https://github.com/erkgmz"
-        fontAwesomeClass="fa fa-github" />
+      {ICONS.map( (icon, key) => {
+        return (
+          <SocialIcon
+            key={key}
+            outboundLink={icon.outboundLink}
+            classes={icon.classes} />
+        );
+      })}
     </ul>
   );
 };
