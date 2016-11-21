@@ -51,6 +51,7 @@
     "normalize.css": "^5.0.0",
     "npm-run-all": "1.8.0",
     "open": "0.0.5",
+    "postcss-loader": "^1.1.1",
     "react-addons-test-utils": "15.0.2",
     "react-styleable": "^2.2.4",
     "resolve-url-loader": "^1.6.0",

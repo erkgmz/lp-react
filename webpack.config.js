@@ -31,8 +31,12 @@ export default {
       // need to include style loader for font awesome
       // will have to get local copies of logos we want to use
       // to prevent the need for style loader
-      {test: /\.css/, loaders: ['style', 'css']},
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css?module&localIdentName=[local]---[hash:base64:5]!resolve-url!sass')}
+      {test: /\.css/, loaders: ['style', 'css', 'postcss']},
+
+      // NOTE Cannot get local output.css file to include autoprefixes
+      // {test: /\.scss$/, loader: ExtractTextPlugin.extract('css?module&localIdentName=[local]---[hash:base64:5]!resolve-url!sass')}
+      
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css?module&localIdentName=[local]---[hash:base64:5]!postcss!resolve-url!sass')}
     ]
   },
   plugins: [
