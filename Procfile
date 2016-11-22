@@ -1,1 +1,1 @@
-web: node tool/distServer.js
+web: node tools/distServer.js
