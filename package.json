@@ -52,6 +52,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
+    "normalize.css": "^5.0.0",
     "webpack": "1.13.0"
   },
   "devDependencies": {
@@ -61,7 +62,6 @@
     "eslint-watch": "2.1.11",
     "eventsource-polyfill": "0.9.6",
     "font-awesome": "^4.7.0",
-    "normalize.css": "^5.0.0",
     "npm-run-all": "1.8.0",
     "react-addons-test-utils": "15.0.2",
     "rimraf": "^2.5.4",
