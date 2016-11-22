@@ -41,7 +41,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "express": "4.13.4",
     "colors": "1.1.2",
-    "react-styleable": "^2.2.4",
+    "react-styleable": "^2.2.4"
   },
   "devDependencies": {
     "compression": "1.6.1",
