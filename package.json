@@ -42,10 +42,10 @@
     "express": "4.13.4",
     "colors": "1.1.2",
     "react-styleable": "^2.2.4",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "compression": "1.6.1"
   },
   "devDependencies": {
-    "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
     "eslint": "2.9.0",
