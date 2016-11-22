@@ -41,7 +41,8 @@
     "extract-text-webpack-plugin": "1.0.1",
     "express": "4.13.4",
     "colors": "1.1.2",
-    "react-styleable": "^2.2.4"
+    "react-styleable": "^2.2.4",
+    "open": "0.0.5"
   },
   "devDependencies": {
     "compression": "1.6.1",
@@ -57,7 +58,6 @@
     "html-loader": "^0.4.4",
     "normalize.css": "^5.0.0",
     "npm-run-all": "1.8.0",
-    "open": "0.0.5",
     "postcss-loader": "^1.1.1",
     "react-addons-test-utils": "15.0.2",
     "resolve-url-loader": "^1.6.0",
