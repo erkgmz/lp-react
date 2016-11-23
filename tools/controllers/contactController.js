@@ -10,7 +10,13 @@ contactController.sendMessage = (req, res) => {
   let message = req.body.message;
 
   // create reusable transporter object using the default SMTP transport
-  let  transporter = nodemailer.createTransport({ service: 'Gmail', auth: { user: 'senderforkire@gmail.com', pass: 'B3nI2EkAYvFA' } });
+  let  transporter = nodemailer.createTransport({
+    service: 'Yahoo',
+    auth: {
+      user: 'senderforkire@yahoo.com',
+      pass: 'DwUT6A4krBqe'
+    }
+  });
 
   let mailOptions = {
       from: `"${name}" <${email}>`, // sender address
