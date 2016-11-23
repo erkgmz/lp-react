@@ -20,7 +20,7 @@ contactController.sendMessage = (req, res) => {
 
   let mailOptions = {
       from: `"${name}" <${email}>`, // sender address
-      to: 'e@erikgomez.co', // list of receivers
+      to: 'egoxiv@gmail.com', // list of receivers
       subject: `${name}(${email}) has sent you a message.`, // Subject line
       text: `
         BEGIN MESSAGE: ${message}
