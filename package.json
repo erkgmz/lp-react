@@ -41,6 +41,7 @@
     "jquery": "2.2.3",
     "node-sass": "^3.13.0",
     "nodemailer": "^2.6.4",
+    "normalize.css": "^5.0.0",
     "open": "0.0.5",
     "postcss-loader": "^1.1.1",
     "react": "15.0.2",
@@ -50,9 +51,9 @@
     "react-styleable": "^2.2.4",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
+    "sendgrid": "^4.7.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
-    "normalize.css": "^5.0.0",
     "webpack": "1.13.0"
   },
   "devDependencies": {
