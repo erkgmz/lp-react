@@ -11,10 +11,10 @@ contactController.sendMessage = (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let  transporter = nodemailer.createTransport({
-    service: 'Yahoo',
+    service: 'Gmail',
     auth: {
-      user: 'senderforkire@yahoo.com',
-      pass: 'DwUT6A4krBqe'
+      user: 'senderforkire@gmail.com',
+      pass: 'B3nI2EkAYvFA'
     }
   });
 
@@ -35,9 +35,10 @@ contactController.sendMessage = (req, res) => {
     if(error){
       console.log(error);
       res.json({error: error});
+    } else {
+      console.log('Message sent: ' + data.response);
+      res.json({name: name, email: email, message: message, data: data});
     }
-    console.log('Message sent: ' + data.response);
-    res.json({name: name, email: email, message: message, data: data});
   });
 };
 
