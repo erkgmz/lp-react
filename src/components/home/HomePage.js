@@ -11,8 +11,8 @@ import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-li
 const HomePage = () => {
   return (
     <article className={css.homepage}>
-      <Headline text="Erik Gomez" />
-      <Byline text="Front end developer in Bakersfield, Ca" />
+      <Headline text="Hi, I'm Erik" />
+      <Byline text="… and I build apps with JavaScript." />
       <CopyBlock />
       <SocialIcons />
     </article>

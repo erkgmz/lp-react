@@ -1,7 +1,7 @@
 const PROJECTS = [
   {
-    title: 'ERIKGOMEZ.CO',
-    link: 'https://erikgomez.co/',
+    title: 'Under Construction',
+    link: 'https://erkgmz.github.io/e-lp/public/',
     img: {
       path: require('./portfolio_images/personalPage.png'),
       alt: 'erikgomez.co cover image'
