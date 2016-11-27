@@ -90,11 +90,11 @@ nav {
     .wrapper article {
       max-width: 75rem; }
     .wrapper header {
-      position: static;
-      order: 1; }
+      order: 1;
+      position: static; }
     .wrapper nav {
-      position: static;
-      order: 2; }
+      order: 2;
+      position: static; }
     .wrapper article {
       order: 3;
       margin: auto; } }
@@ -162,28 +162,47 @@ nav {
 /* HEADLINE Sizes */
 /* Theme Color Palette */
 .contact {
-  margin: auto; }
-  .contact form {
-    margin: 2rem auto 0;
-    display: flex;
-    flex-flow: column nowrap; }
-    .contact form input[type="submit"] {
-      display: block;
-      background-color: #FF3D00;
-      border: none;
-      padding: .6rem;
-      margin: 0 auto;
-      cursor: pointer; }
-    .contact form input,
-    .contact form textarea {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-      margin-bottom: 1.5rem;
-      outline: none;
-      color: rgba(255, 255, 255, 0.8);
-      padding: .8rem 0; }
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  /* WE NEED SINGLE COLUMN LAYOUT IN MOBILE, 2 COLUMNS FOR DESKTOP */ }
+  .contact .leftCol {
+    flex: 0 1 auto; }
+  .contact .rightCol {
+    flex: 1 0 28rem; }
+    .contact .rightCol form {
+      margin: 3rem auto 0;
+      display: flex;
+      flex-flow: column nowrap; }
+      .contact .rightCol form label {
+        display: flex;
+        flex-flow: column;
+        align-content: stretch; }
+      .contact .rightCol form input[type="submit"] {
+        background-color: #FF3D00;
+        border: none;
+        padding: .6rem;
+        cursor: pointer;
+        align-self: flex-end;
+        flex: 1 0 auto; }
+      .contact .rightCol form input,
+      .contact .rightCol form textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        margin-bottom: .5rem;
+        outline: none;
+        color: rgba(255, 255, 255, 0.8);
+        padding: .8rem 0; }
+  @media (min-width: 1024px) {
+    .contact {
+      flex-flow: row nowrap; }
+      .contact .leftCol {
+        flex: 0 1 42rem; }
+      .contact .rightCol form {
+        margin: auto; } }
 
 /* BREAKPOINTS */
 /* Font Sizes */

@@ -108,21 +108,21 @@ class Form extends Component {
     return (
       <form>
         <TextInput
-          label="Name"
+          label="Name:"
           type="text"
           name="name"
           value={this.state.name}
           onChange={this.handleChange} />
 
         <TextInput
-          label="Email"
+          label="Email:"
           type="email"
           name="email"
           value={this.state.email}
           onChange={this.handleChange} />
 
         <label htmlFor="message">
-          Message
+          Message:
           <textarea
             type="text"
             name="message"

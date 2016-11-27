@@ -120,18 +120,18 @@ nav {
 
     // SET THE ORDER OF THE FLEX ITEM HEADER<NAV<BODY, respectively
     header {
-        position: static;
-        order: 1;
-      }
+      order: 1;
+      position: static;
+    }
 
-      nav {
-        position: static;
-        order: 2;
-      }
+    nav {
+      order: 2;
+      position: static;
+    }
 
-      article {
-        order: 3;
-        margin: auto;
-      }
+    article {
+      order: 3;
+      margin: auto;
+    }
   }
 }

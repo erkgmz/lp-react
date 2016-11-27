@@ -1,37 +1,63 @@
 @import './config';
 
 .contact {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   margin: auto;
+  display: flex;
+  flex-flow: column nowrap; /* WE NEED SINGLE COLUMN LAYOUT IN MOBILE, 2 COLUMNS FOR DESKTOP */
 
-  form {
-    margin: 2rem auto 0;
-    display: flex;
-    flex-flow: column nowrap;
+  .leftCol {
+    flex: 0 1 auto;
+  }
 
-    input[type="submit"] {
-      display: block;
-      background-color: $theme-accent;
-      border: none;
-      padding: .6rem;
-      margin: 0 auto;
-      cursor: pointer;
-    }
+  .rightCol {
+    flex: 1 0 28rem;
 
-    input,
-    textarea {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid $theme-text;
-      margin-bottom: 1.5rem;
-      outline: none;
-      color: $theme-text;
-      padding: .8rem 0;
+    form {
+      margin: 3rem auto 0;
+      display: flex;
+      flex-flow: column nowrap;
+
+      label {
+        display: flex;
+        flex-flow: column;
+        align-content: stretch;
+      }
+
+      input[type="submit"] {
+        background-color: $theme-accent;
+        border: none;
+        padding: .6rem;
+        cursor: pointer;
+        align-self: flex-end;
+        flex: 1 0 auto;
+      }
+
+      input,
+      textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $theme-text;
+        margin-bottom: .5rem;
+        outline: none;
+        color: $theme-text;
+        padding: .8rem 0;
+      }
     }
   }
 
   @media(min-width: $breakpoint-desktop) {
-    
+    flex-flow: row nowrap;
 
+    .leftCol {
+      flex: 0 1 42rem;
+    }
+
+    .rightCol {
+      form {
+        margin: auto;
+      }
+    }
   }
 }

@@ -8,18 +8,20 @@ import Form from './Form';
 
 import css from '../../css/sass/components/_contact.scss'; // eslint-disable-line
 
-const templateString =`Have a question? Great!
-I want to hear from you.`;
+/*
+NEED TO ADD NEW CLASSES AS CSS MODULES!
+*/
 
 const ContactPage = () => {
   return (
     <article className={css.contact}>
-      <div className="col-left">
+      <div className={css.leftCol}>
         <Headline text="CONTACT"/>
-        <Byline text={templateString} />
+        <Byline text="Have a question? Great! I want to hear from you." />
         <SocialIcons />
       </div>
-      <div className="col-right">
+
+      <div className={css.rightCol}>
         <Form />
       </div>
     </article>
