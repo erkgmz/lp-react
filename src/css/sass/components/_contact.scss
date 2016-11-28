@@ -1,8 +1,6 @@
 @import './config';
 
 .contact {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   margin: auto;
   display: flex;
   flex-flow: column nowrap; /* WE NEED SINGLE COLUMN LAYOUT IN MOBILE, 2 COLUMNS FOR DESKTOP */

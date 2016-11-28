@@ -8,10 +8,6 @@ import Form from './Form';
 
 import css from '../../css/sass/components/_contact.scss'; // eslint-disable-line
 
-/*
-NEED TO ADD NEW CLASSES AS CSS MODULES!
-*/
-
 const ContactPage = () => {
   return (
     <article className={css.contact}>

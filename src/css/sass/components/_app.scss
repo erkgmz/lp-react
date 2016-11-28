@@ -22,14 +22,11 @@ body {
 
 header {
   background-color: $theme-dark;
-}
-
-header,
-article {
   padding: 0 1.5rem;
 }
 
 article {
+  padding: 6.5rem 1.2rem;
   max-width: 55rem;
 }
 
@@ -96,6 +93,29 @@ nav {
   li {
     list-style: none;
   }
+
+
+
+  /*********************
+  *** LANDSCAPE ORIENTATION
+  *********************/
+
+  @media screen and (orientation: landscape) {
+
+    header {
+      position: static;
+    }
+
+    article {
+      padding: 2rem 1rem 5rem;
+    }
+  }
+
+
+
+  /*********************
+  *** DESKTOP BREAKPOINT >1024
+  *********************/
 
   @media(min-width: $breakpoint-desktop) {
 

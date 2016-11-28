@@ -23,13 +23,11 @@ body {
   overflow: auto; }
 
 header {
-  background-color: #37474F; }
-
-header,
-article {
+  background-color: #37474F;
   padding: 0 1.5rem; }
 
 article {
+  padding: 6.5rem 1.2rem;
   max-width: 55rem; }
 
 nav {
@@ -48,7 +46,13 @@ nav {
   min-height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center; }
+  justify-content: center;
+  /*********************
+  *** LANDSCAPE ORIENTATION
+  *********************/
+  /*********************
+  *** DESKTOP BREAKPOINT >1024
+  *********************/ }
   .wrapper h1 {
     font-size: 5rem; }
   .wrapper h2 {
@@ -77,6 +81,11 @@ nav {
     font-size: 1.4rem; }
   .wrapper li {
     list-style: none; }
+  @media screen and (orientation: landscape) {
+    .wrapper header {
+      position: static; }
+    .wrapper article {
+      padding: 2rem 1rem 5rem; } }
   @media (min-width: 1024px) {
     .wrapper h1 {
       font-size: 6.5rem; }
@@ -123,14 +132,14 @@ nav {
   margin: auto; }
   .homepage p {
     margin: 3rem auto 0; }
+    .homepage p a {
+      text-decoration: underline; }
 
 /* BREAKPOINTS */
 /* Font Sizes */
 /* HEADLINE Sizes */
 /* Theme Color Palette */
 .workpage {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   margin: auto; }
   .workpage a {
     text-decoration: underline; }
@@ -141,7 +150,7 @@ nav {
     justify-content: center; }
     .workpage ul li {
       margin: 1rem auto;
-      flex: 0 1 27rem;
+      flex: 0 0 26rem;
       align-items: flex-start; }
       .workpage ul li a {
         text-decoration: none;
@@ -154,16 +163,16 @@ nav {
         .workpage ul li a p {
           margin: .8rem auto; }
   @media (min-width: 1024px) {
-    .workpage ul li {
-      flex: 0 1 24rem; } }
+    .workpage {
+      padding: auto; }
+      .workpage ul li {
+        flex: 0 0 24rem; } }
 
 /* BREAKPOINTS */
 /* Font Sizes */
 /* HEADLINE Sizes */
 /* Theme Color Palette */
 .contact {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -225,8 +234,17 @@ nav {
         align-items: center; }
         .navigation ul li a i {
           font-size: 2.4rem; }
+          @media screen and (orientation: landscape) {
+            .navigation ul li a i {
+              font-size: 1.6rem; } }
         .navigation ul li a p {
           margin: 0 auto; }
+          @media screen and (orientation: landscape) {
+            .navigation ul li a p {
+              font-size: 1.3rem; } }
+    @media screen and (orientation: landscape) {
+      .navigation ul {
+        margin: 1; } }
   @media (min-width: 1024px) {
     .navigation {
       display: flex;

@@ -21,14 +21,27 @@
 
         i {
           font-size: 2.4rem;
+
+          @media screen and (orientation: landscape) {
+            font-size: 1.6rem;
+          }
         }
 
         p {
           margin: 0 auto;
+
+          @media screen and (orientation: landscape) {
+            font-size: 1.3rem;
+          }
         }
       }
     }
+
+    @media screen and (orientation: landscape) {
+      margin: 1;
+    }
   }
+
 
   @media(min-width: $breakpoint-desktop) {
     display: flex;

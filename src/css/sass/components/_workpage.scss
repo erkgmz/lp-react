@@ -1,8 +1,6 @@
 @import './config';
 
 .workpage {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   margin: auto;
 
   a {
@@ -17,7 +15,7 @@
 
     li {
       margin: 1rem auto;
-      flex: 0 1 27rem;
+      flex: 0 0 26rem;
       align-items: flex-start;
 
       a {
@@ -39,9 +37,12 @@
   }
 
   @media(min-width: $breakpoint-desktop) {
+    padding: auto;
+
     ul {
+
       li {
-        flex: 0 1 24rem;
+        flex: 0 0 24rem;
       }
     }
   }
