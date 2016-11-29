@@ -1,6 +1,7 @@
 /*eslint-disable no-console */
 import React, {Component} from 'react';
 import * as $ from 'jquery';
+import toastr from 'toastr';
 
 import TextInput from '../common/TextInput';
 
@@ -92,15 +93,17 @@ class Form extends Component {
         cache: false,
         success: function(response) {
           this.clearState();
+          toastr.success('Your message has been sent.');
           console.log(response);
         }.bind(this),
         error: function(xhr, status, error) {
           this.clearState();
+          toastr.error('Hmm, there was an error sending your message.');
           console.log(error);
         }.bind(this)
       });
     } else {
-      return alert(this.state.error);
+      return toastr.error(this.state.error);
     }
   }
 
