@@ -1,6 +1,6 @@
 const PROJECTS = [
   {
-    title: 'Under Construction',
+    title: 'SPLASH PAGE',
     link: 'https://erkgmz.github.io/e-lp/public/',
     img: {
       path: require('./portfolio_images/personalPage.png'),
