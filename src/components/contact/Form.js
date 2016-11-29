@@ -12,8 +12,7 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-      error: 'Please enter your name.',
-      sending: false
+      error: 'Please enter your name.'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -80,6 +79,7 @@ class Form extends Component {
 
   handleClick(event) {
     event.preventDefault();
+
     if( this.formIsValid() ){
       this.setState({sending: true});
       let {name, email, message} = this.state;
@@ -96,7 +96,7 @@ class Form extends Component {
         }.bind(this),
         error: function(xhr, status, error) {
           this.clearState();
-          console.error(error);
+          console.log(error);
         }.bind(this)
       });
     } else {
