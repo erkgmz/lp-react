@@ -13,6 +13,7 @@ fs.readFile('src/index.html', 'utf-8', (err, markup) => {
 
   // $('head').prepend(`<link rel="stylesheet" href="./styles.css">`);
 
+  // $.html(),
   fs.writeFile('dist/index.html', $.html(), 'utf-8', err => {
     if(err) {
       return console.log(err);
