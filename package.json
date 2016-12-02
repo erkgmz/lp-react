@@ -65,6 +65,7 @@
     "eslint-plugin-react": "5.0.1",
     "eslint-watch": "2.1.11",
     "eventsource-polyfill": "0.9.6",
+    "fly": "^1.4.1",
     "font-awesome": "^4.7.0",
     "react-addons-test-utils": "15.0.2",
     "rimraf": "^2.5.4"
