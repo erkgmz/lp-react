@@ -6,6 +6,7 @@ import compression from 'compression';
 /*eslint-disable no-console*/
 
 const port = process.env.PORT || 3000;
+
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -24,8 +25,9 @@ app.get('*', (req, res) => {
 
 app.listen(port, err => {
   if(err) {
-    console.log(err);
+    return console.log(err);
   } else {
+    console.log(`App is now running on ${port}`);
     open(`http://localhost:${port}`);
   }
 });

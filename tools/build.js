@@ -24,7 +24,7 @@ webpack(webpackConfig).run((err, stats) => {
     jsonStats.warnings.map(warning => console.log(warning.yellow));
   }
 
-  console.log(`Webapck stats: ${stats}`);
+  // console.log(`Webapck stats: ${stats}`);
 
   // build success
   console.log('Your app has been compiled in production mode and written in /dist.'.green);

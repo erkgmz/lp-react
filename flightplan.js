@@ -1,8 +1,7 @@
-// flightplan.js
 /* eslint-disable */
 var plan = require('flightplan');
 
-var appName = 'erikgomez-app';
+var appName = 'app';
 var username = 'erik';
 var startFile = 'dist/';
 
@@ -11,7 +10,7 @@ var tmpDir = appName+'-' + new Date().getTime();
 // configuration
 plan.target('staging', [
   {
-    host: '104.131.128.184',
+    host: '104.131.128.185',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   }
@@ -22,7 +21,7 @@ plan.target('production', [
     host: '104.131.128.185',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
-  }
+  },
 //add in another server if you have more than one
 // {
 //   host: '104.131.93.216',
@@ -34,8 +33,8 @@ plan.target('production', [
 // run commands on localhost
 plan.local(function(local) {
   // uncomment these if you need to run a build on your machine first
-  local.log('Run build');
-  local.exec('npm run build');
+  // local.log('Run build');
+  // local.exec('npm run build');
 
   local.log('Copy files to remote hosts');
   var filesToCopy = local.exec('git ls-files', {silent: true});
@@ -54,10 +53,12 @@ plan.remote(function(remote) {
 
   remote.log('Reload application');
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
+  // remote.exec('forever start ~/'+appName);
+  // remote.exec('forever stop ~/'+tmpDir, {failsafe: true});
+  // remote.exec('cd ' + tmpDir + ' && forever start -c "npm start" ./');
 
-  remote.exec('forever stop ~/'+appName+'/'+startFile, {failsafe: true});
-  remote.exec('forever start ~/'+appName+'/'+startFile);
+  // https://github.com/foreverjs/forever/issues/540
+  remote.exec('cd ' + tmpDir + ' && npm start');
+  // remote.exec('npm start ' + tmpDir);
 
-  // remove the forever lines, replacing them with the last line here
-  // remote.exec('sudo restart node-app');
 });
