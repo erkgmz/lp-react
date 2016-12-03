@@ -195,7 +195,8 @@ nav {
         padding: .6rem;
         cursor: pointer;
         align-self: flex-end;
-        flex: 1 0 auto; }
+        flex: 1 0 auto;
+        font-size: 1.4rem; }
       .contact .rightCol form input,
       .contact .rightCol form textarea {
         background-color: transparent;
