@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "npm run build",
     "predev": "babel-node tools/startMessage.js",
     "dev": "npm-run-all --parallel open:src lint:watch sass:watch",
     "open:src": "babel-node tools/srcServer.js",
@@ -15,7 +16,7 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist build:html",
     "build": "babel-node tools/build.js",
-    "start": "npm run build && babel-node tools/distServer.js && forever start --minUptime 1000 --spinSleepTime 1000 tools/distServer.js"
+    "prodserver": "babel-node tools/distServer.js"
   },
   "dependencies": {
     "babel-cli": "6.8.0",

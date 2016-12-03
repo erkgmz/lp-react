@@ -35,6 +35,7 @@ plan.local(function(local) {
   // uncomment these if you need to run a build on your machine first
   // local.log('Run build');
   // local.exec('npm run build');
+  // ADD COMMIT EVERYTHING FIRST SO DIST FILE WILL BE RSYNCED
 
   local.log('Copy files to remote hosts');
   var filesToCopy = local.exec('git ls-files', {silent: true});
@@ -52,13 +53,15 @@ plan.remote(function(remote) {
   remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
 
   remote.log('Reload application');
+  // SYMLINK?
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
   // remote.exec('forever start ~/'+appName);
-  // remote.exec('forever stop ~/'+tmpDir, {failsafe: true});
   // remote.exec('cd ' + tmpDir + ' && forever start -c "npm start" ./');
 
   // https://github.com/foreverjs/forever/issues/540
-  remote.exec('cd ' + tmpDir + ' && npm start');
+  remote.exec('forever stop ~/'+tmpDir, {failsafe: true});
+  remote.exec('cd ~/' + tmpDir + ' && npm start');
+  remote.exec('cd ~/' + tmpDir + ' && forever start --minUptime 1000 --spinSleepTime 1000 tools/distServer.js');
   // remote.exec('npm start ' + tmpDir);
 
 });
