@@ -63,7 +63,7 @@ plan.remote(function(remote) {
   remote.exec('forever stop ~/'+tmpDir, {failsafe: true});
   // remote.exec('cd ~/' + tmpDir + ' && npm start');
   // remote.exec('forever start --minUptime 20000 --spinSleepTime 1000 -c "node" ~/' + tmpDir + '/tools/distServer.js');
-  remote.exec('cd `~/' + tmpDir + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
+  remote.exec('cd ~/' + tmpDir + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
   // remote.exec('npm start ' + tmpDir);
 
 });
