@@ -61,7 +61,7 @@ plan.remote(function(remote) {
   // https://github.com/foreverjs/forever/issues/540
   remote.exec('forever stop ~/'+tmpDir, {failsafe: true});
   // remote.exec('cd ~/' + tmpDir + ' && npm start');
-  remote.exec('forever start --minUptime 20000 --spinSleepTime 1000 ~/' + tmpDir + '/tools/distServer.js');
+  remote.exec('forever start --minUptime 20000 --spinSleepTime 1000 -c "node" ~/' + tmpDir + '/tools/distServer.js');
   // remote.exec('npm start ' + tmpDir);
 
 });
