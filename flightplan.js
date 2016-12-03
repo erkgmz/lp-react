@@ -32,7 +32,7 @@ plan.target('production', [
 
 // run commands on localhost
 plan.local(function(local) {
-  // ADD COMMIT EVERYTHING FIRST SO DIST FILE WILL BE RSYNCED
+  // ADD+COMMIT EVERYTHING FIRST SO /dist DIRECTORY CAN BE RSYNCED
   local.log('Copy files to remote hosts');
   var files = local.exec('git ls-files', {silent: true});
   // rsync files to all the destination's hosts

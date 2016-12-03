@@ -137,7 +137,7 @@ class Form extends Component {
 
         <input
           type="submit"
-          value={this.state.sending ? 'Sending...' : 'Send'}
+          value={this.state.sending ? 'SENDING...' : 'SEND'}
           onClick={this.handleClick} />
       </form>
     );
