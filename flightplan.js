@@ -38,9 +38,10 @@ plan.local(function(local) {
   // ADD COMMIT EVERYTHING FIRST SO DIST FILE WILL BE RSYNCED
 
   local.log('Copy files to remote hosts');
-  var filesToCopy = local.exec('git ls-files', {silent: true});
+  var files = local.exec('git ls-files', {silent: true});
   // rsync files to all the destination's hosts
-  local.transfer(filesToCopy, '/tmp/' + tmpDir);
+  console.log(files)
+  local.transfer(files, '/tmp/' + tmpDir);
 });
 
 // run commands on remote hosts (destinations)
