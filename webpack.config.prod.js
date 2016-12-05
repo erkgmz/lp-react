@@ -3,7 +3,9 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const GLOBALS = {
-  'process.env.NODE_ENV': JSON.stringify('production')
+  'process.env.NODE_ENV': JSON.stringify('production'),
+  'process.env.SENDGRID_API_KEY': JSON.stringify(process.env.SENDGRID_API_KEY),
+  'process.env.SENDGRID_EMAIL': JSON.stringify(process.env.SENDGRID_EMAIL)
 };
 
 export default {

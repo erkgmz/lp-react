@@ -25,7 +25,7 @@ contactController.sendMessage = (req, res) => {
   sg.API(request, function(error, response) {
     if(error) {
       console.log(error);
-      return res.json({error});
+      return res.json({error, name, email, message});
     } else {
       let {statusCode, body, headers} = response;
       return res.json({statusCode, body, headers});
