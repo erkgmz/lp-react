@@ -1,5 +1,7 @@
 import sendgrid from 'sendgrid';
 
+require('dotenv').config();
+
 let contactController = {};
 
 /* eslint-disable no-console */
