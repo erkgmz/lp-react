@@ -34,7 +34,7 @@ plan.target('production', [
 plan.local(function(local) {
   // ADD+COMMIT EVERYTHING FIRST SO /dist DIRECTORY CAN BE RSYNCED
   local.log('Copy files to remote hosts');
-  var files = local.exec('git ls-files', {silent: true});
+  var files = local.exec('git ls-files && ls .env', {silent: true});
   // rsync files to all the destination's hosts
   console.log(files)
   local.transfer(files, '/tmp/' + tmpDir);
