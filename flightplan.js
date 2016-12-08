@@ -53,6 +53,6 @@ plan.remote(function(remote) {
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});// SYMLINK?
 
   remote.exec('forever stop /' + appName, {failsafe: true});
-  remote.exec('cd ~/' + tmpDir + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
+  remote.exec('cd ~/' + appName + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
   // https://github.com/foreverjs/forever/issues/540
 });
