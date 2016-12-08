@@ -5,7 +5,7 @@ import compression from 'compression';
 
 /*eslint-disable no-console*/
 
-const port = process.env.PORT || 8080;
+const port = 8080;
 
 const app = express();
 const bodyParser = require('body-parser');
