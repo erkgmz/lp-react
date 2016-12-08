@@ -11,7 +11,7 @@ fs.readFile('src/index.html', 'utf-8', (err, markup) => {
 
   const $ = cheerio.load(markup);
 
-  // $('head').prepend(`<link rel="stylesheet" href="./styles.css">`);
+  $('head').prepend(`<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>`);
 
   // $.html(),
   fs.writeFile('dist/index.html', $.html(), 'utf-8', err => {
