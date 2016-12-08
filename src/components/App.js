@@ -4,8 +4,7 @@ import Navigation from './navigation/Navigation';
 import styleable from 'react-styleable';
 
 import css from '../css/sass/components/_app.scss'; // eslint-disable-line
-import 'font-awesome/css/font-awesome.min.css';
-import 'toastr/build/toastr.min.css';
+
 import '../../favicon.ico';
 
 const App = ({ children }) => {

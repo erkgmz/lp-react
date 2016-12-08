@@ -1,7 +1,7 @@
 /*eslint-disable no-console */
-import React, {Component} from 'react';
-import * as $ from 'jquery';
-import toastr from 'toastr';
+/*eslint-disable no-undef */
+/* Need to disable no-undef because this component will use Toastr, Jquery CDN as API's */
+ import React, {Component} from 'react';
 
 import TextInput from '../common/TextInput';
 
