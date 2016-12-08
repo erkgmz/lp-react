@@ -42,6 +42,9 @@ plan.local(function(local) {
 
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
+  remote.exec('forever stop 0', {failsafe: true});
+  remote.exec('rm -rf *');
+
   remote.log('Move folder to root');
   remote.sudo('cp -R /tmp/' + tmpDir + ' ~', {user: username});
   remote.rm('-rf /tmp/' + tmpDir);
@@ -52,7 +55,6 @@ plan.remote(function(remote) {
   remote.log('Reload application');
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});// SYMLINK?
 
-  remote.exec('forever stop 0', {failsafe: true});
   remote.exec('cd ~/' + tmpDir + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
   // https://github.com/foreverjs/forever/issues/540
 });
