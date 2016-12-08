@@ -27,7 +27,10 @@ app.listen(port, err => {
   if(err) {
     return console.log(err);
   } else {
-    console.log(`App is now running on ${port}`);
-    open(`http://localhost:${port}`);
+    if(process.env.NODE_ENV === 'production') {
+      console.log(`App is now running on ${port}`);
+    } else {
+      open(`http://localhost:${port}`);
+    }
   }
 });
