@@ -30,10 +30,6 @@ article {
   max-width: 55rem;
 }
 
-nav {
-  background-color: $theme-medium;
-}
-
 /*
  * NOTE:
  *  Since the header and navigation are fixed at the top & bottom, respectively, we will not treat them as
@@ -114,6 +110,31 @@ nav {
 
 
   /*********************
+  *** Tablet BREAKPOINT >768
+  *********************/
+
+  @media(min-width: $breakpoint-tablet) {
+
+    // SET THE ORDER OF THE FLEX ITEM HEADER<NAV<BODY, respectively
+    header {
+      order: 1;
+      position: static;
+    }
+
+    nav {
+      order: 2;
+      position: static;
+    }
+
+    article {
+      order: 3;
+      margin: auto;
+    }
+  }
+
+
+
+  /*********************
   *** DESKTOP BREAKPOINT >1024
   *********************/
 
@@ -138,20 +159,8 @@ nav {
       max-width: 75rem;
     }
 
-    // SET THE ORDER OF THE FLEX ITEM HEADER<NAV<BODY, respectively
-    header {
-      order: 1;
-      position: static;
-    }
-
     nav {
-      order: 2;
-      position: static;
-    }
-
-    article {
-      order: 3;
-      margin: auto;
+      background-color: $theme-medium;
     }
   }
 }

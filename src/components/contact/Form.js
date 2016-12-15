@@ -13,7 +13,7 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-      error: 'Please enter your name.'
+      error: 'You cant leave name field empty.'
     };
 
     this.handleChange = this.handleChange.bind(this);
