@@ -92,7 +92,8 @@ article {
       position: static; }
     .wrapper nav {
       order: 2;
-      position: static; }
+      position: static;
+      background-color: #607D8B; }
     .wrapper article {
       order: 3;
       margin: auto; } }
@@ -105,11 +106,9 @@ article {
     .wrapper a,
     .wrapper input,
     .wrapper textarea {
-      font-size: 1.8rem; }
+      font-size: 1.6rem; }
     .wrapper article {
-      max-width: 75rem; }
-    .wrapper nav {
-      background-color: #607D8B; } }
+      max-width: 75rem; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -251,13 +250,13 @@ article {
       display: flex;
       justify-content: flex-end; }
       .navigation ul {
-        flex: 0 0 33%; }
+        flex: 0 0 50%; }
         .navigation ul li {
           padding: 0; }
           .navigation ul li a i {
             display: none; }
           .navigation ul li a p {
-            display: inline-block; } }
+            display: inline-flex; } }
 
 /* Breakpoints */
 /* Font Sizes */

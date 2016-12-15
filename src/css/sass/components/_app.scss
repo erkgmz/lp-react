@@ -124,6 +124,7 @@ article {
     nav {
       order: 2;
       position: static;
+      background-color: $theme-medium;
     }
 
     article {
@@ -159,8 +160,5 @@ article {
       max-width: 75rem;
     }
 
-    nav {
-      background-color: $theme-medium;
-    }
   }
 }
