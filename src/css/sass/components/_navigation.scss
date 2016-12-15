@@ -1,5 +1,9 @@
 @import 'config';
 
+.active {
+  background-color: $theme-accent;
+}
+
 .navigation {
   position: fixed;
   bottom: 0;
@@ -7,52 +11,54 @@
 
   ul {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
 
+
     li {
-      width: 32%;
+      flex: 1 1 auto;
+      background-color: $theme-medium;
 
       a {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        padding: 1rem 0;
 
         i {
-          font-size: 2.4rem;
-
-          @media screen and (orientation: landscape) {
-            font-size: 1.6rem;
-          }
+          font-size: 2.5rem;
         }
 
         p {
-          margin: 0 auto;
-
-          @media screen and (orientation: landscape) {
-            font-size: 1.3rem;
-          }
+          display: none;
         }
       }
-    }
-
-    @media screen and (orientation: landscape) {
-      margin: 1;
     }
   }
 
 
-  @media(min-width: $breakpoint-desktop) {
+  @media(min-width: $breakpoint-tablet) {
     display: flex;
     justify-content: flex-end;
 
     ul {
-      width: 33%;
-    }
+      flex: 0 0 33%;
 
-    i {
-      display: none;
+      li {
+        padding: 0;
+
+        a {
+          i {
+            display: none;
+          }
+
+          p {
+            display: inline-block;
+          }
+        }
+      }
     }
   }
 }
