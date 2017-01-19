@@ -5,9 +5,17 @@
 
   p {
     margin: 3rem auto 0;
+  }
 
-    a {
-      text-decoration: underline;
+  div {
+    ul {
+      li {
+        list-style: initial;
+
+        p {
+          margin: .5rem;
+        }
+      }
     }
   }
 }

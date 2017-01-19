@@ -7,8 +7,12 @@
   li {
     flex: 0 0 5rem;
 
-    i {
-      font-size: 2rem;
+    a {
+      border-bottom: none;
+
+        i {
+        font-size: 2rem;
+      }
     }
   }
 }

@@ -1,16 +1,50 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+const skillsSequence = () => {
+  // an array of strings that contain my skills.
+  // we should iterate this array and re-render
+
+  return 'skills';
+};
+
 const CopyBlock = () => {
   return (
-    <p>
-      I live in sunny Bakersfield, California. I am a voracious consumer of information, entrepreneurial spirit
-      and seasoned front-end developer. I frequently work with technologies like Angular.js and React.js for
-      front-end projects and Node.js+Express and Mongoose.js on backend projects.
-      <br />
-      <br />
-      Want to work together? Got a question? Just <Link to="/contact">contact me</Link>.
-    </p>
+    <div>
+
+      <p>
+        That includes Reactjs, Nodejs, Webpack and many other useful tools ({skillsSequence()}).
+      </p>
+
+      <p>
+        I am a self taught programmer and General Assembly WDI alumni. I've worked for both big and small companies
+        and have several years experience in the web development industry.
+      </p>
+
+      <div>
+        <p>I am currently freelancing and offer these services:</p>
+        <ul>
+          <li>
+            <p>Front-End JavaScript Development</p>
+          </li>
+
+          <li>
+            <p>Back-End Nodejs Development</p>
+          </li>
+
+          <li>
+            <p>Mobile App Development (iOS, Android)</p>
+          </li>
+        </ul>
+
+        <p>I particularly enjoy working on React.js and React Native projects.</p>
+      </div>
+
+      <p>
+        <Link to="/contact">Send me a message</Link> or connect with me on social!
+      </p>
+
+    </div>
   );
 };
 

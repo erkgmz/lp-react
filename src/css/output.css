@@ -73,7 +73,8 @@ article {
   .wrapper a {
     text-decoration: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.8); }
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 0.2rem solid #FF3D00; }
   .wrapper p,
   .wrapper a,
   .wrapper input,
@@ -134,8 +135,10 @@ article {
   margin: auto; }
   .homepage p {
     margin: 3rem auto 0; }
-    .homepage p a {
-      text-decoration: underline; }
+  .homepage div ul li {
+    list-style: initial; }
+    .homepage div ul li p {
+      margin: .5rem; }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -143,8 +146,6 @@ article {
 /* Theme Color Palette */
 .workpage {
   margin: auto; }
-  .workpage a {
-    text-decoration: underline; }
   .workpage ul {
     padding: 0;
     display: flex;
@@ -240,7 +241,8 @@ article {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        padding: 1rem 0; }
+        padding: 1rem 0;
+        border-bottom: none; }
         .navigation ul li a i {
           font-size: 2.5rem; }
         .navigation ul li a p {
@@ -267,7 +269,9 @@ article {
   display: flex; }
   .social li {
     flex: 0 0 5rem; }
-    .social li i {
-      font-size: 2rem; }
+    .social li a {
+      border-bottom: none; }
+      .social li a i {
+        font-size: 2rem; }
 
 /*# sourceMappingURL=output.css.map */

@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <Headline text="Hi, I'm Erik" />
-      <Byline text="… and I build apps with JavaScript." />
+      <Byline text="... and I build modern applications with JavaScript." />
       <CopyBlock />
       <SocialIcons />
     </article>
