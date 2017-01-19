@@ -13,7 +13,7 @@ const CopyBlock = () => {
     <div>
 
       <p>
-        That includes Reactjs, Nodejs, Webpack and many other useful tools ({skillsSequence()}).
+        That includes Reactjs, Nodejs, Webpack and many other useful tools.
       </p>
 
       <p>
