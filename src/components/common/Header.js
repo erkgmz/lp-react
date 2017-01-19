@@ -5,8 +5,7 @@ import css from '../../css/sass/components/_header.scss'; // eslint-disable-line
 
 const Header = () => {
   return (
-    <header
-      className={css.header}>
+    <header className={css.header}>
       <h1>EG</h1>
     </header>
   );
