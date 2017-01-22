@@ -10,6 +10,14 @@
   top: 0;
   width: 100%;
 
+  .removeBorderBottom {
+    border-bottom: none;
+  }
+
+  h1 {
+    display: inline-block;
+  }
+
   @media(min-width: $breakpoint-desktop) {
     width: auto;
   }
