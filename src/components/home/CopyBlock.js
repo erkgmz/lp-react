@@ -15,7 +15,7 @@ const CopyBlock = () => {
         That includes Reactjs, Nodejs, Webpack and many other useful tools.
       </p>
       <p>
-        I am a self taught programmer and General Assembly WDI alumni. I've worked for both big and small companies
+        I am a self taught web developer and General Assembly WDI alumni. I've worked for both big and small companies
         and have several years experience in the web development industry.
       </p>
       <div>
