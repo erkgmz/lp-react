@@ -4,7 +4,10 @@ import FontAwesomeIcon from '../common/FontAwesomeIcon';
 const SocialIcon = ({ outboundLink, classes }) => {
   return (
     <li>
-      <a href={outboundLink}>
+      <a
+        href={outboundLink}
+        target="_blank"
+        rel="noopener noreferrer">
         <FontAwesomeIcon classes={classes} />
       </a>
     </li>
