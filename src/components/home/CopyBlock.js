@@ -1,65 +1,62 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-const skills = [
-  'Babel',
-  'ES2015 / ES6',
-  'React Native',
-  'Express',
-  'Angular JS',
-  'Mongoose JS',
-  'Responsive Web Design',
-  'Sketch',
-  'UI',
-  'UX Design',
-  'HandlebarsJS',
-  'JQuery',
-  'SASS',
-  'Git',
-  'Unit Testing',
-  'Continous Integration (CI)',
-  'Advanced CSS',
-  'Bootstrap',
-  'React',
-  'Webpack',
-  'Node JS',
-  'CSS Flexbox',
-  'Wordpress',
-  'Mocha'
-];
+import skills from './skills';
 
+class CopyBlock extends Component {
+  constructor(props, context) {
+    super(props, context);
 
+    this.state = {
+      currentSkill: skills[0]
+    };
 
-const skillsSequence = () => {
-  // an array of strings that contain my skills.
-  // we should iterate this array and re-render
+    this.randomSkill = this.randomSkill.bind(this);
+    this.randomNumber = this.randomNumber.bind(this);
+  }
 
-  return 'skills';
-};
+  componentWillMount() {
+    let intervalId = setInterval(this.randomSkill, 1000);
+    this.setState({intervalId: intervalId});
+  }
 
-const CopyBlock = () => {
-  return (
-    <div>
-      <p>That includes ReactJS, NodeJS, Webpack and many other useful tools.</p>
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
+  }
 
-      <p>I am a self taught web developer and General Assembly WDI alumni. I've worked for both big and small companies
-        and have several years experience in the web development industry.</p>
+  randomNumber() {
+    let random = Math.floor(Math.random() * skills.length);
+    return random;
+  }
 
+  randomSkill() {
+    let rand = this.randomNumber();
+    let skill = skills[rand];
+    this.setState({ currentSkill: skill });
+  }
+
+  render() {
+    return (
       <div>
+        <p>I have several years experience building powerful and modern web, mobile, and single page applications with the
+          JavaScript stack and other technologies like {this.state.currentSkill}.</p>
 
-        <p>I am currently freelancing and offer these services:</p>
-        <ul>
-          <li><p>Front-End JavaScript Development</p></li>
-          <li><p>Back-End Nodejs Development</p></li>
-          <li><p>Mobile App Development on iOS or Android</p></li>
-        </ul>
+        {/*<p>I am a self-taught web developer and General Assembly alumni. I've worked for both big and small companies,
+          and have several years experience working with JavaScript in the web development industry.</p>*/}
 
-        <p>I particularly enjoy working with React.js and React Native projects.</p>
+        <div>
+          <p>If you are a business owner or agency looking for digital services, I am currently available for:</p>
+          <ul>
+            <li><p>UX / UI design and research</p></li>
+            <li><p>Web / mobile app development</p></li>
+            <li><p>Site audits and optimization</p></li>
+            <li><p>JavaScript custom code / feature request</p></li>
+          </ul>
+        </div>
+        <p>Want to learn more? <Link to="/contact">Send me a message</Link> or connect with me on social.</p>
       </div>
-
-      <p><Link to="/contact">Send me a message</Link> or connect with me on social!</p>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default CopyBlock;
