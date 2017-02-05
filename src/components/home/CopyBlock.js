@@ -38,24 +38,22 @@ class CopyBlock extends Component {
   render() {
     return (
       <div>
-        <p>That includes ReactJS, NodeJS, Webpack and many other useful tools like {this.state.currentSkill}.</p>
+        <p>I have several years experience building powerful and modern web, mobile, and single page applications with the
+          JavaScript stack and other technologies like {this.state.currentSkill}.</p>
 
-        <p>I am a self taught web developer and General Assembly WDI alumni. I've worked for both big and small companies
-          and have several years experience in the web development industry.</p>
+        {/*<p>I am a self-taught web developer and General Assembly alumni. I've worked for both big and small companies,
+          and have several years experience working with JavaScript in the web development industry.</p>*/}
 
         <div>
-
-          <p>I am currently freelancing and offer these services:</p>
+          <p>If you are a business owner or agency looking for digital services, I am currently available for:</p>
           <ul>
-            <li><p>Front-End JavaScript Development</p></li>
-            <li><p>Back-End Nodejs Development</p></li>
-            <li><p>Mobile App Development on iOS or Android</p></li>
+            <li><p>UX / UI design and research</p></li>
+            <li><p>Web / mobile app development</p></li>
+            <li><p>Site audits and optimization</p></li>
+            <li><p>JavaScript custom code / feature request</p></li>
           </ul>
-
-          <p>I particularly enjoy working with React.js and React Native projects.</p>
         </div>
-
-        <p><Link to="/contact">Send me a message</Link> or connect with me on social!</p>
+        <p>Want to learn more? <Link to="/contact">Send me a message</Link> or connect with me on social.</p>
       </div>
     );
   }
