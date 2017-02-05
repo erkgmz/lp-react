@@ -41,9 +41,6 @@ class CopyBlock extends Component {
         <p>I have several years experience building powerful and modern web, mobile, and single page applications with the
           JavaScript stack and other technologies like {this.state.currentSkill}.</p>
 
-        {/*<p>I am a self-taught web developer and General Assembly alumni. I've worked for both big and small companies,
-          and have several years experience working with JavaScript in the web development industry.</p>*/}
-
         <div>
           <p>If you are a business owner or agency looking for digital services, I am currently available for:</p>
           <ul>
