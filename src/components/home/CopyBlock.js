@@ -8,15 +8,16 @@ class CopyBlock extends Component {
     super(props, context);
 
     this.state = {
-      currentSkill: skills[0]
+      currentSkill: skills[0],
+      skillIndex: 0
     };
 
-    this.randomSkill = this.randomSkill.bind(this);
-    this.randomNumber = this.randomNumber.bind(this);
+    this.iterateSkill = this.iterateSkill.bind(this);
+    this.updateIndex = this.updateIndex.bind(this);
   }
 
   componentWillMount() {
-    let intervalId = setInterval(this.randomSkill, 1000);
+    let intervalId = setInterval(this.iterateSkill, 1000);
     this.setState({intervalId: intervalId});
   }
 
@@ -24,14 +25,23 @@ class CopyBlock extends Component {
     clearInterval(this.state.intervalId);
   }
 
-  randomNumber() {
-    let random = Math.floor(Math.random() * skills.length);
-    return random;
+  updateIndex() {
+    let {skillIndex} = this.state;
+    skillIndex++;
+
+    if(skillIndex >= skills.length) {
+      skillIndex = 0;
+    }
+
+    this.setState({skillIndex: skillIndex});
   }
 
-  randomSkill() {
-    let rand = this.randomNumber();
-    let skill = skills[rand];
+  iterateSkill() {
+    let {skillIndex} = this.state;
+    let skill = skills[skillIndex];
+
+    this.updateIndex();
+
     this.setState({ currentSkill: skill });
   }
 
