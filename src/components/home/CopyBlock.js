@@ -18,7 +18,7 @@ class CopyBlock extends Component {
 
   componentWillMount() {
     let intervalId = setInterval(this.iterateSkill, 1000);
-    this.setState({intervalId: intervalId});
+    this.setState({ intervalId });
   }
 
   componentWillUnmount() {
@@ -33,16 +33,16 @@ class CopyBlock extends Component {
       skillIndex = 0;
     }
 
-    this.setState({skillIndex: skillIndex});
+    this.setState({ skillIndex });
   }
 
   iterateSkill() {
     let {skillIndex} = this.state;
-    let skill = skills[skillIndex];
+    let currentSkill = skills[skillIndex];
 
     this.updateIndex();
 
-    this.setState({ currentSkill: skill });
+    this.setState({ currentSkill });
   }
 
   render() {
