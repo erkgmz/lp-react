@@ -1,7 +1,5 @@
 const skills = [
   'Babel',
-  'ES2015 / ES6',
-  'React Native',
   'Express',
   'Angular JS',
   'Mongoose JS',
@@ -10,20 +8,18 @@ const skills = [
   'UI design',
   'UX design',
   'Handlebars JS',
-  'JQuery',
+  'jQuery',
   'SASS',
   'Git',
-  'Unit Testing',
-  'Continous Integration (CI)',
+  'Continous Integration',
   'Advanced CSS',
   'Bootstrap',
-  'React',
+  'React JS',
   'Webpack',
   'Node JS',
-  'CSS Flexbox',
+  'Flexbox',
   'Wordpress',
-  'Mocha',
-  'ES2016 / ES7'
+  'ES6 / ES7'
 ];
 
 export default skills;

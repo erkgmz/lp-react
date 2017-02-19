@@ -12,7 +12,8 @@ const WorkPage = () => {
   return (
     <article className={css.workpage}>
       <Headline text="Portfolio" />
-      <Byline text="I design & develop responsive apps & websites" />
+      <Byline text="I design and develop responsive web applications." />
+      <WorkItems projects={PROJECTS} />
       <p>
         Want to learn about how I used React.js to build this page?
         &nbsp;
@@ -20,10 +21,9 @@ const WorkPage = () => {
           href="https://github.com/erkgmz/lp-react"
           target="_blank"
           rel="noopener noreferrer">
-          Checkout the project repo on GitHub
+          Check out the project repo on GitHub
         </a>
       </p>
-      <WorkItems projects={PROJECTS} />
     </article>
   );
 };

@@ -43,6 +43,10 @@
         color: $theme-text;
         padding: .8rem 0;
       }
+
+      textarea {
+        resize: none;
+      }
     }
   }
 

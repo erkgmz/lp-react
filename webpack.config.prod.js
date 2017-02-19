@@ -25,13 +25,8 @@ export default {
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
       {test: /\.css$/, loaders: ['style', 'css']},
       {test: /\.(scss)$/, loader: ExtractTextPlugin.extract('css?module&localIdentName=[local]---[hash:base64:5]!postcss!resolve-url!sass')},
-      { test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/, loader: 'url?limit=10000000&name=[name].[ext]'},
+      {test: /\.(jpe?g|png|gif)$/i, loader: 'file?name=[name].[ext]'},
       {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'}
-      // {test: /\.(jpg|png)$/, loader: 'url-loader?limit=1000000'},
-      // {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      // {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
-      // {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
-      // {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
   },
   plugins: [
