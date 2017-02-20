@@ -1,11 +1,12 @@
 ## Getting started 
 
-To run app in development mode, go to your terminal and type `npm run dev -s` and navigate to `localhost:3000`. 
+To run app in development mode, go to your terminal and run `npm run dev -s` and navigate to `localhost:3000`. 
+
 The `-s` flag reduces "noise" while starting up and is completely optional. 
 
-To build app in production in your terminal run `npm run build -s`.
+To build app in production, open your terminal and run `npm run build -s`.
 
-To run app in production, in your terminal run `npm start -s` and navigate to `localhost:8080`.
+To run app in production, open your terminal and run `npm start -s` then navigate to `localhost:8080`.
 
 ## List of technologies used for development
 
@@ -15,7 +16,7 @@ To run app in production, in your terminal run `npm start -s` and navigate to `l
 - React Router
 - Normalize CSS
 - SASS
-- Flexbox (Autoprefixed with PostCSS thanks to Webpack)
+- Flexbox (Autoprefixed with PostCSS and Webpack)
 - CSS Modules (Webpack feature)
 - Mobile first / Responsive
 - Ajax
