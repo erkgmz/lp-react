@@ -27,7 +27,7 @@ To run app in production, in your terminal run `npm start -s` and navigate to `l
 	- Express Router
 - NPM scripts (including pre/post hooks)
 
-### Transpiler - **Babel**
+### Transpiler - __Babel__
 
 #### List of plugins
 - babel-cli
@@ -39,7 +39,7 @@ To run app in production, in your terminal run `npm start -s` and navigate to `l
 - babel-preset-react-hmre
 - babel-register
 
-### Module Bundler - **Webpack 1.X**
+### Module Bundler - __Webpack 1.X__
 
 #### List of loaders
 - style-loader
@@ -57,7 +57,7 @@ To run app in production, in your terminal run `npm start -s` and navigate to `l
 ### Emails
 - Sendgrid (Node.js)
 
-### Linter - **Eslint**
+### Linter - __Eslint__
 
 #### List of plugins
 - eslint-plugin-import
