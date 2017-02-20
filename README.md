@@ -1,18 +1,71 @@
-### Run app in dev mode
-	npm run dev
+## Getting started 
 
-### Run app in production mode
-	npm run build
+To run app in development mode, go to your terminal and type `npm run dev -s` and navigate to `localhost:3000`. 
+The `-s` flag reduces "noise" while starting up and is completely optional. 
 
-### Heroku
+To build app in production in your terminal run `npm run build -s`.
 
-**No longer using Heroku for deployment**
+To run app in production, in your terminal run `npm start -s` and navigate to `localhost:8080`.
 
-These commands are only here for reference, there's no need to run them while working on this project. Read about Heroku and npm scripts `npm start` & `npm run postinstall` [here](https://devcenter.heroku.com/articles/nodejs-support#build-behavior) or watch [this helpful video on youtube](https://www.youtube.com/watch?v=Ru3Rj_hM8bo&t=1060s) about this topic.
+## List of technologies used for development
 
-	npm run postinstall - initial production build
-	npm start - starts distServer
+### Front-end
+- React
+- React Dom
+- React Router
+- Normalize CSS
+- SASS
+- Flexbox (Autoprefixed with PostCSS thanks to Webpack)
+- CSS Modules (Webpack feature)
+- Mobile first / Responsive
+- Ajax
+- Modern JavaScript (ES6+)
 
+### Back-end
+- Node.js @5.7.1
+- Express
+	- Express Router
+- NPM scripts (including pre/post hooks)
 
-Environment variables on remote server need to be updated manually. For security, we can only ever add our git-ls files
-to the server, so env vars cannot be sent over ssh.
+### Transpiler - **Babel**
+
+#### List of plugins
+- babel-cli
+- babel-core
+- babel-loader
+- babel-plugin-react-display-name
+- babel-preset-es2015
+- babel-preset-react
+- babel-preset-react-hmre
+- babel-register
+
+### Module Bundler - **Webpack 1.X**
+
+#### List of loaders
+- style-loader
+- url-loader
+- resolve-url-loader
+- sass-loader
+- file-loader
+- html-loader
+- postcss-loader
+- css-loader
+- extract-text-webpack-plugin
+- webpack-dev-middleware
+- webpack-hot-middleware
+
+### Emails
+- Sendgrid (Node.js)
+
+### Linter - **Eslint**
+
+#### List of plugins
+- eslint-plugin-import
+- eslint-plugin-react
+- eslint-watch
+
+### Deployment
+- Flightplan
+- Digital Ocean (for Node.js support)
+
+***This project will remain a continous work in progress. Report bugs (or ideas) to e@erikgomez.co.***

@@ -33,8 +33,6 @@ app.listen(port, function(err) {
   if (err) {
     return console.log(err);
   } else {
-    // do I need to use open() to keep Webpack hotreload?
-    // Hot reload not working...
     console.log(`App is now running on ${port}`);
   }
 });
