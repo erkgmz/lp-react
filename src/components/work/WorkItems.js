@@ -13,7 +13,8 @@ const WorkItems = ({ projects }) => {
               title={project.title}
               img={project.img.path}
               alt={project.img.alt}
-              link={project.link} />
+              link={project.link}
+              noFollow={project.noFollow} />
           );
         })
       }

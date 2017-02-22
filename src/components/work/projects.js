@@ -1,7 +1,8 @@
 const PROJECTS = [
   {
-    title: 'SPLASH PAGE',
+    title: 'Under Construction UI',
     link: 'https://erkgmz.github.io/e-lp/public/',
+    noFollow: true,
     img: {
       path: require('./portfolio_images/personalPage.png'),
       alt: 'erikgomez.co cover image'
@@ -10,6 +11,7 @@ const PROJECTS = [
   {
     title: 'GA ADMISSIONS',
     link: 'https://ga-admissions.herokuapp.com/',
+    noFollow: false,
     img: {
       path: require('./portfolio_images/generalAssembly.png'),
       alt: 'General Assembly logo'
@@ -18,6 +20,7 @@ const PROJECTS = [
   {
     title: 'STUD FINDER',
     link: 'http://course-walkers.herokuapp.com/',
+    noFollow: false,
     img: {
       path: require('./portfolio_images/coursewalkers.png'),
       alt: 'Course Walkers logo'
