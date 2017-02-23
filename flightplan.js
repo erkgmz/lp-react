@@ -7,15 +7,6 @@ var startFile = 'dist/';
 
 var tmpDir = appName+'-' + new Date().getTime();
 
-// configuration
-// plan.target('staging', [
-//   {
-//     host: '104.131.128.185',
-//     username: username,
-//     agent: process.env.SSH_AUTH_SOCK
-//   }
-// ]);
-
 plan.target('production', [
   {
     host: '104.131.128.185',
@@ -23,12 +14,6 @@ plan.target('production', [
     privateKey: '/Users/erikgomez/.ssh/id_rsa',
     agent: process.env.SSH_AUTH_SOCK
   },
-//add in another server if you have more than one
-// {
-//   host: '104.131.93.216',
-//   username: username,
-//   agent: process.env.SSH_AUTH_SOCK
-// }
 ]);
 
 // run commands on localhost
