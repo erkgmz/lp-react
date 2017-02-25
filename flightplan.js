@@ -38,6 +38,6 @@ plan.remote(function(remote) {
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
 
   remote.exec('forever stopall', {failsafe: true});
-  remote.exec('cd ~/' + appName + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm start" ./');
+  remote.exec('cd ~/' + appName + ' && forever start --minUptime 20000 --spinSleepTime 1000 -c "npm run productionServer" ./');
   // https://github.com/foreverjs/forever/issues/540
 });
