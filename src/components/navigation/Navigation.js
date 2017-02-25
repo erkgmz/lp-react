@@ -23,7 +23,7 @@ class Navigation extends React.Component {
                   <IndexLink
                     to={icon.routerPath}
                     activeClassName={css.active}>
-                    <FontAwesomeIcon classes={icon.classes} />
+                    <FontAwesomeIcon faClass={icon.faClass} />
                     <p>{icon.text}</p>
                   </IndexLink>
                 </li>
@@ -34,7 +34,7 @@ class Navigation extends React.Component {
                   <Link
                     to={icon.routerPath}
                     activeClassName={css.active}>
-                    <FontAwesomeIcon classes={icon.classes} />
+                    <FontAwesomeIcon faClass={icon.faClass} />
                     <p>{icon.text}</p>
                   </Link>
                 </li>

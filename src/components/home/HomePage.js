@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <Headline text="Hello World!" />
-      <Byline text="I'm Erik, front-end web developer in Southern California." />
+      <Byline text="I'm Erik, web developer & front-end engineer in California." />
       <CopyBlock />
       <SocialIcons />
     </article>

@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className={css.header}>
       <Link to="/" className={css.removeBorderBottom}>
-        <h1>Erik Gomez</h1>
+        <h2>Erik Gomez</h2>
       </Link>
     </header>
   );

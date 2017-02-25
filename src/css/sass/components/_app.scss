@@ -32,9 +32,9 @@ article {
 
 /*
  * NOTE:
- *  Since the header and navigation are fixed at the top & bottom, respectively, we will not treat them as
- *  flex items. We wanted to provide a native experience and did not want to use the hamburger button on mobile.
- *  Currently, flexbox does not support absolutely positioned elements.
+ *  Since the header and navigation are fixed at the top & bottom, we will not treat them as
+ *  flex items. Specs avoid hamburger button on mobile.
+ *  Currently, flexbox does not support absolute elements.
  *  http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element
  *  Because of this, we will set the height of the .wrapper, set a column layout on .wrapper since the
  *   view will not be absolutely positioned, and leverage flexbox to vertically center our content!

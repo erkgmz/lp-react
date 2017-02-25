@@ -3,15 +3,18 @@ import React from 'react';
 const ICONS = [
   {
     outboundLink: 'https://www.linkedin.com/in/erkgmz',
-    classes: 'fa fa-linkedin'
+    faClass: 'fa fa-linkedin',
+    text: 'LINKEDIN'
   },
   {
     outboundLink: 'https://twitter.com/erikgomezco',
-    classes: 'fa fa-twitter'
+    faClass: 'fa fa-twitter',
+    text: 'TWITTER'
   },
   {
     outboundLink: 'https://github.com/erkgmz',
-    classes: 'fa fa-github'
+    faClass: 'fa fa-github',
+    text: 'GITHUB'
   }
 ];
 

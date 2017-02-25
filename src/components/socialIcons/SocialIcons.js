@@ -14,7 +14,7 @@ const SocialIcons = () => {
           <SocialIcon
             key={key}
             outboundLink={icon.outboundLink}
-            classes={icon.classes} />
+            faClass={icon.faClass} />
         );
       })}
     </ul>

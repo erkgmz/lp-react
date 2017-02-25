@@ -1,14 +1,14 @@
 import React from 'react';
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
 
-const SocialIcon = ({ outboundLink, classes }) => {
+const SocialIcon = ({ outboundLink, faClass }) => {
   return (
     <li>
       <a
         href={outboundLink}
         target="_blank"
         rel="noopener noreferrer">
-        <FontAwesomeIcon classes={classes} />
+        <FontAwesomeIcon faClass={faClass} />
       </a>
     </li>
   );
@@ -16,7 +16,7 @@ const SocialIcon = ({ outboundLink, classes }) => {
 
 SocialIcon.propTypes = {
   outboundLink: React.PropTypes.string.isRequired,
-  classes: React.PropTypes.string.isRequired
+  faClass: React.PropTypes.string.isRequired
 };
 
 export default SocialIcon;

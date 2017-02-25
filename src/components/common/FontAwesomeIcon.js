@@ -1,13 +1,13 @@
 import React from 'react';
 
-const FontAwesomeIcon = ({ classes }) => {
+const FontAwesomeIcon = ({ faClass }) => {
   return (
-    <i className={classes} aria-hidden="true"></i>
+    <i className={faClass} aria-hidden="true"></i>
   );
 };
 
 export default FontAwesomeIcon;
 
 FontAwesomeIcon.propTypes = {
-  classes: React.PropTypes.string.isRequired
+  faClass: React.PropTypes.string.isRequired
 };

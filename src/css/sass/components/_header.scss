@@ -9,13 +9,17 @@
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 1.3rem;
 
   .removeBorderBottom {
     border-bottom: none;
   }
 
-  h1 {
-    display: inline-block;
+  a {
+    h2 {
+      display: inline-block;
+      font-weight: 700;
+    }
   }
 
   @media(min-width: $breakpoint-desktop) {

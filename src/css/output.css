@@ -32,9 +32,9 @@ article {
 
 /*
  * NOTE:
- *  Since the header and navigation are fixed at the top & bottom, respectively, we will not treat them as
- *  flex items. We wanted to provide a native experience and did not want to use the hamburger button on mobile.
- *  Currently, flexbox does not support absolutely positioned elements.
+ *  Since the header and navigation are fixed at the top & bottom, we will not treat them as
+ *  flex items. Specs avoid hamburger button on mobile.
+ *  Currently, flexbox does not support absolute elements.
  *  http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element
  *  Because of this, we will set the height of the .wrapper, set a column layout on .wrapper since the
  *   view will not be absolutely positioned, and leverage flexbox to vertically center our content!
@@ -122,11 +122,13 @@ article {
 .header {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  padding: 1.3rem; }
   .header .removeBorderBottom {
     border-bottom: none; }
-  .header h1 {
-    display: inline-block; }
+  .header a h2 {
+    display: inline-block;
+    font-weight: 700; }
   @media (min-width: 1024px) {
     .header {
       width: auto; } }
@@ -143,6 +145,8 @@ article {
     list-style: initial; }
     .homepage div ul li p {
       margin: .5rem; }
+  .homepage div hr {
+    margin: 2rem auto; }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -182,8 +186,7 @@ article {
 .contact {
   margin: auto;
   display: flex;
-  flex-flow: column nowrap;
-  /* WE NEED SINGLE COLUMN LAYOUT IN MOBILE, 2 COLUMNS FOR DESKTOP */ }
+  flex-flow: column nowrap; }
   .contact .leftCol {
     flex: 0 1 auto; }
   .contact .rightCol {
@@ -203,7 +206,8 @@ article {
         cursor: pointer;
         align-self: flex-end;
         flex: 1 0 auto;
-        font-size: 1.4rem; }
+        font-size: 1.4rem;
+        border-radius: 4px; }
       .contact .rightCol form input,
       .contact .rightCol form textarea {
         background-color: transparent;
@@ -273,11 +277,11 @@ article {
 .social {
   padding: 0;
   display: flex; }
-  .social li {
-    flex: 0 0 5rem; }
-    .social li a {
-      border-bottom: none; }
-      .social li a i {
-        font-size: 2rem; }
+  .social li:nth-child(2) {
+    margin: 0 5rem; }
+  .social li a {
+    border-bottom: none; }
+    .social li a i {
+      font-size: 2rem; }
 
 /*# sourceMappingURL=output.css.map */
