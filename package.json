@@ -16,7 +16,7 @@
     "git-push": "git add -A && git commit -m 'removes /dist before push' && git push",
     "git-commit": "git add -A && git commit -m 'stage dist/ for deployment'",
     "add-sitemap": "cp sitemap.xml ./dist",
-    "prebuild": "npm-run-all clean-dist build:html",
+    "prebuild": "npm-run-all clean-dist add-sitemap build:html",
     "build": "babel-node tools/build.js",
     "productionServer": "babel-node tools/distServer.js",
     "predeploy": "npm-run-all build add-sitemap git-commit",
