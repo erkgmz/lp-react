@@ -15,13 +15,12 @@
     "build:html": "babel-node tools/buildHtml.js",
     "git-push": "git add -A && git commit -m 'removes /dist before push' && git push",
     "git-commit": "git add -A && git commit -m 'stage dist/ for deployment'",
-    "add-sitemap": "mv sitemap.xml ./dist",
+    "add-sitemap": "cp sitemap.xml ./dist",
     "prebuild": "npm-run-all clean-dist build:html",
     "build": "babel-node tools/build.js",
     "productionServer": "babel-node tools/distServer.js",
     "predeploy": "npm-run-all build add-sitemap git-commit",
-    "deploy": "fly production",
-    "postdeploy": "npm-run-all remove-dist git-push",
+
     "generateSitemap": "babel-node sitemap-builder.js"
   },
   "dependencies": {
