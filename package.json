@@ -14,10 +14,11 @@
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
     "git-push": "git add -A && git commit -m 'push production' && git push",
+    "git-commit": "git add -A && git commit -m 'predeploy'",
     "prebuild": "npm-run-all clean-dist build:html",
     "build": "babel-node tools/build.js",
     "productionServer": "babel-node tools/distServer.js",
-    "predeploy": "npm run build && git add -A && git commit -m 'predeploy'",
+    "predeploy": "npm-run-all build git-commit",
     "deploy": "fly production",
     "postdeploy": "npm-run-all clean-dist git-push"
   },
