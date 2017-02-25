@@ -1,11 +1,11 @@
 const PROJECTS = [
   {
     title: 'Under Construction UI',
-    link: 'https://erkgmz.github.io/e-lp/public/',
+    link: 'https://erkgmz.github.io/e-lp/',
     noFollow: true,
     img: {
       path: require('./portfolio_images/personalPage.png'),
-      alt: 'erikgomez.co cover image'
+      alt: 'cover image'
     }
   },
   {
