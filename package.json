@@ -20,7 +20,8 @@
     "build": "babel-node tools/build.js",
     "productionServer": "babel-node tools/distServer.js",
     "predeploy": "npm-run-all build add-sitemap git-commit",
-
+    "deploy": "fly production",
+    "postdeploy": "npm-run-all remove-dist git-push",
     "generateSitemap": "babel-node sitemap-builder.js"
   },
   "dependencies": {
