@@ -13,12 +13,13 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
+    "git-push": "git add -A && git commit -m 'push production' && git push",
     "prebuild": "npm-run-all clean-dist build:html",
     "build": "babel-node tools/build.js",
     "productionServer": "babel-node tools/distServer.js",
     "predeploy": "npm run build && git add -A && git commit -m 'predeploy'",
     "deploy": "fly production",
-    "postdeploy": "npm run clean-dist && git push"
+    "postdeploy": "npm-run-all clean-dist git-push"
   },
   "dependencies": {
     "babel-cli": "6.8.0",
