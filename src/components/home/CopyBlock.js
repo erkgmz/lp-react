@@ -59,9 +59,10 @@ class CopyBlock extends Component {
             <li><p>Site audits and optimization</p></li>
           </ul>
         </div>
+        <br /><br />
         <div>
           <Byline text="Questions?" />
-          <p><Link to="/contact">Send me a message</Link> or connect with me on social.</p>
+          <p><Link to="/contact">Send me a message</Link> or connect with me.</p>
         </div>
       </div>
     );

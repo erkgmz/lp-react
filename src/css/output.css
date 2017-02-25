@@ -276,7 +276,8 @@ article {
 /* Theme Color Palette */
 .social {
   padding: 0;
-  display: flex; }
+  display: flex;
+  margin-top: 2rem; }
   .social li:nth-child(2) {
     margin: 0 5rem; }
   .social li a {
