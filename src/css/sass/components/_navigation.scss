@@ -43,6 +43,12 @@
     display: flex;
     justify-content: flex-end;
 
+    .active {
+      p {
+        font-weight: 700;
+      }
+    }
+
     ul {
       flex: 0 0 50%;
 

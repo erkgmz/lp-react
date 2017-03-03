@@ -29,6 +29,11 @@
 
     a {
       text-decoration: underline;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     // q&d solution - get rid of it asap!
