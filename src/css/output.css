@@ -73,8 +73,7 @@ article {
   .wrapper a {
     text-decoration: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    border-bottom: 0.2rem solid #FF3D00; }
+    color: rgba(255, 255, 255, 0.8); }
   .wrapper p,
   .wrapper a,
   .wrapper input,
@@ -139,14 +138,23 @@ article {
 /* Theme Color Palette */
 .homepage {
   margin: auto; }
-  .homepage p {
-    margin: 3rem auto 0; }
-  .homepage div ul li {
-    list-style: initial; }
-    .homepage div ul li p {
-      margin: .5rem; }
-  .homepage div hr {
-    margin: 2rem auto; }
+  .homepage .container {
+    margin-top: 3rem;
+    padding-left: 2rem; }
+    .homepage .container p {
+      margin: 3rem auto; }
+    .homepage .container ul {
+      margin: 3rem auto; }
+      .homepage .container ul li {
+        list-style: initial; }
+        .homepage .container ul li p {
+          margin: .5rem; }
+    .homepage .container h2 {
+      font-weight: 700; }
+    .homepage .container a {
+      text-decoration: underline; }
+    .homepage .container .socialContainer ul li {
+      list-style: none; }
 
 /* Breakpoints */
 /* Font Sizes */

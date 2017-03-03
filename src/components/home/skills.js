@@ -19,7 +19,8 @@ const skills = [
   'Node JS',
   'Flexbox',
   'Wordpress',
-  'ES6 / ES7'
+  'ES6 / ES7',
+  'CSS Modules'
 ];
 
 export default skills;

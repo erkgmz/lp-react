@@ -12,17 +12,11 @@ const WorkPage = () => {
   return (
     <article className={css.workpage}>
       <Headline text="Portfolio" />
-      <Byline text="I design and develop responsive web applications." />
+      <Byline text="I design & develop responsive websites & web applications." />
       <WorkItems projects={PROJECTS} />
       <p>
-        Want to learn about how I used React.js to build this page?
-        &nbsp;
-        <a
-          href="https://github.com/erkgmz/lp-react"
-          target="_blank"
-          rel="noopener noreferrer">
-          Check out the project repo on GitHub
-        </a>
+        This website was <a href="https://github.com/erkgmz/lp-react" target="_blank" rel="noopener noreferrer">developed</a> with modern
+        JavaScript, including Node.js & React, today's fastest growing front-end framework.
       </p>
     </article>
   );

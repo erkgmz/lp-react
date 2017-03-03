@@ -77,7 +77,7 @@ article {
     text-decoration: none;
     cursor: pointer;
     color: $theme-text;
-    border-bottom: .2rem solid $theme-accent;
+    // border-bottom: .2rem solid $theme-accent;
   }
 
   p,
@@ -116,7 +116,6 @@ article {
 
   @media(min-width: $breakpoint-tablet) {
 
-    // SET THE ORDER OF THE FLEX ITEM HEADER<NAV<BODY, respectively
     header {
       order: 1;
       position: static;
