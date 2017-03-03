@@ -16,10 +16,10 @@ const WorkPage = () => {
       <WorkItems projects={PROJECTS} />
       <p>
         This website was <a href="https://github.com/erkgmz/lp-react" target="_blank" rel="noopener noreferrer">developed</a> with modern
-        JavaScript, including Node.js & React, today's fastest growing front-end framework.
+        JavaScript, including Node.js & React.
       </p>
     </article>
   );
 };
-
+// Fix links to have font-weight: 700 with underiline
 export default styleable(css)(WorkPage);
