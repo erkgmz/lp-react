@@ -29,6 +29,13 @@ header {
 article {
   padding: 6.5rem 1.2rem;
   max-width: 55rem; }
+  article p {
+    font-weight: 300; }
+    article p a {
+      text-decoration: underline;
+      font-weight: 700; }
+      article p a:hover {
+        text-decoration: none; }
 
 /*
  * NOTE:
@@ -69,10 +76,8 @@ article {
     font-weight: 400; }
   .wrapper p,
   .wrapper a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300; }
+    font-family: 'Roboto', sans-serif; }
   .wrapper a {
-    text-decoration: none;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8); }
   .wrapper p,
@@ -109,7 +114,7 @@ article {
     .wrapper textarea {
       font-size: 1.6rem; }
     .wrapper article {
-      max-width: 85rem; } }
+      max-width: 75rem; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -139,26 +144,36 @@ article {
 /* Theme Color Palette */
 .homepage {
   margin: auto; }
-  .homepage .container {
-    margin-top: 3rem;
-    padding-left: 2rem; }
-    .homepage .container p {
-      margin: 3rem auto; }
-    .homepage .container ul {
-      margin: 3rem auto; }
-      .homepage .container ul li {
-        list-style: initial; }
-        .homepage .container ul li p {
-          margin: .5rem; }
-    .homepage .container h2 {
+  .homepage .copyblockContainer {
+    margin: 4rem auto; }
+    .homepage .copyblockContainer h2 {
       font-weight: 700; }
-    .homepage .container a {
-      text-decoration: underline;
-      font-weight: 700; }
-      .homepage .container a:hover {
-        text-decoration: none; }
-    .homepage .container .socialContainer ul li {
-      list-style: none; }
+  .homepage .skills {
+    margin: 3rem auto; }
+    .homepage .skills li {
+      list-style: initial; }
+      .homepage .skills li p {
+        margin: .5rem; }
+
+/* Breakpoints */
+/* Font Sizes */
+/* Headline Sizes */
+/* Theme Color Palette */
+.about .container {
+  margin-top: 3rem;
+  padding-left: 2rem; }
+  .about .container p {
+    margin: 3rem auto; }
+    .about .container p img {
+      float: right;
+      width: 15rem;
+      margin: 0 0 1rem 2rem;
+      border-radius: 4px; }
+  .about .container h2 {
+    font-weight: 700; }
+@media (min-width: 1024px) {
+  .about .container p img {
+    width: 30rem; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -246,6 +261,8 @@ article {
 /* Theme Color Palette */
 .active {
   background-color: #FF3D00; }
+  .active a p {
+    font-weight: 700; }
 
 .navigation {
   position: fixed;
@@ -265,11 +282,13 @@ article {
         flex-flow: column nowrap;
         align-items: center;
         padding: 1rem 0;
-        border-bottom: none; }
+        border-bottom: none;
+        text-decoration: none; }
         .navigation ul li a i {
           font-size: 2.5rem; }
         .navigation ul li a p {
-          display: none; }
+          display: none;
+          font-weight: 300; }
   @media (min-width: 768px) {
     .navigation {
       display: flex;

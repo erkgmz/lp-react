@@ -3,45 +3,22 @@
 .homepage {
   margin: auto;
 
-  .container {
-    margin-top: 3rem;
-    padding-left: 2rem;
-
-    p {
-      margin: 3rem auto;
-    }
-
-    ul {
-      margin: 3rem auto;
-
-      li {
-        list-style: initial;
-
-        p {
-          margin: .5rem;
-        }
-      }
-    }
+  .copyblockContainer {
+    margin: 4rem auto;
 
     h2 {
       font-weight: 700;
     }
+  }
 
-    a {
-      text-decoration: underline;
-      font-weight: 700;
+  .skills {
+    margin: 3rem auto;
 
-      &:hover {
-        text-decoration: none;
-      }
-    }
+    li {
+      list-style: initial;
 
-    // q&d solution - get rid of it asap!
-    .socialContainer {
-      ul {
-        li {
-          list-style: none;
-        }
+      p {
+        margin: .5rem;
       }
     }
   }
