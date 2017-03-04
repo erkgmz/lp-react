@@ -1,24 +1,28 @@
 import React from 'react';
+import {Link} from 'react-router';
 import styleable from 'react-styleable';
 
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
+import ContactCTA from '../common/ContactCTA';
 import CopyBlock from './CopyBlock';
+import SocialIcons from '../socialIcons/SocialIcons';
 
 import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
 
 const HomePage = () => {
   return (
     <article className={css.homepage}>
-      <Headline text="I'm Erik" />
-      <Byline text="Web developer & front-end engineer in California." />
-      <CopyBlock
-        containerStyle={css.container}
-        socialContainer={css.socialContainer} />
+      <Headline text="Hello!" />
+      <Byline text="I'm a web developer & front-end engineer in Bakersfield, California." />
+      <CopyBlock styles={css} />
+      <ContactCTA path="/contact" text="Send me a message" />
+      <p>Or connect with me on social.</p>
+      <SocialIcons />
     </article>
   );
 };
-// try to remove CopyBlock props, this is just a quick and dirty solution
+
 export default styleable(css)(HomePage);
 
 HomePage.propTypes = {

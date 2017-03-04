@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
 
 const SocialIcon = ({ outboundLink, faClass }) => {
@@ -15,8 +15,8 @@ const SocialIcon = ({ outboundLink, faClass }) => {
 };
 
 SocialIcon.propTypes = {
-  outboundLink: React.PropTypes.string.isRequired,
-  faClass: React.PropTypes.string.isRequired
+  outboundLink: PropTypes.string.isRequired,
+  faClass: PropTypes.string.isRequired
 };
 
 export default SocialIcon;

@@ -18,8 +18,8 @@ const App = ({ children }) => {
 };
 
 App.propTypes = {
-  children: React.PropTypes.object.isRequired,
-  css: React.PropTypes.object
+  children: PropTypes.object.isRequired,
+  css: PropTypes.object
 };
 
 export default styleable(css)(App);
