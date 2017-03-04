@@ -1,0 +1,33 @@
+@import 'config';
+
+.about {
+  .container {
+    margin-top: 3rem;
+    padding-left: 2rem;
+
+    p {
+      margin: 3rem auto;
+
+      img {
+        float: right;
+        width: 15rem;
+        margin: 0 0 1rem 2rem;
+        border-radius: 4px;
+      }
+    }
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  @media(min-width: $breakpoint-desktop) {
+    .container {
+      p {
+        img {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
