@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import WorkItem from './WorkItem';
 
@@ -25,5 +25,5 @@ const WorkItems = ({ projects }) => {
 export default WorkItems;
 
 WorkItems.propTypes = {
-  projects: React.PropTypes.array.isRequired
+  projects: PropTypes.array.isRequired
 };

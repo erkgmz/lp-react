@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const WorkItem = ({ title, img, link, alt, noFollow }) => {
   return (
@@ -17,11 +17,11 @@ const WorkItem = ({ title, img, link, alt, noFollow }) => {
 };
 
 WorkItem.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  img: React.PropTypes.string.isRequired,
-  link: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string,
-  noFollow: React.PropTypes.bool
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  noFollow: PropTypes.bool
 };
 
 export default WorkItem;

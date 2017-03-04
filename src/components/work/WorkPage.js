@@ -14,12 +14,10 @@ const WorkPage = () => {
       <Headline text="Portfolio" />
       <Byline text="I design & develop responsive websites & web applications." />
       <WorkItems projects={PROJECTS} />
-      <p>
-        This website was <a href="https://github.com/erkgmz/lp-react" target="_blank" rel="noopener noreferrer">developed</a> with modern
-        JavaScript, including Node.js & React.
-      </p>
+      <p>I designed, <a href="https://github.com/erkgmz/lp-react" target="_blank" rel="noopener noreferrer">developed</a>, and deployed this website using modern
+        JavaScript, Node.js and React.</p>
     </article>
   );
 };
-// Fix links to have font-weight: 700 with underiline
+
 export default styleable(css)(WorkPage);
