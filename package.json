@@ -13,7 +13,7 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
-    "git-push": "git add -A && git commit -m 'removes /dist, post deploy' && git push",
+    "git-push": "git add -A && git commit -m 'deployed to production, removes dist' && git push",
     "git-commit": "git add -A && git commit -m 'stage dist/ for deployment'",
     "add-sitemap": "cp sitemap.xml ./dist",
     "prebuild": "npm-run-all clean-dist add-sitemap build:html",
