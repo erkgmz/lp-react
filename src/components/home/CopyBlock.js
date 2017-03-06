@@ -59,15 +59,17 @@ class CopyBlock extends Component {
     return (
       <div className={this.props.styles.copyblockContainer}>
         <Byline text="What I do" />
+
         <p>I build modern, responsive web applications with JavaScript and technologies like {this.state.currentSkill}.</p>
 
         <p>If you have any questions or need digital services, I am currently available for:</p>
+
         <ul className={this.props.styles.skills}>
-          <li><p>Web development</p></li>
-          <li><p>UX Design (UX)</p></li>
-          <li><p>Site audits & redesigns</p></li>
+          <li><p>Web Development - Full-Stack JavaScript</p></li>
+          <li><p>Front-End Development - HTML, CSS, JavaScript</p></li>
+          <li><p>UX/UI Design</p></li>
+          <li><p>Site Audits & Redesigns</p></li>
           <li><p>Search Engine Optimization (SEO)</p></li>
-          <li><p>JavaScript Mentoring</p></li>
         </ul>
       </div>
     );

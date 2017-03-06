@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <Headline text="Hello!" />
-      <Byline text="I'm a web developer & front-end engineer in Bakersfield, California." />
+      <Byline text="I'm a UX/UI Designer, Front-End Engineer, and Web Developer in Bakersfield, California." />
       <CopyBlock styles={css} />
       <ContactCTA path="/contact" text="Send me a message" />
       <p>Or connect with me on social.</p>

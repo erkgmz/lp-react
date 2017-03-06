@@ -26,7 +26,7 @@
       input[type="submit"] {
         background-color: $theme-accent;
         border: none;
-        padding: .6rem;
+        padding: .6rem 2rem;
         cursor: pointer;
         align-self: flex-end;
         flex: 1 0 auto;
@@ -43,6 +43,7 @@
         outline: none;
         color: $theme-text;
         padding: .8rem 0;
+        border-radius: 0;
       }
 
       textarea {
@@ -53,9 +54,10 @@
 
   @media(min-width: $breakpoint-desktop) {
     flex-flow: row nowrap;
+    justify-content: space-between;
 
     .leftCol {
-      flex: 0 1 42rem;
+      flex: 0 1 auto;
     }
 
     .rightCol {

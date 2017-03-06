@@ -12,8 +12,8 @@ const ContactPage = () => {
   return (
     <article className={css.contact}>
       <div className={css.leftCol}>
-        <Headline text="Contact"/>
-        <Byline text="Have a question? Great! I want to hear from you" />
+        <Headline text="Contact Me"/>
+        <Byline text="Have a Question? Send Me a Message." />
         <SocialIcons />
       </div>
 
