@@ -24,13 +24,6 @@ class CopyBlock extends Component {
     this.setState({ intervalId });
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextState.skillIndex >= this.state.skillIndex) {
-      return true;
-    }
-    return false;
-  }
-
   componentWillUnmount() {
     clearInterval(this.state.intervalId);
   }
@@ -39,8 +32,15 @@ class CopyBlock extends Component {
     let {skillIndex} = this.state;
     skillIndex++;
 
-    if(skillIndex >= skills.length) {
-      skillIndex = 0;
+    // start over
+    // if(skillIndex >= skills.length) {
+    //   skillIndex = 0;
+    // }
+
+    // stop at the end
+    if(skillIndex === skills.length) {
+      skillIndex = skills.length;
+      clearInterval(this.state.intervalId);
     }
 
     this.setState({ skillIndex });
@@ -58,18 +58,17 @@ class CopyBlock extends Component {
   render() {
     return (
       <div className={this.props.styles.copyblockContainer}>
-        <Byline text="What I do" />
+        <Byline text="What I Do" iterator={this.state.currentSkill} />
 
-        <p>I build modern, responsive web applications with JavaScript and technologies like {this.state.currentSkill}.</p>
+        <p>I currently develop with React.js, Node.js, Babel, and Webpack with modern JavaScript, and am always looking for the next JS framework that will consume my attention.</p>
 
-        <p>If you have any questions or need digital services, I am currently available for:</p>
+        <p>Here is a high level breakdown of my skills:</p>
 
         <ul className={this.props.styles.skills}>
           <li><p>Web Development - Full-Stack JavaScript</p></li>
           <li><p>Front-End Development - HTML, CSS, JavaScript</p></li>
           <li><p>UX/UI Design</p></li>
-          <li><p>Site Audits & Redesigns</p></li>
-          <li><p>Search Engine Optimization (SEO)</p></li>
+          <li><p>Mobile & Responsive Development</p></li>
         </ul>
       </div>
     );

@@ -13,8 +13,8 @@ import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-li
 const HomePage = () => {
   return (
     <article className={css.homepage}>
-      <Headline text="Hello!" />
-      <Byline text="I'm a UX/UI Designer, Front-End Engineer, and Web Developer in Bakersfield, California." />
+      <Headline text="Hi, I'm Erik" />
+      <Byline text="A Front-End Developer in Los Angeles, CA." />
       <CopyBlock styles={css} />
       <ContactCTA path="/contact" text="Send me a message" />
       <p>Or connect with me on social.</p>
