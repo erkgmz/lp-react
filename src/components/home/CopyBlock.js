@@ -59,7 +59,6 @@ class CopyBlock extends Component {
     return (
       <div className={this.props.styles.copyblockContainer}>
         <Byline text="What I Do" iterator={this.state.currentSkill} />
-
         <p>I develop websites and web apps with modern JavaScript and technologies like React and Node.js.</p>
 
         <p>I have several years experience working with startups and global companies in digital marketing and web development, specifically as a front-end developer.</p>
@@ -68,13 +67,16 @@ class CopyBlock extends Component {
 
         <ul className={this.props.styles.skills}>
           <li><p>Web Development</p></li>
+
           <ul>
             <li><p>Front-End Development</p></li>
             <li><p>Full-Stack JavaScript</p></li>
             <li><p>Mobile & Responsive Development</p></li>
             <li><p>UX/UI Design</p></li>
           </ul>
+
           <li><p>Marketing</p></li>
+
           <ul>
             <li><p>Digital Marketing</p></li>
             <li><p>Search Engine Optimization (SEO)</p></li>
