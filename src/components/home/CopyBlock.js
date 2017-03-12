@@ -20,7 +20,7 @@ class CopyBlock extends Component {
   }
 
   componentWillMount() {
-    let intervalId = setInterval(this.iterateSkill, 1000);
+    let intervalId = setInterval(this.iterateSkill, 1200);
     this.setState({ intervalId });
   }
 
@@ -60,15 +60,27 @@ class CopyBlock extends Component {
       <div className={this.props.styles.copyblockContainer}>
         <Byline text="What I Do" iterator={this.state.currentSkill} />
 
-        <p>I currently develop with React.js, Node.js, Babel, and Webpack with modern JavaScript, and am always looking for the next JS framework that will consume my attention.</p>
+        <p>I develop websites and web apps with modern JavaScript and technologies like React and Node.js.</p>
 
-        <p>Here is a high level breakdown of my skills:</p>
+        <p>I have several years experience working with startups and global companies in digital marketing and web development, specifically as a front-end developer.</p>
+
+        <p>If you need digital services, I am available for the following:</p>
 
         <ul className={this.props.styles.skills}>
-          <li><p>Web Development - Full-Stack JavaScript</p></li>
-          <li><p>Front-End Development - HTML, CSS, JavaScript</p></li>
-          <li><p>UX/UI Design</p></li>
-          <li><p>Mobile & Responsive Development</p></li>
+          <li><p>Web Development</p></li>
+          <ul>
+            <li><p>Front-End Development</p></li>
+            <li><p>Full-Stack JavaScript</p></li>
+            <li><p>Mobile & Responsive Development</p></li>
+            <li><p>UX/UI Design</p></li>
+          </ul>
+          <li><p>Marketing</p></li>
+          <ul>
+            <li><p>Digital Marketing</p></li>
+            <li><p>Search Engine Optimization (SEO)</p></li>
+            <li><p>Content Marketing</p></li>
+            <li><p>Data & Analytics</p></li>
+          </ul>
         </ul>
       </div>
     );

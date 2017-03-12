@@ -60,7 +60,6 @@
           p {
             display: flex;
             justify-content: center;
-            font-weight: 700;
           }
         }
       }
@@ -75,8 +74,10 @@
         div {
           flex: 0 0 50%;
 
-          h2 {
-            text-align: center;
+          li {
+            p {
+              justify-content: flex-start;
+            }
           }
         }
       }

@@ -1,6 +1,12 @@
 @import 'config';
 
 .about {
+  margin: auto;
+
+  .italics {
+    font-style: italic;
+  }
+
   .container {
     margin-top: 3rem;
     padding-left: 2rem;
@@ -18,6 +24,17 @@
 
     h2 {
       font-weight: 700;
+    }
+
+    ul {
+
+      li {
+        list-style: initial;
+
+        p {
+          margin: .5rem;
+        }
+      }
     }
   }
 

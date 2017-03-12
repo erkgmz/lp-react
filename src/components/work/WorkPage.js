@@ -14,8 +14,8 @@ const WorkPage = () => {
   return (
     <article className={css.workpage}>
       <Headline text="Work & Skills" />
-      <Byline text="Learn, Code, Repeat." />
-      <p>Here are a few projects I've worked on. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>
+      <Byline text="Portfolio" />
+      <p>Here are a few of my web development projects. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>
       <WorkItems projects={PROJECTS} />
       <Techs style={css} />
       <p>This site was designed, <a href="https://github.com/erkgmz/lp-react" target="_blank" rel="noopener noreferrer">developed</a>, and deployed by me with modern

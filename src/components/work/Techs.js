@@ -7,24 +7,24 @@ const Techs = props => {
     <section className={props.style.techContainer}>
       <div className={props.style.techWrapper}>
         <div>
-          <Byline text="Core Skills" />
+          <Byline text="Development Skills" />
           <ul className={props.style.coreLanguages}>
-            <li><p>HTML5</p></li>
-            <li><p>CSS3</p></li>
-            <li><p>JavaScript</p></li>
-            <li><p>Node.js</p></li>
+            <li><p>HTML, CSS, JavaScript</p></li>
+            <li><p>React.js</p></li>
+            <li><p>MongoDB</p></li>
+            <li><p>Node.js + Express</p></li>
             <li><p>Mobile & Responsive Design</p></li>
           </ul>
         </div>
 
         <div>
-          <Byline text="Frameworks" />
+          <Byline text="Marketing Skills" />
           <ul className={props.style.frameworks}>
-            <li><p>React.js</p></li>
-            <li><p>Webpack</p></li>
-            <li><p>MongoDB</p></li>
-            <li><p>Express</p></li>
-            <li><p>Bootstrap & Flexbox</p></li>
+            <li><p>SEO</p></li>
+            <li><p>Social Media</p></li>
+            <li><p>Google Analytics</p></li>
+            <li><p>Promotions</p></li>
+            <li><p>Marketing Strategy</p></li>
           </ul>
         </div>
       </div>

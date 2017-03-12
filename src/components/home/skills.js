@@ -1,16 +1,21 @@
 const skills = [
   'JavaScript',
+  'Digital Marketing',
+  'Project Management',
   'Babel',
   'Express',
   'Angular',
   'Mongoose',
   'Handlebars',
+  'Analytics',
   'jQuery',
   'SASS',
   'Git',
   'HTML5',
   'CSS3',
+  'Content Marketing',
   'Bootstrap',
+  'Social Media',
   'React',
   'Webpack',
   'Node',
@@ -21,6 +26,7 @@ const skills = [
   'Sketch',
   'UI design',
   'UX design',
+  'SEO',
   'Geek'
 ];
 
