@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="/styles.css" media="screen" title="no title">
     <link rel="shortcut icon" href="/favicon.ico">
 
     <meta property="og:title" content="Erik Gomez">
@@ -23,9 +22,10 @@
   </head>
   <body>
     <div id="app" style="height: 100%"></div>
-    <script src="/bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <% if(process.env.NODE_ENV === 'production') { %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,5 +35,7 @@
       ga('create', 'UA-90990854-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <% } %>
+
   </body>
 </html>

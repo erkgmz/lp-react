@@ -1,24 +1,25 @@
 import webpack from 'webpack';
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
+  resolve: {
+    extensions: ['', '.js', '.json']
+  },
   debug: true,
   devtool: 'cheap-module-eval-source-map',
-  noInfo: false,
+  noInfo: true,
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
-    path.resolve(__dirname, 'src/index')
+    path.resolve(__dirname, 'src/index.js')
   ],
   target: 'web',
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, 'src')
   },
   module: {
     loaders: [
@@ -34,8 +35,16 @@ export default {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
+      __DEV__: true
+    }),
+    new ExtractTextPlugin('styles.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('styles.css', { allChunks: true })
+    new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
+      template: 'src/index.ejs',
+      inject: true
+    })
   ]
 };
