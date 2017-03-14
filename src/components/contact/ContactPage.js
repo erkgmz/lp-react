@@ -14,13 +14,11 @@ const ContactPage = () => {
       <div className={css.leftCol}>
         <Headline text="Contact Me"/>
         <Byline text="Have a Question? Send Me a Message." />
-        <SocialIcons />
       </div>
 
       <div className={css.rightCol}>
         <Form />
       </div>
-
     </article>
   );
 };

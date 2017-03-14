@@ -11,14 +11,29 @@
     }
   }
 
-  .skills {
-    margin: 3rem auto;
+  .skillsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
 
-    li {
-      list-style: initial;
+    .skills {
 
-      p {
-        margin: .5rem;
+      li {
+        list-style: initial;
+
+        p {
+          margin: .5rem;
+        }
+      }
+    }
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    .skillsContainer {
+      flex-flow: row nowrap;
+
+      div {
+        flex: 1;
       }
     }
   }

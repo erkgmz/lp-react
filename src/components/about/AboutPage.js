@@ -38,7 +38,7 @@ const AboutPage = () => {
 
         <Byline text="But, Enough About Work" />
 
-        <p>I spend most of my time working on React.js and Node.js projects for clients or myself, but I'm also a very active off of my laptop too.</p>
+        <p>I spend most of my time working on React.js and Node.js projects for clients or myself, but I'm also very active off of my laptop too.</p>
 
         <p>If I'm not making websites or learning something new, I can usually be found hanging out with friends or doing something with my wife Kailey, our daughter Leah, or my dog Tito. I work out a few times a week and regularly enjoy spending time outdoors, hiking, or biking.</p>
 

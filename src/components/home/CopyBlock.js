@@ -59,31 +59,30 @@ class CopyBlock extends Component {
     return (
       <div className={this.props.styles.copyblockContainer}>
         <Byline text="What I Do" iterator={this.state.currentSkill} />
-        <p>I develop websites and web apps with modern JavaScript and technologies like React and Node.js.</p>
+        <p>I design and develop digital interfaces for the web and execute marketing campaigns.</p>
 
-        <p>I have several years experience working with startups and global companies in digital marketing and web development, specifically as a front-end developer.</p>
+        <p>My web development experience gives me a unique insight to developing effective digital marketing strategies that get the results you need. Wether it's planning an awareness campaign, improving your site's speed, or a complete site redesign, I have the skills that keep your marketing strategy in sync with what your users interact with.</p>
 
-        <p>If you need digital services, I am available for the following:</p>
+        <div className={this.props.styles.skillsContainer}>
+          <div>
+            <h2>Web Development</h2>
+            <ul className={this.props.styles.skills}>
+              <li><p>Front-End Development</p></li>
+              <li><p>Responsive & Mobile Friendly</p></li>
+              <li><p>Full-Stack JavaScript</p></li>
+            </ul>
+          </div>
 
-        <ul className={this.props.styles.skills}>
-          <li><p>Web Development</p></li>
-
-          <ul>
-            <li><p>Front-End Development</p></li>
-            <li><p>Full-Stack JavaScript</p></li>
-            <li><p>Mobile & Responsive Development</p></li>
-            <li><p>UX/UI Design</p></li>
-          </ul>
-
-          <li><p>Marketing</p></li>
-
-          <ul>
-            <li><p>Digital Marketing</p></li>
-            <li><p>Search Engine Optimization (SEO)</p></li>
-            <li><p>Content Marketing</p></li>
-            <li><p>Data & Analytics</p></li>
-          </ul>
-        </ul>
+          <div>
+            <h2>Digital Marketing</h2>
+            <ul className={this.props.styles.skills}>
+              <li><p>SEM & SEO</p></li>
+              <li><p>Email Marketing</p></li>
+              <li><p>Data & Analytics</p></li>
+            </ul>
+          </div>
+        </div>
+        <p>Let's have coffee?</p>
       </div>
     );
   }

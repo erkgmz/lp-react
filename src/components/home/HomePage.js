@@ -17,8 +17,6 @@ const HomePage = () => {
       <Byline text="A Front-End Developer & Digital Marketer in Bakersfield, CA." />
       <CopyBlock styles={css} />
       <ContactCTA path="/contact" text="Contact Me" />
-      <p>Or connect with me on social.</p>
-      <SocialIcons />
     </article>
   );
 };

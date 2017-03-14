@@ -27,7 +27,7 @@ header {
   padding: 0 1.5rem; }
 
 article {
-  padding: 6.5rem 1.2rem;
+  padding: 2rem 1.5rem 7rem;
   max-width: 55rem; }
   article p {
     font-weight: 300; }
@@ -125,10 +125,16 @@ article {
  * Specs do not allow a flex item here since the header will be fixed to the top of the browser window.
  */
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1.3rem; }
+  width: auto;
+  padding: 1.5rem; }
+  .header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; }
+  .header ul {
+    display: flex;
+    width: 33.33%;
+    justify-content: space-around; }
   .header .removeBorderBottom {
     border-bottom: none; }
   .header a h2 {
@@ -148,12 +154,19 @@ article {
     margin: 4rem auto; }
     .homepage .copyblockContainer h2 {
       font-weight: 700; }
-  .homepage .skills {
-    margin: 3rem auto; }
-    .homepage .skills li {
+  .homepage .skillsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around; }
+    .homepage .skillsContainer .skills li {
       list-style: initial; }
-      .homepage .skills li p {
+      .homepage .skillsContainer .skills li p {
         margin: .5rem; }
+  @media (min-width: 768px) {
+    .homepage .skillsContainer {
+      flex-flow: row nowrap; }
+      .homepage .skillsContainer div {
+        flex: 1; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -163,22 +176,19 @@ article {
   margin: auto; }
   .about .italics {
     font-style: italic; }
-  .about .container {
-    margin-top: 3rem;
-    padding-left: 2rem; }
-    .about .container p {
-      margin: 3rem auto; }
-      .about .container p img {
-        float: right;
-        width: 15rem;
-        margin: 0 0 1rem 2rem;
-        border-radius: 4px; }
-    .about .container h2 {
-      font-weight: 700; }
-    .about .container ul li {
-      list-style: initial; }
-      .about .container ul li p {
-        margin: .5rem; }
+  .about .container p {
+    margin: 3rem auto; }
+    .about .container p img {
+      float: right;
+      width: 15rem;
+      margin: 0 0 1rem 2rem;
+      border-radius: 4px; }
+  .about .container h2 {
+    font-weight: 700; }
+  .about .container ul li {
+    list-style: initial; }
+    .about .container ul li p {
+      margin: .5rem; }
   @media (min-width: 1024px) {
     .about .container p img {
       width: 30rem; } }
@@ -216,16 +226,16 @@ article {
       margin: 2.5rem 0; }
       .workpage .techContainer .techWrapper div h2 {
         font-weight: 700; }
-    .workpage .techContainer .techWrapper .coreLanguages,
-    .workpage .techContainer .techWrapper .frameworks {
+    .workpage .techContainer .techWrapper .devSkills,
+    .workpage .techContainer .techWrapper .marketingSkills {
       display: flex;
       flex-flow: row wrap; }
-      .workpage .techContainer .techWrapper .coreLanguages li,
-      .workpage .techContainer .techWrapper .frameworks li {
+      .workpage .techContainer .techWrapper .devSkills li,
+      .workpage .techContainer .techWrapper .marketingSkills li {
         flex: 0 1 50%;
         margin: auto; }
-        .workpage .techContainer .techWrapper .coreLanguages li p,
-        .workpage .techContainer .techWrapper .frameworks li p {
+        .workpage .techContainer .techWrapper .devSkills li p,
+        .workpage .techContainer .techWrapper .marketingSkills li p {
           display: flex;
           justify-content: center; }
   @media (min-width: 768px) {
@@ -342,9 +352,9 @@ article {
 .social {
   padding: 0;
   display: flex;
-  margin-top: 2rem; }
+  margin: 0; }
   .social li:nth-child(2) {
-    margin: 0 5rem; }
+    margin: 0 3rem; }
   .social li a {
     border-bottom: none; }
     .social li a i {

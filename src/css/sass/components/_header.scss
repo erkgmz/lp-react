@@ -6,10 +6,20 @@
  */
 
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1.3rem;
+  width: auto;
+  padding: 1.5rem;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  ul {
+    display: flex;
+    width: 33.33%;
+    justify-content: space-around;
+  }
 
   .removeBorderBottom {
     border-bottom: none;

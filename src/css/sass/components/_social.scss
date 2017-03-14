@@ -3,12 +3,12 @@
 .social {
   padding: 0;
   display: flex;
-  margin-top: 2rem;
+  margin: 0;
 
   li {
 
     &:nth-child(2) {
-      margin: 0 5rem;
+      margin: 0 3rem;
     }
 
     a {

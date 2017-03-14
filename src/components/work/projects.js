@@ -11,13 +11,13 @@ const PROJECTS = [
     }
   },
   {
-    title: 'GA ADMISSIONS',
+    title: 'ADMISSIONS PROCESSING',
     link: 'https://ga-admissions.herokuapp.com/',
     techs: ['Mongo', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
     noFollow: false,
     inDevelopment: false,
     img: {
-      path: require('./portfolio_images/generalAssembly.png'),
+      path: require('./portfolio_images/students_on_laptop.png'),
       alt: 'General Assembly logo'
     }
   },
@@ -33,7 +33,7 @@ const PROJECTS = [
     }
   },
   {
-    title: 'UNDER CONSTRUCTION',
+    title: 'PLACEHOLDER UI',
     link: 'https://erkgmz.github.io/e-lp/',
     techs: ['Angular.js', 'SASS', 'Meterial UI'],
     noFollow: true,
