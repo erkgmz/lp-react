@@ -127,19 +127,21 @@ article {
 .header {
   width: auto;
   padding: 1.5rem; }
+  .header .removeBorderBottom {
+    border-bottom: none; }
   .header div {
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
-  .header ul {
-    display: flex;
-    width: 33.33%;
-    justify-content: space-around; }
-  .header .removeBorderBottom {
-    border-bottom: none; }
-  .header a h2 {
-    display: inline-block;
-    font-weight: 700; }
+    .header div a {
+      flex: 1; }
+      .header div a h2 {
+        display: inline-block;
+        font-weight: 700; }
+    .header div ul {
+      display: flex;
+      flex: 1;
+      justify-content: space-around; }
   @media (min-width: 1024px) {
     .header {
       width: auto; } }
@@ -353,8 +355,8 @@ article {
   padding: 0;
   display: flex;
   margin: 0; }
-  .social li:nth-child(2) {
-    margin: 0 3rem; }
+  .social .show {
+    display: none; }
   .social li a {
     border-bottom: none; }
     .social li a i {

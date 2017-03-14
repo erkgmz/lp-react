@@ -15,6 +15,11 @@ const ICONS = [
     outboundLink: 'https://github.com/erkgmz',
     faClass: 'fa fa-github',
     text: 'GITHUB'
+  },
+  {
+    outboundLink: 'https://angel.co/erikgomez',
+    faClass: 'fa fa-angellist',
+    text: 'ANGELIST'
   }
 ];
 

@@ -5,11 +5,11 @@
   display: flex;
   margin: 0;
 
-  li {
+  .show {
+    display: none;
+  }
 
-    &:nth-child(2) {
-      margin: 0 3rem;
-    }
+  li {
 
     a {
       border-bottom: none;

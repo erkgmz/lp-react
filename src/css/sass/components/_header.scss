@@ -9,26 +9,28 @@
   width: auto;
   padding: 1.5rem;
 
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  ul {
-    display: flex;
-    width: 33.33%;
-    justify-content: space-around;
-  }
-
   .removeBorderBottom {
     border-bottom: none;
   }
 
-  a {
-    h2 {
-      display: inline-block;
-      font-weight: 700;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    a {
+      flex: 1;
+
+      h2 {
+        display: inline-block;
+        font-weight: 700;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex: 1;
+      justify-content: space-around;
     }
   }
 
