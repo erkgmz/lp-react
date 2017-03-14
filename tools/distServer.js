@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
+import historyApiFallback from 'connect-history-api-fallback';
 
 /*eslint-disable no-console*/
 
@@ -13,6 +14,7 @@ const contactRoute = require('./routes/contactRoute.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(historyApiFallback());
 app.use(compression());
 app.use(express.static('dist'));
 
