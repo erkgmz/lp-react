@@ -1,12 +1,12 @@
 ## Getting started 
 
-To run app in development mode, go to your terminal and run `npm run dev -s` and navigate to `localhost:3000`. 
+To run app in development mode, go to your terminal and run `npm start -s` and navigate to `localhost:3000`. 
 
 The `-s` flag reduces "noise" while starting up and is completely optional. 
 
 To build app in production, open your terminal and run `npm run build -s`.
 
-To run app in production, open your terminal and run `npm start -s` then navigate to `localhost:8080`.
+To run app in production, open your terminal and run `npm productionServer -s` then navigate to `localhost:8080`.
 
 ## List of technologies used for development
 
