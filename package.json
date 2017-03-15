@@ -1,5 +1,5 @@
 {
-  "name": "react-lp",
+  "name": "development",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,18 +10,17 @@
     "lint:watch": "npm run lint -- --watch",
     "sass": "sass src/css/sass/input.scss:src/css/output.css",
     "sass:watch": "npm run sass -- --watch",
-    "clean-dist": "npm run remove-dist && mkdir dist",
+    "add-sitemap": "cp sitemap.xml ./dist/static/",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "clean-dist": "npm run remove-dist && mkdir -p dist/static/",
+    "compile-server": "babel tools/distServer.js --out-file dist/server.js",
+    "compile-server-routes": "mkdir dist/routes/ && babel tools/routes/contactRoute.js --out-file dist/routes/contactRoute.js",
+    "compile-server-controllers": "mkdir dist/controllers/ && babel tools/controllers/contactController.js --out-file dist/controllers/contactController.js",
+    "build-es5-server": "npm-run-all compile-server compile-server-routes compile-server-controllers",
     "build:html": "babel-node tools/buildHtml.js",
-    "git-push": "git add -A && git commit -m 'deployed to production, removes dist' && git push",
-    "git-commit": "git add -A && git commit -m 'stage dist/ for deployment'",
-    "add-sitemap": "cp sitemap.xml ./dist",
-    "prebuild": "npm-run-all clean-dist add-sitemap build:html",
+    "prebuild": "npm-run-all clean-dist add-sitemap build:html build-es5-server",
     "build": "babel-node tools/build.js",
-    "productionServer": "babel-node tools/distServer.js",
-    "predeploy": "npm-run-all build git-commit",
-    "deploy": "fly production",
-    "postdeploy": "npm-run-all remove-dist git-push"
+    "postbuild": "node dist/server.js"
   },
   "dependencies": {
     "babel-cli": "6.8.0",
