@@ -14,7 +14,7 @@ const WorkPage = () => {
   return (
     <article className={css.workpage}>
       <Headline text="Work & Skills" />
-      <Byline text="Portfolio" />
+      <Byline text="Previous Projects, and Digital Skills" />
       <p>Here are a few of my web development projects. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>
       <WorkItems projects={PROJECTS} />
       <Techs style={css} />

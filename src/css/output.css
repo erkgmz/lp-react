@@ -134,7 +134,7 @@ article {
     justify-content: space-between;
     align-items: baseline; }
     .header div a {
-      flex: 1; }
+      flex: 2; }
       .header div a h2 {
         display: inline-block;
         font-weight: 700; }

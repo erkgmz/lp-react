@@ -61,7 +61,7 @@ class CopyBlock extends Component {
         <Byline text="What I Do" iterator={this.state.currentSkill} />
         <p>I design and develop digital interfaces for the web and execute marketing campaigns.</p>
 
-        <p>My web development experience gives me a unique insight to developing effective digital marketing strategies that get the results you need. Wether it's planning an awareness campaign, improving your site's speed, or a complete site redesign, I have the skills that keep your marketing strategy in sync with what your users interact with.</p>
+        <p>My web development experience gives me a unique insight to developing effective digital marketing strategies that get the results you need. Wether it's planning an awareness campaign, improving your site's speed, or a complete site redesign, I have the skills that keep your marketing strategy in sync with your user's experience.</p>
 
         <div className={this.props.styles.skillsContainer}>
           <div>
