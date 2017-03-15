@@ -16,12 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(historyApiFallback());
 app.use(compression());
-app.use(express.static('dist'));
+app.use(express.static('dist/static'));
 
 app.use('/contact', contactRoute);
-
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, './static/index.html'));
 });
 
 app.listen(port, err => {
