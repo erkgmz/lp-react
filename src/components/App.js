@@ -5,7 +5,7 @@ import styleable from 'react-styleable';
 
 import css from '../css/sass/components/_app.scss'; // eslint-disable-line
 
-import '../../favicon.ico';
+// import '../../favicon.ico';
 
 const App = ({ children }) => {
   return (
