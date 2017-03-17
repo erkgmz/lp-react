@@ -77,7 +77,7 @@ class CopyBlock extends Component {
             <h2>Digital Marketing</h2>
             <ul className={this.props.styles.skills}>
               <li><p>SEM & SEO</p></li>
-              <li><p>Email Marketing</p></li>
+              <li><p>Content Marketing</p></li>
               <li><p>Data & Analytics</p></li>
             </ul>
           </div>
