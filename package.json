@@ -66,6 +66,7 @@
     "eslint-watch": "2.1.11",
     "eventsource-polyfill": "0.9.6",
     "html-webpack-plugin": "^2.28.0",
+    "open": "0.0.5",
     "react-addons-test-utils": "15.0.2",
     "rimraf": "^2.5.4",
     "webpack-dev-middleware": "^1.6.1",
