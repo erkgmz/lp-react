@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
 
 import Byline from '../common/Byline';
+import List from '../common/List';
+
+import {development, marketing} from './projects';
 
 const Techs = props => {
   return (
@@ -8,23 +11,12 @@ const Techs = props => {
       <div className={props.style.techWrapper}>
         <div>
           <Byline text="Development Skills" />
-          <ul className={props.style.devSkills}>
-            <li><p>HTML5, CSS3</p></li>
-            <li><p>React.js</p></li>
-            <li><p>Node.js</p></li>
-            <li><p>Express.js</p></li>
-            <li><p>JavaScript</p></li>
-          </ul>
+          <List items={development} listClass={props.style.devSkills} />
         </div>
 
         <div>
           <Byline text="Marketing Skills" />
-          <ul className={props.style.marketingSkills}>
-            <li><p>Digital Campaigns</p></li>
-            <li><p>Social Media Advertising</p></li>
-            <li><p>Strategic Planning</p></li>
-            <li><p>Google Analytics</p></li>
-          </ul>
+          <List items={marketing} listClass={props.style.marketingSkills} />
         </div>
       </div>
     </section>

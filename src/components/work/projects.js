@@ -1,4 +1,4 @@
-const PROJECTS = [
+export const projects = [
   {
     title: 'KS MARKETING SERVICES',
     link: 'https://goo.gl/XaPTjw',
@@ -45,4 +45,19 @@ const PROJECTS = [
   }
 ];
 
-export default PROJECTS;
+export const development = [
+  'HTML5, CSS3',
+  'React.js',
+  'Node.js',
+  'Express.js',
+  'JavaScript'
+];
+
+export const marketing = [
+  'Digital Campaigns',
+  'Social Media Advertising',
+  'Strategic Planning',
+  'Google Analytics',
+  'Email Marketing'
+];
+
