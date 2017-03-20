@@ -152,8 +152,17 @@ article {
 /* Theme Color Palette */
 .homepage {
   margin: auto; }
+  .homepage .mute {
+    color: rgba(255, 255, 255, 0.5); }
   .homepage .copyblockContainer {
     margin: 4rem auto; }
+    .homepage .copyblockContainer .headlineBlock {
+      display: flex; }
+      .homepage .copyblockContainer .headlineBlock h2:nth-child(1) {
+        white-space: nowrap; }
+      .homepage .copyblockContainer .headlineBlock .pipe {
+        margin: 0 .5rem;
+        color: rgba(255, 255, 255, 0.5); }
     .homepage .copyblockContainer h2 {
       font-weight: 700; }
   .homepage .skillsContainer {

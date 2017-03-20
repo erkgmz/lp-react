@@ -1,4 +1,4 @@
-const skills = [
+export const skills = [
   'JavaScript',
   'Digital Marketing',
   'Project Management',
@@ -30,4 +30,15 @@ const skills = [
   'Geek'
 ];
 
-export default skills;
+export const devSkills = [
+  'Front-End Development',
+  'Responsive & Mobile Friendly',
+  'Full-Stack JavaScript'
+];
+
+export const digiSkills = [
+  'SEM & SEO',
+  'Content Marketing',
+  'Data & Analytics'
+];
+
