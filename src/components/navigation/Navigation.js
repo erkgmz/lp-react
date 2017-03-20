@@ -12,35 +12,40 @@ class Navigation extends React.Component {
     super(props);
   }
 
+  handleIndexLink(icon, key) {
+    return (
+      <li key={key}>
+        <IndexLink
+          to={icon.routerPath}
+          activeClassName={css.active}>
+          <FontAwesomeIcon faClass={icon.faClass} />
+          <p>{icon.text}</p>
+        </IndexLink>
+      </li>
+    );
+  }
+
+  handleRouterLink(icon, key) {
+    return (
+      <li key={key}>
+        <Link
+          to={icon.routerPath}
+          activeClassName={css.active}>
+          <FontAwesomeIcon faClass={icon.faClass} />
+          <p>{icon.text}</p>
+        </Link>
+      </li>
+    );
+  }
+
   render() {
     return(
       <nav className={css.navigation}>
         <ul>
-          {icons.map( (icon, key) => {
-            if(key === 0) {
-              return (
-                <li key={key}>
-                  <IndexLink
-                    to={icon.routerPath}
-                    activeClassName={css.active}>
-                    <FontAwesomeIcon faClass={icon.faClass} />
-                    <p>{icon.text}</p>
-                  </IndexLink>
-                </li>
-              );
-            } else {
-              return (
-                <li key={key}>
-                  <Link
-                    to={icon.routerPath}
-                    activeClassName={css.active}>
-                    <FontAwesomeIcon faClass={icon.faClass} />
-                    <p>{icon.text}</p>
-                  </Link>
-                </li>
-              );
-            }
-            })}
+          {icons.map( (icon, key) => key === 0 ?
+            this.handleIndexLink(icon, key) :
+            this.handleRouterLink(icon, key)
+          )}
         </ul>
       </nav>
     );
