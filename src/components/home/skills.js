@@ -5,7 +5,7 @@ const skills = [
   'Babel',
   'Express',
   'Angular',
-  'Mongoose',
+  'MongoDB',
   'Handlebars',
   'Analytics',
   'jQuery',
