@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
-require('./assets/headshot-cropped.png');
+require('./assets/image.png');
 require('../favicon.ico');
 require('./assets/resume.pdf');
 
