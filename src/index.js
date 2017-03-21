@@ -9,6 +9,5 @@ require('./assets/image.png');
 require('../favicon.ico');
 require('./assets/resume.pdf');
 
-// props are passed down to App.js from here
 let root = document.getElementById('app');
 render(<Router history={browserHistory} routes={routes} />, root);
