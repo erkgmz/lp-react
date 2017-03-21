@@ -17,9 +17,7 @@ const CopyBlock = props => {
         <Iterate list={skills} textColor={props.styles.mute} />
       </div>
 
-      <p>I design and develop digital interfaces for the web and execute marketing campaigns.</p>
-
-      <p>My web development experience gives me a unique insight to developing effective digital marketing strategies that get the results you need. Wether it's planning an awareness campaign, improving your site's speed, or a complete site redesign, I have the skills that keep your marketing strategy in sync with your user's experience.</p>
+      <p>I'm a front-end developer that combines a background in digital marketing with modern web development to deliver quality websites and applications built for performance and user experience. I am experienced in numerous languages and frameworks and highly adaptable to work in any stage of the development life cycle.</p>
 
       <div className={props.styles.skillsContainer}>
         <div>
