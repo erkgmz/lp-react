@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <Headline text="Hi, I'm Erik" />
-      <Byline text="A Front-End Developer & Digital Marketer in Bakersfield, CA." />
+      <Byline text="A Front-End Developer & Digital Marketer in Los Angeles, CA." />
       <CopyBlock styles={css} />
       <ContactCTA path="/contact" text="Contact Me" />
     </article>
