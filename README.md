@@ -1,13 +1,13 @@
 ## Getting started 
 Start by forking and cloning this repo.
 
-Then run `npm install`.
+Once you've cloned, go into your local copy and run `npm install`.
 
-Start app in development mode, go to your terminal and run `npm start -s` and the npm package `open` should open `localhost:3000`. 
+After installation you can run the the app in `development` with `npm start -s`. This will start a browser session at `localhost:3000`. 
 
-The `-s` flag reduces "noise" while starting up and is completely optional. 
+***The `-s` flag reduces "noise" while starting up and is completely optional.***
 
-Build app in production, open your terminal and run `npm run build -s` which start a server on `localhost:8080`.
+To build app in `production`, open your terminal and run `npm run build -s` which generates a production build in `dist/` and starts a server on `localhost:8080`.
 
 ## List of technologies used for development
 
