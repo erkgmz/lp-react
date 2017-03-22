@@ -70,4 +70,10 @@ To build app in `production`, open your terminal and run `npm run build -s` whic
 - Flightplan
 - Digital Ocean (for Node.js support)
 
+### Bugs
+- Flexbox layout on desktop in IE is incorrect, article should be centered horizontally on all pages.
+
+### Known issues
+This site was developed to be compatible with Chrome, Safari, Firefox, and IE 11 and up. 
+
 ***This project will remain a continous work in progress. Report bugs (or ideas) to e@erikgomez.co.***
