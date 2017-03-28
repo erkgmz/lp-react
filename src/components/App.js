@@ -3,7 +3,7 @@ import Header from './common/Header';
 import Navigation from './navigation/Navigation';
 import styleable from 'react-styleable';
 
-import css from '../css/sass/components/_app.scss'; // eslint-disable-line
+import css from '../css/sass/components/_base.scss'; // eslint-disable-line
 
 const App = ({ children }) => {
   return (

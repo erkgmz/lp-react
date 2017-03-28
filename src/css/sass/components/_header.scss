@@ -1,11 +1,11 @@
-@import './config';
+@import 'variables';
 
 .header {
   width: auto;
   padding: 1.5rem;
 
-  .removeBorderBottom {
-    border-bottom: none;
+  .removeTextDecoration {
+    text-decoration: none;
   }
 
   div {
@@ -13,12 +13,13 @@
     justify-content: space-between;
     align-items: baseline;
 
-    a {
+    h2 {
       flex: 2;
+      font-weight: 700;
 
-      h2 {
-        display: inline-block;
-        font-weight: 700;
+      a {
+        font-family: unset;
+        font-size: unset;
       }
     }
 
@@ -33,7 +34,7 @@
     width: auto;
 
     div {
-      a {
+      h2 {
         flex: 3;
       }
     }

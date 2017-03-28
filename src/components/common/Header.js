@@ -10,9 +10,11 @@ const Header = () => {
   return (
     <header className={css.header}>
       <div>
-        <Link to="/" className={css.removeBorderBottom}>
-          <h2>Erik Gomez</h2>
-        </Link>
+          <h2>
+            <Link to="/" className={css.removeTextDecoration}>
+              Erik Gomez
+            </Link>
+          </h2>
         <SocialIcons />
       </div>
     </header>

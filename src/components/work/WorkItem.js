@@ -10,7 +10,7 @@ const WorkItem = ({ title, img, link, alt, noFollow }) => {
         <img
           src={img}
           alt={alt} />
-        <p>{title}</p>
+        <h2>{title}</h2>
       </a>
     </li>
   );

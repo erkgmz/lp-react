@@ -1,7 +1,10 @@
 // WEBPACK - explicit import required for access to variables
-@import 'config';
+@import 'variables';
 @import "normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400');
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: $root-font-size;
@@ -65,30 +68,34 @@ article {
 
   h2 {
     font-size: $subheader;
+    font-weight: 400;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $bodyheader;
+    font-weight: 400;
   }
 
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     font-family: 'Roboto Slab', serif;
     margin: 0;
   }
 
-  h2,
-  h3,
-  h4 {
-    font-weight: 400;
-  }
 
   p,
   a {
     font-family: 'Roboto', sans-serif;
-    // font-weight: 300;
   }
 
   a {
-    // text-decoration: none;
     cursor: pointer;
     color: $theme-text;
   }

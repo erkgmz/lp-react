@@ -8,6 +8,9 @@
 /* Theme Color Palette */
 @import url(normalize.css/normalize.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400");
+* {
+  box-sizing: border-box; }
+
 html {
   font-size: 10px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -63,17 +66,22 @@ article {
   .wrapper h1 {
     font-size: 5rem; }
   .wrapper h2 {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    font-weight: 400; }
+  .wrapper h3,
+  .wrapper h4,
+  .wrapper h5,
+  .wrapper h6 {
+    font-size: 1.9rem;
+    font-weight: 400; }
   .wrapper h1,
   .wrapper h2,
   .wrapper h3,
-  .wrapper h4 {
+  .wrapper h4,
+  .wrapper h5,
+  .wrapper h6 {
     font-family: 'Roboto Slab', serif;
     margin: 0; }
-  .wrapper h2,
-  .wrapper h3,
-  .wrapper h4 {
-    font-weight: 400; }
   .wrapper p,
   .wrapper a {
     font-family: 'Roboto', sans-serif; }
@@ -123,17 +131,18 @@ article {
 .header {
   width: auto;
   padding: 1.5rem; }
-  .header .removeBorderBottom {
-    border-bottom: none; }
+  .header .removeTextDecoration {
+    text-decoration: none; }
   .header div {
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
-    .header div a {
-      flex: 2; }
-      .header div a h2 {
-        display: inline-block;
-        font-weight: 700; }
+    .header div h2 {
+      flex: 2;
+      font-weight: 700; }
+      .header div h2 a {
+        font-family: unset;
+        font-size: unset; }
     .header div ul {
       display: flex;
       flex: 1;
@@ -141,7 +150,7 @@ article {
   @media (min-width: 1024px) {
     .header {
       width: auto; }
-      .header div a {
+      .header div h2 {
         flex: 3; } }
 
 /* Breakpoints */
@@ -208,25 +217,23 @@ article {
 /* Theme Color Palette */
 .workpage {
   margin: auto; }
-  .workpage ul {
-    padding: 0;
+  .workpage .center {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
-    .workpage ul li {
-      margin: 1rem auto;
-      flex: 0 0 26rem;
-      align-items: flex-start; }
-      .workpage ul li a {
-        text-decoration: none;
-        background-color: #FF3D00;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center; }
-        .workpage ul li a img {
-          width: 100%; }
-        .workpage ul li a p {
-          margin: .8rem auto; }
+    justify-content: center;
+    max-width: 100%; }
+  .workpage ul {
+    padding: 0; }
+    .workpage ul li a {
+      text-decoration: none;
+      position: relative;
+      background: rgba(0, 0, 0, 0.5); }
+      .workpage ul li a img {
+        width: 100%; }
+      .workpage ul li a h2 {
+        position: absolute;
+        bottom: 100px;
+        left: 30px;
+        color: white; }
   .workpage .techContainer .techWrapper {
     margin: 1rem auto 0;
     display: flex;
@@ -368,5 +375,71 @@ article {
     border-bottom: none; }
     .social li a i {
       font-size: 2rem; }
+
+/* Breakpoints */
+/* Font Sizes */
+/* Headline Sizes */
+/* Theme Color Palette */
+.Cards {
+  display: flex;
+  flex-flow: row nowrap; }
+  .Cards .alignRight {
+    text-align: right; }
+  .Cards a {
+    flex: 1;
+    margin: auto; }
+    .Cards a .faArrow {
+      font-size: 4rem; }
+  .Cards .Card {
+    flex: 8;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+    .Cards .Card img {
+      display: inline-block;
+      width: 100%; }
+    .Cards .Card .copyBlock {
+      display: flex;
+      flex-flow: column nowrap; }
+      .Cards .Card .copyBlock a {
+        margin: 0 0 1rem; }
+      .Cards .Card .copyBlock .tags {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0; }
+        .Cards .Card .copyBlock .tags .tag {
+          background: #FF3D00;
+          border-radius: 4px 0 0 4px;
+          display: inline-block;
+          line-height: 26px;
+          padding: 0 20px 0 23px;
+          position: relative;
+          margin: 0 10px 10px 0;
+          outline-color: transparent; }
+          .Cards .Card .copyBlock .tags .tag:before {
+            background: #90A4AE;
+            border-radius: 10px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
+            content: '';
+            height: 6px;
+            left: 10px;
+            position: absolute;
+            width: 6px;
+            top: 10px; }
+          .Cards .Card .copyBlock .tags .tag:after {
+            background: #90A4AE;
+            border-bottom: 13px solid transparent;
+            border-left: 10px solid #FF3D00;
+            border-top: 13px solid transparent;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0; }
+          .Cards .Card .copyBlock .tags .tag p {
+            margin: 0;
+            font-size: 1.2rem;
+            outline: 0;
+            white-space: nowrap; }
 
 /*# sourceMappingURL=output.css.map */

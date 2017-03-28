@@ -1,5 +1,5 @@
-@import 'config';
-@import 'app';
+@import 'variables';
+@import 'base';
 @import 'header';
 @import 'homepage';
 @import 'aboutpage';
@@ -7,4 +7,5 @@
 @import 'contact';
 @import 'navigation';
 @import 'social';
+@import 'cards';
 

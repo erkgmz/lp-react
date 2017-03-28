@@ -1,0 +1,89 @@
+@import 'variables';
+
+.Cards {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .alignRight {
+    text-align: right;
+  }
+
+  a {
+    flex: 1;
+    margin: auto;
+    // margin: 30% 0 auto;
+
+    .faArrow {
+      font-size: 4rem;
+    }
+  }
+
+  .Card {
+    flex: 8;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .copyBlock {
+      display: flex;
+      flex-flow: column nowrap;
+
+      a {
+        margin: 0 0 1rem;
+      }
+
+      .tags {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+
+        .tag {
+          background: $theme-accent;
+          border-radius: 4px 0 0 4px;
+          display: inline-block;
+          line-height: 26px;
+          padding: 0 20px 0 23px;
+          position: relative;
+          margin: 0 10px 10px 0;
+          outline-color: transparent;
+
+          &:before {
+            background: $theme-light;
+            border-radius: 10px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
+            content: '';
+            height: 6px;
+            left: 10px;
+            position: absolute;
+            width: 6px;
+            top: 10px;
+          }
+
+          &:after {
+            background: $theme-light;
+            border-bottom: 13px solid transparent;
+            border-left: 10px solid $theme-accent;
+            border-top: 13px solid transparent;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+          p {
+            margin: 0;
+            font-size: 1.2rem;
+            outline: 0;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

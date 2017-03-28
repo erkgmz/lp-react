@@ -1,8 +1,9 @@
 export const projects = [
   {
-    title: 'KS MARKETING SERVICES',
+    title: 'KS Marketing',
     link: 'https://goo.gl/XaPTjw',
-    techs: ['React', 'CSS Modules', 'ES6'],
+    technologies: ['React', 'CSS Modules', 'ES6', 'Webpack', 'Node'],
+    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: false,
     inDevelopment: true,
     img: {
@@ -11,9 +12,10 @@ export const projects = [
     }
   },
   {
-    title: 'ADMISSIONS PROCESSING',
+    title: 'General Assembly Admissions Processing',
     link: 'https://ga-admissions.herokuapp.com/',
-    techs: ['Mongo', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
+    technologies: ['Mongo', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
+    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: false,
     inDevelopment: false,
     img: {
@@ -22,9 +24,10 @@ export const projects = [
     }
   },
   {
-    title: 'STUD FINDER',
+    title: 'Course Walker Stud Services',
     link: 'http://course-walkers.herokuapp.com/',
-    techs: ['jQuery', 'Flexbox', 'Handlebars.js'],
+    technologies: ['jQuery', 'Flexbox', 'Handlebars.js'],
+    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: false,
     inDevelopment: false,
     img: {
@@ -33,9 +36,10 @@ export const projects = [
     }
   },
   {
-    title: 'PLACEHOLDER UI',
+    title: 'Personal Project - Under Construction UI',
     link: 'https://erkgmz.github.io/e-lp/',
-    techs: ['Angular.js', 'SASS', 'Meterial UI'],
+    technologies: ['Angular.js', 'SASS', 'Meterial UI', 'Responsive'],
+    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: true,
     inDevelopment: false,
     img: {

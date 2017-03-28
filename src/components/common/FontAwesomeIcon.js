@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const FontAwesomeIcon = ({ faClass }) => {
   return (
@@ -9,5 +9,5 @@ const FontAwesomeIcon = ({ faClass }) => {
 export default FontAwesomeIcon;
 
 FontAwesomeIcon.propTypes = {
-  faClass: React.PropTypes.string.isRequired
+  faClass: PropTypes.string.isRequired
 };

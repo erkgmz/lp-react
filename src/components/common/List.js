@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const List = ({listClass, items}) => {
+const List = ({listClass, items, itemClass}) => {
   return (
     <ul className={listClass}>
       {
         items.map((item, key) => {
           return (
-            <li key={key}>
+            <li className={itemClass} key={key}>
               <p>{item}</p>
             </li>
           );
@@ -18,7 +18,8 @@ const List = ({listClass, items}) => {
 
 List.propTypes = {
   items: PropTypes.array.isRequired,
-  listClass: PropTypes.string
+  listClass: PropTypes.string,
+  itemClass: PropTypes.string
 };
 
 export default List;
