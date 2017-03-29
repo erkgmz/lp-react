@@ -1,26 +1,24 @@
 import React, {PropTypes} from 'react';
 import List from '../common/List';
 
-const Card = ({title, image, description, link, noFollow, tags, styles}) => {
+const Card = ({title, image, description, link, noFollow, tags, styles, inDevelopment}) => {
   return (
     <div className={styles.Card}>
-      <img
-        src={image.path}
+      <img src={image.path}
         alt={image.alt} />
 
       <div className={styles.copyBlock}>
         <h4>{title}</h4>
         <p>{description}</p>
-        {link ?
+        {link && !inDevelopment ?
           <a href={link}
             target="_blank"
             rel={noFollow ? "noopener noreferrer nofollow" : "noopener noreferrer"}>
-            VIEW LIVE
+            VIEW
           </a> :
-          <span></span>}
+          <p className={styles.mute}>IN DEVELOPMENT</p>}
 
-        <List
-          listClass={styles.tags}
+        <List listClass={styles.tags}
           items={tags}
           itemClass={styles.tag} />
       </div>
@@ -37,5 +35,6 @@ Card.propTypes = {
   link: PropTypes.string,
   tags: PropTypes.array,
   noFollow: PropTypes.bool,
-  styles: PropTypes.object.isRequired
+  styles: PropTypes.object.isRequired,
+  inDevelopment: PropTypes.bool.isRequired
 };

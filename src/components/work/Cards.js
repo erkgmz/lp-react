@@ -56,7 +56,8 @@ class Cards extends Component {
           description={this.state.card.description}
           link={this.state.card.link}
           tags={this.state.card.technologies}
-          styles={this.props.styles} />
+          styles={this.props.styles}
+          inDevelopment={this.state.card.inDevelopment} />
 
         <a onClick={this.handleNext} className={this.props.styles.alignRight}>
           <FontAwesomeIcon faClass={`fa fa-angle-right ${this.props.styles.faArrow}`} />

@@ -8,10 +8,13 @@
     text-align: right;
   }
 
+  .mute {
+    color: $mute;
+  }
+
   a {
     flex: 1;
-    margin: auto;
-    // margin: 30% 0 auto;
+    margin: 100px 0 auto;
 
     .faArrow {
       font-size: 4rem;
@@ -19,14 +22,17 @@
   }
 
   .Card {
-    flex: 8;
+    flex: 9;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
     img {
-      display: inline-block;
       width: 100%;
+      height: 15rem;
+      max-width: 30rem;
+      margin: 0 0 1rem;
+      border-radius: 4px;
     }
 
     .copyBlock {
@@ -79,10 +85,31 @@
           p {
             margin: 0;
             font-size: 1.2rem;
-            outline: 0;
             white-space: nowrap;
           }
         }
+      }
+    }
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    a {
+      margin: 50px 0 auto;
+    }
+  }
+
+  @media(min-width: $breakpoint-desktop) {
+    a {
+      .faArrow {
+        font-size: 5rem;
+      }
+    }
+
+    .Card {
+      img {
+        width: 100%;
+        height: 20rem;
+        max-width: 40rem;
       }
     }
   }

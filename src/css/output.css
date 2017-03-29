@@ -110,7 +110,8 @@ article {
       background-color: #607D8B; }
     .wrapper article {
       order: 3;
-      margin: auto; } }
+      margin: auto;
+      max-width: 65rem; } }
   @media (min-width: 1024px) {
     .wrapper h1 {
       font-size: 6.5rem; }
@@ -217,50 +218,6 @@ article {
 /* Theme Color Palette */
 .workpage {
   margin: auto; }
-  .workpage .center {
-    display: flex;
-    justify-content: center;
-    max-width: 100%; }
-  .workpage ul {
-    padding: 0; }
-    .workpage ul li a {
-      text-decoration: none;
-      position: relative;
-      background: rgba(0, 0, 0, 0.5); }
-      .workpage ul li a img {
-        width: 100%; }
-      .workpage ul li a h2 {
-        position: absolute;
-        bottom: 100px;
-        left: 30px;
-        color: white; }
-  .workpage .techContainer .techWrapper {
-    margin: 1rem auto 0;
-    display: flex;
-    flex-flow: column; }
-    .workpage .techContainer .techWrapper div {
-      margin: 2.5rem 0; }
-      .workpage .techContainer .techWrapper div h2 {
-        font-weight: 700; }
-    .workpage .techContainer .techWrapper .devSkills,
-    .workpage .techContainer .techWrapper .marketingSkills {
-      display: flex;
-      flex-flow: row wrap; }
-      .workpage .techContainer .techWrapper .devSkills li,
-      .workpage .techContainer .techWrapper .marketingSkills li {
-        flex: 0 1 50%;
-        margin: auto; }
-        .workpage .techContainer .techWrapper .devSkills li p,
-        .workpage .techContainer .techWrapper .marketingSkills li p {
-          display: flex;
-          justify-content: center; }
-  @media (min-width: 768px) {
-    .workpage .techContainer .techWrapper {
-      flex-flow: row nowrap; }
-      .workpage .techContainer .techWrapper div {
-        flex: 0 0 50%; }
-        .workpage .techContainer .techWrapper div li p {
-          justify-content: flex-start; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -385,19 +342,24 @@ article {
   flex-flow: row nowrap; }
   .Cards .alignRight {
     text-align: right; }
+  .Cards .mute {
+    color: rgba(255, 255, 255, 0.5); }
   .Cards a {
     flex: 1;
-    margin: auto; }
+    margin: 100px 0 auto; }
     .Cards a .faArrow {
       font-size: 4rem; }
   .Cards .Card {
-    flex: 8;
+    flex: 9;
     display: flex;
     flex-flow: column nowrap;
     align-items: center; }
     .Cards .Card img {
-      display: inline-block;
-      width: 100%; }
+      width: 100%;
+      height: 15rem;
+      max-width: 30rem;
+      margin: 0 0 1rem;
+      border-radius: 4px; }
     .Cards .Card .copyBlock {
       display: flex;
       flex-flow: column nowrap; }
@@ -439,7 +401,16 @@ article {
           .Cards .Card .copyBlock .tags .tag p {
             margin: 0;
             font-size: 1.2rem;
-            outline: 0;
             white-space: nowrap; }
+  @media (min-width: 768px) {
+    .Cards a {
+      margin: 50px 0 auto; } }
+  @media (min-width: 1024px) {
+    .Cards a .faArrow {
+      font-size: 5rem; }
+    .Cards .Card img {
+      width: 100%;
+      height: 20rem;
+      max-width: 40rem; } }
 
 /*# sourceMappingURL=output.css.map */

@@ -2,12 +2,12 @@ export const projects = [
   {
     title: 'KS Marketing',
     link: 'https://goo.gl/XaPTjw',
-    technologies: ['React', 'CSS Modules', 'ES6', 'Webpack', 'Node'],
+    technologies: ['React', 'Flexbox', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
     description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: false,
     inDevelopment: true,
     img: {
-      path: require('./portfolio_images/ksMarketing.png'),
+      path: require('../../assets/ksMarketing.png'),
       alt: 'team photo'
     }
   },
@@ -19,32 +19,44 @@ export const projects = [
     noFollow: false,
     inDevelopment: false,
     img: {
-      path: require('./portfolio_images/students_on_laptop.png'),
+      path: require('../../assets/general-assembly-logo.png'),
       alt: 'General Assembly logo'
     }
   },
   {
-    title: 'Course Walker Stud Services',
+    title: 'Course Walkers',
     link: 'http://course-walkers.herokuapp.com/',
-    technologies: ['jQuery', 'Flexbox', 'Handlebars.js'],
+    technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS'],
     description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: false,
     inDevelopment: false,
     img: {
-      path: require('./portfolio_images/coursewalkers.png'),
+      path: require('../../assets/course-walkers-logo.png'),
       alt: 'Course Walkers logo'
     }
   },
   {
-    title: 'Personal Project - Under Construction UI',
+    title: 'Under Construction UI',
     link: 'https://erkgmz.github.io/e-lp/',
-    technologies: ['Angular.js', 'SASS', 'Meterial UI', 'Responsive'],
+    technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
     description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
     noFollow: true,
     inDevelopment: false,
     img: {
-      path: require('./portfolio_images/personalPage.png'),
+      path: require('../../assets/min-bgimage.png'),
       alt: 'cover image'
+    }
+  },
+  {
+    title: 'Create Purpose',
+    link: 'https://createpurpose.org/',
+    technologies: ['Wordpress', 'SEO', 'Google Analytics', 'Front-End Consulting'],
+    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    noFollow: false,
+    inDevelopment: false,
+    img: {
+      path: require('../../assets/cp-logo.png'),
+      alt: 'Create Purpose logo'
     }
   }
 ];
