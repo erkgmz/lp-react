@@ -196,7 +196,7 @@ article {
   .about .italics {
     font-style: italic; }
   .about .container p {
-    margin: 3rem auto; }
+    margin: 2rem auto; }
     .about .container p img {
       float: right;
       width: 15rem;
@@ -364,7 +364,7 @@ article {
       display: flex;
       flex-flow: column nowrap; }
       .Cards .Card .copyBlock a {
-        margin: 0 0 1rem; }
+        margin: 1rem 0; }
       .Cards .Card .copyBlock .tags {
         list-style: none;
         margin: 0;
@@ -412,5 +412,8 @@ article {
       width: 100%;
       height: 20rem;
       max-width: 40rem; } }
+
+.Error {
+  margin: auto; }
 
 /*# sourceMappingURL=output.css.map */

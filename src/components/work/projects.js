@@ -1,11 +1,15 @@
-export const projects = [
+const projects = [
   {
     title: 'KS Marketing',
     link: 'https://goo.gl/XaPTjw',
-    technologies: ['React', 'Flexbox', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
-    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
+    description: 'A fast and simple personal website for a professional client.  This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
     noFollow: false,
     inDevelopment: true,
+    github: {
+      repo: true,
+      link: 'https://github.com/erkgmz/kailey-lp'
+    },
     img: {
       path: require('../../assets/ksMarketing.png'),
       alt: 'team photo'
@@ -14,10 +18,14 @@ export const projects = [
   {
     title: 'General Assembly Admissions Processing',
     link: 'https://ga-admissions.herokuapp.com/',
-    technologies: ['Mongo', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
-    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    technologies: ['MongoDB', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
+    description: 'A MEAN stack web application designed to function as an application and screening system that makes it easier for the GA team to manage the admissions process for prospective students.',
     noFollow: false,
     inDevelopment: false,
+    github: {
+      repo: true,
+      link: 'https://github.com/erkgmz/ga_admissions_app'
+    },
     img: {
       path: require('../../assets/general-assembly-logo.png'),
       alt: 'General Assembly logo'
@@ -27,9 +35,13 @@ export const projects = [
     title: 'Course Walkers',
     link: 'http://course-walkers.herokuapp.com/',
     technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS'],
-    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    description: 'A website built for a client offering horse riding lessons, training, and stud services.  Users can also view a horse’s ancestry and videos of them in action!',
     noFollow: false,
     inDevelopment: false,
+    github: {
+      repo: true,
+      link: 'https://github.com/erkgmz/stud-finder'
+    },
     img: {
       path: require('../../assets/course-walkers-logo.png'),
       alt: 'Course Walkers logo'
@@ -39,9 +51,13 @@ export const projects = [
     title: 'Under Construction UI',
     link: 'https://erkgmz.github.io/e-lp/',
     technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
-    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    description: 'A personal project for a placeholder, under construction page.This simple UI is built with modern technology and is responsive across different device screen sizes.',
     noFollow: true,
     inDevelopment: false,
+    github: {
+      repo: true,
+      link: 'https://github.com/erkgmz/e-lp'
+    },
     img: {
       path: require('../../assets/min-bgimage.png'),
       alt: 'cover image'
@@ -50,10 +66,13 @@ export const projects = [
   {
     title: 'Create Purpose',
     link: 'https://createpurpose.org/',
-    technologies: ['Wordpress', 'SEO', 'Google Analytics', 'Front-End Consulting'],
-    description: 'Phasellus ac tortor nec risus pretium dictum. In euismod nibh a fermentum imperdiet. Nullam aliquet elementum turpis, eu consequat velit posuere eu. Sed eget nulla massa. Morbi maximus dolor diam, sed dignissim leo elementum vel.',
+    technologies: ['Wordpress', 'SEO', 'Google Analytics', 'Consulting'],
+    description: 'I volunteered my services to help the Create Purpose team build their new website to further their mission of bringing STEM education and project-based learning to orphans in Mexico.',
     noFollow: false,
     inDevelopment: false,
+    github: {
+      repo: false
+    },
     img: {
       path: require('../../assets/cp-logo.png'),
       alt: 'Create Purpose logo'
@@ -61,19 +80,4 @@ export const projects = [
   }
 ];
 
-export const development = [
-  'HTML5, CSS3',
-  'React.js',
-  'Node.js',
-  'Express.js',
-  'JavaScript'
-];
-
-export const marketing = [
-  'Digital Campaigns',
-  'Social Media Advertising',
-  'Strategic Planning',
-  'Google Analytics',
-  'Email Marketing'
-];
-
+export default projects;

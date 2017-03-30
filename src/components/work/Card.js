@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import List from '../common/List';
 
-const Card = ({title, image, description, link, noFollow, tags, styles, inDevelopment}) => {
+const Card = ({title, image, description, link, noFollow, tags, styles, inDevelopment, github}) => {
   return (
     <div className={styles.Card}>
       <img src={image.path}
@@ -10,11 +10,19 @@ const Card = ({title, image, description, link, noFollow, tags, styles, inDevelo
       <div className={styles.copyBlock}>
         <h4>{title}</h4>
         <p>{description}</p>
+
+        {github.repo ?
+          <a href={github.link}
+            target="_blank"
+            rel={noFollow ? "noopener noreferrer nofollow" : "noopener noreferrer"}>
+            View on Github
+          </a> : ""}
+
         {link && !inDevelopment ?
           <a href={link}
             target="_blank"
             rel={noFollow ? "noopener noreferrer nofollow" : "noopener noreferrer"}>
-            VIEW
+            View Live
           </a> :
           <p className={styles.mute}>IN DEVELOPMENT</p>}
 
@@ -36,5 +44,6 @@ Card.propTypes = {
   tags: PropTypes.array,
   noFollow: PropTypes.bool,
   styles: PropTypes.object.isRequired,
-  inDevelopment: PropTypes.bool.isRequired
+  inDevelopment: PropTypes.bool.isRequired,
+  github: PropTypes.object
 };

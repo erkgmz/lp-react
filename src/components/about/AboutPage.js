@@ -51,12 +51,9 @@ const AboutPage = () => {
           <p>- Albert Einstein</p>
         </blockquote>
 
-        <p>My value lies in my versatility. My entrepreneurial spirit, high-level marketing experience, and specific focus on web development make me a jack-of-all-trades in the digital world.</p>
-
-        <p>I’ll continue offering my services to the community, while seeking full-time opportunities doing what I love.</p>
-
         <p>Within the next year I plan to:</p>
         <ul>
+          <li><p>Code, Learn, Repeat</p></li>
           <li><p>Read at least 10 books</p></li>
           <li><p>Go on my first snowboarding trip</p></li>
           <li><p>Learn how to play “Wish You Were Here” by Pink Floyd on the guitar</p></li>

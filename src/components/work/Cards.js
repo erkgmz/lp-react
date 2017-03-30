@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
 import Card from './Card';
-import {projects} from './projects';
+import projects from './projects';
 
 class Cards extends Component {
   constructor(props, context) {
@@ -57,7 +57,8 @@ class Cards extends Component {
           link={this.state.card.link}
           tags={this.state.card.technologies}
           styles={this.props.styles}
-          inDevelopment={this.state.card.inDevelopment} />
+          inDevelopment={this.state.card.inDevelopment}
+          github={this.state.card.github} />
 
         <a onClick={this.handleNext} className={this.props.styles.alignRight}>
           <FontAwesomeIcon faClass={`fa fa-angle-right ${this.props.styles.faArrow}`} />
