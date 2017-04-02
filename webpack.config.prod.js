@@ -56,7 +56,7 @@ export default {
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: true,
         removeRedundantAttributes: true,
         useShortDoctype: true,

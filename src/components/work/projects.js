@@ -1,18 +1,18 @@
 const projects = [
   {
-    title: 'KS Marketing',
-    link: 'https://goo.gl/XaPTjw',
-    technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
-    description: 'A fast and simple personal website for a professional client.  This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
+    title: 'Course Walkers',
+    link: 'http://course-walkers.herokuapp.com/',
+    technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS'],
+    description: 'A website built for a client offering horse riding lessons, training, and stud services.  Users can also view a horse’s ancestry and videos of them in action!',
     noFollow: false,
-    inDevelopment: true,
+    inDevelopment: false,
     github: {
       repo: true,
-      link: 'https://github.com/erkgmz/kailey-lp'
+      link: 'https://github.com/erkgmz/stud-finder'
     },
     img: {
-      path: require('../../assets/ksMarketing.png'),
-      alt: 'team photo'
+      path: require('../../assets/course-walkers-logo.png'),
+      alt: 'Course Walkers logo'
     }
   },
   {
@@ -32,19 +32,34 @@ const projects = [
     }
   },
   {
-    title: 'Course Walkers',
-    link: 'http://course-walkers.herokuapp.com/',
-    technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS'],
-    description: 'A website built for a client offering horse riding lessons, training, and stud services.  Users can also view a horse’s ancestry and videos of them in action!',
+    title: 'Create Purpose',
+    link: 'https://createpurpose.org/',
+    technologies: ['Wordpress', 'SEO', 'Google Analytics', 'Consulting'],
+    description: 'I volunteered my services to help the Create Purpose team build their new website to further their mission of bringing STEM education and project-based learning to orphans in Mexico.',
     noFollow: false,
     inDevelopment: false,
     github: {
-      repo: true,
-      link: 'https://github.com/erkgmz/stud-finder'
+      repo: false
     },
     img: {
-      path: require('../../assets/course-walkers-logo.png'),
-      alt: 'Course Walkers logo'
+      path: require('../../assets/cp-logo.png'),
+      alt: 'Create Purpose logo'
+    }
+  },
+  {
+    title: 'KS Marketing',
+    link: 'https://goo.gl/XaPTjw',
+    technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
+    description: 'A fast and simple personal website for a professional client.  This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
+    noFollow: false,
+    inDevelopment: true,
+    github: {
+      repo: true,
+      link: 'https://github.com/erkgmz/kailey-lp'
+    },
+    img: {
+      path: require('../../assets/ksMarketing.png'),
+      alt: 'team photo'
     }
   },
   {
@@ -62,22 +77,12 @@ const projects = [
       path: require('../../assets/min-bgimage.png'),
       alt: 'cover image'
     }
-  },
-  {
-    title: 'Create Purpose',
-    link: 'https://createpurpose.org/',
-    technologies: ['Wordpress', 'SEO', 'Google Analytics', 'Consulting'],
-    description: 'I volunteered my services to help the Create Purpose team build their new website to further their mission of bringing STEM education and project-based learning to orphans in Mexico.',
-    noFollow: false,
-    inDevelopment: false,
-    github: {
-      repo: false
-    },
-    img: {
-      path: require('../../assets/cp-logo.png'),
-      alt: 'Create Purpose logo'
-    }
   }
 ];
+
+
+
+
+
 
 export default projects;
