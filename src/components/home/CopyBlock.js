@@ -30,7 +30,6 @@ const CopyBlock = props => {
           <List listClass={props.styles.skills} items={digiSkills} />
         </div>
       </div>
-      <p>Let's have coffee?</p>
     </div>
   );
 };

@@ -12,7 +12,7 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 10px;
+  font-size: 11px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.8);
   overflow: hidden; }
@@ -163,7 +163,7 @@ article {
   .homepage .mute {
     color: rgba(255, 255, 255, 0.5); }
   .homepage .copyblockContainer {
-    margin: 4rem auto; }
+    margin: 3rem auto; }
     .homepage .copyblockContainer .headlineBlock {
       display: flex; }
       .homepage .copyblockContainer .headlineBlock h2:nth-child(1) {

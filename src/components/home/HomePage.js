@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import styleable from 'react-styleable';
+// import styleable from 'react-styleable';
 
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
@@ -21,7 +21,8 @@ const HomePage = () => {
   );
 };
 
-export default styleable(css)(HomePage);
+// export default styleable(css)(HomePage);
+export default HomePage;
 
 HomePage.propTypes = {
   css: React.PropTypes.object

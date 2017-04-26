@@ -5,12 +5,12 @@ const icons = [
     faClass:'fa fa-home',
     id: 'home'
   },
-  {
-    text: 'ABOUT',
-    routerPath: '/about',
-    faClass: 'fa fa-user',
-    id: 'contact'
-  },
+  // {
+  //   text: 'ABOUT',
+  //   routerPath: '/about',
+  //   faClass: 'fa fa-user',
+  //   id: 'contact'
+  // },
   {
     text: 'WORK',
     routerPath: '/work',

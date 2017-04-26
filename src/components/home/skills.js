@@ -1,13 +1,14 @@
 export const skills = [
   'JavaScript',
   'Digital Marketing',
-  'Project Management',
   'Babel',
   'Express',
   'Angular',
+  'Project Management',
   'MongoDB',
   'Handlebars',
   'Analytics',
+  'Responsive Design',
   'jQuery',
   'SASS',
   'Git',
@@ -24,8 +25,7 @@ export const skills = [
   'ES6/ES7',
   'CSS Modules',
   'Sketch',
-  'UI design',
-  'UX design',
+  'UI/UX design',
   'SEO',
   'Geek'
 ];

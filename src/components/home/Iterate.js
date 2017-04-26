@@ -14,7 +14,7 @@ class Iterate extends Component {
   }
 
   componentWillMount() {
-    let intervalId = setInterval(this.iterateSkill, 1200);
+    let intervalId = setInterval(this.iterateSkill, 1100);
     this.setState({ intervalId });
   }
 
@@ -25,11 +25,6 @@ class Iterate extends Component {
   updateIndex() {
     let {skillIndex} = this.state;
     skillIndex++;
-
-    // start over
-    // if(skillIndex >= skills.length) {
-    //   skillIndex = 0;
-    // }
 
     // stop at the end
     if(skillIndex === this.props.list.length) {
