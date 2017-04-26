@@ -66,7 +66,7 @@ const projects = [
     title: 'Under Construction UI',
     link: 'https://erkgmz.github.io/e-lp/',
     technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
-    description: 'A personal project for a placeholder, under construction page.This simple UI is built with modern technology and is responsive across different device screen sizes.',
+    description: 'A personal project for a placeholder, under construction page. This simple UI is built with modern technology and is responsive across different device screen sizes.',
     noFollow: true,
     inDevelopment: false,
     github: {
@@ -76,6 +76,21 @@ const projects = [
     img: {
       path: require('../../assets/min-bgimage.png'),
       alt: 'cover image'
+    }
+  },
+  {
+    title: 'Blogging',
+    link: 'http://www.stacykeibler.com/guest-post-5-ways-to-make-your-kids-bulletproof/',
+    technologies: ['Writing', 'Blogging', 'Copyediting', 'Research'],
+    description: 'A guest post for Stacy Keibler’s blog offering advice to parents on how to support a healthy, Bulletproof lifestyle for their kids.',
+    noFollow: false,
+    inDevelopment: false,
+    github: {
+      repo: false
+    },
+    img: {
+      path: require('../../assets/bulletproof_kids.png'),
+      alt: 'Child eating healthy food'
     }
   }
 ];
