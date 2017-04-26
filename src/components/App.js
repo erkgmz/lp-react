@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import Navigation from './navigation/Navigation';
-import styleable from 'react-styleable';
 
 import css from '../css/sass/components/_base.scss'; // eslint-disable-line
 
@@ -20,4 +19,4 @@ App.propTypes = {
   css: PropTypes.object
 };
 
-export default styleable(css)(App);
+export default App;

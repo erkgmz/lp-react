@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router';
-// import styleable from 'react-styleable';
 
 import Headline from '../common/Headline';
 import Byline from '../common/Byline';
 import ContactCTA from '../common/ContactCTA';
+import LearnMoreCTA from '../common/LearnMoreCTA';
 import CopyBlock from './CopyBlock';
 import SocialIcons from '../socialIcons/SocialIcons';
 
@@ -16,12 +16,14 @@ const HomePage = () => {
       <Headline text="Hi, I'm Erik" />
       <Byline text="I design and develop digital interfaces for the web." />
       <CopyBlock styles={css} />
-      <ContactCTA path="/contact" text="Contact Me" />
+      <div className={css.ctaContainer}>
+        <ContactCTA path="/contact" text="Contact Me" />
+        <LearnMoreCTA path="/services" text="Learn More" />
+      </div>
     </article>
   );
 };
 
-// export default styleable(css)(HomePage);
 export default HomePage;
 
 HomePage.propTypes = {

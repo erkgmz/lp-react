@@ -7,6 +7,7 @@ import AboutPage from './components/about/AboutPage';
 import WorkPage from './components/work/WorkPage';
 import ContactPage from './components/contact/ContactPage';
 import ErrorPage from './components/error/ErrorPage';
+import ServicesPage from './components/services/ServicesPage';
 
 export default (
   <Route path="/" component={App}>
@@ -14,6 +15,7 @@ export default (
     <Route path="/about" component={AboutPage} />
     <Route path="/work" component={WorkPage} />
     <Route path="/contact" component={ContactPage} />
+    <Route path="/services" component={ServicesPage} />
     <Route path="/*" component={ErrorPage} />
   </Route>
 );

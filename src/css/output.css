@@ -40,6 +40,10 @@ article {
       article p a:hover {
         text-decoration: none; }
 
+a {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8); }
+
 /*
  * NOTE:
  *  Since the header and navigation are fixed at the top & bottom, we will not treat them as
@@ -85,9 +89,6 @@ article {
   .wrapper p,
   .wrapper a {
     font-family: 'Roboto', sans-serif; }
-  .wrapper a {
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8); }
   .wrapper p,
   .wrapper a,
   .wrapper input,
@@ -163,16 +164,11 @@ article {
   .homepage .mute {
     color: rgba(255, 255, 255, 0.5); }
   .homepage .copyblockContainer {
-    margin: 3rem auto; }
-    .homepage .copyblockContainer .headlineBlock {
-      display: flex; }
-      .homepage .copyblockContainer .headlineBlock h2:nth-child(1) {
-        white-space: nowrap; }
-      .homepage .copyblockContainer .headlineBlock .pipe {
-        margin: 0 .5rem;
-        color: rgba(255, 255, 255, 0.5); }
-    .homepage .copyblockContainer h2 {
-      font-weight: 700; }
+    display: none; }
+  .homepage .ctaContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
   .homepage .skillsContainer {
     display: flex;
     flex-flow: column nowrap;
@@ -181,11 +177,23 @@ article {
       list-style: initial; }
       .homepage .skillsContainer .skills li p {
         margin: .5rem; }
-  @media (min-width: 768px) {
+  @media (min-width: 550px) {
     .homepage .skillsContainer {
       flex-flow: row nowrap; }
       .homepage .skillsContainer div {
-        flex: 1; } }
+        flex: 1; }
+    .homepage .copyblockContainer {
+      display: block;
+      margin: 3rem auto 0; }
+      .homepage .copyblockContainer .headlineBlock {
+        display: flex; }
+        .homepage .copyblockContainer .headlineBlock h2:nth-child(1) {
+          white-space: nowrap; }
+        .homepage .copyblockContainer .headlineBlock .pipe {
+          margin: 0 .5rem;
+          color: rgba(255, 255, 255, 0.5); }
+      .homepage .copyblockContainer h2 {
+        font-weight: 700; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -301,7 +309,7 @@ article {
         .navigation ul li a i {
           font-size: 2.5rem; }
         .navigation ul li a p {
-          display: none;
+          margin: 0;
           font-weight: 300; }
   @media (min-width: 768px) {
     .navigation {
@@ -316,7 +324,8 @@ article {
           .navigation ul li a i {
             display: none; }
           .navigation ul li a p {
-            display: inline-flex; } }
+            display: inline-flex;
+            margin: 1.5rem 0; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -365,6 +374,8 @@ article {
       flex-flow: column nowrap; }
       .Cards .Card .copyBlock a {
         margin: 1rem 0; }
+        .Cards .Card .copyBlock a:hover {
+          text-decoration: none; }
       .Cards .Card .copyBlock .tags {
         list-style: none;
         margin: 0;
@@ -412,6 +423,37 @@ article {
       width: 100%;
       height: 20rem;
       max-width: 40rem; } }
+
+/* Breakpoints */
+/* Font Sizes */
+/* Headline Sizes */
+/* Theme Color Palette */
+.servicespage {
+  margin: auto; }
+  .servicespage .mute {
+    color: rgba(255, 255, 255, 0.5); }
+  .servicespage .headlineBlock {
+    display: flex; }
+    .servicespage .headlineBlock h2:nth-child(1) {
+      white-space: nowrap; }
+    .servicespage .headlineBlock .pipe {
+      margin: 0 .5rem;
+      color: rgba(255, 255, 255, 0.5); }
+  .servicespage h2 {
+    font-weight: 700; }
+  .servicespage .skillsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around; }
+    .servicespage .skillsContainer .skills li {
+      list-style: initial; }
+      .servicespage .skillsContainer .skills li p {
+        margin: .5rem; }
+  @media (min-width: 768px) {
+    .servicespage .skillsContainer {
+      flex-flow: row nowrap; }
+      .servicespage .skillsContainer div {
+        flex: 1; } }
 
 .Error {
   margin: auto; }

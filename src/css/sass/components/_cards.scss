@@ -41,6 +41,10 @@
 
       a {
         margin: 1rem 0;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       .tags {

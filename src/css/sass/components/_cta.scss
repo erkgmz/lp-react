@@ -1,0 +1,40 @@
+@import 'variables';
+
+.contactCta {
+  background: $theme-accent;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 2rem 0;
+  transition: background 0.4s ease;
+
+  &:hover {
+    background: $theme-text;
+    color: $theme-accent;
+  }
+
+  @media(min-width: $breakpoint-mobile) {
+    margin: 1rem 0;
+  }
+}
+
+.learnCta {
+  background: $theme-text;
+  color: $theme-accent;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 2rem 0;
+  transition: background 0.4s ease;
+
+  &:hover {
+    background: $theme-accent;
+    color: $theme-text;
+  }
+
+  @media(min-width: $breakpoint-mobile) {
+    display: none;
+  }
+}

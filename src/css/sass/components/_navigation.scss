@@ -39,7 +39,7 @@
         }
 
         p {
-          display: none;
+          margin: 0;
           font-weight: 300;
         }
       }
@@ -71,6 +71,7 @@
 
           p {
             display: inline-flex;
+            margin: 1.5rem 0;
           }
         }
       }

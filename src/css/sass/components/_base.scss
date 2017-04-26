@@ -2,6 +2,7 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400');
+
 * {
   box-sizing: border-box;
 }
@@ -44,6 +45,11 @@ article {
       }
     }
   }
+}
+
+a {
+  cursor: pointer;
+  color: $theme-text;
 }
 
 /*
@@ -93,11 +99,6 @@ article {
   p,
   a {
     font-family: 'Roboto', sans-serif;
-  }
-
-  a {
-    cursor: pointer;
-    color: $theme-text;
   }
 
   p,

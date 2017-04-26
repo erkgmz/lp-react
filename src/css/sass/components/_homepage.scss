@@ -8,25 +8,13 @@
   }
 
   .copyblockContainer {
-    margin: 3rem auto;
-    // display: none;
+    display: none;
+  }
 
-    .headlineBlock {
-      display: flex;
-
-      h2:nth-child(1) {
-        white-space: nowrap;
-      }
-
-      .pipe {
-        margin: 0 .5rem;
-        color: $mute;
-      }
-    }
-
-    h2 {
-      font-weight: 700;
-    }
+  .ctaContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 
   .skillsContainer {
@@ -45,16 +33,34 @@
     }
   }
 
-  @media(min-width: $breakpoint-tablet) {
-    // .copyblockContainer {
-    //   display: block;
-    // }
-
+  @media(min-width: $breakpoint-mobile) {
     .skillsContainer {
       flex-flow: row nowrap;
 
       div {
         flex: 1;
+      }
+    }
+
+    .copyblockContainer {
+      display: block;
+      margin: 3rem auto 0;
+
+      .headlineBlock {
+        display: flex;
+
+        h2:nth-child(1) {
+          white-space: nowrap;
+        }
+
+        .pipe {
+          margin: 0 .5rem;
+          color: $mute;
+        }
+      }
+
+      h2 {
+        font-weight: 700;
       }
     }
   }

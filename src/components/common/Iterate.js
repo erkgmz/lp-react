@@ -26,6 +26,11 @@ class Iterate extends Component {
     let {skillIndex} = this.state;
     skillIndex++;
 
+    // start over
+    if(skillIndex >= this.props.list.length && this.props.restart) {
+      skillIndex = 0;
+    }
+
     // stop at the end
     if(skillIndex === this.props.list.length) {
       skillIndex = this.props.list.length;
@@ -55,7 +60,8 @@ class Iterate extends Component {
 
 Iterate.propTypes = {
   list: PropTypes.array.isRequired,
-  textColor: PropTypes.string
+  textColor: PropTypes.string,
+  restart: PropTypes.bool
 };
 
 export default Iterate;
