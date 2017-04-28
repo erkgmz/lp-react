@@ -94,12 +94,10 @@ class Form extends Component {
         success: function(response) {
           this.clearState();
           toastr.success('Your message has been sent.');
-          console.log(response);
         }.bind(this),
         error: function(xhr, status, error) {
           this.clearState();
-          toastr.error('Hmm, there was an error sending your message.');
-          console.log(error);
+          toastr.error('Hmm, there was an error sending your message, try again.');
         }.bind(this)
       });
     } else {

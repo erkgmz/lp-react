@@ -1,10 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const FontAwesomeIcon = ({ faClass }) => {
-  return (
-    <i className={faClass} aria-hidden="true"></i>
-  );
-};
+const FontAwesomeIcon = ({ faClass }) => <i className={faClass} aria-hidden="true"></i>;
 
 export default FontAwesomeIcon;
 

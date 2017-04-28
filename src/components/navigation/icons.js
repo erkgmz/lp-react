@@ -5,6 +5,7 @@ const icons = [
     faClass:'fa fa-home',
     id: 'home'
   },
+  // Removed 4/28/17 - Need to shorter about section
   // {
   //   text: 'ABOUT',
   //   routerPath: '/about',

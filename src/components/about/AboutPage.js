@@ -1,3 +1,4 @@
+// Re-write content to be shorter and sweeter
 import React from 'react';
 
 import Headline from '../common/Headline';
