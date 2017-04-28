@@ -11,20 +11,22 @@ const Card = ({title, image, description, link, noFollow, tags, styles, inDevelo
         <h4>{title}</h4>
         <p>{description}</p>
 
-        {github.repo ?
+        {github.repo &&
           <a href={github.link}
             target="_blank"
             rel={noFollow ? "noopener noreferrer nofollow" : "noopener noreferrer"}>
-            View on Github
-          </a> : ""}
+            View Github
+          </a>}
 
-        {link && !inDevelopment ?
+        {link && !inDevelopment ? (
           <a href={link}
             target="_blank"
             rel={noFollow ? "noopener noreferrer nofollow" : "noopener noreferrer"}>
             View Live
-          </a> :
-          <p className={styles.mute}>IN DEVELOPMENT</p>}
+          </a>
+        ) : (
+          <p className={styles.mute}>IN DEVELOPMENT</p>
+        )}
 
         <List listClass={styles.tags}
           items={tags}
