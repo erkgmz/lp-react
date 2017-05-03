@@ -5,8 +5,7 @@ import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import List from '../common/List';
 import Iterate from '../common/Iterate';
-// import {skills, devSkills, digiSkills} from '../common/skills';
-import {skills, devSkills} from '../common/skills';
+import {skills, devSkills, digiSkills} from '../common/skills';
 
 const CopyBlock = props => {
   return (

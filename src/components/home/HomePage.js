@@ -5,7 +5,7 @@ import Headline from '../common/Headline';
 import Byline from '../common/Byline';
 import ContactCTA from '../common/ContactCTA';
 import LearnMoreCTA from '../common/LearnMoreCTA';
-import CopyBlock from './CopyBlock';
+import CopyBlock from '../common/CopyBlock';
 import SocialIcons from '../socialIcons/SocialIcons';
 
 import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
