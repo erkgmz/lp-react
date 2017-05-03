@@ -7,7 +7,8 @@ import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import List from '../common/List';
 import Iterate from '../common/Iterate';
-import {skills, devSkills, digiSkills} from '../common/skills';
+// import {skills, devSkills, digiSkills} from '../common/skills';
+import {skills, devSkills} from '../common/skills';
 
 import css from '../../css/sass/components/_servicespage.scss'; // eslint-disable-line
 
@@ -29,10 +30,10 @@ const ServicesPage = () => {
           <List listClass={css.skills} items={devSkills} />
         </div>
 
-        <div>
+        {/*<div>
           <h2>Digital Marketing</h2>
           <List listClass={css.skills} items={digiSkills} />
-        </div>
+        </div>*/}
       </div>
     </article>
   );

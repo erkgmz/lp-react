@@ -5,7 +5,8 @@ import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import List from '../common/List';
 import Iterate from '../common/Iterate';
-import {skills, devSkills, digiSkills} from '../common/skills';
+// import {skills, devSkills, digiSkills} from '../common/skills';
+import {skills, devSkills} from '../common/skills';
 
 const CopyBlock = props => {
   return (
@@ -20,14 +21,14 @@ const CopyBlock = props => {
 
       <div className={props.styles.skillsContainer}>
         <div>
-          <h2>Web Development</h2>
+          <h2>Front-End Skills</h2>
           <List listClass={props.styles.skills} items={devSkills} />
         </div>
 
-        <div>
+        {/*<div>
           <h2>Digital Marketing</h2>
           <List listClass={props.styles.skills} items={digiSkills} />
-        </div>
+        </div>*/}
       </div>
     </div>
   );

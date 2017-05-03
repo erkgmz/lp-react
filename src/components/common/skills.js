@@ -31,14 +31,15 @@ export const skills = [
 ];
 
 export const devSkills = [
-  'Front-End Development',
-  'Responsive & Mobile Friendly',
-  'Full-Stack JavaScript'
+  'Expert HTML & CSS',
+  'Responsive Web Design',
+  'Modern JavaScript (ES201X)',
+  'React.js & Node.js'
 ];
 
-export const digiSkills = [
-  'SEM & SEO',
-  'Content Marketing',
-  'Data & Analytics'
-];
+// export const digiSkills = [
+//   'SEM & SEO',
+//   'Content Marketing',
+//   'Data & Analytics'
+// ];
 

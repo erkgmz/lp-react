@@ -47,38 +47,6 @@ const projects = [
     }
   },
   {
-    title: 'KS Marketing',
-    link: 'https://goo.gl/XaPTjw',
-    technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
-    description: 'A fast and simple personal website for a professional client.  This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
-    noFollow: false,
-    inDevelopment: true,
-    github: {
-      repo: true,
-      link: 'https://github.com/erkgmz/kailey-lp'
-    },
-    img: {
-      path: require('../../assets/ksMarketing.png'),
-      alt: 'team photo'
-    }
-  },
-  {
-    title: 'Under Construction UI',
-    link: 'https://erkgmz.github.io/e-lp/',
-    technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
-    description: 'A personal project for a placeholder, under construction page. This simple UI is built with modern technology and is responsive across different device screen sizes.',
-    noFollow: true,
-    inDevelopment: false,
-    github: {
-      repo: true,
-      link: 'https://github.com/erkgmz/e-lp'
-    },
-    img: {
-      path: require('../../assets/min-bgimage.png'),
-      alt: 'cover image'
-    }
-  },
-  {
     title: 'Blogging',
     link: 'http://www.stacykeibler.com/guest-post-5-ways-to-make-your-kids-bulletproof/',
     technologies: ['Writing', 'Blogging', 'Copyediting', 'Research'],
@@ -93,6 +61,38 @@ const projects = [
       alt: 'Child eating healthy food'
     }
   }
+  // {
+  //   title: 'KS Marketing',
+  //   link: 'https://goo.gl/XaPTjw',
+  //   technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
+  //   description: 'A fast and simple personal website for a professional client. This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
+  //   noFollow: false,
+  //   inDevelopment: true,
+  //   github: {
+  //     repo: true,
+  //     link: 'https://github.com/erkgmz/kailey-lp'
+  //   },
+  //   img: {
+  //     path: require('../../assets/ksMarketing.png'),
+  //     alt: 'team photo'
+  //   }
+  // },
+  // {
+  //   title: 'Under Construction UI',
+  //   link: 'https://erkgmz.github.io/e-lp/',
+  //   technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
+  //   description: 'A personal project for a placeholder, under construction page. This simple UI is built with modern technology and is responsive across different device screen sizes.',
+  //   noFollow: true,
+  //   inDevelopment: false,
+  //   github: {
+  //     repo: true,
+  //     link: 'https://github.com/erkgmz/e-lp'
+  //   },
+  //   img: {
+  //     path: require('../../assets/min-bgimage.png'),
+  //     alt: 'cover image'
+  //   }
+  // }
 ];
 
 export default projects;

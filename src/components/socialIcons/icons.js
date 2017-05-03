@@ -7,20 +7,20 @@ const ICONS = [
     text: 'LINKEDIN'
   },
   {
-    outboundLink: 'https://twitter.com/erikgomezco',
-    faClass: 'fa fa-twitter',
-    text: 'TWITTER'
-  },
-  {
     outboundLink: 'https://github.com/erkgmz',
     faClass: 'fa fa-github',
     text: 'GITHUB'
-  },
-  {
-    outboundLink: 'https://angel.co/erikgomez',
-    faClass: 'fa fa-angellist',
-    text: 'ANGELIST'
   }
+  // {
+  //   outboundLink: 'https://twitter.com/erikgomezco',
+  //   faClass: 'fa fa-twitter',
+  //   text: 'TWITTER'
+  // },
+  // {
+  //   outboundLink: 'https://angel.co/erikgomez',
+  //   faClass: 'fa fa-angellist',
+  //   text: 'ANGELIST'
+  // }
 ];
 
 export default ICONS;
