@@ -22,12 +22,18 @@ body {
   height: 100%; }
 
 body {
-  background-color: #90A4AE;
+  background: linear-gradient(to bottom, #607D8B 20%, #90A4AE);
   overflow: auto; }
+  @media (min-width: 768px) {
+    body {
+      background: linear-gradient(to bottom right, #607D8B 40%, #90A4AE); } }
 
 header {
-  background-color: #37474F;
   padding: 0 1.5rem; }
+
+nav {
+  background: #90A4AE;
+  box-shadow: 0 0 7px 7px #90A4AE; }
 
 article {
   padding: 2rem 1.5rem 7rem;
@@ -102,13 +108,15 @@ a {
     .wrapper article {
       padding: 2rem 1rem 5rem; } }
   @media (min-width: 768px) {
+    .wrapper nav {
+      background: rgba(255, 255, 255, 0);
+      box-shadow: none; }
     .wrapper header {
       order: 1;
       position: static; }
     .wrapper nav {
       order: 2;
-      position: static;
-      background-color: #607D8B; }
+      position: static; }
     .wrapper article {
       order: 3;
       margin: auto;
@@ -289,8 +297,7 @@ a {
     flex-flow: row nowrap;
     justify-content: space-around; }
     .navigation ul li {
-      flex: 1 1 auto;
-      background-color: #607D8B; }
+      flex: 1 1 auto; }
       .navigation ul li a {
         display: flex;
         flex-flow: column nowrap;

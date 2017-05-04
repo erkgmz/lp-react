@@ -21,5 +21,8 @@ $theme-dark: #37474F;
 $theme-medium: #607D8B;
 $theme-light: #90A4AE;
 $theme-accent: #FF3D00;
+$transparent: rgba(255, 255, 255, 0);
 $theme-text: rgba(255, 255, 255, .8);
+$desktop-gradient: linear-gradient(to bottom right, $theme-medium 40%, $theme-light);
+$mobile-gradient: linear-gradient(to bottom, $theme-medium 20%, $theme-light);
 $mute : rgba(255, 255, 255, 0.5);

@@ -20,13 +20,23 @@ body {
 }
 
 body {
-  background-color: $theme-light;
+  // background-color: $theme-light;
+  background: $mobile-gradient;
   overflow: auto;
+
+  @media(min-width: $breakpoint-tablet) {
+    background: $desktop-gradient;
+  }
 }
 
 header {
-  background-color: $theme-dark;
+  // background-color: $theme-dark;
   padding: 0 1.5rem;
+}
+
+nav {
+  background: $theme-light;
+  box-shadow: 0 0 7px 7px $theme-light;
 }
 
 article {
@@ -137,6 +147,11 @@ a {
 
   @media(min-width: $breakpoint-tablet) {
 
+    nav {
+      background: $transparent;
+      box-shadow: none;
+    }
+
     header {
       order: 1;
       position: static;
@@ -145,7 +160,7 @@ a {
     nav {
       order: 2;
       position: static;
-      background-color: $theme-medium;
+      // background-color: $theme-medium;
     }
 
     article {
