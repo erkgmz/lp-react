@@ -163,36 +163,28 @@ a {
   margin: auto; }
   .homepage .mute {
     color: rgba(255, 255, 255, 0.5); }
-  .homepage .copyblockContainer {
+  .homepage .copyBlock {
     display: none; }
   .homepage .ctaContainer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between; }
-  .homepage .skillsContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around; }
-    .homepage .skillsContainer .skills li {
-      list-style: initial; }
-      .homepage .skillsContainer .skills li p {
-        margin: .5rem; }
+  .homepage .skillsBlock .skills li {
+    list-style: initial; }
+    .homepage .skillsBlock .skills li p {
+      margin: .5rem; }
   @media (min-width: 550px) {
-    .homepage .skillsContainer {
-      flex-flow: row nowrap; }
-      .homepage .skillsContainer div {
-        flex: 1; }
-    .homepage .copyblockContainer {
+    .homepage .copyBlock {
       display: block;
       margin: 3rem auto 0; }
-      .homepage .copyblockContainer .headlineBlock {
+      .homepage .copyBlock .headlineBlock {
         display: flex; }
-        .homepage .copyblockContainer .headlineBlock h2:nth-child(1) {
+        .homepage .copyBlock .headlineBlock h2:nth-child(1) {
           white-space: nowrap; }
-        .homepage .copyblockContainer .headlineBlock .pipe {
+        .homepage .copyBlock .headlineBlock .pipe {
           margin: 0 .5rem;
           color: rgba(255, 255, 255, 0.5); }
-      .homepage .copyblockContainer h2 {
+      .homepage .copyBlock h2 {
         font-weight: 700; } }
 
 /* Breakpoints */
@@ -441,19 +433,10 @@ a {
       color: rgba(255, 255, 255, 0.5); }
   .servicespage h2 {
     font-weight: 700; }
-  .servicespage .skillsContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around; }
-    .servicespage .skillsContainer .skills li {
-      list-style: initial; }
-      .servicespage .skillsContainer .skills li p {
-        margin: .5rem; }
-  @media (min-width: 768px) {
-    .servicespage .skillsContainer {
-      flex-flow: row nowrap; }
-      .servicespage .skillsContainer div {
-        flex: 1; } }
+  .servicespage .skillsBlock .skills li {
+    list-style: initial; }
+    .servicespage .skillsBlock .skills li p {
+      margin: .5rem; }
 
 .Error {
   margin: auto; }

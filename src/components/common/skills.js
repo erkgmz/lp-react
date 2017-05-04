@@ -14,19 +14,15 @@ export const skills = [
   'Bootstrap',
   'CSS Modules',
   'Git',
-  'Project Management',
-  'Angular.js',
+  'Angular 1.X',
   'Handlebars.js',
   'Google Analytics',
-  'Responsive Web Design',
   'Social Media',
   'Flexbox',
   'Wordpress',
-  'Content Marketing',
   'ES201X',
   'Sketch',
   'SEO',
-  'Digital Marketing',
   'Geek'
 ];
 
@@ -36,10 +32,4 @@ export const devSkills = [
   'Modern JavaScript (ES201X)',
   'React.js & Node.js'
 ];
-
-// export const digiSkills = [
-//   'SEM & SEO',
-//   'Content Marketing',
-//   'Data & Analytics'
-// ];
 

@@ -24,15 +24,7 @@
     font-weight: 700;
   }
 
-  // .copyblockContainer {
-  //   margin: 3rem auto;
-  //   // display: none;
-  // }
-
-  .skillsContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+  .skillsBlock {
 
     .skills {
       li {
@@ -41,20 +33,6 @@
         p {
           margin: .5rem;
         }
-      }
-    }
-  }
-
-  @media(min-width: $breakpoint-tablet) {
-    // .copyblockContainer {
-    //   display: block;
-    // }
-
-    .skillsContainer {
-      flex-flow: row nowrap;
-
-      div {
-        flex: 1;
       }
     }
   }

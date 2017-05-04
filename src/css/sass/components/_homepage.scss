@@ -7,7 +7,7 @@
     color: $mute;
   }
 
-  .copyblockContainer {
+  .copyBlock {
     display: none;
   }
 
@@ -17,10 +17,7 @@
     justify-content: space-between;
   }
 
-  .skillsContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+  .skillsBlock {
 
     .skills {
       li {
@@ -34,15 +31,8 @@
   }
 
   @media(min-width: $breakpoint-mobile) {
-    .skillsContainer {
-      flex-flow: row nowrap;
 
-      div {
-        flex: 1;
-      }
-    }
-
-    .copyblockContainer {
+    .copyBlock {
       display: block;
       margin: 3rem auto 0;
 
