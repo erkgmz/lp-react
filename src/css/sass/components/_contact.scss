@@ -4,6 +4,8 @@
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
+  padding-top: 0;
+  padding-bottom: 0;
 
   .leftCol {
     flex: 0 1 auto;
@@ -36,7 +38,7 @@
 
       input,
       textarea {
-        background-color: transparent;
+        background-color: $transparent;
         border: none;
         border-bottom: 1px solid $theme-text;
         margin-bottom: .5rem;

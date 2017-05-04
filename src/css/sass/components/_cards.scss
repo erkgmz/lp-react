@@ -61,7 +61,7 @@
           padding: 0 20px 0 23px;
           position: relative;
           margin: 0 10px 10px 0;
-          outline-color: transparent;
+          outline-color: $transparent;
 
           &:before {
             background: $theme-light;
@@ -75,16 +75,16 @@
             top: 10px;
           }
 
-          &:after {
-            background: $theme-light;
-            border-bottom: 13px solid transparent;
-            border-left: 10px solid $theme-accent;
-            border-top: 13px solid transparent;
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-          }
+          // &:after {
+          //   background: $theme-light;
+          //   border-bottom: 13px solid $transparent;
+          //   border-left: 10px solid $theme-accent;
+          //   border-top: 13px solid $transparent;
+          //   content: '';
+          //   position: absolute;
+          //   right: 0;
+          //   top: 0;
+          // }
 
           p {
             margin: 0;

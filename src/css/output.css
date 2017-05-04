@@ -225,7 +225,9 @@ a {
 /* Headline Sizes */
 /* Theme Color Palette */
 .workpage {
-  margin: auto; }
+  margin: auto;
+  padding-bottom: 8rem;
+  /* overrides global */ }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -234,7 +236,9 @@ a {
 .contact {
   margin: auto;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  padding-top: 0;
+  padding-bottom: 0; }
   .contact .leftCol {
     flex: 0 1 auto; }
   .contact .rightCol {
@@ -258,7 +262,7 @@ a {
         border-radius: 4px; }
       .contact .rightCol form input,
       .contact .rightCol form textarea {
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0);
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.8);
         margin-bottom: .5rem;
@@ -388,7 +392,7 @@ a {
           padding: 0 20px 0 23px;
           position: relative;
           margin: 0 10px 10px 0;
-          outline-color: transparent; }
+          outline-color: rgba(255, 255, 255, 0); }
           .Cards .Card .copyBlock .tags .tag:before {
             background: #90A4AE;
             border-radius: 10px;
@@ -399,15 +403,6 @@ a {
             position: absolute;
             width: 6px;
             top: 10px; }
-          .Cards .Card .copyBlock .tags .tag:after {
-            background: #90A4AE;
-            border-bottom: 13px solid transparent;
-            border-left: 10px solid #FF3D00;
-            border-top: 13px solid transparent;
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0; }
           .Cards .Card .copyBlock .tags .tag p {
             margin: 0;
             font-size: 1.2rem;
@@ -446,6 +441,7 @@ a {
       margin: .5rem; }
 
 .Error {
-  margin: auto; }
+  margin: auto;
+  padding: 0; }
 
 /*# sourceMappingURL=output.css.map */
