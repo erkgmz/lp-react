@@ -4,10 +4,6 @@
   display: flex;
   flex-flow: row nowrap;
 
-  // .alignRight {
-  //   text-align: right;
-  // }
-
   .mute {
     color: $mute;
   }
@@ -74,17 +70,6 @@
             width: 6px;
             top: 10px;
           }
-
-          // &:after {
-          //   background: $theme-light;
-          //   border-bottom: 13px solid $transparent;
-          //   border-left: 10px solid $theme-accent;
-          //   border-top: 13px solid $transparent;
-          //   content: '';
-          //   position: absolute;
-          //   right: 0;
-          //   top: 0;
-          // }
 
           p {
             margin: 0;

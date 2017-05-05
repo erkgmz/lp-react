@@ -53,15 +53,6 @@ a {
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 1px; }
 
-/*
- * NOTE:
- *  Since the header and navigation are fixed at the top & bottom, we will not treat them as
- *  flex items. Specs avoid hamburger button on mobile.
- *  Currently, flexbox does not support absolute elements.
- *  http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element
- *  Because of this, we will set the height of the .wrapper, set a column layout on .wrapper since the
- *   view will not be absolutely positioned, and leverage flexbox to vertically center our content!
- */
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -224,7 +215,7 @@ a {
 .workpage {
   margin: auto;
   padding-bottom: 8rem;
-  /* overrides global */ }
+  /* overrides global rule */ }
 
 /* Breakpoints */
 /* Font Sizes */
