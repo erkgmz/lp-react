@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import styleable from 'react-styleable';
 
-import SocialIcons from '../socialIcons/SocialIcons';
+// import SocialIcons from '../socialIcons/SocialIcons';
 
 import css from '../../css/sass/components/_header.scss'; // eslint-disable-line
 
@@ -15,7 +15,7 @@ const Header = () => {
             Erik Gomez
           </Link>
         </h2>
-        <SocialIcons />
+        {/*<SocialIcons />*/}
       </div>
     </header>
   );

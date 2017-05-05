@@ -4,9 +4,9 @@
   display: flex;
   flex-flow: row nowrap;
 
-  .alignRight {
-    text-align: right;
-  }
+  // .alignRight {
+  //   text-align: right;
+  // }
 
   .mute {
     color: $mute;
@@ -14,7 +14,7 @@
 
   a {
     flex: 1;
-    margin: 100px 0 auto;
+    margin: 120px 0 0;
 
     .faArrow {
       font-size: 4rem;
@@ -90,6 +90,7 @@
             margin: 0;
             font-size: 1.2rem;
             white-space: nowrap;
+            line-height: 2;
           }
         }
       }

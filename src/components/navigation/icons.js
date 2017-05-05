@@ -13,10 +13,10 @@ const icons = [
   //   id: 'contact'
   // },
   {
-    text: 'WORK',
+    text: 'EXPERIENCE',
     routerPath: '/work',
     faClass: 'fa fa-folder-open',
-    id: 'work'
+    id: 'experience'
   },
   {
     text: 'CONTACT',

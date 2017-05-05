@@ -17,7 +17,7 @@ const HomePage = () => {
       <Byline text="I design and develop digital interfaces for the web." />
       <CopyBlock styles={css} />
       <div className={css.ctaContainer}>
-        <ContactCTA path="/contact" text="Contact Me" />
+        <ContactCTA path="/contact" text="Hire Me" />
         <LearnMoreCTA path="/services" text="Learn More" />
       </div>
     </article>

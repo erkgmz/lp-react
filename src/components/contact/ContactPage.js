@@ -1,8 +1,6 @@
 import React from 'react';
-import styleable from 'react-styleable';
 
 import Headline from '../common/Headline';
-import Byline from '../common/Byline';
 import SocialIcons from '../socialIcons/SocialIcons';
 import Form from './Form';
 
@@ -11,16 +9,17 @@ import css from '../../css/sass/components/_contact.scss'; // eslint-disable-lin
 const ContactPage = () => {
   return (
     <article className={css.contact}>
-      <div className={css.leftCol}>
-        <Headline text="Contact Me"/>
-        <Byline text="Have a Question? Send Me a Message." />
+      <div>
+        <Headline text="Contact"/>
+        <p>I'm here to help. Get in touch with me by sending a message. Make sure to check me out on the socials.</p>
+        <SocialIcons />
       </div>
 
-      <div className={css.rightCol}>
+      <div>
         <Form />
       </div>
     </article>
   );
 };
 
-export default styleable(css)(ContactPage);
+export default ContactPage;

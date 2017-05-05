@@ -1,21 +1,15 @@
 @import 'variables';
 
 .contact {
-  margin: auto;
+  margin: auto 2.5rem;
+  padding: 0 0 5rem;
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 0;
-  padding-bottom: 0;
 
-  .leftCol {
-    flex: 0 1 auto;
-  }
-
-  .rightCol {
-    flex: 1 0 28rem;
+  div {
+    margin: 2rem 0;
 
     form {
-      margin: 3rem auto 0;
       display: flex;
       flex-flow: column nowrap;
 
@@ -23,6 +17,7 @@
         display: flex;
         flex-flow: column;
         align-content: stretch;
+        letter-spacing: 1px;
       }
 
       input[type="submit"] {
@@ -34,6 +29,7 @@
         flex: 1 0 auto;
         font-size: $font-size-sm;
         border-radius: 4px;
+        letter-spacing: 1px;
       }
 
       input,
@@ -52,20 +48,33 @@
         resize: none;
       }
     }
+
+    ul {
+      margin-top: 1.6rem;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+
+      i {
+        font-size: 2rem;
+      }
+
+      li:first-child {
+        margin-right: 2rem;
+      }
+    }
   }
 
-  @media(min-width: $breakpoint-desktop) {
-    flex-flow: row nowrap;
+  @media(min-width: $breakpoint-tablet) {
+    flex-flow: row;
     justify-content: space-between;
 
-    .leftCol {
-      flex: 0 1 auto;
+    div:first-child {
+      padding-right: 1rem;
     }
 
-    .rightCol {
-      form {
-        margin: auto;
-      }
+    form {
+      min-width: 30rem;
     }
   }
 }
