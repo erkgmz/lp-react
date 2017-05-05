@@ -20,7 +20,6 @@ body {
 }
 
 body {
-  // background-color: $theme-light;
   background: $mobile-gradient;
   overflow: auto;
 
@@ -30,7 +29,6 @@ body {
 }
 
 header {
-  // background-color: $theme-dark;
   padding: 0 1.5rem;
 }
 
@@ -166,7 +164,6 @@ a {
     nav {
       order: 2;
       position: static;
-      // background-color: $theme-medium;
     }
 
     article {

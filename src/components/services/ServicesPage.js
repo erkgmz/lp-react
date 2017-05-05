@@ -17,7 +17,7 @@ const ServicesPage = () => {
     <article className={css.servicespage}>
       <Headline text="In a Nutshell" />
       <CopyBlock styles={css} />
-      <ContactCTA path="/contact" text="Contact Me" />
+      <ContactCTA path="/contact" text="Hire Me" />
     </article>
   );
 };

@@ -11,7 +11,7 @@ const ContactPage = () => {
     <article className={css.contact}>
       <div>
         <Headline text="Contact"/>
-        <p>I'm here to help. Get in touch with me by sending a message. Make sure to check me out on the socials.</p>
+        <p>I'm here to help. Get in touch with me by sending a message or check me out on the socials.</p>
         <SocialIcons />
       </div>
 
