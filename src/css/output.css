@@ -22,6 +22,10 @@ body {
   height: 100%; }
 
 body {
+  background: -webkit-linear-gradient(#607D8B, #90A4AE);
+  background: -moz-linear-gradient(top, #607D8B, #90A4AE);
+  background: -ms-linear-gradient(#607D8B, #90A4AE);
+  background: -o-linear-gradient(#607D8B, #90A4AE);
   background: linear-gradient(to bottom, #607D8B 20%, #90A4AE);
   overflow: auto; }
   @media (min-width: 768px) {

@@ -20,6 +20,10 @@ body {
 }
 
 body {
+  background: -webkit-linear-gradient($theme-medium, $theme-light);
+  background: -moz-linear-gradient(top, $theme-medium, $theme-light);
+  background: -ms-linear-gradient($theme-medium, $theme-light);
+  background: -o-linear-gradient($theme-medium, $theme-light);
   background: $mobile-gradient;
   overflow: auto;
 
