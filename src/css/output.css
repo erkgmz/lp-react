@@ -19,7 +19,8 @@ html {
 
 html,
 body {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 body {
   background: -webkit-linear-gradient(#607D8B, #90A4AE);
@@ -27,7 +28,9 @@ body {
   background: -ms-linear-gradient(#607D8B, #90A4AE);
   background: -o-linear-gradient(#607D8B, #90A4AE);
   background: linear-gradient(to bottom, #607D8B 20%, #90A4AE);
-  overflow: auto; }
+  overflow: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   @media (min-width: 768px) {
     body {
       background: linear-gradient(to bottom right, #607D8B 40%, #90A4AE); } }
@@ -41,7 +44,9 @@ nav {
 
 article {
   padding: 2rem 1.5rem 7rem;
-  max-width: 55rem; }
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto; }
   article p {
     font-weight: 300;
     line-height: 1.5;
@@ -292,7 +297,8 @@ a {
 .navigation {
   position: fixed;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transform: scale3d(1, 1, 1); }
   .navigation ul {
     padding: 0;
     margin: 0;
@@ -340,7 +346,9 @@ a {
     color: rgba(255, 255, 255, 0.5); }
   .Cards a {
     flex: 1;
-    margin: 120px 0 0; }
+    margin: 100px 0 auto; }
+    .Cards a:last-child {
+      text-align: end; }
     .Cards a .faArrow {
       font-size: 4rem; }
   .Cards .Card {
