@@ -45,7 +45,7 @@ nav {
 }
 
 article {
-  padding: 2rem 1.5rem 7rem;
+  padding: 2rem 1.5rem;
   max-width: 55rem;
   margin-left: auto;
   margin-right: auto;
@@ -90,10 +90,15 @@ a {
     letter-spacing: 1px;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
+  // h3,
+  // h4,
+  // h5,
+  // h6 {
+  //   font-size: $bodyheader;
+  //   font-weight: 400;
+  // }
+
+  h3 {
     font-size: $bodyheader;
     font-weight: 400;
   }
@@ -138,7 +143,7 @@ a {
     }
 
     article {
-      padding: 2rem 1rem 5rem;
+      padding: 2rem 1rem;
     }
   }
 

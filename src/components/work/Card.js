@@ -8,7 +8,7 @@ const Card = ({title, image, description, link, noFollow, tags, styles, inDevelo
         alt={image.alt} />
 
       <div className={styles.copyBlock}>
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{description}</p>
 
         {github.repo &&

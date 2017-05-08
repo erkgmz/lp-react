@@ -1,15 +1,13 @@
 import React, {PropTypes} from 'react';
-import Header from './common/Header';
-import Navigation from './navigation/Navigation';
+import HeaderWithNav from './header/HeaderWithNav';
 
 import css from '../css/sass/components/_base.scss'; // eslint-disable-line
 
 const App = ({ children }) => {
   return (
     <div className={css.wrapper}>
-      <Header />
+      <HeaderWithNav />
       {children}
-      <Navigation />
     </div>
   );
 };
