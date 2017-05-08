@@ -12,7 +12,6 @@ const WorkPage = () => {
     <article className={css.workpage}>
       <Headline text="Experience" />
       <p>Below are a few of my web development projects. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>
-      <p>For a current copy of my resume, please <a href="/resume.pdf" target="_blank" rel="noopener noreferrer nofollow">click here</a>.</p>
       <Cards styles={cards} />
     </article>
   );

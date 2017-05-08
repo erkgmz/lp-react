@@ -123,6 +123,11 @@ a {
 
   footer {
     text-align: center;
+    padding: 0 2rem 1rem;
+
+    p {
+      margin: 0;
+    }
   }
 
 
@@ -156,7 +161,6 @@ a {
     }
 
     footer {
-      padding: 0 2rem;
       text-align: end;
     }
   }

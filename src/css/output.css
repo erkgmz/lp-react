@@ -106,7 +106,10 @@ a {
   .wrapper li {
     list-style: none; }
   .wrapper footer {
-    text-align: center; }
+    text-align: center;
+    padding: 0 2rem 1rem; }
+    .wrapper footer p {
+      margin: 0; }
   @media screen and (orientation: landscape) {
     .wrapper header {
       position: static; }
@@ -117,7 +120,6 @@ a {
       margin: auto;
       max-width: 65rem; }
     .wrapper footer {
-      padding: 0 2rem;
       text-align: end; } }
   @media (min-width: 1024px) {
     .wrapper article {
