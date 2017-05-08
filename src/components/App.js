@@ -9,7 +9,7 @@ const App = ({ children }) => {
       <HeaderWithNav />
       {children}
       <footer>
-        <p>&copy; Copyright 2017 - Erik Gomez</p>
+        <p>&copy; Copyright 2017</p>
       </footer>
     </div>
   );
