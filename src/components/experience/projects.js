@@ -2,7 +2,7 @@ const projects = [
   {
     title: 'Course Walkers',
     link: 'http://course-walkers.herokuapp.com/',
-    technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS'],
+    technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS', 'Flexbox'],
     description: 'A website built for a client offering horse riding lessons, training, and stud services.  Users can also view a horse’s ancestry and videos of them in action!',
     noFollow: false,
     inDevelopment: false,
