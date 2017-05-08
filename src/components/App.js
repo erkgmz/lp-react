@@ -8,6 +8,9 @@ const App = ({ children }) => {
     <div className={css.wrapper}>
       <HeaderWithNav />
       {children}
+      <footer>
+        <p>&copy; Copyright 2017 - Erik Gomez</p>
+      </footer>
     </div>
   );
 };

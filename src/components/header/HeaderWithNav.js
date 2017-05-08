@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {Link, IndexLink} from 'react-router';
 
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
 
@@ -52,15 +52,36 @@ class HeaderWithNav extends Component {
           <div className={css.navContainer}>
             <ul className={css.navBlock}>
               <li>
-                <h1><Link onClick={this.hideNav} to="/">Home</Link></h1>
+                <h1>
+                  <IndexLink
+                    activeClassName={css.active}
+                    onClick={this.hideNav}
+                    to="/">
+                    Home
+                  </IndexLink>
+                </h1>
               </li>
               <li className={css.pipe}><h1>|</h1></li>
               <li>
-                <h1><Link onClick={this.hideNav} to="/work">Experience</Link></h1>
+                <h1>
+                  <Link
+                    activeClassName={css.active}
+                    onClick={this.hideNav}
+                    to="/work">
+                    Experience
+                  </Link>
+                </h1>
               </li>
               <li className={css.pipe}><h1>|</h1></li>
               <li>
-                <h1><Link onClick={this.hideNav} to="/contact">Contact</Link></h1>
+                <h1>
+                  <Link
+                    activeClassName={css.active}
+                    onClick={this.hideNav}
+                    to="/contact">
+                    Contact
+                  </Link>
+                </h1>
               </li>
             </ul>
           </div>

@@ -102,28 +102,23 @@ a {
   .wrapper a,
   .wrapper input,
   .wrapper textarea {
-    font-size: 1.4rem; }
+    font-size: 1.5rem; }
   .wrapper li {
     list-style: none; }
+  .wrapper footer {
+    text-align: center; }
   @media screen and (orientation: landscape) {
     .wrapper header {
       position: static; }
     .wrapper article {
       padding: 2rem 1rem; } }
   @media (min-width: 768px) {
-    .wrapper nav {
-      background: rgba(255, 255, 255, 0);
-      box-shadow: none; }
-    .wrapper header {
-      order: 1;
-      position: static; }
-    .wrapper nav {
-      order: 2;
-      position: static; }
     .wrapper article {
-      order: 3;
       margin: auto;
-      max-width: 65rem; } }
+      max-width: 65rem; }
+    .wrapper footer {
+      padding: 0 2rem;
+      text-align: end; } }
   @media (min-width: 1024px) {
     .wrapper article {
       max-width: 75rem; } }
@@ -183,12 +178,15 @@ a {
           flex: 1 0;
           text-align: center;
           padding: 2rem; }
-          .header .navPanel .navContainer .navBlock li a {
-            font-family: unset;
-            font-size: unset;
-            letter-spacing: 5px; }
           .header .navPanel .navContainer .navBlock li h1 {
             font-weight: 700; }
+            .header .navPanel .navContainer .navBlock li h1 .active {
+              text-decoration: underline; }
+            .header .navPanel .navContainer .navBlock li h1 a {
+              font-family: unset;
+              font-size: unset;
+              text-decoration: none;
+              letter-spacing: 5px; }
     @media (min-width: 1024px) {
       .header .navPanel .navContainer .navBlock {
         width: auto;
@@ -288,7 +286,7 @@ a {
         cursor: pointer;
         align-self: flex-end;
         flex: 1 0 auto;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         border-radius: 4px;
         letter-spacing: 1px; }
       .contact div form input,
@@ -383,7 +381,8 @@ a {
             margin: 0;
             font-size: 1.2rem;
             white-space: nowrap;
-            line-height: 2; }
+            line-height: 2;
+            font-weight: 400; }
   @media (min-width: 768px) {
     .Cards a {
       margin: 50px 0 auto; } }

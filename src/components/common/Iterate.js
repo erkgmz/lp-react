@@ -27,9 +27,9 @@ class Iterate extends Component {
     skillIndex++;
 
     // start over
-    if(skillIndex >= this.props.list.length && this.props.restart) {
-      skillIndex = 0;
-    }
+    // if(skillIndex >= this.props.list.length && this.props.restart) {
+    //   skillIndex = 0;
+    // }
 
     // stop at the end
     if(skillIndex === this.props.list.length) {

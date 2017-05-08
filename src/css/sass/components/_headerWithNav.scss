@@ -70,14 +70,20 @@
           text-align: center;
           padding: 2rem;
 
-          a {
-            font-family: unset;
-            font-size: unset;
-            letter-spacing: 5px;
-          }
 
           h1 {
             font-weight: 700;
+
+            .active {
+              text-decoration: underline;
+            }
+
+            a {
+              font-family: unset;
+              font-size: unset;
+              text-decoration: none;
+              letter-spacing: 5px;
+            }
           }
         }
       }

@@ -121,6 +121,10 @@ a {
     list-style: none;
   }
 
+  footer {
+    text-align: center;
+  }
+
 
 
   /*********************
@@ -146,25 +150,14 @@ a {
 
   @media(min-width: $breakpoint-tablet) {
 
-    nav {
-      background: $transparent;
-      box-shadow: none;
-    }
-
-    header {
-      order: 1;
-      position: static;
-    }
-
-    nav {
-      order: 2;
-      position: static;
-    }
-
     article {
-      order: 3;
       margin: auto;
       max-width: 65rem;
+    }
+
+    footer {
+      padding: 0 2rem;
+      text-align: end;
     }
   }
 

@@ -1,4 +1,5 @@
 export const skills = [
+  // 13 char limit
   'HTML5',
   'CSS3',
   'JavaScript',
@@ -16,19 +17,20 @@ export const skills = [
   'Git',
   'Angular 1.X',
   'Handlebars.js',
-  'Google Analytics',
+  'Analytics',
   'Social Media',
   'Flexbox',
   'Wordpress',
   'ES201X',
   'Sketch',
+  'Photoshop',
   'SEO',
   'Geek'
 ];
 
 export const devSkills = [
   'Expert HTML & CSS',
-  'Responsive Web Design',
+  'Mobile Friendly Design (RWD)',
   'Modern JavaScript (ES201X)',
   'React.js & Node.js'
 ];
