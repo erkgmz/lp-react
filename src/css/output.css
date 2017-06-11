@@ -38,10 +38,6 @@ body {
 header {
   padding: 0 1.5rem; }
 
-nav {
-  background: #90A4AE;
-  box-shadow: 0 0 7px 7px #90A4AE; }
-
 article {
   padding: 2rem 1.5rem;
   max-width: 55rem;
@@ -147,59 +143,64 @@ a {
     text-align: end; }
     .header .bars i {
       font-size: 2.5rem; }
-  .header .navPanel {
+
+/* Breakpoints */
+/* Font Sizes */
+/* Headline Sizes */
+/* Theme Color Palette */
+.navPanel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, #FF3D00 25%, #FF6E40);
+  background: -webkit-linear-gradient(#FF3D00, #FF6E40);
+  background: -moz-linear-gradient(top, #FF3D00, #FF6E40);
+  background: -ms-linear-gradient(#FF3D00, #FF6E40);
+  background: -o-linear-gradient(#FF3D00, #FF6E40);
+  z-index: 1; }
+  .navPanel .faClose {
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 2rem;
+    top: 1.5rem; }
+    .navPanel .faClose i {
+      font-size: 2.5rem; }
+  .navPanel .navContainer {
+    display: flex;
     height: 100%;
-    width: 100%;
-    background: linear-gradient(to bottom right, #FF3D00 25%, #FF6E40);
-    background: -webkit-linear-gradient(#FF3D00, #FF6E40);
-    background: -moz-linear-gradient(top, #FF3D00, #FF6E40);
-    background: -ms-linear-gradient(#FF3D00, #FF6E40);
-    background: -o-linear-gradient(#FF3D00, #FF6E40);
-    z-index: 1; }
-    .header .navPanel .faClose {
-      position: absolute;
-      right: 2rem;
-      top: 1.5rem; }
-      .header .navPanel .faClose i {
-        font-size: 2.5rem; }
-    .header .navPanel .navContainer {
+    width: 100%; }
+    .navPanel .navContainer .navBlock {
       display: flex;
-      height: 100%;
+      flex-flow: column nowrap;
+      padding: 0;
+      margin: auto;
       width: 100%; }
-      .header .navPanel .navContainer .navBlock {
-        display: flex;
-        flex-flow: column nowrap;
-        padding: 0;
-        margin: auto;
-        width: 100%; }
-        .header .navPanel .navContainer .navBlock .pipe {
-          display: none; }
-        .header .navPanel .navContainer .navBlock li {
-          flex: 1 0;
-          text-align: center;
-          padding: 2rem; }
-          .header .navPanel .navContainer .navBlock li h1 {
-            font-weight: 700; }
-            .header .navPanel .navContainer .navBlock li h1 .active {
-              text-decoration: underline; }
-            .header .navPanel .navContainer .navBlock li h1 a {
-              font-family: unset;
-              font-size: unset;
-              text-decoration: none;
-              letter-spacing: 5px; }
-    @media (min-width: 1024px) {
-      .header .navPanel .navContainer .navBlock {
-        width: auto;
-        flex-flow: row nowrap; }
-        .header .navPanel .navContainer .navBlock .pipe {
-          display: inline-block; }
-        .header .navPanel .navContainer .navBlock li {
-          padding: 0 2rem; }
-          .header .navPanel .navContainer .navBlock li a:hover {
-            text-decoration: none; } }
+      .navPanel .navContainer .navBlock .pipe {
+        display: none; }
+      .navPanel .navContainer .navBlock li {
+        flex: 1 0;
+        text-align: center;
+        padding: 2rem; }
+        .navPanel .navContainer .navBlock li h1 {
+          font-weight: 700; }
+          .navPanel .navContainer .navBlock li h1 .active {
+            text-decoration: underline; }
+          .navPanel .navContainer .navBlock li h1 a {
+            font-family: unset;
+            font-size: unset;
+            text-decoration: none;
+            letter-spacing: 5px; }
+  @media (min-width: 1024px) {
+    .navPanel .navContainer .navBlock {
+      width: auto;
+      flex-flow: row nowrap; }
+      .navPanel .navContainer .navBlock .pipe {
+        display: inline-block; }
+      .navPanel .navContainer .navBlock li {
+        padding: 0 2rem; }
+        .navPanel .navContainer .navBlock li a:hover {
+          text-decoration: none; } }
 
 /* Breakpoints */
 /* Font Sizes */
