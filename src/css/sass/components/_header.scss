@@ -1,0 +1,28 @@
+@import 'variables';
+
+.header {
+  display: flex;
+  padding-top: 1.5rem;
+  height: 100%;
+  margin-bottom: 3rem;
+
+  .siteId {
+    font-weight: 700; // overrides global
+    flex: 1;
+
+    a {
+      font-family: unset;
+      font-size: unset;
+      text-decoration: none;
+    }
+  }
+
+  .bars {
+    flex: 1;
+    text-align: end;
+
+    i {
+      font-size: $subheader;
+    }
+  }
+}
