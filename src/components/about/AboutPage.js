@@ -1,4 +1,4 @@
-// Re-write content to be shorter and sweeter
+// DEPRECATED
 import React from 'react';
 
 import Headline from '../common/Headline';

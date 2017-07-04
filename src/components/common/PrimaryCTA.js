@@ -1,21 +1,21 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-import css from '../../css/sass/components/_cta.scss'; // eslint-disable-line
+import css from '../../css/sass/components/_primarycta.scss'; // eslint-disable-line
 
-const WorkCTA = props => {
+const PrimaryCTA = props => {
   return (
     <Link
       to={props.path}
-      className={css.workCta}>
+      className={css.primarycta}>
       {props.text}
     </Link>
   );
 };
 
-WorkCTA.propTypes = {
+PrimaryCTA.propTypes = {
   path: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
 };
 
-export default WorkCTA;
+export default PrimaryCTA;

@@ -32,7 +32,7 @@
         display: flex;
         flex-flow: column nowrap;
         padding: 0;
-        margin: auto;
+        margin: auto auto 5rem;
         width: 100%;
 
         .pipe {
@@ -41,7 +41,7 @@
 
         li {
           flex: 1 0;
-          text-align: center;
+          text-align: right;
           padding: 2rem;
 
 
@@ -63,9 +63,16 @@
       }
     }
 
+    @media (min-width: $breakpoint-tablet) {
+      .navContainer {
+        .navBlock {
+          margin: auto;
+        }
+      }
+    }
+
     @media (min-width: $breakpoint-desktop) {
       .navContainer {
-
         .navBlock {
           width: auto;
           flex-flow: row nowrap;

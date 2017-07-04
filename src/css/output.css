@@ -76,7 +76,7 @@ a {
     font-size: 5rem;
     letter-spacing: 2px; }
   .wrapper h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 1px; }
@@ -142,7 +142,7 @@ a {
     flex: 1;
     text-align: end; }
     .header .bars i {
-      font-size: 2.5rem; }
+      font-size: 3rem; }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -165,7 +165,7 @@ a {
     right: 2rem;
     top: 1.5rem; }
     .navPanel .faClose i {
-      font-size: 2.5rem; }
+      font-size: 3rem; }
   .navPanel .navContainer {
     display: flex;
     height: 100%;
@@ -174,13 +174,13 @@ a {
       display: flex;
       flex-flow: column nowrap;
       padding: 0;
-      margin: auto;
+      margin: auto auto 5rem;
       width: 100%; }
       .navPanel .navContainer .navBlock .pipe {
         display: none; }
       .navPanel .navContainer .navBlock li {
         flex: 1 0;
-        text-align: center;
+        text-align: right;
         padding: 2rem; }
         .navPanel .navContainer .navBlock li h1 {
           font-weight: 700; }
@@ -191,6 +191,9 @@ a {
             font-size: unset;
             text-decoration: none;
             letter-spacing: 5px; }
+  @media (min-width: 768px) {
+    .navPanel .navContainer .navBlock {
+      margin: auto; } }
   @media (min-width: 1024px) {
     .navPanel .navContainer .navBlock {
       width: auto;
@@ -247,24 +250,24 @@ a {
 /* Font Sizes */
 /* Headline Sizes */
 /* Theme Color Palette */
-.about {
-  margin: auto; }
-  .about .container p {
-    margin: 2rem auto; }
-    .about .container p img {
-      float: right;
-      width: 15rem;
-      margin: 0 0 1rem 2rem;
-      border-radius: 4px; }
-  .about .container h2 {
-    font-weight: 700; }
-  .about .container ul li {
-    list-style: initial; }
-    .about .container ul li p {
-      margin: .5rem; }
-  @media (min-width: 1024px) {
-    .about .container p img {
-      width: 30rem; } }
+.primarycta {
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.4s linear;
+  text-align: center;
+  padding: 1.5rem 6rem;
+  color: rgba(255, 255, 255, 0.8);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  letter-spacing: 4px;
+  max-width: 25rem; }
+  .primarycta:hover {
+    color: #FF3D00;
+    border: 6px solid #FF3D00;
+    font-weight: 900; }
+  @media (min-width: 550px) {
+    .primarycta {
+      margin: 1rem 0; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -406,28 +409,6 @@ a {
       width: 100%;
       height: 20rem;
       max-width: 40rem; } }
-
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-.servicespage {
-  margin: auto; }
-  .servicespage .mute {
-    color: rgba(255, 255, 255, 0.5); }
-  .servicespage .headlineBlock {
-    display: flex; }
-    .servicespage .headlineBlock h2:nth-child(1) {
-      white-space: nowrap; }
-    .servicespage .headlineBlock .pipe {
-      margin: 0 .5rem;
-      color: rgba(255, 255, 255, 0.5); }
-  .servicespage h2 {
-    font-weight: 700; }
-  .servicespage .skillsBlock .skills li {
-    list-style: initial; }
-    .servicespage .skillsBlock .skills li p {
-      margin: .5rem; }
 
 .Error {
   margin: auto;
