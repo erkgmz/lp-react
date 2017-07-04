@@ -3,19 +3,19 @@ import {Link} from 'react-router';
 
 import css from '../../css/sass/components/_cta.scss'; // eslint-disable-line
 
-const ContactCTA = props => {
+const WorkCTA = props => {
   return (
     <Link
       to={props.path}
-      className={css.contactCta}>
+      className={css.workCta}>
       {props.text}
     </Link>
   );
 };
 
-ContactCTA.propTypes = {
+WorkCTA.propTypes = {
   path: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
 };
 
-export default ContactCTA;
+export default WorkCTA;

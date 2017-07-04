@@ -8,7 +8,7 @@ import CopyBlock from '../common/CopyBlock';
 import SocialIcons from '../socialIcons/SocialIcons';
 import List from '../common/List';
 import Iterate from '../common/Iterate';
-import ContactCTA from '../common/ContactCTA';
+import WorkCTA from '../common/WorkCTA';
 
 import css from '../../css/sass/components/_servicespage.scss'; // eslint-disable-line
 
@@ -17,7 +17,7 @@ const ServicesPage = () => {
     <article className={css.servicespage}>
       <Headline text="In a Nutshell" />
       <CopyBlock styles={css} />
-      <ContactCTA path="/contact" text="Hire Me" />
+      <WorkCTA path="/work" text="Portfolio" />
     </article>
   );
 };

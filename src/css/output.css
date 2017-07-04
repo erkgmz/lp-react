@@ -7,7 +7,7 @@
 /* Headline Sizes */
 /* Theme Color Palette */
 @import url(normalize.css/normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900");
 * {
   box-sizing: border-box; }
 
@@ -207,15 +207,21 @@ a {
 /* Headline Sizes */
 /* Theme Color Palette */
 .homepage {
-  margin: auto; }
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap; }
+  .homepage div:nth-child(1) {
+    margin-bottom: 2rem; }
+  .homepage div:nth-child(2) {
+    margin-top: 2rem; }
   .homepage .mute {
     color: rgba(255, 255, 255, 0.5); }
   .homepage .copyBlock {
     display: none; }
   .homepage .ctaContainer {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
+    flex-flow: column;
+    margin: 2rem auto 0 0; }
   .homepage .skillsBlock .skills li {
     list-style: initial; }
     .homepage .skillsBlock .skills li p {
@@ -233,6 +239,9 @@ a {
           color: rgba(255, 255, 255, 0.5); }
       .homepage .copyBlock h2 {
         font-weight: 700; } }
+  @media (min-width: 768px) {
+    .homepage {
+      flex-flow: row nowrap; } }
 
 /* Breakpoints */
 /* Font Sizes */

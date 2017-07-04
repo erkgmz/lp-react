@@ -2,6 +2,18 @@
 
 .homepage {
   margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  div {
+    &:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(2) {
+      margin-top: 2rem;
+    }
+  }
 
   .mute {
     color: $mute;
@@ -13,8 +25,8 @@
 
   .ctaContainer {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column;
+    margin: 2rem auto 0 0;
   }
 
   .skillsBlock {
@@ -53,5 +65,9 @@
         font-weight: 700;
       }
     }
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    flex-flow: row nowrap;
   }
 }

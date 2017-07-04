@@ -1,6 +1,6 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900');
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 html {
   font-size: $root-font-size;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $theme-text;
+  color: $theme-white;
   overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ article {
 
 a {
   cursor: pointer;
-  color: $theme-text;
+  color: $theme-white;
   letter-spacing: 1px;
 }
 

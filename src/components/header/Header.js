@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link, IndexLink} from 'react-router';
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../navigation/Navigation';
 import css from '../../css/sass/components/_header.scss'; //eslint-disable-line
 
 class Header extends Component {
