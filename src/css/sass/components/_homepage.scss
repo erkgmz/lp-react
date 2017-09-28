@@ -7,11 +7,11 @@
 
   div {
     &:nth-child(1) {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     &:nth-child(2) {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
   }
 
@@ -26,7 +26,6 @@
   .ctaContainer {
     display: flex;
     flex-flow: column;
-    margin: 2rem auto 0 0;
   }
 
   .skillsBlock {
@@ -65,9 +64,5 @@
         font-weight: 700;
       }
     }
-  }
-
-  @media(min-width: $breakpoint-tablet) {
-    flex-flow: row nowrap;
   }
 }

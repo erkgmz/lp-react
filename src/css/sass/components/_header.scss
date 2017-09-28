@@ -2,16 +2,20 @@
 
 .header {
   display: flex;
-  padding-top: 1.5rem;
-  height: 100%;
-  margin-bottom: 3rem;
+  align-items: baseline;
+  padding: 2rem 1.5rem;
+  background: $theme-gradient-color-1;
+  background: -moz-linear-gradient(left, $theme-gradient-color-1 0%, $theme-gradient-color-2 100%);
+  background: -webkit-linear-gradient(left, $theme-gradient-color-1 0%,$theme-gradient-color-2 100%);
+  background: linear-gradient(to right, $theme-gradient-color-1 0%,$theme-gradient-color-2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$theme-gradient-color-1, endColorstr=$theme-gradient-color-2,GradientType=1 );
 
   .siteId {
     font-weight: 700; // overrides global
     flex: 1;
 
     a {
-      font-family: unset;
+      font-family: $font-stack-primary;
       font-size: unset;
       text-decoration: none;
     }

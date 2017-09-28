@@ -16,7 +16,7 @@ const HomePage = () => {
         <Byline text="Front-End Developer at The AdExchange Group in Irvine, CA." />
       </div>
       <div className={css.ctaContainer}>
-        <PrimaryCTA path="/work" text="EXPERIENCE" />
+        <PrimaryCTA path="/work" text="VIEW MY WORK" />
       </div>
     </article>
   );

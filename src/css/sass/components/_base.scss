@@ -1,16 +1,24 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900');
-
-* {
-  box-sizing: border-box;
-}
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:600');
 
 html {
   font-size: $root-font-size;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $theme-white;
+  color: $font-color;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html,
@@ -20,18 +28,14 @@ body {
 }
 
 body {
-  background: -webkit-linear-gradient($theme-medium, $theme-light);
-  background: -moz-linear-gradient(top, $theme-medium, $theme-light);
-  background: -ms-linear-gradient($theme-medium, $theme-light);
-  background: -o-linear-gradient($theme-medium, $theme-light);
-  background: $mobile-gradient;
+  background: $theme-medium;
+  background: -moz-linear-gradient($theme-medium 40%, $theme-light 100%);
+  background: -webkit-linear-gradient($theme-medium 40%,$theme-light 100%);
+  background: linear-gradient($theme-medium 40%,$theme-light 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$theme-medium 40%, endColorstr=$theme-light,GradientType=1 );
   overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media(min-width: $breakpoint-tablet) {
-    background: $desktop-gradient;
-  }
 }
 
 header {
@@ -45,24 +49,24 @@ article {
   margin-right: auto;
 
   p {
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
 
-    a {
-      text-decoration: underline;
-      font-weight: 700;
+  a {
+    text-decoration: underline;
+    font-weight: 700;
 
-      &:hover {
-        text-decoration: none;
-      }
+    &:hover {
+      text-decoration: none;
     }
   }
 }
 
 a {
   cursor: pointer;
-  color: $theme-white;
+  color: $font-color;
   letter-spacing: 1px;
 }
 
@@ -73,7 +77,7 @@ a {
   justify-content: center;
 
   h1 {
-    font-size: $headline;
+    font-size: $mobile-headline;
     letter-spacing: 2px;
   }
 
@@ -86,23 +90,31 @@ a {
 
   h3 {
     font-size: $bodyheader;
-    font-weight: 400;
+    font-weight: 600;
   }
 
-  h1,
+  h1 {
+    font-family: $font-stack-primary;
+    margin: 0;
+  }
+
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: 'Roboto Slab', serif;
     margin: 0;
   }
 
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   p,
   a {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-stack-secondary;
   }
 
   p,
@@ -150,6 +162,11 @@ a {
   *********************/
 
   @media(min-width: $breakpoint-tablet) {
+
+    h1 {
+      font-size: $desktop-headline;
+      letter-spacing: 2px;
+    }
 
     article {
       margin: auto;

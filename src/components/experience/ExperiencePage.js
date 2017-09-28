@@ -10,8 +10,9 @@ import cards from '../../css/sass/components/_cards.scss'; // eslint-disable-lin
 const ExperiencePage = () => {
   return (
     <article className={css.experience}>
-      <Headline text="Experience" />
-      <p>Below are a few of my web development projects. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>
+      <Headline text="My Work." />
+      {/*<p>Below are a few of my web development projects. <Link to="/contact">Send me a message</Link> if you'd like to see more or have any questions.</p>*/}
+      <p>Look Ma, I'm coding!</p>
       <Cards styles={cards} />
     </article>
   );

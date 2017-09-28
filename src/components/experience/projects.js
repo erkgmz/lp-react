@@ -16,7 +16,7 @@ const projects = [
     }
   },
   {
-    title: 'General Assembly Admissions Processing',
+    title: 'General Assembly',
     link: 'https://ga-admissions.herokuapp.com/',
     technologies: ['MongoDB', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
     description: 'A MEAN stack web application designed to function as an application and screening system that makes it easier for the GA team to manage the admissions process for prospective students.',
@@ -47,7 +47,7 @@ const projects = [
     }
   },
   {
-    title: 'Blogging',
+    title: 'Creative Writing',
     link: 'http://www.stacykeibler.com/guest-post-5-ways-to-make-your-kids-bulletproof/',
     technologies: ['Writing', 'Blogging', 'Copyediting', 'Research'],
     description: 'A guest post for Stacy Keibler’s blog offering advice to parents on how to support a healthy, Bulletproof lifestyle for their kids.',
@@ -76,7 +76,7 @@ const projects = [
   //     path: require('../../assets/ksMarketing.png'),
   //     alt: 'team photo'
   //   }
-  // },
+  // }
   // {
   //   title: 'Under Construction UI',
   //   link: 'https://erkgmz.github.io/e-lp/',

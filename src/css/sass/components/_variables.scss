@@ -8,19 +8,21 @@ $root-font-size: 10px;
 $font-size-sm: 1.5rem;
 
 /* Headline Sizes */
-$headline: 5rem;
+$mobile-headline: 6rem;
+$desktop-headline: 8rem;
 $subheader: 3rem;
-$bodyheader: 1.9rem;
+$bodyheader: 2.2rem;
 
 /* Theme Color Palette */
-$theme-dark: #37474F;
-$theme-medium: #607D8B;
-$theme-light: #90A4AE;
-$theme-accent: #FF3D00;
-$theme-accent-light: #FF6E40;
+$theme-medium: #6c06e0;
+$theme-light: #914ae2;
+$theme-accent: #FF6A63;
+$theme-gradient-color-1: #F89D2A;
+$theme-gradient-color-2: #FF00F4;
 $transparent: rgba(255, 255, 255, 0);
-$theme-white: rgba(255, 255, 255, .8);
-$desktop-gradient: linear-gradient(to bottom right, $theme-medium 40%, $theme-light);
-$mobile-gradient: linear-gradient(to bottom, $theme-medium 20%, $theme-light);
-$nav-gradient: linear-gradient(to bottom right, $theme-accent 25%, $theme-accent-light);
-$mute : rgba(255, 255, 255, 0.5);
+$font-color: #FFFFFF;
+$mute: rgba(255, 255, 255, 0.5);
+
+/* Font Stacks */
+$font-stack-primary: 'Oswald', serif;
+$font-stack-secondary: 'Open Sans', sans-serif;

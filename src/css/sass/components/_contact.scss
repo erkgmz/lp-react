@@ -21,25 +21,32 @@
       }
 
       input[type="submit"] {
-        background-color: $theme-accent;
         border: none;
-        padding: .6rem 2rem;
+        padding: 1.2rem;
         cursor: pointer;
         align-self: flex-end;
         flex: 1 0 auto;
-        font-size: $font-size-sm;
+        font-size: 2.5rem;
         border-radius: 4px;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
+        width: 100%;
+        border-top: 2px solid $theme-gradient-color-1;
+        border-bottom: 2px solid $theme-gradient-color-2;
+        background-image: linear-gradient($theme-gradient-color-1, $theme-gradient-color-2), linear-gradient($theme-gradient-color-1, $theme-gradient-color-2);
+        background-size: 10px 100%;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        font-family: 'Oswald', serif;
       }
 
       input,
       textarea {
         background-color: $transparent;
         border: none;
-        border-bottom: 1px solid $theme-white;
+        border-bottom: 1px solid $font-color;
         margin-bottom: .5rem;
         outline: none;
-        color: $theme-white;
+        color: $font-color;
         padding: .8rem 0;
         border-radius: 0;
       }
