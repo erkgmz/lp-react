@@ -49,8 +49,10 @@ const projects = [
   {
     title: 'Creative Writing',
     link: 'http://www.stacykeibler.com/guest-post-5-ways-to-make-your-kids-bulletproof/',
-    technologies: ['Writing', 'Blogging', 'Copyediting', 'Research'],
-    description: 'A guest post for Stacy Keibler’s blog offering advice to parents on how to support a healthy, Bulletproof lifestyle for their kids.',
+    technologies: ['Blog Writing', 'Copyediting', 'Research', 'List-icles'],
+    // description: 'I once did a guest post for a popular blog that explains how children benefit from a healthy diet and a few tips for parents on how to better support their children with a healthy lifestyle.',
+    description: 'Along with coding, I also enjoy creative writing. From writing a full blog post to brainstorming a headline for an ad and everything in between I do my reasearch and follow the latest trends to develop compelling content.',
+    linkText: true,
     noFollow: false,
     inDevelopment: false,
     github: {

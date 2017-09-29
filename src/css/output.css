@@ -379,19 +379,18 @@ a.primarycta {
     color: rgba(255, 255, 255, 0.5); }
   .Cards a {
     flex: 1;
-    margin: 100px 0 auto; }
+    margin: 70px 0 auto; }
     .Cards a:last-child {
       text-align: end; }
     .Cards a .faArrow {
-      font-size: 4rem; }
+      font-size: 7rem; }
   .Cards .Card {
     flex: 9;
     display: flex;
     flex-flow: column nowrap;
     align-items: center; }
     .Cards .Card img {
-      width: 100%;
-      height: 15rem;
+      height: auto;
       max-width: 30rem;
       margin: 0 0 1rem;
       border-radius: 4px; }
@@ -402,6 +401,8 @@ a.primarycta {
         margin: 1rem 0; }
         .Cards .Card .copyBlock a:hover {
           text-decoration: none; }
+      .Cards .Card .copyBlock .linkWrap {
+        display: flex; }
       .Cards .Card .copyBlock .tags {
         list-style: none;
         margin: 0;
@@ -437,7 +438,7 @@ a.primarycta {
       margin: 50px 0 auto; } }
   @media (min-width: 1024px) {
     .Cards a .faArrow {
-      font-size: 5rem; }
+      font-size: 10rem; }
     .Cards .Card img {
       width: 100%;
       height: 20rem;
