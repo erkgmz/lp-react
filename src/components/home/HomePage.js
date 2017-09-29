@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <div>
-        <Headline text="Hi, I'm Erik" />
+        <Headline text="Hi, I'm Erik." />
         <Byline text="Front-End Developer at The AdExchange Group in Irvine, CA." />
       </div>
       <div className={css.ctaContainer}>
