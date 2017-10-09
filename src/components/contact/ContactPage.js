@@ -11,13 +11,9 @@ const ContactPage = () => {
     <article className={css.contact}>
       <div>
         <Headline text="Contact."/>
-        <p>I'm here to help. Get in touch with me by sending a message or for a current copy of my resume <a href="/resume.pdf" target="_blank" rel="noopener noreferrer nofollow">click here</a>.</p>
-        {/* <p>
-          Need help? Send me a message &rarr; <br />
-          Want a current copy of my resume? <br />
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer nofollow">Click here</a>.
-        </p> */}
-        <SocialIcons />
+        <p>Need help? Getting in touch is easy.</p>
+        <p>Just enter a little info about youself, a brief message with details about your project, and click send.</p>
+        <p>I'll be in touch shortly after</p>
       </div>
 
       <div>

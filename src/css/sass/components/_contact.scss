@@ -7,7 +7,7 @@
   flex-flow: column nowrap;
 
   div {
-    margin: 2rem 0;
+    margin: 1rem 0;
 
     form {
       display: flex;
@@ -16,38 +16,32 @@
       label {
         display: flex;
         flex-flow: column;
-        align-content: stretch;
         letter-spacing: 1px;
+        font-size: 1.3rem;
+        margin: .4rem 0;
       }
 
       input[type="submit"] {
         border: none;
         padding: 1.2rem;
         cursor: pointer;
-        align-self: flex-end;
         flex: 1 0 auto;
         font-size: 2.5rem;
         border-radius: 4px;
         letter-spacing: 3px;
         width: 100%;
-        border-top: 2px solid $theme-gradient-color-1;
-        border-bottom: 2px solid $theme-gradient-color-2;
-        background-image: linear-gradient($theme-gradient-color-1, $theme-gradient-color-2), linear-gradient($theme-gradient-color-1, $theme-gradient-color-2);
-        // background-size: 10px 100%;
-        background-position: 0 0, 100% 0;
-        background-repeat: no-repeat;
+        background: $cta-bg;
         font-family: 'Oswald', serif;
       }
 
       input,
       textarea {
-        background-color: $transparent;
+        background-color: rgba(39, 22, 22, 0.1);
         border: none;
-        border-bottom: 1px solid $font-color;
         margin-bottom: .5rem;
         outline: none;
         color: $font-color;
-        padding: .8rem 0;
+        padding: 1rem;
         border-radius: 0;
       }
 
@@ -73,19 +67,12 @@
   }
 
   @media(min-width: $breakpoint-tablet) {
-    flex-flow: row;
-    justify-content: space-between;
-    width: 75rem; // overrides global
-
-    div:first-child {
-      flex: 5;
-    }
-
     div:last-child {
-      flex: 3;
-
       form {
-        width: 100%;
+        input[type="submit"] {
+          align-self: flex-end;
+          max-width: 33%;
+        }
       }
     }
   }
