@@ -135,7 +135,13 @@ a {
       text-align: end; } }
   @media (min-width: 1024px) {
     .wrapper article {
-      max-width: 75rem; } }
+      max-width: 75rem;
+      padding: 0; }
+    .wrapper p,
+    .wrapper a,
+    .wrapper input,
+    .wrapper textarea {
+      font-size: 1.5rem; } }
 
 /* Breakpoints */
 /* Font Sizes */
@@ -278,7 +284,7 @@ a.primarycta {
   text-align: center;
   padding: 2rem;
   font-size: 2.5rem;
-  color: white;
+  color: #FFFFFF;
   font-weight: 700;
   box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.2);
   letter-spacing: 4px;
@@ -333,7 +339,6 @@ a.primarycta {
         border-top: 2px solid #F89D2A;
         border-bottom: 2px solid #FF00F4;
         background-image: linear-gradient(#F89D2A, #FF00F4), linear-gradient(#F89D2A, #FF00F4);
-        background-size: 10px 100%;
         background-position: 0 0, 100% 0;
         background-repeat: no-repeat;
         font-family: 'Oswald', serif; }
@@ -361,11 +366,14 @@ a.primarycta {
   @media (min-width: 768px) {
     .contact {
       flex-flow: row;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 75rem; }
       .contact div:first-child {
-        padding-right: 1rem; }
-      .contact form {
-        min-width: 30rem; } }
+        flex: 5; }
+      .contact div:last-child {
+        flex: 3; }
+        .contact div:last-child form {
+          width: 100%; } }
 
 /* Breakpoints */
 /* Font Sizes */

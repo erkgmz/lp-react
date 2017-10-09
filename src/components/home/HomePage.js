@@ -13,7 +13,8 @@ const HomePage = () => {
     <article className={css.homepage}>
       <div>
         <Headline text="Hi, I'm Erik." />
-        <Byline text="Front-End Developer at The AdExchange Group in Irvine, CA." />
+        {/*<Byline text="Front-End Developer at The AdExchange Group in Irvine, CA." />*/}
+        <p>Front-End Developer at The AdExchange Group in Irvine, CA.</p>
       </div>
       <div className={css.ctaContainer}>
         <PrimaryCTA path="/work" text="VIEW MY WORK" />

@@ -1,6 +1,5 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
-// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:600');
 
 html {
@@ -188,6 +187,14 @@ a {
 
     article {
       max-width: 75rem;
+      padding: 0;
+    }
+
+    p,
+    a,
+    input,
+    textarea {
+      font-size: $font-size-lg;
     }
   }
 }

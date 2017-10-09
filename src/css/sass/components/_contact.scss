@@ -33,7 +33,7 @@
         border-top: 2px solid $theme-gradient-color-1;
         border-bottom: 2px solid $theme-gradient-color-2;
         background-image: linear-gradient($theme-gradient-color-1, $theme-gradient-color-2), linear-gradient($theme-gradient-color-1, $theme-gradient-color-2);
-        background-size: 10px 100%;
+        // background-size: 10px 100%;
         background-position: 0 0, 100% 0;
         background-repeat: no-repeat;
         font-family: 'Oswald', serif;
@@ -75,13 +75,18 @@
   @media(min-width: $breakpoint-tablet) {
     flex-flow: row;
     justify-content: space-between;
+    width: 75rem; // overrides global
 
     div:first-child {
-      padding-right: 1rem;
+      flex: 5;
     }
 
-    form {
-      min-width: 30rem;
+    div:last-child {
+      flex: 3;
+
+      form {
+        width: 100%;
+      }
     }
   }
 }
