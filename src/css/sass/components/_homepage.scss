@@ -26,6 +26,10 @@
   .ctaContainer {
     display: flex;
     flex-flow: column;
+
+     a {
+       margin: 1rem 0;
+     }
   }
 
   .skillsBlock {
@@ -42,6 +46,16 @@
   }
 
   @media(min-width: $breakpoint-mobile) {
+
+    // .ctaContainer {
+    //   flex-flow: row;
+    //   justify-content: space-between;
+
+    //   a {
+    //     flex: 1;
+    //     max-width: 25rem;
+    //   }
+    // }
 
     .copyBlock {
       display: block;
@@ -62,6 +76,18 @@
 
       h2 {
         font-weight: 700;
+      }
+    }
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    .ctaContainer {
+      flex-flow: row;
+      justify-content: space-between;
+
+      a {
+        flex: 1;
+        max-width: 25rem;
       }
     }
   }

@@ -6,11 +6,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background: $theme-gradient-color-1;
-    background: -moz-linear-gradient($theme-gradient-color-1 0%, $theme-gradient-color-2 100%);
-    background: -webkit-linear-gradient($theme-gradient-color-1 0%,$theme-gradient-color-2 100%);
-    background: linear-gradient($theme-gradient-color-1 0%,$theme-gradient-color-2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$theme-gradient-color-1, endColorstr=$theme-gradient-color-2,GradientType=1 );
+    background: $nav-panel-bg;
     z-index: 1;
 
     .faClose {
@@ -19,7 +15,7 @@
       top: 1.5rem;
 
       i {
-        font-size: $subheader;
+        font-size: 4rem;
       }
     }
 

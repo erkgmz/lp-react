@@ -11,8 +11,6 @@
   a {
     flex: 1;
     margin: 70px 0 auto;
-    // height: 300px;
-    // margin-top: 50px;
 
     &:last-child {
       text-align: end;
@@ -31,7 +29,6 @@
 
     img {
       width: 100%;
-      // height: 15rem;
       height: auto;
       max-width: 30rem;
       margin: 0 0 1rem;
@@ -62,6 +59,7 @@
 
         .tag {
           background: $theme-accent;
+          color: rgba(0, 0, 0, 0.8);
           border-radius: 4px 0 0 4px;
           display: inline-block;
           line-height: 26px;
@@ -71,7 +69,7 @@
           outline-color: $transparent;
 
           &:before {
-            background: $theme-light;
+            background: $main-bg;
             border-radius: 10px;
             box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
             content: '';
@@ -87,7 +85,7 @@
             font-size: 1.2rem;
             white-space: nowrap;
             line-height: 2;
-            font-weight: 400;
+            font-weight: 600;
           }
         }
       }
