@@ -6,7 +6,7 @@ $breakpoint-desktop: 1024px;
 /* Font Sizes */
 $root-font-size: 10px;
 $font-size-sm: 1.5rem;
-$font-size-lg: 1.5rem;
+$font-size-lg: 1.6rem;
 
 /* Headline Sizes */
 $mobile-headline: 6rem;
@@ -15,15 +15,23 @@ $subheader: 3rem;
 $bodyheader: 2.2rem;
 
 /* Theme Color Palette */
-$theme-medium: #6c06e0;
-$theme-light: #914ae2;
-$theme-accent: #FF6A63;
-$theme-gradient-color-1: #F89D2A;
-$theme-gradient-color-2: #FF00F4;
-$transparent: rgba(255, 255, 255, 0);
-$font-color: #FFFFFF;
-$mute: rgba(255, 255, 255, 0.5);
+$main-bg: #9068be;
+$nav-panel-bg: #e62739;
+$theme-accent: #e1e8f0;
+$cta-bg: #e62739;
+$transparent: rgba(39, 22, 22, 0);
+$font-color: #e1e8f0;
+$mute: rgba(225,232,240, 0.5);
 
 /* Font Stacks */
 $font-stack-primary: 'Oswald', serif;
 $font-stack-secondary: 'Open Sans', sans-serif;
+
+/* Mixins */
+@mixin responsive-gradient($start-color, $end-color) {
+  background: $start-color;
+  background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
+  background: -webkit-linear-gradient(left, $start-color 0%,$end-color 100%);
+  background: linear-gradient(to right, $start-color 0%,$end-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start-color, endColorstr=$end-color, GradientType=1 );
+}
