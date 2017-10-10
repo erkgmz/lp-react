@@ -29,11 +29,11 @@
 
      a {
        margin: 1rem 0;
+       font-size: 1.8rem;
      }
   }
 
   .skillsBlock {
-
     .skills {
       li {
         list-style: initial;
@@ -46,16 +46,15 @@
   }
 
   @media(min-width: $breakpoint-mobile) {
+    .ctaContainer {
+      flex-flow: row;
+      justify-content: space-between;
 
-    // .ctaContainer {
-    //   flex-flow: row;
-    //   justify-content: space-between;
-
-    //   a {
-    //     flex: 1;
-    //     max-width: 25rem;
-    //   }
-    // }
+      a {
+        flex: 1;
+        max-width: 20rem;
+      }
+    }
 
     .copyBlock {
       display: block;
@@ -82,12 +81,23 @@
 
   @media(min-width: $breakpoint-tablet) {
     .ctaContainer {
+      a {
+        flex: 1;
+        max-width: 25rem;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media(min-width: $breakpoint-desktop) {
+    min-width: 90rem; // override global to keep headline on 2 lines
+
+    .ctaContainer {
       flex-flow: row;
       justify-content: space-between;
 
       a {
-        flex: 1;
-        max-width: 25rem;
+        max-width: 33%;
       }
     }
   }
