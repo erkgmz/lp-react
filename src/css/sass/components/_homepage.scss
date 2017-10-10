@@ -90,8 +90,6 @@
   }
 
   @media(min-width: $breakpoint-desktop) {
-    min-width: 90rem; // override global to keep headline on 2 lines
-
     .ctaContainer {
       flex-flow: row;
       justify-content: space-between;

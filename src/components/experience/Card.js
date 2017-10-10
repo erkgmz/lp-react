@@ -30,7 +30,7 @@ const Card = ({title, image, description, link, writingProject, noFollow, tags, 
               {/*These strings should go into a variable in the card object*/}
             </a>
           ) : (
-            <p className={styles.mute}>IN DEVELOPMENT</p>
+            <p className={styles.mute}>{title === "Shopify" ? '' : "IN DEVELOPMENT"}</p>
           )}
         </div>
       </div>

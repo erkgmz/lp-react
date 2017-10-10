@@ -1,5 +1,20 @@
 const projects = [
   {
+    title: 'Shopify',
+    link: false,
+    technologies: ['Shopify', 'Theme Development', 'UX', 'Ecommerce', 'Liquid Development'],
+    description: 'Shopify is a leading ecommerce platform because it provides turn key end-to-end solutions. If you\'re interested in custom theme development and want to see an example of my work please contact me.',
+    noFollow: false,
+    inDevelopment: false,
+    github: {
+      repo: false
+    },
+    img: {
+      path: require('../../assets/shopify-logo.jpg'),
+      alt: 'Shopify logo'
+    }
+  },
+  {
     title: 'Course Walkers',
     link: 'http://course-walkers.herokuapp.com/',
     technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS', 'Flexbox'],
@@ -45,23 +60,23 @@ const projects = [
       path: require('../../assets/cp-logo.png'),
       alt: 'Create Purpose logo'
     }
-  },
-  {
-    title: 'Creative Writing',
-    link: 'https://blog.bulletproof.com/tim-ferriss-injury-lyme-disease-filming-tim-ferriss-experiment-215/',
-    technologies: ['Blog Writing', 'Copyediting', 'Research', 'List-icles', 'Ad Copy'],
-    description: 'Along with coding, I also enjoy creative writing. From writing a full blog post to brainstorming a headline for an ad and everything in between, I do my research and follow the latest trends to develop compelling content.',
-    writingProject: true,
-    noFollow: false,
-    inDevelopment: false,
-    github: {
-      repo: false
-    },
-    img: {
-      path: require('../../assets/bulletproof_kids.png'),
-      alt: 'Child eating healthy food'
-    }
   }
+  // {
+  //   title: 'Creative Writing',
+  //   link: 'https://blog.bulletproof.com/tim-ferriss-injury-lyme-disease-filming-tim-ferriss-experiment-215/',
+  //   technologies: ['Blog Writing', 'Copyediting', 'Research', 'List-icles', 'Ad Copy'],
+  //   description: 'Along with coding, I also enjoy creative writing. From writing a full blog post to brainstorming a headline for an ad and everything in between, I do my research and follow the latest trends to develop compelling content.',
+  //   writingProject: true,
+  //   noFollow: false,
+  //   inDevelopment: false,
+  //   github: {
+  //     repo: false
+  //   },
+  //   img: {
+  //     path: require('../../assets/bulletproof_kids.png'),
+  //     alt: 'Child eating healthy food'
+  //   }
+  // }
   // {
   //   title: 'KS Marketing',
   //   link: 'https://goo.gl/XaPTjw',

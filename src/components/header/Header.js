@@ -3,6 +3,7 @@ import {Link, IndexLink} from 'react-router';
 import FontAwesomeIcon from '../common/FontAwesomeIcon';
 import Navigation from '../navigation/Navigation';
 import css from '../../css/sass/components/_header.scss'; //eslint-disable-line
+import SocialIcons from '../socialIcons/SocialIcons';
 
 class Header extends Component {
   constructor(props, context) {

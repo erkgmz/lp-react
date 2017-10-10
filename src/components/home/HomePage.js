@@ -12,13 +12,9 @@ const HomePage = () => {
   return (
     <article className={css.homepage}>
       <div>
-        {/* <Headline text="HOW CAN I HELP?" /> */}
-        <Headline text="Experienced Front-End Developer & Digital Marketer" />
-        {<Byline text="I help deliver creative email campaigns, enhance user experience, and create ecommerce solutions." />}
-        {<Byline text="Let's chat about your development and digital marketing needs." />}
-        {/* <p>I am a Front-End developer with marketing, design & ecommerce experience.</p> */}
-        {/* <p>I help clients launch creative email campaigns, enhance user experience, and create ecommerce solutions with Shopify.</p> */}
-        {/* <p>Let's chat.</p> */}
+        <Headline text="Front-End Developer & Digital Marketer" />
+        <Byline text="I help deliver creative email campaigns, enhance user experience, and ecommerce solutions." />
+        <Byline text="Let's chat about your development and digital marketing needs." />
       </div>
       <div className={css.ctaContainer}>
         <PrimaryCTA path="/work" text="VIEW MY WORK" />

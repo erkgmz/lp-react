@@ -292,13 +292,11 @@ a {
       max-width: 25rem;
       font-size: 2.5rem; } }
   @media (min-width: 1024px) {
-    .homepage {
-      min-width: 90rem; }
-      .homepage .ctaContainer {
-        flex-flow: row;
-        justify-content: space-between; }
-        .homepage .ctaContainer a {
-          max-width: 33%; } }
+    .homepage .ctaContainer {
+      flex-flow: row;
+      justify-content: space-between; }
+      .homepage .ctaContainer a {
+        max-width: 33%; } }
 
 /* Breakpoints */
 /* Font Sizes */
