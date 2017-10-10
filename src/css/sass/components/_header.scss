@@ -3,11 +3,14 @@
 .header {
   display: flex;
   align-items: baseline;
-  padding: 2rem 1.5rem;
-  background: transparent;
+  padding: 1rem 1.5rem;
+  // background: transparent;
+  background: #6ed3cf;
 
   .siteId {
     font-weight: 700; // overrides global
+    margin: 0;
+    font-size: 3rem;
     flex: 1;
 
     a {
@@ -22,7 +25,19 @@
     text-align: end;
 
     i {
-      font-size: $subheader;
+      font-size: 3rem;
+    }
+  }
+
+  @media(min-width: $breakpoint-mobile) {
+    .siteId {
+      font-size: 3rem;
+    }
+
+    .bars {
+      i {
+        font-size: 3rem;
+      }
     }
   }
 }
