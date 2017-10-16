@@ -13,7 +13,8 @@ const HomePage = () => {
     <article className={css.homepage}>
       <div>
         <Headline text="Front-End Developer & Digital Marketer" />
-        <Byline text="I help deliver creative email campaigns, enhance user experience, and ecommerce solutions." />
+        <Byline text="I help deliver responsive email campaigns, enhance user experience, and develop ecommerce solutions." />
+        <Byline text="YOU NEED A HOW ITS DONE SECTION" />
         <Byline text="Let's chat about your development and digital marketing needs." />
       </div>
       <div className={css.ctaContainer}>
