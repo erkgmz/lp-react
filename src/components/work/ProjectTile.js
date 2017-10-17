@@ -24,7 +24,8 @@ class ProjectTile extends React.Component {
     return (
       <div className={this.props.css.projectWrap}
         onMouseEnter={this.hoverOn}
-        onMouseLeave={this.hoverOff}>
+        onMouseLeave={this.hoverOff}
+        style={{backgroundColor: this.props.project.tileBg, display: 'flex'}}>
         <div className={this.props.css.overlay}
           style={{display: this.state.hover ? 'flex' : 'none'}}>
             {this.props.project.type !== 'cta' ? (
@@ -34,11 +35,19 @@ class ProjectTile extends React.Component {
               </div>
             ) : (
               <div className={this.props.css.overlayContent}>
-                <PrimaryCTA path="/contact" text={this.props.project.title} />
+                <PrimaryCTA path="/contact"
+                  text={this.props.project.type === 'cta' ? 'Message Me' : this.props.project.title} />
               </div>
             )}
         </div>
-        <img src={this.props.project.asset_path} />
+        {this.props.project.asset_path ? (
+          <img src={this.props.project.asset_path} />
+        ) : (
+          <div style={{margin: 'auto', textAlign: 'center'}}>
+            <h3>{this.props.project.title}</h3>
+            <p>Just ask.</p>
+          </div>
+        )}
       </div>
     );
   }
