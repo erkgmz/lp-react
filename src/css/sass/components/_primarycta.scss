@@ -13,6 +13,10 @@ a.primarycta {
   background: $cta-bg;
   font-family: $font-stack-primary;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   @media(min-width: $breakpoint-tablet) {
     max-width: 36rem;
   }

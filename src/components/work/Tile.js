@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryCTA from '../common/PrimaryCTA';
 
-class ProjectTile extends React.Component {
+class Tile extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -30,11 +30,12 @@ class ProjectTile extends React.Component {
           style={{display: this.state.hover ? 'flex' : 'none'}}>
             {this.props.project.type !== 'cta' ? (
               <div className={this.props.css.overlayContent}>
-                <h3>{this.props.project.title}</h3>
-                <p>{this.props.project.type}</p>
+                <h3 style={{backgroundColor:'#000000'}}>{this.props.project.title}</h3>
+                <p style={{backgroundColor:'#000000'}}>{this.props.project.type}</p>
               </div>
             ) : (
               <div className={this.props.css.overlayContent}>
+                <p style={{backgroundColor:'#000000'}}><b>Examples available on request.</b></p>
                 <PrimaryCTA path="/contact"
                   text={this.props.project.type === 'cta' ? 'Message Me' : this.props.project.title} />
               </div>
@@ -44,8 +45,7 @@ class ProjectTile extends React.Component {
           <img src={this.props.project.asset_path} />
         ) : (
           <div style={{margin: 'auto', textAlign: 'center'}}>
-            <h3>{this.props.project.title}</h3>
-            <p>Just ask.</p>
+            <p><b>{this.props.project.title}</b></p>
           </div>
         )}
       </div>
@@ -53,11 +53,10 @@ class ProjectTile extends React.Component {
   }
 }
 
-ProjectTile.propTypes = {
+Tile.propTypes = {
   css: React.PropTypes.object.isRequired,
   project: React.PropTypes.object.isRequired,
   hover: React.PropTypes.bool
 };
 
-export default ProjectTile;
-
+export default Tile;
