@@ -1,7 +1,6 @@
 const bulletproof       = require('../../assets/bp-logo.png');
 const futuresThatMatter = require('../../assets/futures_that_matter.png');
 const courseWalkers     = require('../../assets/course_walkers.png');
-// const messageMe         = require('../../assets/message_me.jpg');
 const generalAssembly   = require('../../assets/general_assembly.png');
 const createPurpose     = require('../../assets/create_purpose.png');
 
@@ -26,7 +25,7 @@ export const projectsList = [
   },
   {
     asset_path: false,
-    title: 'WHERE ARE THE EXAMPLES?',
+    title: 'EXAMPLES?',
     type: 'cta',
     tileBg: '#E62739'
   },

@@ -1,6 +1,6 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:700');
 
 html {
   font-size: $root-font-size;
@@ -100,14 +100,16 @@ a {
   h5,
   h6,
   p,
-  a {
+  a,
+  li {
     font-family: $font-stack-secondary;
   }
 
   p,
   a,
   input,
-  textarea {
+  textarea,
+  li {
     font-size: $font-size-sm;
   }
 
@@ -172,7 +174,7 @@ a {
 
     article {
       margin: auto;
-      max-width: 65rem;
+      max-width: 75rem;
     }
 
     footer {
@@ -189,14 +191,15 @@ a {
   @media(min-width: $breakpoint-desktop) {
 
     article {
-      max-width: 75rem;
+      max-width: 85rem;
       padding: 0;
     }
 
     p,
     a,
     input,
-    textarea {
+    textarea,
+    li {
       font-size: $font-size-lg;
     }
   }

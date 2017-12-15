@@ -1,15 +1,24 @@
 import React from 'react';
+import {Link} from 'react-router';
 import PrimaryCTA from '../common/PrimaryCTA';
 
 class Tile extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      hover: false
-    };
+    this.state = {hover: false};
 
     this.hoverOn = this.hoverOn.bind(this);
     this.hoverOff = this.hoverOff.bind(this);
+    this.resize = this.resize.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    this.setState({tileIsScalable: window.innerWidth >= 768});
   }
 
   hoverOn() {
@@ -25,27 +34,31 @@ class Tile extends React.Component {
       <div className={this.props.css.projectWrap}
         onMouseEnter={this.hoverOn}
         onMouseLeave={this.hoverOff}
-        style={{backgroundColor: this.props.project.tileBg, display: 'flex'}}>
+        onClick={this.hoverOn}
+        style={{
+          backgroundColor: this.props.project.tileBg,
+          transform: this.state.hover && this.state.tileIsScalable ? 'scale(1.2)' : 'none',
+          zIndex: this.state.hover && this.state.tileIsScalable ? '10' : '0'
+        }}>
         <div className={this.props.css.overlay}
           style={{display: this.state.hover ? 'flex' : 'none'}}>
             {this.props.project.type !== 'cta' ? (
               <div className={this.props.css.overlayContent}>
-                <h3 style={{backgroundColor:'#000000'}}>{this.props.project.title}</h3>
-                <p style={{backgroundColor:'#000000'}}>{this.props.project.type}</p>
+                <h4>{this.props.project.title}</h4>
+                <p>{this.props.project.type}</p>
               </div>
-            ) : (
+              ) : (
               <div className={this.props.css.overlayContent}>
-                <p style={{backgroundColor:'#000000'}}><b>Examples available on request.</b></p>
-                <PrimaryCTA path="/contact"
-                  text={this.props.project.type === 'cta' ? 'Message Me' : this.props.project.title} />
+                <h4>Available on request.</h4>
+                <Link to="/contact">MESSAGE ME</Link>
               </div>
             )}
         </div>
         {this.props.project.asset_path ? (
           <img src={this.props.project.asset_path} />
         ) : (
-          <div style={{margin: 'auto', textAlign: 'center'}}>
-            <p><b>{this.props.project.title}</b></p>
+          <div className={this.props.css.noAsset}>
+            <p>{this.props.project.title}</p>
           </div>
         )}
       </div>
