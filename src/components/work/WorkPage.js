@@ -21,21 +21,21 @@ class WorkPage extends Component {
     return (
       <article className={css.workpage}>
         <div className={css.copyBlock}>
-          <Headline text="MY WORK IS MY PASSION" />
-          <p>As a full-time Front-End Developer, I work on the Shopify platform with a team  of creative and engineering geniuses that take a project from concept to launch.</p>
-          <p>As I freelancer, I help clients with different creative and development needs, including:</p>
-          <ul>
-            <li><b>UX Design</b></li>
-            <li><b>Responsive Emails</b> (design & development)</li>
-            <li><b>Front-End Development</b> (HTML, CSS, JavaScript)</li>
-          </ul>
+          <Headline text="Insert Your Project Here" />
+          <p>I can help you with that!</p>
+            <p>If you need...</p>
+            <ul>
+              <li>To launch that Shopify store</li>
+              <li>To make your emails looks better on more devices (even Outlook!)</li>
+              <li>Help with UX design (user experience)</li>
+              <li>A pro to code up a fresh new website for you</li>
+            </ul>
+            <p>... then we need to talk :)</p>
           <div className={css.ctaWrap}>
             <PrimaryCTA path="/contact" text="SEND A MESSAGE" />
           </div>
         </div>
-        <div className={css.tiles}>
-          {this.state.tiles}
-        </div>
+        <div className={css.tiles}>{this.state.tiles}</div>
       </article>
     );
   }

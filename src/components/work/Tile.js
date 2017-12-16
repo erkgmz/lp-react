@@ -56,7 +56,7 @@ class Tile extends React.Component {
         </div>
         {this.props.project.asset_path ? (
           <img src={this.props.project.asset_path} />
-        ) : (
+          ) : (
           <div className={this.props.css.noAsset}>
             <p>{this.props.project.title}</p>
           </div>

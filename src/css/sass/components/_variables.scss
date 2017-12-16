@@ -17,11 +17,12 @@ $bodyheader: 2.2rem;
 /* Theme Color Palette */
 $main-bg: #9068be;
 $nav-panel-bg: #e62739;
-$theme-accent: #e1e8f0;
+// $theme-accent: #e1e8f0;
+$header-color: #6ed3cf;
 $cta-bg: #e62739;
 $transparent: rgba(39, 22, 22, 0);
-$font-color: #e1e8f0;
-$mute: rgba(225,232,240, 0.5);
+$font-color: white;
+$mute: rgba(255, 255, 255, 0.5);
 
 /* Font Stacks */
 $font-stack-primary: 'Oswald', serif;
@@ -31,7 +32,21 @@ $font-stack-secondary: 'Open Sans', sans-serif;
 @mixin responsive-gradient($start-color, $end-color) {
   background: $start-color;
   background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
-  background: -webkit-linear-gradient(left, $start-color 0%,$end-color 100%);
-  background: linear-gradient(to right, $start-color 0%,$end-color 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start-color, endColorstr=$end-color, GradientType=1 );
+  background: -webkit-linear-gradient(left, $start-color 0%, $end-color 100%);
+  background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}', GradientType=1 );
 }
+
+// IDEALLY WE WOULD HAVE THESE VARIABLES IN A MAJOR RAFACTOR
+/*
+$xs-mobile-breakpoint: 320px;
+$md-mobile-breakpoint: 375px;
+$lg-mobile-breakpoint: 414px;
+
+$portrait-tablet-breakpoint: 768px;
+$landscape-tablet-breakpoint: 1024;
+
+$sm-desktop-breakpoint: 1200px;
+$md-desktop-breakpoint: 1400px; // necessary??
+$lg-desktop-breakpoint: 1920px; // necessary??
+*/

@@ -107,15 +107,17 @@
 
       .ctaWrap {
         padding-bottom: 0;
+
+        a {
+          max-width: 300px;
+          display: block;
+          margin: 0 auto;
+        }
       }
     }
 
     .tiles {
       flex: 1;
-
-      .projectWrap {
-        width: 50%;
-      }
     }
   }
 }
