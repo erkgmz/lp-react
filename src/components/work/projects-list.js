@@ -32,7 +32,7 @@ export const projectsList = [
   {
     asset_path: generalAssembly,
     title: 'General Assembly',
-    type: 'Web Application',
+    type: 'Web Application (MEAN)',
     tileBg: '#FFFFFF'
   },
   {

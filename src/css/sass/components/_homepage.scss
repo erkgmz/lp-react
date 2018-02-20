@@ -5,22 +5,37 @@
   display: flex;
   flex-flow: column nowrap;
 
-  div {
-    &:nth-child(1) {
-      margin-bottom: 1rem;
-    }
-
-    &:nth-child(2) {
-      margin-top: 1rem;
-    }
-  }
-
   .mute {
     color: $mute;
   }
 
   .copyBlock {
-    display: none;
+    text-align: center;
+
+    .typewriter {
+      display: inline-block;
+      margin: 0 auto 30px;
+      border-right: 4px solid $theme-accent;
+      // animation: blink-caret .8s step-end infinite;
+      animation: blink-caret step-end infinite; // duration set on Typewriter component
+      min-height: 46px; // prevent collapse in between intervals
+
+      @media(min-width: $breakpoint-tablet) {
+        min-height: 69px; // prevent collapse in between intervals
+      }
+
+      &.highlight {
+        background: rgba(255,255,255,0.8);
+        color: rgba(0,0,0,0.7);
+        border: none;
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: $theme-accent; }
+      }
+    }
   }
 
   .ctaContainer {
@@ -48,30 +63,18 @@
   @media(min-width: $breakpoint-mobile) {
     .ctaContainer {
       flex-flow: row;
-      justify-content: space-between;
+      justify-content: center;
 
       a {
         flex: 1;
         max-width: 20rem;
+        margin: 0 10px;
       }
     }
 
     .copyBlock {
       display: block;
       margin: 3rem auto 0;
-
-      .headlineBlock {
-        display: flex;
-
-        h2:nth-child(1) {
-          white-space: nowrap;
-        }
-
-        .pipe {
-          margin: 0 .5rem;
-          color: $mute;
-        }
-      }
 
       h2 {
         font-weight: 700;
@@ -84,7 +87,7 @@
       a {
         flex: 1;
         max-width: 25rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
   }
@@ -92,10 +95,13 @@
   @media(min-width: $breakpoint-desktop) {
     .ctaContainer {
       flex-flow: row;
-      justify-content: space-between;
 
       a {
         max-width: 33%;
+
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
       }
     }
   }

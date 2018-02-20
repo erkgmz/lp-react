@@ -9,9 +9,8 @@ const ContactPage = () => {
     <article className={css.contact}>
       <div>
         <Headline text="Contact."/>
-        <p>Need help? Getting in touch is easy.</p>
-        <p>Just enter a little info about youself, a brief message with details about your project, and click send.</p>
-        <p>I'll be in touch shortly after. <i>Resume available upon request.</i></p>
+        <p>I am currently <span style={{color: '#29FD2F', fontWeight: 800}}>AVAILABLE</span></p>
+        <p>I would love to hear about your project. Please take a few minutes to tell me a little bit about it and I'll be in touch.</p>
       </div>
       <div>
         <Form />

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SocialIcon from './SocialIcon';
 import ICONS from './icons';
 
