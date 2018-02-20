@@ -520,8 +520,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
           padding-bottom: 0; }
           .workpage .copyBlock .ctaWrap a {
             max-width: 300px;
-            display: block;
-            margin: 0 auto; }
+            display: block; }
       .workpage .tiles {
         flex: 1; } }
 

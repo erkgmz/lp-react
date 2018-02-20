@@ -25,16 +25,14 @@ class Typewriter extends Component {
 
   pause() {
     clearTimeout(this.state.timerId);
-    setTimeout(() => {
-      this.setState({text: ''});
-      this.type();
-    }, this.props.pause);
+    this.setState({
+      timerId: setTimeout(() => this.setState({text: ''}, () => this.type()), this.props.pause)
+    });
   }
 
   type() {
     let currentProject = this.props.projects[this.state.currentProject];
-    let timerId = setTimeout(this.type.bind(this), this.props.typeSpeed);
-    this.setState({timerId});
+    this.setState({timerId: setTimeout(this.type.bind(this), this.props.typeSpeed)});
 
     if( this.state.currentProject === this.props.projects.length ) {
       this.setState({currentProject: 0}); // reset to beginning of list
@@ -48,9 +46,7 @@ class Typewriter extends Component {
         // set to complete word before pause
         text: this.props.projects[this.state.currentProject],
         highlight: true
-      });
-
-      this.pause();
+      }, () => this.pause());
     } else {
       // increment index to point to next letter in current word
       this.setState({
