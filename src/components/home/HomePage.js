@@ -3,6 +3,7 @@ import React from 'react';
 import Headline from '../common/Headline';
 import PrimaryCTA from '../common/PrimaryCTA';
 import Typewriter from '../common/Typewriter';
+import SocialIcons from '../socialIcons/SocialIcons';
 import css from '../../css/sass/components/_homepage.scss'; // eslint-disable-line
 
 const HomePage = () => {
@@ -21,6 +22,9 @@ const HomePage = () => {
       <div className={css.ctaContainer}>
         <PrimaryCTA path="/contact" text="CONTACT" />
         <PrimaryCTA path="/work" text="VIEW PORTFOLIO" />
+      </div>
+      <div className={css.socialIcons}>
+        <SocialIcons />
       </div>
     </article>
   );

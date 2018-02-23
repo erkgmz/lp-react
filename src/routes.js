@@ -13,11 +13,8 @@ import ErrorPage from './components/error/ErrorPage';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    {/*<Route path="/about" component={AboutPage} />*/}
-    {/* <Route path="/work" component={ExperiencePage} /> */}
     <Route path="/work" component={WorkPage} />
     <Route path="/contact" component={ContactPage} />
-    {/*<Route path="/services" component={ServicesPage} />*/}
     <Route path="/*" component={ErrorPage} />
   </Route>
 );

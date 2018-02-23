@@ -22,7 +22,6 @@ class WorkPage extends Component {
       <article className={css.workpage}>
         <div className={css.copyBlock}>
           <Headline text="Insert Your Project Here" />
-          <p>I can help you with that!</p>
             <p>If you need...</p>
             <ul>
               <li>To launch that Shopify store</li>
@@ -30,7 +29,7 @@ class WorkPage extends Component {
               <li>Help with UX design (user experience)</li>
               <li>A pro to code up a fresh new website for you</li>
             </ul>
-            <p>... then we need to talk :)</p>
+            <p>... then we need to talk</p>
           <div className={css.ctaWrap}>
             <PrimaryCTA path="/contact" text="SEND A MESSAGE" />
           </div>

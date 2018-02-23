@@ -134,16 +134,11 @@ a {
     list-style: none; }
   .wrapper footer {
     padding: 1rem 2rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
+    display: block; }
     .wrapper footer p {
       margin: 0;
       font-size: 10px;
-      flex: 8;
-      justify-content: flex-start;
-      display: flex;
-      align-items: flex-end; }
+      text-align: center; }
     .wrapper footer ul {
       margin: 0;
       display: flex;
@@ -160,9 +155,7 @@ a {
       font-size: 6rem; }
     .wrapper article {
       margin: auto;
-      max-width: 75rem; }
-    .wrapper footer {
-      text-align: end; } }
+      max-width: 75rem; } }
   @media (min-width: 1024px) {
     .wrapper article {
       max-width: 85rem;
@@ -341,10 +334,16 @@ $lg-desktop-breakpoint: 1920px; // necessary??
     .homepage .ctaContainer a {
       margin: 1rem 0;
       font-size: 1.8rem; }
-  .homepage .skillsBlock .skills li {
-    list-style: initial; }
-    .homepage .skillsBlock .skills li p {
-      margin: .5rem; }
+  .homepage .socialIcons {
+    margin-top: 20px; }
+    .homepage .socialIcons ul {
+      display: flex;
+      padding: 0;
+      justify-content: center; }
+      .homepage .socialIcons ul li {
+        margin: 0 20px; }
+        .homepage .socialIcons ul li a {
+          font-size: 2.8rem; }
   @media (min-width: 550px) {
     .homepage .ctaContainer {
       flex-flow: row;
