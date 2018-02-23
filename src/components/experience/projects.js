@@ -1,5 +1,20 @@
 const projects = [
   {
+    title: 'Shopify',
+    link: false,
+    technologies: ['Shopify', 'Theme Development', 'UX', 'Ecommerce', 'Liquid Development'],
+    description: 'Shopify is a leading ecommerce platform because it provides turn key end-to-end solutions. If you\'re interested in custom theme development and want to see an example of my work please contact me.',
+    noFollow: false,
+    inDevelopment: false,
+    github: {
+      repo: false
+    },
+    img: {
+      path: require('../../assets/shopify-logo.jpg'),
+      alt: 'Shopify logo'
+    }
+  },
+  {
     title: 'Course Walkers',
     link: 'http://course-walkers.herokuapp.com/',
     technologies: ['jQuery', 'Handlebars.js', 'HTML5 Video', 'SMACSS', 'Flexbox'],
@@ -16,7 +31,7 @@ const projects = [
     }
   },
   {
-    title: 'General Assembly Admissions Processing',
+    title: 'General Assembly',
     link: 'https://ga-admissions.herokuapp.com/',
     technologies: ['MongoDB', 'Express', 'Angular.js', 'Node.js', 'Bootstrap'],
     description: 'A MEAN stack web application designed to function as an application and screening system that makes it easier for the GA team to manage the admissions process for prospective students.',
@@ -46,53 +61,6 @@ const projects = [
       alt: 'Create Purpose logo'
     }
   }
-  // {
-  //   title: 'Blogging',
-  //   link: 'http://www.stacykeibler.com/guest-post-5-ways-to-make-your-kids-bulletproof/',
-  //   technologies: ['Writing', 'Blogging', 'Copyediting', 'Research'],
-  //   description: 'A guest post for Stacy Keibler’s blog offering advice to parents on how to support a healthy, Bulletproof lifestyle for their kids.',
-  //   noFollow: false,
-  //   inDevelopment: false,
-  //   github: {
-  //     repo: false
-  //   },
-  //   img: {
-  //     path: require('../../assets/bulletproof_kids.png'),
-  //     alt: 'Child eating healthy food'
-  //   }
-  // }
-  // {
-  //   title: 'KS Marketing',
-  //   link: 'https://goo.gl/XaPTjw',
-  //   technologies: ['React', 'Webpack', 'CSS Modules', 'ES6', 'Node', 'Sendgrid'],
-  //   description: 'A fast and simple personal website for a professional client. This static site was deployed on Github Pages and uses SendGrid API and NodeJS to send messages.',
-  //   noFollow: false,
-  //   inDevelopment: true,
-  //   github: {
-  //     repo: true,
-  //     link: 'https://github.com/erkgmz/kailey-lp'
-  //   },
-  //   img: {
-  //     path: require('../../assets/ksMarketing.png'),
-  //     alt: 'team photo'
-  //   }
-  // },
-  // {
-  //   title: 'Under Construction UI',
-  //   link: 'https://erkgmz.github.io/e-lp/',
-  //   technologies: ['Angular.js', 'SASS', 'Angular UI', 'Responsive', 'GH Pages'],
-  //   description: 'A personal project for a placeholder, under construction page. This simple UI is built with modern technology and is responsive across different device screen sizes.',
-  //   noFollow: true,
-  //   inDevelopment: false,
-  //   github: {
-  //     repo: true,
-  //     link: 'https://github.com/erkgmz/e-lp'
-  //   },
-  //   img: {
-  //     path: require('../../assets/min-bgimage.png'),
-  //     alt: 'cover image'
-  //   }
-  // }
 ];
 
 export default projects;

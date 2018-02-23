@@ -1,16 +1,23 @@
 @import 'variables';
 @import "normalize.css/normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,900');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Oswald:700');
 
 html {
   font-size: $root-font-size;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $theme-white;
+  color: $font-color;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html,
@@ -20,18 +27,10 @@ body {
 }
 
 body {
-  background: -webkit-linear-gradient($theme-medium, $theme-light);
-  background: -moz-linear-gradient(top, $theme-medium, $theme-light);
-  background: -ms-linear-gradient($theme-medium, $theme-light);
-  background: -o-linear-gradient($theme-medium, $theme-light);
-  background: $mobile-gradient;
+  background: $main-bg;
   overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media(min-width: $breakpoint-tablet) {
-    background: $desktop-gradient;
-  }
 }
 
 header {
@@ -40,29 +39,30 @@ header {
 
 article {
   padding: 2rem 1.5rem;
+  width: 100%;
   max-width: 55rem;
   margin-left: auto;
   margin-right: auto;
 
   p {
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
 
-    a {
-      text-decoration: underline;
-      font-weight: 700;
+  a {
+    text-decoration: underline;
+    font-weight: 700;
 
-      &:hover {
-        text-decoration: none;
-      }
+    &:hover {
+      text-decoration: none;
     }
   }
 }
 
 a {
   cursor: pointer;
-  color: $theme-white;
+  color: $font-color;
   letter-spacing: 1px;
 }
 
@@ -73,8 +73,8 @@ a {
   justify-content: center;
 
   h1 {
-    font-size: $headline;
-    letter-spacing: 2px;
+    font-size: $mobile-headline;
+    letter-spacing: -2px;
   }
 
   h2 {
@@ -86,29 +86,31 @@ a {
 
   h3 {
     font-size: $bodyheader;
-    font-weight: 400;
+    font-weight: 600;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Roboto Slab', serif;
+  h1 {
+    font-family: $font-stack-primary;
     margin: 0;
   }
 
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   p,
-  a {
-    font-family: 'Roboto', sans-serif;
+  a,
+  li {
+    font-family: $font-stack-secondary;
   }
 
   p,
   a,
   input,
-  textarea {
+  textarea,
+  li {
     font-size: $font-size-sm;
   }
 
@@ -117,12 +119,21 @@ a {
   }
 
   footer {
-    text-align: center;
-    padding: 0 2rem 1rem;
+    padding: 1rem 2rem;
+    display: block;
 
     p {
       margin: 0;
       font-size: $root-font-size;
+      text-align: center;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      flex: 1;
     }
   }
 
@@ -151,13 +162,13 @@ a {
 
   @media(min-width: $breakpoint-tablet) {
 
-    article {
-      margin: auto;
-      max-width: 65rem;
+    h1 {
+      font-size: $desktop-headline;
     }
 
-    footer {
-      text-align: end;
+    article {
+      margin: auto;
+      max-width: 75rem;
     }
   }
 
@@ -170,7 +181,16 @@ a {
   @media(min-width: $breakpoint-desktop) {
 
     article {
-      max-width: 75rem;
+      max-width: 85rem;
+      padding: 0;
+    }
+
+    p,
+    a,
+    input,
+    textarea,
+    li {
+      font-size: $font-size-lg;
     }
   }
 }

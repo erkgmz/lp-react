@@ -28,7 +28,7 @@ const Navigation = ({ show, hide }) => {
                 activeClassName={css.active}
                 onClick={hide}
                 to="/work">
-                Experience
+                Work
               </Link>
             </h1>
           </li>

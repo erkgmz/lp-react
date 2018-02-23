@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import Header from './header/Header';
-
+import SocialIcons from './socialIcons/SocialIcons';
 import css from '../css/sass/components/_base.scss'; // eslint-disable-line
 
 const App = ({ children }) => {

@@ -55,6 +55,7 @@ class Cards extends Component {
           title={this.state.card.title}
           description={this.state.card.description}
           link={this.state.card.link}
+          writingProject={this.state.card.writingProject}
           tags={this.state.card.technologies}
           styles={this.props.styles}
           inDevelopment={this.state.card.inDevelopment}

@@ -109,27 +109,30 @@ class Form extends Component {
     return (
       <form>
         <TextInput
-          label="Name:"
+          label="Name*:"
           type="text"
           name="name"
           value={this.state.name}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+          placeholder="Ex: John Doe" />
 
         <TextInput
-          label="Email:"
+          label="Email*:"
           type="email"
           name="email"
           value={this.state.email}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+          placeholder="Ex: johndoe@gmail.com" />
 
         <label htmlFor="message">
-          Message:
+          Message*:
           <textarea
             type="text"
             name="message"
-            rows="3"
+            rows="5"
             value={this.state.message}
-            onChange={this.handleChange}>
+            onChange={this.handleChange}
+            placeholder="What is it? What are your goals? How can I help? Timeline and budget details are also appreciated.">
           </textarea>
         </label>
 
