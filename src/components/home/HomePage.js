@@ -12,7 +12,7 @@ const HomePage = () => {
         <Headline text="Hi, I'm Erik - I design and build" />
         <Typewriter projects={['Shopify Stores', 'Landing Pages', 'Sales Funnels', 'Email Templates']}
           typeSpeed={150} // typing rate (milliseconds)
-          pause={1000} // duration of pause before next word (milliseconds)
+          pause={1500} // duration of pause before next word (milliseconds)
           cursorDurartion={0.8} // cursor blink rate (milliseconds)
           cssClass={css.typewriter}
           cssHighlight={css.highlight}

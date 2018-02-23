@@ -68,6 +68,7 @@ header {
 
 article {
   padding: 2rem 1.5rem;
+  width: 100%;
   max-width: 55rem;
   margin-left: auto;
   margin-right: auto; }
@@ -350,7 +351,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       justify-content: center; }
       .homepage .ctaContainer a {
         flex: 1;
-        max-width: 20rem;
+        max-width: 22rem;
         margin: 0 10px; }
     .homepage .copyBlock {
       display: block;
@@ -366,7 +367,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
     .homepage .ctaContainer {
       flex-flow: row; }
       .homepage .ctaContainer a {
-        max-width: 33%; }
+        max-width: 250px; }
         .homepage .ctaContainer a:nth-child(2) {
           margin-left: 20px; } }
 
@@ -578,6 +579,22 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         color: white;
         padding: 1rem;
         border-radius: 0; }
+        .contact div form input::-webkit-input-placeholder,
+        .contact div form textarea::-webkit-input-placeholder {
+          /* WebKit browsers */
+          color: rgba(255, 255, 255, 0.4); }
+        .contact div form input:-moz-placeholder,
+        .contact div form textarea:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: rgba(255, 255, 255, 0.4); }
+        .contact div form input::-moz-placeholder,
+        .contact div form textarea::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: rgba(255, 255, 255, 0.4); }
+        .contact div form input:-ms-input-placeholder,
+        .contact div form textarea:-ms-input-placeholder {
+          /* Internet Explorer 10+ */
+          color: rgba(255, 255, 255, 0.4); }
       .contact div form textarea {
         resize: none; }
     .contact div ul {
@@ -590,9 +607,20 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       .contact div ul li:first-child {
         margin-right: 2rem; }
   @media (min-width: 768px) {
-    .contact div:last-child form input[type="submit"] {
+    .contact .formWrap form input[type="submit"] {
       align-self: flex-end;
       max-width: 33%; } }
+  @media (min-width: 1024px) {
+    .contact {
+      display: flex;
+      flex-flow: row nowrap; }
+      .contact .copyblock {
+        flex: 1;
+        padding-right: 30px; }
+      .contact .formWrap {
+        flex: 1; }
+        .contact .formWrap form input[type="submit"] {
+          max-width: 50%; } }
 
 /* Breakpoints */
 /* Font Sizes */

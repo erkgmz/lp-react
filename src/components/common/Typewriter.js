@@ -59,6 +59,7 @@ class Typewriter extends Component {
 
   render() {
     let styles = `${this.props.cssClass} ${this.state.highlight ? this.props.cssHighlight : 'no-highlight'}`;
+
     return(
       <h1 className={styles} style={{ animationDuration: `${this.props.cursorDurartion}s` }}>
         {this.state.text}
