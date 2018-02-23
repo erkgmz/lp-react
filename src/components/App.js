@@ -10,7 +10,6 @@ const App = ({ children }) => {
       {children}
       <footer>
         <p>&copy; Copyright 2017</p>
-        {/* <SocialIcons /> */}
       </footer>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router';
 import Headline from '../common/Headline';
 import PrimaryCTA from '../common/PrimaryCTA';
 import Typewriter from '../common/Typewriter';

@@ -121,19 +121,11 @@ a {
   footer {
     padding: 1rem 2rem;
     display: block;
-    // display: flex;
-    // flex-flow: row nowrap;
-    // justify-content: space-between;
-    // display: none;
 
     p {
       margin: 0;
       font-size: $root-font-size;
       text-align: center;
-      // flex: 8;
-      // justify-content: flex-start;
-      // display: flex;
-      // align-items: flex-end;
     }
 
     ul {
@@ -172,16 +164,11 @@ a {
 
     h1 {
       font-size: $desktop-headline;
-      // letter-spacing: 2px;
     }
 
     article {
       margin: auto;
       max-width: 75rem;
-    }
-
-    footer {
-      // text-align: end;
     }
   }
 
