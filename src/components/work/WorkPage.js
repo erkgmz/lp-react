@@ -9,12 +9,9 @@ import css from '../../css/sass/components/_workpage.scss'; // eslint-disable-li
 class WorkPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {tiles: null};
-  }
-
-  componentWillMount() {
-    let tiles = projectsList.map( (project, key) => <Tile css={css} project={project} key={key} /> );
-    this.setState({tiles});
+    this.state = {
+      tiles: projectsList.map( (project, key) => <Tile css={css} project={project} key={key} /> )
+    };
   }
 
   render() {
