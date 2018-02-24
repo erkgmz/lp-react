@@ -5,19 +5,26 @@ import PrimaryCTA from '../common/PrimaryCTA';
 class Tile extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {hover: false};
+    this.state = {
+      hover: false,
+      isMounted: false
+    };
 
     this.hoverOn = this.hoverOn.bind(this);
     this.hoverOff = this.hoverOff.bind(this);
-    this.resize = this.resize.bind(this);
+    this.onResize = this.onResize.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
+  componentWillMount() {
+    window.addEventListener('resize', this.onResize);
   }
 
-  resize() {
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  onResize() {
+    console.log('do you even resize bro?');
     this.setState({tileIsScalable: window.innerWidth >= 768});
   }
 

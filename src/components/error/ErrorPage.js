@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     <article className={style.Error}>
       <h1>Oh No! Not Found</h1>
-      <p>Try going <Link to="/">here</Link>.</p>
+      <p>Go <Link to="/">here</Link>.</p>
     </article>
   );
 };

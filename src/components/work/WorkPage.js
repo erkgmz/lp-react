@@ -22,14 +22,14 @@ class WorkPage extends Component {
       <article className={css.workpage}>
         <div className={css.copyBlock}>
           <Headline text="Insert Your Project Here" />
-            <p>If you need...</p>
-            <ul>
-              <li>To launch that Shopify store</li>
-              <li>To make your emails looks better on more devices (even Outlook!)</li>
-              <li>Help with UX/UI design</li>
-              <li>A pro to code up a fresh new website for you</li>
-            </ul>
-            <p>... then we need to talk</p>
+          <p>If you need...</p>
+          <ul>
+            <li>To launch that Shopify store</li>
+            <li>To make your emails looks better on more devices (even Outlook!)</li>
+            <li>Help with UX/UI design</li>
+            <li>A pro to code up a fresh new website for you</li>
+          </ul>
+          <p>... then we need to talk</p>
           <div className={css.ctaWrap}>
             <PrimaryCTA path="/contact" text="SEND A MESSAGE" />
           </div>
