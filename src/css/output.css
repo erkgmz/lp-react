@@ -615,7 +615,8 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       flex-flow: row nowrap; }
       .contact .copyblock {
         flex: 1;
-        padding-right: 30px; }
+        padding-right: 30px;
+        padding-top: 40px; }
       .contact .formWrap {
         flex: 1; }
         .contact .formWrap form input[type="submit"] {

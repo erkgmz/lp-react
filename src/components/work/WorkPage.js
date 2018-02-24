@@ -26,7 +26,7 @@ class WorkPage extends Component {
             <ul>
               <li>To launch that Shopify store</li>
               <li>To make your emails looks better on more devices (even Outlook!)</li>
-              <li>Help with UX design (user experience)</li>
+              <li>Help with UX/UI design</li>
               <li>A pro to code up a fresh new website for you</li>
             </ul>
             <p>... then we need to talk</p>
