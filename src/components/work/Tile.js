@@ -5,9 +5,7 @@ import PrimaryCTA from '../common/PrimaryCTA';
 class Tile extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      hover: false
-    };
+    this.state = {hover: false};
 
     this.hoverOn = this.hoverOn.bind(this);
     this.hoverOff = this.hoverOff.bind(this);
