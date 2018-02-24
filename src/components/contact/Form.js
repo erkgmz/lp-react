@@ -22,6 +22,18 @@ class Form extends Component {
     this.clearState = this.clearState.bind(this);
   }
 
+  componentWillMount() {
+    // Need to setInterval to check inputs in case autofill is used
+    // @TODO: eliminate setInterval and handle autofill more elegantly
+    this.setState({timerId: setInterval(() => {
+      this.formIsValid();
+    }, 2000)});
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.state.timerId);
+  }
+
   clearState() {
     this.setState({
       name: '',
