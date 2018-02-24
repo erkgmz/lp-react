@@ -6,8 +6,7 @@ class Tile extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      hover: false,
-      isMounted: false
+      hover: false
     };
 
     this.hoverOn = this.hoverOn.bind(this);
@@ -24,7 +23,6 @@ class Tile extends React.Component {
   }
 
   onResize() {
-    console.log('do you even resize bro?');
     this.setState({tileIsScalable: window.innerWidth >= 768});
   }
 
