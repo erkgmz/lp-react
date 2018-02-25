@@ -37,18 +37,13 @@ class Typewriter extends Component {
     if( this.state.currentProject === this.props.projects.length ) {
       this.setState({currentProject: 0}); // reset to beginning of list
     } else if( this.state.charIndex === currentProject.length ) {
-      // reset to beginning of string
       this.setState({
-        // increment to next item
         currentProject: this.state.currentProject + 1,
-        // reset to beginning of word
         charIndex: 0,
-        // set to complete word before pause
         text: this.props.projects[this.state.currentProject],
         highlight: true
       }, () => this.pause());
     } else {
-      // increment index to point to next letter in current word
       this.setState({
         text: this.state.text + currentProject.charAt(this.state.charIndex),
         charIndex: this.state.charIndex + 1,

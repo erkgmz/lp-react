@@ -16,24 +16,23 @@
       display: inline-block;
       margin: 0 auto 30px;
       border-right: 4px solid $theme-accent;
-      // animation: blink-caret .8s step-end infinite;
       animation: blink-caret step-end infinite; // duration set on Typewriter component
       min-height: 46px; // prevent collapse in between intervals
 
       @media(min-width: $breakpoint-tablet) {
-        min-height: 69px; // prevent collapse in between intervals
-      }
-
-      &.highlight {
-        background: rgba(255,255,255,0.8);
-        color: rgba(0,0,0,0.7);
-        border: none;
+        min-height: 69px;
       }
 
       /* The typewriter cursor effect */
       @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: $theme-accent; }
+      }
+
+      &.highlight {
+        background: rgba(255,255,255,0.8);
+        color: rgba(0,0,0,0.7);
+        border: none;
       }
     }
   }
