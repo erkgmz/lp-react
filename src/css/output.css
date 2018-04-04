@@ -319,15 +319,15 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       @media (min-width: 768px) {
         .homepage .copyBlock .typewriter {
           min-height: 69px; } }
-      .homepage .copyBlock .typewriter.highlight {
-        background: rgba(255, 255, 255, 0.8);
-        color: rgba(0, 0, 0, 0.7);
-        border: none; }
 @keyframes blink-caret {
   from, to {
     border-color: transparent; }
   50% {
     border-color: #e62739; } }
+      .homepage .copyBlock .typewriter.highlight {
+        background: rgba(255, 255, 255, 0.8);
+        color: rgba(0, 0, 0, 0.7);
+        border: none; }
   .homepage .ctaContainer {
     display: flex;
     flex-flow: column; }

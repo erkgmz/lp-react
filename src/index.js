@@ -6,7 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
 require('../favicon.ico');
-require('./assets/social-image.png');
+require('./assets/code_bg_dark@3x.jpg');
 
 let root = document.getElementById('app');
 render(<Router history={browserHistory} routes={routes} />, root);

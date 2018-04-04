@@ -11,28 +11,28 @@ class Typewriter extends Component {
       timerId: ''
     };
 
-    this.type = this.type.bind(this);
-    this.pause = this.pause.bind(this);
+    this.nextLetter = this.nextLetter.bind(this);
+    this.highlightDuration = this.highlightDuration.bind(this);
   }
 
   componentDidMount() {
-    this.type();
+    this.nextLetter();
   }
 
   componentWillUnmount() {
     clearTimeout(this.state.timerId);
   }
 
-  pause() {
+  highlightDuration() {
     clearTimeout(this.state.timerId);
     this.setState({
-      timerId: setTimeout(() => this.setState({text: ''}, () => this.type()), this.props.pause)
+      timerId: setTimeout(() => this.setState({text: ''}, () => this.nextLetter()), this.props.highlightDuration)
     });
   }
 
-  type() {
+  nextLetter() {
     let currentProject = this.props.projects[this.state.currentProject];
-    this.setState({timerId: setTimeout(this.type.bind(this), this.props.typeSpeed)});
+    this.setState({timerId: setTimeout(this.nextLetter.bind(this), this.props.typeSpeed)});
 
     if( this.state.currentProject === this.props.projects.length ) {
       this.setState({currentProject: 0}); // reset to beginning of list
@@ -42,7 +42,7 @@ class Typewriter extends Component {
         charIndex: 0,
         text: this.props.projects[this.state.currentProject],
         highlight: true
-      }, () => this.pause());
+      }, () => this.highlightDuration());
     } else {
       this.setState({
         text: this.state.text + currentProject.charAt(this.state.charIndex),
@@ -68,7 +68,7 @@ export default Typewriter;
 Typewriter.propTypes = {
   projects: React.PropTypes.array,
   typeSpeed: React.PropTypes.number,
-  pause: React.PropTypes.number,
+  highlightDuration: React.PropTypes.number,
   cursorDurartion: React.PropTypes.number,
   cssClass: React.PropTypes.string,
   cssHighlight: React.PropTypes.string
