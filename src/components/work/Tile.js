@@ -44,7 +44,7 @@ class Tile extends React.Component {
           zIndex: this.state.hover && this.state.tileIsScalable ? '10' : '0'
         }}>
         <div className={this.props.css.overlay}
-          style={{display: this.state.hover ? 'flex' : 'none'}}>
+          style={{opacity: this.state.hover ? 1 : 0}}>
             {this.props.project.type !== 'cta' ? (
               <div className={this.props.css.overlayContent}>
                 <h4>{this.props.project.title}</h4>

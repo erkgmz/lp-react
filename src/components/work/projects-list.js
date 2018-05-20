@@ -21,7 +21,7 @@ export const projectsList = [
     asset_path: courseWalkers,
     title: 'Course Walkers',
     type: 'Front-End Development',
-    tileBg: '#000000'
+    tileBg: '#161616'
   },
   {
     asset_path: false,
