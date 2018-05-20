@@ -6,16 +6,16 @@ const ICONS = [
     faClass: 'fa fa-linkedin',
     text: 'LINKEDIN'
   },
-  // {
-  //   outboundLink: 'https://github.com/erkgmz',
-  //   faClass: 'fa fa-github',
-  //   text: 'GITHUB'
-  // }
   {
-    outboundLink: 'https://twitter.com/erikgomezco',
-    faClass: 'fa fa-twitter',
-    text: 'TWITTER'
+    outboundLink: 'https://github.com/erkgmz',
+    faClass: 'fa fa-github',
+    text: 'GITHUB'
   }
+  // {
+  //   outboundLink: 'https://twitter.com/erikgomezco',
+  //   faClass: 'fa fa-twitter',
+  //   text: 'TWITTER'
+  // }
   // {
   //   outboundLink: 'https://angel.co/erikgomez',
   //   faClass: 'fa fa-angellist',
