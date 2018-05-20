@@ -231,11 +231,11 @@ $lg-desktop-breakpoint: 1920px; // necessary??
 .navPanel {
   position: absolute;
   left: 0;
-  top: 0;
   height: 100%;
   width: 100%;
   background: #e62739;
-  z-index: 1; }
+  z-index: 1;
+  transition: top .2s ease; }
   .navPanel .faClose {
     position: absolute;
     right: 2rem;

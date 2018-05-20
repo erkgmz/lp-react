@@ -3,11 +3,11 @@
 .navPanel {
     position: absolute;
     left: 0;
-    top: 0;
     height: 100%;
     width: 100%;
     background: $nav-panel-bg;
     z-index: 1;
+    transition: top .2s ease;
 
     .faClose {
       position: absolute;

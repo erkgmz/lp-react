@@ -5,7 +5,7 @@ import css from '../../css/sass/components/_navigation.scss'; //eslint-disable-l
 
 const Navigation = ({ show, hide }) => {
   return (
-    <div className={css.navPanel} style={{display: show ? 'block' : 'none'}}>
+    <div className={css.navPanel} style={{top: show ? 0 : '-100%'}}>
       <a className={css.faClose} onClick={hide}>
         <FontAwesomeIcon faClass="fa fa-times" />
       </a>
