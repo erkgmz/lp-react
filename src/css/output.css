@@ -58,7 +58,7 @@ body {
   width: 100%; }
 
 body {
-  background: #9068be;
+  background: #222222;
   overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -189,7 +189,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
   display: flex;
   align-items: baseline;
   padding: 1rem 1.5rem;
-  background: #6ed3cf; }
+  background: #140D4F; }
   .header .siteId {
     font-weight: 700;
     margin: 0;
@@ -233,7 +233,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
   left: 0;
   height: 100%;
   width: 100%;
-  background: #e62739;
+  background: #4B4E6D;
   z-index: 1;
   transition: top .2s ease; }
   .navPanel .faClose {
@@ -312,7 +312,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
     .homepage .copyBlock .typewriter {
       display: inline-block;
       margin: 0 auto 30px;
-      border-right: 4px solid #e62739;
+      border-right: 4px solid #4B4E6D;
       animation: blink-caret step-end infinite;
       min-height: 46px;
       /* The typewriter cursor effect */ }
@@ -323,7 +323,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
   from, to {
     border-color: transparent; }
   50% {
-    border-color: #e62739; } }
+    border-color: #4B4E6D; } }
       .homepage .copyBlock .typewriter.highlight {
         background: rgba(255, 255, 255, 0.8);
         color: rgba(0, 0, 0, 0.7);
@@ -395,10 +395,10 @@ a.primarycta {
   text-align: center;
   padding: 2rem;
   font-size: 2.5rem;
-  color: white;
+  color: #222222;
   font-weight: 700;
   letter-spacing: 4px;
-  background: #e62739;
+  background: #E0FF4F;
   font-family: "Oswald", serif; }
   a.primarycta:hover {
     text-decoration: underline; }
@@ -481,7 +481,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
             max-width: 100%;
             border-radius: 4px;
             text-decoration: none;
-            background-color: #e62739; }
+            background-color: #E0FF4F; }
             @media (min-width: 1024px) {
               .workpage .tiles .projectWrap .overlay .overlayContent a:hover {
                 text-decoration: underline; } }
@@ -548,8 +548,9 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         border-radius: 4px;
         letter-spacing: 3px;
         width: 100%;
-        background: #e62739;
-        font-family: 'Oswald', serif; }
+        background: #E0FF4F;
+        font-family: 'Oswald', serif;
+        color: #222222; }
       .contact div form input,
       .contact div form textarea {
         background-color: rgba(39, 22, 22, 0.1);
@@ -670,7 +671,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
           margin: 0 10px 10px 0;
           outline-color: rgba(39, 22, 22, 0); }
           .Cards .Card .copyBlock .tags .tag:before {
-            background: #9068be;
+            background: #222222;
             border-radius: 10px;
             box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
             content: '';
