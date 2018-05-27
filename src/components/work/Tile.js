@@ -41,7 +41,7 @@ class Tile extends React.Component {
         style={{
           backgroundColor: this.props.project.tileBg,
           transform: this.state.hover && this.state.tileIsScalable ? 'scale(1.2)' : 'none',
-          zIndex: this.state.hover && this.state.tileIsScalable ? '10' : '0'
+          zIndex: this.state.hover && this.state.tileIsScalable ? '1' : '0'
         }}>
         <div className={this.props.css.overlay}
           style={{opacity: this.state.hover ? 1 : 0}}>
@@ -53,7 +53,7 @@ class Tile extends React.Component {
               ) : (
               <div className={this.props.css.overlayContent}>
                 <h4>Available on request.</h4>
-                <Link to="/contact">MESSAGE ME</Link>
+                <PrimaryCTA path="/contact" text="MESSAGE ME" />
               </div>
             )}
         </div>

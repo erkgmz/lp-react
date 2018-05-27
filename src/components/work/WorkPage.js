@@ -9,6 +9,9 @@ import css from '../../css/sass/components/_workpage.scss'; // eslint-disable-li
 const WorkPage = () => {
   return (
     <article className={css.workpage}>
+      <div className={css.tiles}>
+        {projectsList.map( (project, key) => <Tile css={css} project={project} key={key} /> )}
+      </div>
       <div className={css.copyBlock}>
         <Headline text="Insert Your Project Here" />
         <p>If you need...</p>
@@ -22,9 +25,6 @@ const WorkPage = () => {
         <div className={css.ctaWrap}>
           <PrimaryCTA path="/contact" text="SEND A MESSAGE" />
         </div>
-      </div>
-      <div className={css.tiles}>
-        {projectsList.map( (project, key) => <Tile css={css} project={project} key={key} /> )}
       </div>
     </article>
   );
