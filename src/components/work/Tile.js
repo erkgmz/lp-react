@@ -40,7 +40,6 @@ class Tile extends React.Component {
         onClick={this.hoverOn}
         style={{
           backgroundColor: this.props.project.tileBg,
-          transform: this.state.hover && this.state.tileIsScalable ? 'scale(1.2)' : 'none',
           zIndex: this.state.hover && this.state.tileIsScalable ? '1' : '0'
         }}>
         <div className={this.props.css.overlay}
