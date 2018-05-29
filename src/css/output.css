@@ -1,45 +1,39 @@
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 @import url(normalize.css/normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Oswald:700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Roboto+Slab");
 html {
   font-size: 10px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: white;
+  color: #222222;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -58,7 +52,7 @@ body {
   width: 100%; }
 
 body {
-  background: #222222;
+  background: #EAEAEA;
   overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -84,7 +78,7 @@ article {
 
 a {
   cursor: pointer;
-  color: white;
+  color: #222222;
   letter-spacing: 1px; }
 
 .wrapper {
@@ -102,8 +96,12 @@ a {
   *** DESKTOP BREAKPOINT >1024
   *********************/ }
   .wrapper h1 {
-    font-size: 4rem;
-    letter-spacing: -2px; }
+    font-size: 3.4rem;
+    font-family: "Roboto Slab", serif;
+    margin: 0; }
+    @media (min-width: 375px) {
+      .wrapper h1 {
+        font-size: 4rem; } }
   .wrapper h2 {
     font-size: 2rem;
     font-weight: 400;
@@ -112,9 +110,6 @@ a {
   .wrapper h3 {
     font-size: 2.2rem;
     font-weight: 600; }
-  .wrapper h1 {
-    font-family: "Oswald", serif;
-    margin: 0; }
   .wrapper h2,
   .wrapper h3,
   .wrapper h4,
@@ -123,7 +118,7 @@ a {
   .wrapper p,
   .wrapper a,
   .wrapper li {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Montserrat", sans-serif; }
   .wrapper p,
   .wrapper a,
   .wrapper input,
@@ -152,7 +147,7 @@ a {
       padding: 2rem 1rem; } }
   @media (min-width: 768px) {
     .wrapper h1 {
-      font-size: 6rem; }
+      font-size: 4.9rem; }
     .wrapper article {
       margin: auto;
       max-width: 75rem; } }
@@ -167,36 +162,33 @@ a {
     .wrapper li {
       font-size: 1.6rem; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .header {
   display: flex;
   align-items: baseline;
   padding: 1rem 1.5rem;
-  background: #140D4F; }
+  background: #E5E059; }
   .header .siteId {
     font-weight: 700;
     margin: 0;
-    font-size: 2.9rem;
+    font-size: 2.4rem;
     flex: 1; }
     .header .siteId a {
-      font-family: "Oswald", serif;
+      font-family: "Montserrat", sans-serif;
       font-size: unset;
       text-decoration: none; }
   .header .bars {
@@ -210,30 +202,27 @@ $lg-desktop-breakpoint: 1920px; // necessary??
     .header .bars i {
       font-size: 3rem; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .navPanel {
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
-  background: #4B4E6D;
+  background: #0A2463;
   z-index: 1;
   transition: top .2s ease; }
   .navPanel .faClose {
@@ -241,7 +230,8 @@ $lg-desktop-breakpoint: 1920px; // necessary??
     right: 2rem;
     top: 1.5rem; }
     .navPanel .faClose i {
-      font-size: 4rem; }
+      font-size: 4rem;
+      color: #EAEAEA; }
   .navPanel .navContainer {
     display: flex;
     height: 100%;
@@ -267,7 +257,8 @@ $lg-desktop-breakpoint: 1920px; // necessary??
             font-family: unset;
             font-size: unset;
             text-decoration: none;
-            letter-spacing: 5px; }
+            letter-spacing: 5px;
+            color: #EAEAEA; }
   @media (min-width: 768px) {
     .navPanel .navContainer .navBlock {
       margin: auto; } }
@@ -277,44 +268,49 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       flex-flow: row nowrap; }
       .navPanel .navContainer .navBlock .pipe {
         display: inline-block;
-        margin: 0 2rem; }
+        margin: 0 2rem;
+        color: #EAEAEA; }
       .navPanel .navContainer .navBlock li {
         padding: 0; }
         .navPanel .navContainer .navBlock li a:hover {
           text-decoration: none; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .homepage {
   margin: auto;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  opacity: 0;
+  transition: all .8s ease;
+  transform: translateY(-10px); }
+  .homepage.fadeIn {
+    opacity: 1;
+    transform: translateY(0); }
   .homepage .mute {
     color: rgba(255, 255, 255, 0.5); }
   .homepage .copyBlock {
     text-align: center; }
     .homepage .copyBlock .typewriter {
       display: inline-block;
-      margin: 0 auto 30px;
-      border-right: 4px solid #4B4E6D;
+      margin: .5rem auto 3rem;
+      border-right: 4px solid #FB3640;
       animation: blink-caret step-end infinite;
-      min-height: 46px;
+      min-height: 4.6rem;
+      vertical-align: middle;
       /* The typewriter cursor effect */ }
       @media (min-width: 768px) {
         .homepage .copyBlock .typewriter {
@@ -323,11 +319,12 @@ $lg-desktop-breakpoint: 1920px; // necessary??
   from, to {
     border-color: transparent; }
   50% {
-    border-color: #4B4E6D; } }
+    border-color: #FB3640; } }
       .homepage .copyBlock .typewriter.highlight {
-        background: rgba(255, 255, 255, 0.8);
+        background: #E5E059;
         color: rgba(0, 0, 0, 0.7);
-        border: none; }
+        border: none;
+        padding: 0 .6rem; }
   .homepage .ctaContainer {
     display: flex;
     flex-flow: column; }
@@ -370,24 +367,21 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         .homepage .ctaContainer a:nth-child(2) {
           margin-left: 20px; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 a.primarycta {
   text-decoration: none;
   border-radius: 4px;
@@ -395,48 +389,46 @@ a.primarycta {
   text-align: center;
   padding: 2rem;
   font-size: 2.5rem;
-  color: #222222;
+  color: rgba(234, 234, 234, 0.6);
   font-weight: 700;
-  letter-spacing: 4px;
-  background: #E0FF4F;
-  font-family: "Oswald", serif; }
+  background: #FB3640;
+  font-family: "Montserrat", sans-serif; }
   a.primarycta:hover {
     text-decoration: underline; }
   @media (min-width: 768px) {
     a.primarycta {
       max-width: 36rem; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .workpage {
   display: flex;
   flex-flow: column nowrap; }
-  .workpage .copyBlock ul {
-    padding-left: 20px; }
-    .workpage .copyBlock ul li {
-      padding: 0;
-      list-style-type: disc; }
-  .workpage .copyBlock .ctaWrap {
-    padding: 20px 0; }
-    .workpage .copyBlock .ctaWrap a {
-      max-width: none;
-      width: 100%; }
+  .workpage .copyBlock {
+    padding-top: 2rem; }
+    .workpage .copyBlock ul {
+      padding-left: 2rem; }
+      .workpage .copyBlock ul li {
+        padding: 0;
+        list-style-type: disc; }
+    .workpage .copyBlock .ctaWrap {
+      padding: 2rem 0; }
+      .workpage .copyBlock .ctaWrap a {
+        max-width: none;
+        width: 100%; }
   .workpage .tiles {
     margin-top: 2rem;
     display: flex;
@@ -451,14 +443,14 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       position: relative; }
       .workpage .tiles .projectWrap img {
         width: 100%;
-        max-width: 120px;
+        max-width: 12rem;
         margin: auto; }
       .workpage .tiles .projectWrap .overlay {
         opacity: 0;
         display: flex;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 0;
         left: 0;
@@ -469,19 +461,15 @@ $lg-desktop-breakpoint: 1920px; // necessary??
           text-align: center;
           width: 100%; }
           .workpage .tiles .projectWrap .overlay .overlayContent h4 {
-            font-size: 1.8rem; }
+            font-size: 1.8rem;
+            color: #EAEAEA; }
           .workpage .tiles .projectWrap .overlay .overlayContent p {
             padding: 0 10px;
-            font-size: 12px; }
+            font-size: 12px;
+            color: #EAEAEA; }
           .workpage .tiles .projectWrap .overlay .overlayContent a {
             font-size: 12px;
-            display: inline-block;
-            padding: 15px 0;
-            width: 100%;
-            max-width: 100%;
-            border-radius: 4px;
-            text-decoration: none;
-            background-color: #E0FF4F; }
+            width: 100%; }
             @media (min-width: 1024px) {
               .workpage .tiles .projectWrap .overlay .overlayContent a:hover {
                 text-decoration: underline; } }
@@ -489,12 +477,13 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         margin: auto;
         text-align: center; }
         .workpage .tiles .projectWrap .noAsset p {
-          font-weight: 700; }
+          font-weight: 700;
+          color: #222222; }
   @media (min-width: 768px) {
     .workpage {
       flex-flow: row nowrap; }
       .workpage .copyBlock {
-        padding-right: 20px;
+        padding-left: 20px;
         margin: auto;
         flex: 1; }
         .workpage .copyBlock .ctaWrap {
@@ -505,24 +494,21 @@ $lg-desktop-breakpoint: 1920px; // necessary??
       .workpage .tiles {
         flex: 1; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .contact {
   margin: auto;
   padding: 0 2.5rem;
@@ -548,34 +534,34 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         border-radius: 4px;
         letter-spacing: 3px;
         width: 100%;
-        background: #E0FF4F;
+        background: #FB3640;
         font-family: 'Oswald', serif;
-        color: #222222; }
+        color: rgba(234, 234, 234, 0.6); }
       .contact div form input,
       .contact div form textarea {
         background-color: rgba(39, 22, 22, 0.1);
         border: none;
         margin-bottom: .5rem;
         outline: none;
-        color: white;
+        color: #222222;
         padding: 1rem;
         border-radius: 0; }
         .contact div form input::-webkit-input-placeholder,
         .contact div form textarea::-webkit-input-placeholder {
           /* WebKit browsers */
-          color: rgba(255, 255, 255, 0.4); }
+          color: rgba(0, 0, 0, 0.4); }
         .contact div form input:-moz-placeholder,
         .contact div form textarea:-moz-placeholder {
           /* Mozilla Firefox 4 to 18 */
-          color: rgba(255, 255, 255, 0.4); }
+          color: rgba(0, 0, 0, 0.4); }
         .contact div form input::-moz-placeholder,
         .contact div form textarea::-moz-placeholder {
           /* Mozilla Firefox 19+ */
-          color: rgba(255, 255, 255, 0.4); }
+          color: rgba(0, 0, 0, 0.4); }
         .contact div form input:-ms-input-placeholder,
         .contact div form textarea:-ms-input-placeholder {
           /* Internet Explorer 10+ */
-          color: rgba(255, 255, 255, 0.4); }
+          color: rgba(0, 0, 0, 0.4); }
       .contact div form textarea {
         resize: none; }
     .contact div ul {
@@ -604,24 +590,21 @@ $lg-desktop-breakpoint: 1920px; // necessary??
         .contact .formWrap form input[type="submit"] {
           max-width: 50%; } }
 
-/* Breakpoints */
-/* Font Sizes */
-/* Headline Sizes */
-/* Theme Color Palette */
-/* Font Stacks */
-/* Mixins */
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+/*******************
+ * Breakpoints
+ ******************/
+/*******************
+ * Font Sizes
+ ******************/
+/*******************
+ * STYLE VARIABLES
+ ******************/
+/*******************
+ * Fonts
+ ******************/
+/*******************
+ * Mixins
+ ******************/
 .Cards {
   display: flex;
   flex-flow: row nowrap; }
@@ -671,7 +654,7 @@ $lg-desktop-breakpoint: 1920px; // necessary??
           margin: 0 10px 10px 0;
           outline-color: rgba(39, 22, 22, 0); }
           .Cards .Card .copyBlock .tags .tag:before {
-            background: #222222;
+            background: #EAEAEA;
             border-radius: 10px;
             box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
             content: '';

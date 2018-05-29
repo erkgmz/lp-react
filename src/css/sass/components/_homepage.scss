@@ -5,6 +5,15 @@
   display: flex;
   flex-flow: column nowrap;
 
+  opacity: 0;
+  transition: all .8s ease;
+  transform: translateY(-10px);
+
+  &.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .mute {
     color: $mute;
   }
@@ -14,10 +23,11 @@
 
     .typewriter {
       display: inline-block;
-      margin: 0 auto 30px;
-      border-right: 4px solid $theme-accent;
+      margin: .5rem auto 3rem;
+      border-right: 4px solid $typewriter-cursor-color;
       animation: blink-caret step-end infinite; // duration set on Typewriter component
-      min-height: 46px; // prevent collapse in between intervals
+      min-height: 4.6rem; // prevent collapse in between intervals
+      vertical-align: middle;
 
       @media(min-width: $breakpoint-tablet) {
         min-height: 69px;
@@ -30,9 +40,10 @@
       }
 
       &.highlight {
-        background: rgba(255,255,255,0.8);
+        background: $typewriter-highlight;
         color: rgba(0,0,0,0.7);
         border: none;
+        padding: 0 .6rem;
       }
     }
   }

@@ -1,20 +1,5 @@
 @import 'variables';
 
-@mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { /* WebKit browsers */
-      color: $color;
-  }
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: $color;
-  }
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: $color;
-  }
-  &:-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: $color;
-  }
-}
-
 .contact {
   margin: auto;
   padding: 0 2.5rem;
@@ -59,7 +44,7 @@
         color: $font-color;
         padding: 1rem;
         border-radius: 0;
-        @include placeholder-color(rgba(255,255,255,0.4));
+        @include placeholder-color(rgba(0, 0, 0, 0.4));
       }
 
       textarea {

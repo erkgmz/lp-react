@@ -1,40 +1,69 @@
-/* Breakpoints */
+/*******************
+ * Breakpoints
+ ******************/
+
 $breakpoint-mobile: 550px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-/* Font Sizes */
+
+
+/*******************
+ * Font Sizes
+ ******************/
+
 $root-font-size: 10px;
 $font-size-sm: 1.5rem;
 $font-size-lg: 1.6rem;
+$mobile-headline: 3.4rem;
+$desktop-headline: 4.9rem;
 
-/* Headline Sizes */
-$mobile-headline: 4rem;
-$desktop-headline: 6rem;
-$subheader: 2rem;
-$bodyheader: 2.2rem;
 
-/* Theme Color Palette */
-// $main-bg: #9068be;
-// $theme-accent: #e62739;
-// $nav-panel-bg: #e62739;
-// $header-color: #6ed3cf;
-// $cta-bg: #e62739;
-$main-bg: #222222;
-$theme-accent: #4B4E6D;
-$nav-panel-bg: #4B4E6D;
-$header-color: #140D4F;
-$cta-bg: #E0FF4F;
-$cta-color: #222222;
+
+/*******************
+ * STYLE VARIABLES
+ ******************/
+
+// Globals
+$main-bg: #EAEAEA;
+$font-color: #222222;
+
+// Navigation
+$nav-panel-bg: #0A2463;
+$nav-panel-font-color: #EAEAEA;
+
+// Elements
+$header-color: #E5E059;
+$theme-accent: #FB3640;
+
+// CTA
+$cta-bg: $theme-accent;
+$cta-color: rgba(234, 234, 234, .6);
+
+// Typewriter
+$typewriter-highlight: $header-color;
+$typewriter-cursor-color: $theme-accent;
+
+// Helpers
 $transparent: rgba(39, 22, 22, 0);
-$font-color: white;
 $mute: rgba(255, 255, 255, 0.5);
 
-/* Font Stacks */
-$font-stack-primary: 'Oswald', serif;
-$font-stack-secondary: 'Open Sans', sans-serif;
 
-/* Mixins */
+
+/*******************
+ * Fonts
+ ******************/
+
+$font-stack-primary: 'Roboto Slab', serif;
+$font-stack-secondary: 'Montserrat', sans-serif;
+$cta-font: 'Montserrat', sans-serif;
+
+
+
+/*******************
+ * Mixins
+ ******************/
+
 @mixin responsive-gradient($start-color, $end-color) {
   background: $start-color;
   background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
@@ -43,16 +72,17 @@ $font-stack-secondary: 'Open Sans', sans-serif;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}', GradientType=1 );
 }
 
-// IDEALLY WE WOULD HAVE THESE VARIABLES IN A MAJOR RAFACTOR
-/*
-$xs-mobile-breakpoint: 320px;
-$md-mobile-breakpoint: 375px;
-$lg-mobile-breakpoint: 414px;
-
-$portrait-tablet-breakpoint: 768px;
-$landscape-tablet-breakpoint: 1024;
-
-$sm-desktop-breakpoint: 1200px;
-$md-desktop-breakpoint: 1400px; // necessary??
-$lg-desktop-breakpoint: 1920px; // necessary??
-*/
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}

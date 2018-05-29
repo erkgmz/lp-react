@@ -16,6 +16,7 @@
 
       i {
         font-size: 4rem;
+        color: $nav-panel-font-color;
       }
     }
 
@@ -53,6 +54,7 @@
               font-size: unset;
               text-decoration: none;
               letter-spacing: 5px;
+              color: $nav-panel-font-color;
             }
           }
         }
@@ -76,6 +78,7 @@
           .pipe {
             display: inline-block;
             margin: 0 2rem;
+            color: $nav-panel-font-color;
           }
 
           li {

@@ -52,8 +52,8 @@ class Tile extends React.Component {
               </div>
               ) : (
               <div className={this.props.css.overlayContent}>
-                <h4>Available on request.</h4>
-                <PrimaryCTA path="/contact" text="MESSAGE ME" />
+                {/* <h4>Available on request.</h4> */}
+                <PrimaryCTA path="/contact" text="JUST ASK" />
               </div>
             )}
         </div>

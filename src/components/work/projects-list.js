@@ -25,7 +25,7 @@ export const projectsList = [
   },
   {
     asset_path: false,
-    title: 'EXAMPLES?',
+    title: 'Examples?',
     type: 'cta',
     tileBg: '#E62739'
   },
