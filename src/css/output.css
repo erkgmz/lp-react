@@ -389,7 +389,7 @@ a.primarycta {
   text-align: center;
   padding: 2rem;
   font-size: 2.5rem;
-  color: rgba(234, 234, 234, 0.6);
+  color: rgba(234, 234, 234, 0.7);
   font-weight: 700;
   background: #FB3640;
   font-family: "Montserrat", sans-serif; }
@@ -536,7 +536,7 @@ a.primarycta {
         width: 100%;
         background: #FB3640;
         font-family: 'Oswald', serif;
-        color: rgba(234, 234, 234, 0.6); }
+        color: rgba(234, 234, 234, 0.7); }
       .contact div form input,
       .contact div form textarea {
         background-color: rgba(39, 22, 22, 0.1);
