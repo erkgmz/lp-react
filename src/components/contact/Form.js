@@ -6,8 +6,6 @@ import React, {Component} from 'react';
 import TextInput from '../common/TextInput';
 import Ajax from './ajax';
 
-console.log(Ajax);
-
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +23,6 @@ class Form extends Component {
     this.clearState = this.clearState.bind(this);
     this.handleResponse = this.handleResponse.bind(this);
     this.ajax = new Ajax();
-
-    console.log(this.ajax);
   }
 
   componentWillMount() {
@@ -119,8 +115,6 @@ class Form extends Component {
 
         this.ajax.post('/contact', user, this.handleResponse);
       });
-    } else {
-      return toastr.error(this.state.error);
     }
   }
 
