@@ -1,9 +1,12 @@
 /*eslint-disable no-console */
 /*eslint-disable no-undef */
 /* Need to disable no-undef because this component will use Toastr, Jquery CDN as API's */
- import React, {Component} from 'react';
+import React, {Component} from 'react';
 
 import TextInput from '../common/TextInput';
+import Ajax from './ajax';
+
+console.log(Ajax);
 
 class Form extends Component {
   constructor(props) {
@@ -20,6 +23,10 @@ class Form extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.formIsValid = this.formIsValid.bind(this);
     this.clearState = this.clearState.bind(this);
+    this.handleResponse = this.handleResponse.bind(this);
+    this.ajax = new Ajax();
+
+    console.log(this.ajax);
   }
 
   componentWillMount() {
@@ -90,27 +97,27 @@ class Form extends Component {
     this.formIsValid();
   }
 
+  handleResponse(response) {
+    let {statusCode} = JSON.parse(response);
+
+    if(statusCode === 202) {
+      toastr.success('Your message has been sent.');
+    } else {
+      toastr.error('Hmm, there was an error sending your message, try again.');
+    }
+
+    this.clearState();
+  }
+
   handleClick(event) {
     event.preventDefault();
 
     if( this.formIsValid() ){
-      this.setState({sending: true});
-      let {name, email, message} = this.state;
-      let user = {name, email, message};
-      $.ajax({
-        type: 'POST',
-        url: '/contact',
-        data: user,
-        dataType: 'json',
-        cache: false,
-        success: function(response) {
-          this.clearState();
-          toastr.success('Your message has been sent.');
-        }.bind(this),
-        error: function(xhr, status, error) {
-          this.clearState();
-          toastr.error('Hmm, there was an error sending your message, try again.');
-        }.bind(this)
+      this.setState({sending: true}, () => {
+        let {name, email, message} = this.state;
+        let user = {name, email, message};
+
+        this.ajax.post('/contact', user, this.handleResponse);
       });
     } else {
       return toastr.error(this.state.error);
