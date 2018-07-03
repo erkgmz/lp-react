@@ -29,7 +29,7 @@
  * Mixins
  ******************/
 @import url(normalize.css/normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Roboto+Slab:700");
 html {
   font-size: 10px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
