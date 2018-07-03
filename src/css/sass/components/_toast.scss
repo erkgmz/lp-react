@@ -1,0 +1,75 @@
+@import 'variables';
+
+.toast {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  max-width: 80%;
+  width: 300px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+  border-radius: 6px;
+  color: $cta-color;
+
+  @media(min-width: 320px) and (max-width: $breakpoint-tablet) {
+    pointer-events: none;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    top: 15%;
+  }
+
+  &.success {
+    background: $toastBgColor;
+  }
+
+  &.error {
+    background: $theme-accent;
+  }
+
+  &.show {
+    // opacity: .8;
+    opacity: 1;
+    transition: opacity .1s ease-out;
+
+    @media(min-width: $breakpoint-tablet) {
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.error {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(-50%, -50%, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(calc(-50% - 2px), -50%, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(calc(-50% + 4px), -50%, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(calc(-50% - 4px), -50%, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(calc(-50% + 4px), -50%, 0);
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
