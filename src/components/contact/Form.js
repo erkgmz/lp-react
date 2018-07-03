@@ -14,9 +14,7 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-
       _toastMissingField: 'name',
-      // _toastMessage: `Don't forge to add your ${this.state._toastMissingField}!`,
       _toastStatusBg: false, // true = success or false = error in Toast.js
       _toastShow: false,
       _toastDisplay: false,
@@ -30,7 +28,6 @@ class Form extends Component {
     this.emptyInputs = this.emptyInputs.bind(this);
     this.handleResponse = this.handleResponse.bind(this);
     this.flashToast = this.flashToast.bind(this);
-    // this.getMissingField = this.getMissingField.bind(this);
     this.ajax = new Ajax();
   }
 
@@ -82,21 +79,10 @@ class Form extends Component {
 
   emailIsValid(email) {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // let {email} = this.state;
-
     return re.test(email);
-
-    // if( re.test(email) ) {
-    //   return true;
-    // } else {
-    //   this.setState({missingField: 'email'}, () => false);
-    //   // this.setState({error: `Don't forget to enter your <b>email</b>.`}, () => false);
-    //   // return false;
-    // }
   }
 
   formIsValid() {
-    // return this.emailIsValid() && this.inputsAreValid();
     return this.inputsAreValid();
   }
 
@@ -117,17 +103,14 @@ class Form extends Component {
     let {statusCode} = JSON.parse(response);
 
     if(statusCode === 202) {
-      // toastr.success('Your message has been sent.');
       this.setState({
         _toastMessage: 'Your message has been sent.'
       }, () => this.flashToast(this.emptyInputs));
     } else {
-      // toastr.error('Hmm, there was an error sending your message, try again.');
       this.setState({
         _toastMessage: 'Hmm, there was an error sending your message, try again.'
       }, () => this.flashToast(this.emptyInputs));
     }
-    // this.emptyInputs();
   }
 
   flashToast(cb) {
@@ -146,14 +129,10 @@ class Form extends Component {
     if( this.formIsValid() ) {
       let {name, email, message} = this.state;
       let user = {name, email, message};
-      this.setState({sending: true, _toastStatusBg: true}, () => {
+      this.setState({sending: true, _toastStatusBg: true}, () => { // _toastStatusBg should be set in hadleResponse (assumes success)
         this.ajax.post('/contact', user, this.handleResponse);
       });
     } else {
-      // toastr.error(`Dont forget to enter your ${this.state.missingField}`);
-      // this.setState({toast: {status: false}}, () => {
-      //   this.setState({toast: {showToast: false}})
-      // });
       this.flashToast();
     }
   }
