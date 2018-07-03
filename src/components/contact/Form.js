@@ -2,9 +2,9 @@
 /*eslint-disable no-undef */
 /* Need to disable no-undef because this component will use Toastr, Jquery CDN as API's */
 import React, {Component} from 'react';
-
 import TextInput from '../common/TextInput';
-import Ajax from './ajax';
+import Ajax from '../common/Ajax';
+import Toast from '../common/Toast';
 
 class Form extends Component {
   constructor(props) {
@@ -14,30 +14,42 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-      error: 'You cant leave name field empty.'
+
+      _toastMissingField: 'name',
+      // _toastMessage: `Don't forge to add your ${this.state._toastMissingField}!`,
+      _toastStatusBg: false, // true = success or false = error in Toast.js
+      _toastShow: false,
+      _toastDisplay: false,
+      _toastResponseMessage: null,
+      _toastFlashDuration: 2000
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.formIsValid = this.formIsValid.bind(this);
-    this.clearState = this.clearState.bind(this);
+    this.emptyInputs = this.emptyInputs.bind(this);
     this.handleResponse = this.handleResponse.bind(this);
+    this.flashToast = this.flashToast.bind(this);
+    // this.getMissingField = this.getMissingField.bind(this);
     this.ajax = new Ajax();
   }
 
   componentWillMount() {
-    // Need to setInterval to check inputs in case autofill is used
-    // @TODO: eliminate setInterval and handle autofill more elegantly
-    this.setState({timerId: setInterval(() => {
-      this.formIsValid();
-    }, 2000)});
+    this.setState({
+      _toastMessage: `Don't forget to add your <b>${this.state._toastMissingField}</b>`,
+      timerId: setInterval(() => {
+        // Need to setInterval to check inputs in case autofill is used
+        // @TODO: eliminate setInterval and handle autofill more elegantly
+        this.formIsValid();
+      }, 2000)
+    });
   }
 
   componentWillUnmount() {
     clearTimeout(this.state.timerId);
   }
 
-  clearState() {
+  emptyInputs() {
     this.setState({
       name: '',
       email: '',
@@ -52,31 +64,40 @@ class Form extends Component {
 
     for(let key in user) {
       if(user[key] === '') {
-        this.setState({error: `You cant leave ${key} field empty.`});
-        return false;
+        return this.setState({
+          _toastMessage: `Don't forget to add your <b>${key}</b>`,
+          _toastStatusBg: false
+        }, () => false);
+      }
+
+      if(key === 'email' && this.emailIsValid(user[key]) == false) {
+        return this.setState({
+          _toastMessage: `Don't forge to add your <b>${key}</b>`,
+          _toastStatusBg: false
+        }, () => false);
       }
     }
     return true;
   }
 
-  emailIsValid() {
+  emailIsValid(email) {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let {email} = this.state;
+    // let {email} = this.state;
 
-    if( re.test(email) ) {
-      return true;
-    } else {
-      this.setState({error: `Hmm, seems like '${email}' is not a valid email. Try again (example: youremail@website.com)`});
-      return false;
-    }
+    return re.test(email);
+
+    // if( re.test(email) ) {
+    //   return true;
+    // } else {
+    //   this.setState({missingField: 'email'}, () => false);
+    //   // this.setState({error: `Don't forget to enter your <b>email</b>.`}, () => false);
+    //   // return false;
+    // }
   }
 
   formIsValid() {
-    if( this.inputsAreValid() && this.emailIsValid() ) {
-    return true;
-    } else {
-      return false;
-    }
+    // return this.emailIsValid() && this.inputsAreValid();
+    return this.inputsAreValid();
   }
 
   handleChange(event) {
@@ -89,7 +110,6 @@ class Form extends Component {
     if(event.target.name === 'message') {
       this.setState({message: event.target.value});
     }
-    // checking form validation in preperation for send
     this.formIsValid();
   }
 
@@ -97,24 +117,44 @@ class Form extends Component {
     let {statusCode} = JSON.parse(response);
 
     if(statusCode === 202) {
-      toastr.success('Your message has been sent.');
+      // toastr.success('Your message has been sent.');
+      this.setState({
+        _toastMessage: 'Your message has been sent.'
+      }, () => this.flashToast(this.emptyInputs));
     } else {
-      toastr.error('Hmm, there was an error sending your message, try again.');
+      // toastr.error('Hmm, there was an error sending your message, try again.');
+      this.setState({
+        _toastMessage: 'Hmm, there was an error sending your message, try again.'
+      }, () => this.flashToast(this.emptyInputs));
     }
+    // this.emptyInputs();
+  }
 
-    this.clearState();
+  flashToast(cb) {
+    this.setState({_toastShow: true}, () => {
+      setTimeout(() => {
+        this.setState({
+          _toastShow: false
+        }, () => cb && cb());
+      }, this.state._toastFlashDuration);
+    });
   }
 
   handleClick(event) {
     event.preventDefault();
 
-    if( this.formIsValid() ){
-      this.setState({sending: true}, () => {
-        let {name, email, message} = this.state;
-        let user = {name, email, message};
-
+    if( this.formIsValid() ) {
+      let {name, email, message} = this.state;
+      let user = {name, email, message};
+      this.setState({sending: true, _toastStatusBg: true}, () => {
         this.ajax.post('/contact', user, this.handleResponse);
       });
+    } else {
+      // toastr.error(`Dont forget to enter your ${this.state.missingField}`);
+      // this.setState({toast: {status: false}}, () => {
+      //   this.setState({toast: {showToast: false}})
+      // });
+      this.flashToast();
     }
   }
 
@@ -153,6 +193,11 @@ class Form extends Component {
           type="submit"
           value={this.state.sending ? 'SENDING...' : 'SEND'}
           onClick={this.handleClick} />
+
+        <Toast
+          statusBg={this.state._toastStatusBg}
+          show={this.state._toastShow}
+          toastMessage={this.state._toastMessage} />
       </form>
     );
   }
