@@ -40,7 +40,7 @@ class Form extends Component {
   }
 
   componentWillUnmount() {
-    clearTimeout(this.state.timerId);
+    clearInterval(this.state.timerId);
   }
 
   emptyInputs() {
@@ -71,7 +71,6 @@ class Form extends Component {
         }, () => false);
       }
     }
-
     return true;
   }
 
