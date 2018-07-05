@@ -19,7 +19,7 @@ class Form extends Component {
       _toastShow: false,
       _toastDisplay: false,
       _toastResponseMessage: null,
-      _toastFlashDuration: 2000
+      _toastFlashDuration: 2500
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -100,11 +100,6 @@ class Form extends Component {
         message: event.target.value
       }, () => this.inputsAreValid());
     }
-
-    // let currentProp = this.state[event.target.name];
-    // this.setState({currentProp: event.target.value}, () => {
-    //   this.inputsAreValid();
-    // });
   }
 
   handleResponse(response) {
