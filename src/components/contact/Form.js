@@ -24,7 +24,6 @@ class Form extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.formIsValid = this.formIsValid.bind(this);
     this.emptyInputs = this.emptyInputs.bind(this);
     this.handleResponse = this.handleResponse.bind(this);
     this.flashToast = this.flashToast.bind(this);
@@ -33,11 +32,11 @@ class Form extends Component {
 
   componentWillMount() {
     this.setState({
-      _toastMessage: `Don't forget to add your <b>${this.state._toastMissingField}</b>`,
+      _toastMessage: `Don't forget to add your ${this.state._toastMissingField}`,
       timerId: setInterval(() => {
         // Need to setInterval to check inputs in case autofill is used
         // @TODO: eliminate setInterval and handle autofill more elegantly
-        this.formIsValid();
+        this.inputsAreValid();
       }, 2000)
     });
   }
@@ -62,18 +61,19 @@ class Form extends Component {
     for(let key in user) {
       if(user[key] === '') {
         return this.setState({
-          _toastMessage: `Don't forget to add your <b>${key}</b>`,
+          _toastMessage: `Don't forget to add your ${key}`,
           _toastStatusBg: false
         }, () => false);
       }
 
       if(key === 'email' && this.emailIsValid(user[key]) == false) {
         return this.setState({
-          _toastMessage: `Don't forge to add your <b>${key}</b>`,
+          _toastMessage: `Don't forge to add your ${key}`,
           _toastStatusBg: false
         }, () => false);
       }
     }
+
     return true;
   }
 
@@ -82,21 +82,29 @@ class Form extends Component {
     return re.test(email);
   }
 
-  formIsValid() {
-    return this.inputsAreValid();
-  }
-
   handleChange(event) {
     if(event.target.name === 'name') {
-      this.setState({name: event.target.value});
+      this.setState({
+        name: event.target.value
+      }, () => this.inputsAreValid());
     }
+
     if(event.target.name === 'email') {
-      this.setState({email: event.target.value});
+      this.setState({
+        email: event.target.value
+      }, () => this.inputsAreValid());
     }
+
     if(event.target.name === 'message') {
-      this.setState({message: event.target.value});
+      this.setState({
+        message: event.target.value
+      }, () => this.inputsAreValid());
     }
-    this.formIsValid();
+
+    // let currentProp = this.state[event.target.name];
+    // this.setState({currentProp: event.target.value}, () => {
+    //   this.inputsAreValid();
+    // });
   }
 
   handleResponse(response) {
@@ -126,7 +134,7 @@ class Form extends Component {
   handleClick(event) {
     event.preventDefault();
 
-    if( this.formIsValid() ) {
+    if( this.inputsAreValid() ) {
       let {name, email, message} = this.state;
       let user = {name, email, message};
       this.setState({sending: true, _toastStatusBg: true}, () => { // _toastStatusBg should be set in hadleResponse (assumes success)
