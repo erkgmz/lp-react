@@ -1,6 +1,4 @@
 /*eslint-disable no-console */
-/*eslint-disable no-undef */
-/* Need to disable no-undef because this component will use Toastr, Jquery CDN as API's */
 import React, {Component} from 'react';
 import TextInput from '../common/TextInput';
 import Ajax from '../common/Ajax';
@@ -82,26 +80,6 @@ class Form extends Component {
     return re.test(email);
   }
 
-  handleChange(event) {
-    if(event.target.name === 'name') {
-      this.setState({
-        name: event.target.value
-      }, () => this.inputsAreValid());
-    }
-
-    if(event.target.name === 'email') {
-      this.setState({
-        email: event.target.value
-      }, () => this.inputsAreValid());
-    }
-
-    if(event.target.name === 'message') {
-      this.setState({
-        message: event.target.value
-      }, () => this.inputsAreValid());
-    }
-  }
-
   handleResponse(response) {
     let {statusCode} = JSON.parse(response);
 
@@ -124,6 +102,28 @@ class Form extends Component {
         }, () => cb && cb());
       }, this.state._toastFlashDuration);
     });
+  }
+
+  handleChange(event) {
+    event.preventDefault();
+
+    if(event.target.name === 'name') {
+      this.setState({
+        name: event.target.value
+      }, () => this.inputsAreValid());
+    }
+
+    if(event.target.name === 'email') {
+      this.setState({
+        email: event.target.value
+      }, () => this.inputsAreValid());
+    }
+
+    if(event.target.name === 'message') {
+      this.setState({
+        message: event.target.value
+      }, () => this.inputsAreValid());
+    }
   }
 
   handleClick(event) {
