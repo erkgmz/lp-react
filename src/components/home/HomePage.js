@@ -18,6 +18,8 @@ class HomePage extends Component {
 
   componentWillMount() {
     let isMounted = true;
+
+    // delay mounting so typewriter does not load while typing
     setTimeout(() => {
       this.setState({isMounted}, () => this.mountTypewriter());
     }, 100);
