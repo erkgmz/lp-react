@@ -33,13 +33,15 @@ class HomePage extends Component {
       <article className={`${css.homepage} ${this.state.isMounted && this.state.fadeClass}`}>
         <div className={css.copyBlock}>
           <Headline text="Hi, I'm Erik - I design and build" />
-          {this.state.mountTypewriter && <Typewriter projects={['Shopify Stores', 'Landing Pages', 'Sales Funnels', 'Email Templates']}
-            typeSpeed={150} // typing rate (milliseconds)
-            highlightDuration={1500}
-            cursorDurartion={0.8} // cursor blink rate (milliseconds)
-            cssClass={css.typewriter}
-            cssHighlight={css.highlight}
-          />}
+          {this.state.mountTypewriter &&
+            <Typewriter
+              projects={['Shopify Stores', 'Landing Pages', 'Email Templates']}
+              typeSpeed={150} // typing rate (milliseconds)
+              highlightDuration={1500}
+              cursorDurartion={0.8} // cursor blink rate (milliseconds)
+              cssClass={css.typewriter}
+              cssHighlight={css.highlight}
+            />}
         </div>
         <div className={css.ctaContainer}>
           <PrimaryCTA path="/contact" text="CONTACT" />
