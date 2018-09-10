@@ -44,7 +44,7 @@
         color: $font-color;
         padding: 1rem;
         border-radius: 0;
-        @include placeholder-color(rgba(0, 0, 0, 0.4));
+        @include placeholder-color($font-color);
       }
 
       textarea {

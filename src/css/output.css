@@ -551,19 +551,19 @@ a.primarycta {
         .contact div form input::-webkit-input-placeholder,
         .contact div form textarea::-webkit-input-placeholder {
           /* WebKit browsers */
-          color: rgba(0, 0, 0, 0.4); }
+          color: #222222; }
         .contact div form input:-moz-placeholder,
         .contact div form textarea:-moz-placeholder {
           /* Mozilla Firefox 4 to 18 */
-          color: rgba(0, 0, 0, 0.4); }
+          color: #222222; }
         .contact div form input::-moz-placeholder,
         .contact div form textarea::-moz-placeholder {
           /* Mozilla Firefox 19+ */
-          color: rgba(0, 0, 0, 0.4); }
+          color: #222222; }
         .contact div form input:-ms-input-placeholder,
         .contact div form textarea:-ms-input-placeholder {
           /* Internet Explorer 10+ */
-          color: rgba(0, 0, 0, 0.4); }
+          color: #222222; }
       .contact div form textarea {
         resize: none; }
     .contact div ul {
