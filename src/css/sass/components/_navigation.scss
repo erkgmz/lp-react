@@ -7,7 +7,15 @@
     width: 100%;
     background: $nav-panel-bg;
     z-index: 1;
-    transition: top .2s ease;
+    transition: all .2s ease-in;
+
+    &.isActive {
+      top: 0;
+    }
+
+    &.isHidden {
+      top: -100%;
+    }
 
     .faClose {
       position: absolute;
